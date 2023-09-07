@@ -156,7 +156,6 @@ export async function getServerSideProps({ req, params }) {
   } : ''
   )
   
-  console.log(filmResponse);
   return {
     props: {
       film: filmResponse.data
