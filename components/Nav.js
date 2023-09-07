@@ -50,6 +50,11 @@ const Nav = () => {
           px-4
           text-lg text-gray-700
           bg-white
+          relative
+          z-10
+          lg:shadow-lg
+          lg:shadow-[gray]/[0.3]
+          lg:border-b-[0.5px]
         "
     >
       <div>
@@ -106,7 +111,14 @@ const Nav = () => {
                 Liste des films
             </Link>
           </li>
-          {!loading &&
+          <li>
+            <Link
+              href="/contact"
+              className="md:p-2 py-2 block hover:text-purple-400">
+                Contact
+            </Link>
+          </li>
+          {/* {!loading &&
             (user ? (
               <li>
                 <Link
@@ -171,7 +183,7 @@ const Nav = () => {
             </>
           ) : (
             ''
-          )}
+          )} */}
         </ul>
       </div>
     </nav>
