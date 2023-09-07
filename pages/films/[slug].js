@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { fetcher } from "@/lib/api"
 import Layout from "@/components/Layout"
 import { useFetchUser } from "@/lib/authContext"
+import Head from 'next/head'
 // import { UserProvider } from '@/lib/authContext'
 import Link from "next/link"
 import { HomeIcon } from '@heroicons/react/20/solid'
@@ -55,6 +56,10 @@ export default function Film({ film }) {
 
   return (
     <>
+      <Head>
+        <title>Liste des films - {film.attributes.title}</title>
+      </Head>
+
       <Layout/>
 
         {/* BREADCRUMB */}

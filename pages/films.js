@@ -30,7 +30,7 @@ export default function films({ films }) {
     <>
 
       <Head>
-        <title>Film DataBase - Films</title>
+        <title>Liste des films</title>
       </Head>
       
       <Layout/>
