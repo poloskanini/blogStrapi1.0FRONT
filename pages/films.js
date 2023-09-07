@@ -12,7 +12,7 @@ import { HomeIcon } from '@heroicons/react/20/solid'
 import Link from "next/link"
 
 
-export default function films({ films }) {
+export default function FilmsList({ films }) {
 
   let filmsQuantity = 6;
 
@@ -44,7 +44,7 @@ export default function films({ films }) {
             </span>
           </h1>
           <Films films={data} />
-          
+
       </Container>
       
       {/* PAGINATION */}

@@ -57,7 +57,7 @@ export default function Film({ film }) {
   return (
     <>
       <Head>
-        <title>Liste des films - {film.attributes.title}</title>
+        <title>Liste des films</title>
       </Head>
 
       <Layout/>
@@ -128,17 +128,21 @@ export default function Film({ film }) {
 
           {/* IMAGE */}
 
-          {/* //TODO: to FIX ! It works, but should be as an Image next*/}
-            {/* <Image src={`${process.env.NEXT_PUBLIC_STRAPI_BASE}${film.attributes.image.data.attributes.url}`}
-            width={100}
-            height={100}
-            alt='mobetter'
-            /> */}
-
           {film.attributes.image.data ?
-            (<img src={`${film.attributes.image.data.attributes.url}`} alt="film-poster" />)
+            <Image src={`${film.attributes.image.data.attributes.url}`}
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt='film-img'
+            style={{ width: '100%', height: 'auto' }} // optional
+            />
             : ""
           }
+
+          {/* {film.attributes.image.data ?
+            (<img src={`${film.attributes.image.data.attributes.url}`} alt="film-poster" />)
+            : ""
+          } */}
 
       </Container>
 

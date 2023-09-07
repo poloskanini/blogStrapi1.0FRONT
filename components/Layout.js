@@ -6,7 +6,7 @@ import { UserProvider } from '@/lib/authContext'
 export default function Layout({ user, loading = false, children }) {
   return (
       <>
-      <Nav></Nav>
+      <Nav />
       </>
          
 
