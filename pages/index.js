@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 export default function Home() {
 
-  const { user, loading } = useFetchUser()
+  // const { user, loading } = useFetchUser()
 
   return (
     <>

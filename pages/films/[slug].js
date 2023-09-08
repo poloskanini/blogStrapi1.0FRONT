@@ -15,7 +15,7 @@ import Image from 'next/image'
 export default function Film({ film }) {
 
 
-  const { user, loading } = useFetchUser()
+  // const { user, loading } = useFetchUser()
   const router = useRouter()
   const [review, setReview] = useState({
     value: ''
@@ -98,7 +98,7 @@ export default function Film({ film }) {
             ))}
           </ol>
         </nav>
-
+      
       <Container>
         
         {/* TITLE */}

@@ -10,7 +10,7 @@ const Nav = () => {
     password: '',
   });
 
-  const { user, loading } = useUser()
+  // const { user, loading } = useUser()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
