@@ -5,9 +5,10 @@ export default function quisommesnous() {
     <>
       <Layout />
 
-      <div className="h-full flex justify-center mt-36">
-        <h1 className="text-xl font-bold">Page en construction</h1>
-      
+      <div className="h-full flex flex-col justify-center items-center mt-36">
+        <h1 className="text-xl font-bold">QUI SOMMES-NOUS</h1>
+        <br />
+        <h2>Page en construction</h2>
       </div>
     </>
   )

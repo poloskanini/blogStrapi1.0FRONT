@@ -28,8 +28,8 @@ const inter = Inter({
 
 
 const expertises = [
-  { name: 'Droit du Travail', description: 'Une meilleure défense de vos droits', href: '#', icon: ChartPieIcon },
-  { name: 'Droit de la sécurité sociale', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Droit du Travail', description: 'Une meilleure défense de vos droits', href: '/droit-du-travail', icon: ChartPieIcon },
+  { name: 'Droit de la sécurité sociale', description: 'Speak directly to your customers', href: '/droit-de-la-securite-sociale', icon: CursorArrowRaysIcon },
   { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
   { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
   { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
@@ -192,7 +192,7 @@ export default function Header() {
                   Accueil
                 </Link> */}
                 <Link
-                  href="#"
+                  href="/qui-sommes-nous"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
@@ -226,21 +226,21 @@ export default function Header() {
                   )}
                 </Disclosure>
                 <Link
-                  href="#"
+                  href="/honoraires"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Honoraires
                 </Link>
                 <Link
-                  href="#"
+                  href="/actualites"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Actualités
                 </Link>
                 <Link
-                  href="#"
+                  href="faq"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >

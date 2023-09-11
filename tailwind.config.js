@@ -29,6 +29,20 @@ module.exports = {
         35: '.35',
         40: '.40',
         175: '1.75',
+      },
+      screens: {
+        'tall': {
+            'raw': `only screen and (max-height: 960px) and (max-width: 480px)`
+        },
+        'wide': {
+            'raw': `only screen and (max-height: 480px) and (max-width: 960px)`
+        },
+        'portrait': {
+            'raw': '(orientation: portrait)'
+        },
+        'landscape': {
+            'raw': '(orientation: landscape)'
+        }
       }
     },
   },

@@ -53,11 +53,11 @@ export default function Accueil() {
             />
           </div>
           <div className="overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pb-32 pt-28 sm:pt-60 lg:px-8 lg:pt-24">
+            <div className="mx-auto max-w-7xl px-6 pb-32 portrait:pt-28 lg:px-8 lg:pt-14">
               <div className="mx-auto max-w-2xl gap-x-48 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-lg p-5">
                   <div className="max-w-sm pb-6">
-                    <h1 className={`${playfair.variable} font-playfair`}>
+                    <h1 className={`${playfair.variable} font-playfair home-title`}>
                     <span className='text-5xl tracking-tight text-white lg:text-6xl xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
                     </h1>
                   </div>
@@ -65,14 +65,14 @@ export default function Accueil() {
                     <h2 className={`${cormorant.variable} font-cormorant font-normal text-3xl tracking-tight text-white sm:text-5xl pb-4`}>
                       Avocats spécialisés <br /> en Droit du Travail
                     </h2>
-                    <p className="relative mt-10 text-sm leading-5 text-white sm:max-w-md lg:max-w-none font-light">
+                    <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light">
                       Depuis janvier 2012, notre cabinet est à votre disposition afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées à l&apos;emploi et à la sécurité sociale. 
                     </p>
                   </div>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
                       href="#"
-                      className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
+                      className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
                     >
                       Nous contacter
                     </a>
@@ -80,7 +80,7 @@ export default function Accueil() {
                 </div>
 
                 {/* Scroll Down */}
-                <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute lg:bottom-60`}>
+                <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute lg:bottom-60 wide:landscape:bottom-80`}>
 
                 <div id="scroll-wrapper-inner">
                     <div id="scroll-title">
@@ -95,7 +95,7 @@ export default function Accueil() {
                     <div className="relative">
                       <Image 
                         src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694424800/pexels-pavel-danilyuk-8111860_ckqsjd.jpg'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}
                         alt='menezes-avocat-avocate sur son bureau au telephone'
@@ -107,7 +107,7 @@ export default function Accueil() {
                     <div className="relative">
                       <Image 
                         src={'https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}
                         alt='menezes-avocat-Femme travaillant sur son ordinateur et souriante'
@@ -117,7 +117,7 @@ export default function Accueil() {
                     <div className="relative">
                       <Image 
                         src={'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}
                         alt='menezes-avocat-equipe travaillant dans un open space'
@@ -129,7 +129,7 @@ export default function Accueil() {
                     <div className="relative">
                       <Image 
                         src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694427794/pexels-cottonbro-studio-3205568_rllyt8.jpg'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}
                         alt='menezes-avocat-equipe de juristes debout autour de la table'
@@ -140,7 +140,7 @@ export default function Accueil() {
                       <Image 
 
                           src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694429862/linkedin-sales-solutions-wS73LE0GnKs-unsplash_zhief7.jpg'}
-                          className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                          className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                           width={500}
                           height={500}
                           alt='menezes-avocat-femme travaille dans son bureau sur son ordinateur'
@@ -152,6 +152,10 @@ export default function Accueil() {
               </div>
             </div>
           </div>
+          <section className='h-screen'>
+            <p className="absolute bottom-0">Prout</p>
+          </section>
         </div>
+        
   )
 }
