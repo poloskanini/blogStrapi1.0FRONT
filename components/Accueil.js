@@ -161,7 +161,9 @@ export default function Accueil() {
         </div>
     </div>
 
-    <section className="h-screen"></section>
+    <section className="h-screen">
+      Prout
+    </section>
 
   </>
   )
