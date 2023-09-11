@@ -53,7 +53,7 @@ export default function Accueil() {
             />
           </div>
           <div className="overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pb-32 portrait:pt-28 lg:px-8 lg:pt-14">
+            <div className="mx-auto max-w-7xl px-6 pb-32 portrait:pt-28 lg:px-8 2xl:pt-14">
               <div className="mx-auto max-w-2xl gap-x-48 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-lg p-5">
                   <div className="max-w-sm pb-6">
@@ -65,7 +65,7 @@ export default function Accueil() {
                     <h2 className={`${cormorant.variable} font-cormorant font-normal text-3xl tracking-tight text-white sm:text-5xl pb-4`}>
                       Avocats spécialisés <br /> en Droit du Travail
                     </h2>
-                    <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light">
+                    <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light text-justify">
                       Depuis janvier 2012, notre cabinet est à votre disposition afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées à l&apos;emploi et à la sécurité sociale. 
                     </p>
                   </div>
@@ -90,8 +90,9 @@ export default function Accueil() {
                   </div>
                 </div>
 
+                {/* Hero Images */}
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
-                  <div className="ml-auto w-72 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div className="ml-auto w-20 2xl:w-80 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <Image 
                         src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694424800/pexels-pavel-danilyuk-8111860_ckqsjd.jpg'}
