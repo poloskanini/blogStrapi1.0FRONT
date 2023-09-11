@@ -110,7 +110,7 @@ export default function Accueil() {
                     <div className="relative">
                       <Image 
                         src={'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden portrait:hidden"
                         width={500}
                         height={500}
                         alt='menezes-avocat-equipe travaillant dans un open space'
@@ -133,7 +133,7 @@ export default function Accueil() {
                       <Image 
 
                           src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694429862/linkedin-sales-solutions-wS73LE0GnKs-unsplash_zhief7.jpg'}
-                          className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
+                          className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden portrait:hidden"
                           width={500}
                           height={500}
                           alt='menezes-avocat-femme travaille dans son bureau sur son ordinateur'
@@ -151,7 +151,7 @@ export default function Accueil() {
     </div>
     
     {/* Scroll Down */}
-    <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute right-0 bottom-0 wide:landscape:bottom-96`}>
+    <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute right-0 bottom-10`}>
 
       <div id="scroll-wrapper-inner">
         <div id="scroll-title">
