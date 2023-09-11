@@ -2,11 +2,12 @@ import '@/styles/globals.css'
 import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
+
 import localFont from 'next/font/local'
 
 const argesta = localFont({ src: '../fonts/Argesta_Display_Regular/Argesta Display Regular Desktop/ArgestaDisplay-Regular.otf'})
-
 const rosseta = localFont({ src: '../fonts/rosseta/Rosseta.otf'})
+
  
 // If loading a variable font, you don't need to specify the font weight
 const cormorant = Cormorant_Garamond({
@@ -26,7 +27,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   
   return (
-    <main className={`${playfair.className}`}>
       <AnimatePresence mode='wait'>
         <motion.div key={router.pathname}>
           <Component {...pageProps} />
@@ -47,6 +47,5 @@ export default function App({ Component, pageProps }) {
           ></motion.div>
         </motion.div>
       </AnimatePresence>
-    </main>
   )
 }

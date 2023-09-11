@@ -13,13 +13,19 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
-
+import { Inter } from 'next/font/google'
 
 const playfair = Playfair_Display({
   weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   variable: '--font-playfair'
 })
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
 
 const expertises = [
   { name: 'Droit du Travail', description: 'Une meilleure défense de vos droits', href: '#', icon: ChartPieIcon },
@@ -42,7 +48,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white drop-shadow z-10">
+    <header className="bg-slate-100 drop-shadow z-10 sticky top-0">
       <nav className="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link
@@ -75,11 +81,11 @@ export default function Header() {
           </Link> */}
           <Link
             href='/qui-sommes-nous'
-            className='text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple'>
+            className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
             Qui sommes-nous
           </Link>
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 border-none hover:text-custom-purple">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-normal leading-6 text-gray-900 border-none hover:text-custom-purple">
               Expertises
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -105,7 +111,7 @@ export default function Header() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-custom-purple" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <p className="block font-semibold text-gray-900 hover:text-custom-purple">
+                        <p className="block font-normal text-gray-900 hover:text-custom-purple">
                           {item.name}
                           <span className="absolute inset-0" />
                         </p>
@@ -114,34 +120,34 @@ export default function Header() {
                     </Link>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-normal leading-6 text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                       {item.name}
                     </Link>
                   ))}
-                </div>
+                </div> */}
               </Popover.Panel>
             </Transition>
           </Popover>
           <Link
             href='/honoraires'
-            className='text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple'>
+            className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
             Honoraires
           </Link>
           <Link
             href='/actualites'
-            className='text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple'>
+            className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
             Actualités
           </Link>
           <Link
             href='/faq'
-            className='text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple'>
+            className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
             F.A.Q
           </Link>
         </Popover.Group>
@@ -187,7 +193,7 @@ export default function Header() {
                 </Link> */}
                 <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-500"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Qui sommes-nous
@@ -195,7 +201,7 @@ export default function Header() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100">
                         Expertises
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
@@ -208,7 +214,7 @@ export default function Header() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-normal leading-7 text-gray-900 hover:bg-gray-100"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                           >
                             <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
@@ -221,21 +227,21 @@ export default function Header() {
                 </Disclosure>
                 <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Honoraires
                 </Link>
                 <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Actualités
                 </Link>
                 <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   F.A.Q
@@ -244,7 +250,7 @@ export default function Header() {
               <div className="py-6">
                 <Link
                   href="/contact"
-                  className="text-base font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3"
+                  className="text-base font-normal leading-6 text-gray-900 border border-custom-purple rounded-full p-3"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   Contact <span aria-hidden="true">&rarr;</span>

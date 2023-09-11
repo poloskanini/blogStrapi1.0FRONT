@@ -16,10 +16,19 @@ module.exports = {
         playfair: ['var(--font-playfair)'],
         cormorant: ['var(--font-cormorant)'],
         argesta: ['var(--font-argesta)'],
-        rosseta: ['var(--font-rosseta)']
+        rosseta: ['var(--font-rosseta)'],
+        inter: ['var(--font-inter)']
       },
       colors: {
         'custom-purple': '#6089C3'
+      },
+      brightness: {
+        20: '.20',
+        25: '.25',
+        30: '.30',
+        35: '.35',
+        40: '.40',
+        175: '1.75',
       }
     },
   },
