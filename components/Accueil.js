@@ -61,11 +61,11 @@ export default function Accueil() {
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-lg p-5">
                   <div className="max-w-sm pb-6">
                     <h1 className={`${playfair.variable} font-playfair home-title`}>
-                    <span className='text-5xl tracking-tight text-white lg:text-6xl xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
+                    <span className='text-5xl tracking-tight text-white lg:text-6xl 2xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl 2xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
                     </h1>
                   </div>
                   <div className="max-w-sm pb-3">
-                    <h2 className={`${cormorant.variable} font-cormorant font-normal text-3xl tracking-tight text-white sm:text-5xl pb-4`}>
+                    <h2 className={`${cormorant.variable} font-cormorant font-normal text-3xl tracking-tight text-white lg:text-5xl pb-4`}>
                       Avocats spécialisés <br /> en Droit du Travail
                     </h2>
                     <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light text-justify">
