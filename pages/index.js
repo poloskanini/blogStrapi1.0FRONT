@@ -11,15 +11,15 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>Film DataBase</title>
+          <title>Menezes Avocat</title>
       </Head>
       
       <Layout />
 
       <Container>
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter mb-4">
+        <h1 className="text-5xl md:text-6xl leading-tighter mb-4 ">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2">
-            Films Database
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga explicabo ipsa provident totam sint?
           </span>
         </h1>
       </Container>

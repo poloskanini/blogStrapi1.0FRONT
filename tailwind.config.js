@@ -12,6 +12,15 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        playfair: ['var(--font-playfair)'],
+        cormorant: ['var(--font-cormorant)'],
+        argesta: ['var(--font-argesta)'],
+        rosseta: ['var(--font-rosseta)']
+      },
+      colors: {
+        'custom-purple': '#6089C3'
+      }
     },
   },
   plugins: [

@@ -55,6 +55,7 @@ const Nav = () => {
           lg:shadow-lg
           lg:shadow-[gray]/[0.3]
           lg:border-b-[0.5px]
+          font-cormorant
         "
     >
       <div>

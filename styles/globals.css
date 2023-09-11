@@ -21,6 +21,14 @@ html, body {
   min-height: 100vh;
 }
 
+nav span {
+  font-family: 'Playfair Display';
+}
+
+button:focus {
+  outline: 0
+}
+
 .slide-in {
   position: absolute;
   top: 0;
