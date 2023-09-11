@@ -15,6 +15,9 @@ const cormorant = Cormorant_Garamond({
 
 export default function Accueil() {
   return (
+
+    <>
+
     <div className="relative isolate">
           <svg
             className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)] brightness-50"
@@ -79,19 +82,8 @@ export default function Accueil() {
                   </div>
                 </div>
 
-                {/* Scroll Down */}
-                <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute lg:bottom-60 wide:landscape:bottom-80`}>
-
-                <div id="scroll-wrapper-inner">
-                    <div id="scroll-title">
-                      Scroll
-                    </div>
-                    <div id="scroll-down"></div>
-                  </div>
-                </div>
-
                 {/* Hero Images */}
-                <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
+                <div className="mt-14 flex justify-end gap-6 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
                   <div className="ml-auto w-20 2xl:w-80 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <Image 
@@ -153,10 +145,24 @@ export default function Accueil() {
               </div>
             </div>
           </div>
-          <section className='h-screen'>
-            <p className="absolute bottom-0">Prout</p>
-          </section>
+
+
+      
+    </div>
+    
+    {/* Scroll Down */}
+    <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute right-0 bottom-0 wide:landscape:bottom-96`}>
+
+      <div id="scroll-wrapper-inner">
+        <div id="scroll-title">
+          Scroll
         </div>
-        
+        <div id="scroll-down"></div>
+        </div>
+    </div>
+
+    <section className="h-screen"></section>
+
+  </>
   )
 }
