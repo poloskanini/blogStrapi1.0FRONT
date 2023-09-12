@@ -58,7 +58,7 @@ export default function Header() {
 
     <HeadRoom>
       <header className="bg-slate-100 drop-shadow z-10 ">
-        <nav className="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav className="mx-auto flex items-center justify-between p-3 lg:p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link
               href='/'
@@ -153,12 +153,10 @@ export default function Header() {
         </nav>
         
         {/* Mobile Menu Window */}
-        <div className="nav-overlay flex justify-center" style={{
-          top: mobileMenuOpen ? "0%" : "-100vh",
-          transitionDelay: mobileMenuOpen ? "0s" : "0s",
-        }}>
+        <div
+          className={mobileMenuOpen ? "nav-overlay flex justify-center mobileActive" : "nav-overlay flex justify-center"}>
           <ul className={`${playfair.variable} font-playfair nav-links h-44 mt-20 flex flex-col items-center`}>
-            <li className="nav-item relative p-6">
+            <li className="nav-item relative p-8">
               <Link
                 href='/qui-sommes-nous'
                 className='text-xl font-normal text-white hover:text-custom-purple'
@@ -167,7 +165,7 @@ export default function Header() {
               </Link>
             </li>
             <li
-              className="nav-item relative p-6 text-xl font-normal text-white cursor-pointer hover:text-custom-purple flex items-center"
+              className="nav-item relative pt-8 text-xl font-normal text-white cursor-pointer hover:text-custom-purple flex items-center"
               onClick={() => setSubOpen(!subOpen)}
             > 
             Expertises
@@ -177,7 +175,7 @@ export default function Header() {
             />
             </li>
                 <ul
-                  className='expertises-list flex flex-col items-center transition-all duration-500'
+                  className='expertises-list flex flex-col items-center transition-all duration-500 mb-8'
                   style={{
                     height: subOpen ? '100%' : '0%',
                     opacity: subOpen ? "1" : "0",
@@ -188,7 +186,7 @@ export default function Header() {
                       key={item.name}
                       as="a"
                       href={item.href}
-                      className="rounded-lg p-2 text-sm font-normal text-white hover:text-custom-purple"
+                      className="rounded-lg p-2 text-base font-normal text-white hover:text-custom-purple"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       <span className='flex'>
@@ -199,21 +197,21 @@ export default function Header() {
                   ))}
                 </ul>
               
-            <li className="nav-item relative p-6">
+            <li className="nav-item relative p-8">
               <Link
                 href='/honoraires'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
                 Honoraires
               </Link>
             </li>
-            <li className="nav-item relative p-6">
+            <li className="nav-item relative p-8">
               <Link
                 href='/actualites'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
                 Actualités
               </Link>
             </li>
-            <li className="nav-item relative p-6">
+            <li className="nav-item relative p-8">
               <Link
                 href='/faq'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
