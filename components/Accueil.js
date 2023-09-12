@@ -1,5 +1,7 @@
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
+import Link from 'next/link'
+
 
 const playfair = Playfair_Display({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -73,12 +75,12 @@ export default function Accueil() {
                     </p>
                   </div>
                   <div className="mt-10 flex items-center gap-x-6">
-                    <a
+                    <Link
                       href="/contact"
                       className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
                     >
                       Nous contacter
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
