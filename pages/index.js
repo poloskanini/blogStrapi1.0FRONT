@@ -20,13 +20,6 @@ export default function Home() {
       
       <Layout />
 
-      {/* <Container>
-        <h1 className="text-5xl md:text-6xl leading-tighter mb-4 ">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga explicabo ipsa provident totam sint?
-          </span>
-        </h1>
-      </Container> */}
       <main className="h-full">
         <VideoHero />
         <Accueil />
