@@ -56,11 +56,6 @@ export default function Header() {
             <Link
               href='/'
               className="-m-1.5 p-1.5 text-xl">
-                  {/* <Image
-                    src={'/assets/images/menezes-logo3.png'}
-                    width={50}
-                    height={50}
-                  ></Image> */}
                 <span className='font-normal text-black' >MENEZES </span>
                 <span className='font-bold text-custom-purple' >AVOCAT</span>
             </Link>
