@@ -4,6 +4,8 @@ import { useFetchUser } from "@/lib/authContext"
 import Head from 'next/head'
 import VideoHero from "@/components/VideoHero"
 import Accueil from "@/components/Accueil"
+import Section from "@/components/Section"
+
 // import { UserProvider } from '@/lib/authContext'
 
 export default function Home() {
@@ -28,6 +30,7 @@ export default function Home() {
       <main className="h-full">
         <VideoHero />
         <Accueil />
+        <Section />
       </main>
       
       

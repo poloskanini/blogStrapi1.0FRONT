@@ -74,7 +74,7 @@ export default function Accueil() {
                   </div>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
-                      href="#"
+                      href="/contact"
                       className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
                     >
                       Nous contacter
@@ -83,15 +83,15 @@ export default function Accueil() {
                 </div>
 
                 {/* Hero Images */}
-                <div className="mt-14 flex justify-end gap-6 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
+                <div className="mt-14 flex justify-end gap-6 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
                   <div className="ml-auto w-20 2xl:w-80 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <Image 
-                        src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694424800/pexels-pavel-danilyuk-8111860_ckqsjd.jpg'}
+                        src={'https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80'}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}
-                        alt='menezes-avocat-avocate sur son bureau au telephone'
+                        alt='menezes-avocat-Femme travaillant sur son ordinateur et souriante '
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
@@ -99,11 +99,11 @@ export default function Accueil() {
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <Image 
-                        src={'https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80'}
+                        src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694424800/pexels-pavel-danilyuk-8111860_ckqsjd.jpg'}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}
-                        alt='menezes-avocat-Femme travaillant sur son ordinateur et souriante'
+                        alt='menezes-avocat-avocate sur son bureau au telephone'
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
@@ -146,8 +146,6 @@ export default function Accueil() {
             </div>
           </div>
 
-
-      
     </div>
     
     {/* Scroll Down */}
@@ -160,10 +158,6 @@ export default function Accueil() {
         <div id="scroll-down"></div>
         </div>
     </div>
-
-    <section className="h-screen">
-      Prout
-    </section>
 
   </>
   )

@@ -33,7 +33,7 @@ button:focus {
 /* Scroll Down */
 #scroll-wrapper {
   position: absolute;
-  z-index: 10;
+
 }
 
 #scroll-wrapper-inner {
