@@ -25,12 +25,8 @@ button:focus {
   outline: 0
 }
 
-/* .home-title span:first-child {
-  text-shadow: 1px 2px 2px rgba(0,0,0,0.3), 
-    0px -1px 10px rgba(16, 15, 15, 0.3);
-} */
 
-/* Scroll Down */
+/** "Scroll Down" Home Animation*/
 #scroll-wrapper {
   position: absolute;
 
@@ -283,6 +279,7 @@ button:focus {
     }
 }
 
+/** Page Transition */
 .slide-in {
   position: absolute;
   top: 0;
@@ -303,4 +300,66 @@ button:focus {
   background: #16161C;
   transform-origin: top;
   z-index: 100 !important;
+}
+
+/** Burger Button */
+.menu-toggle {
+  cursor: pointer;
+}
+
+.hamBox {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 2em;
+}
+
+.lineTop,
+.lineBottom {
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 1);
+  left: 0;
+  right: 0;
+  transform: rotate(0deg);
+  transition: all 0.4s;
+}
+
+.lineTop {
+  top: 1.4rem;
+}
+
+.lineBottom {
+  bottom: 2.2rem;
+}
+
+.lineTop.spin {
+  top: 1.5rem;
+  transform: rotate(-45deg);
+  background: #FFF;
+}
+
+.lineBottom.spin {
+  bottom: 2.35em;
+  transform: rotate(45deg);
+  background: #FFF;
+}
+
+.nav-overlay {
+  position: fixed;
+  background: #18181c;
+  z-index: -2;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 4em;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }

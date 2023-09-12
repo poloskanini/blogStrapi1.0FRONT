@@ -1,7 +1,6 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
 import HeadRoom from 'react-headroom'
-import Image from 'next/image'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -40,13 +39,20 @@ const callsToAction = [
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [subOpen, setSubOpen] = useState(false)
+
+  // Desactive le scroll si le menu mobile est ouvert
+  useEffect(() => {
+    mobileMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="auto"
+  })
+
+
 
   return (
     <HeadRoom>
@@ -56,26 +62,37 @@ export default function Header() {
             <Link
               href='/'
               className="-m-1.5 p-1.5 text-xl">
-                <span className='font-normal text-black' >MENEZES </span>
-                <span className='font-bold text-custom-purple' >AVOCAT</span>
+                <span className={mobileMenuOpen ? "font-normal text-white duration-1000 transition-opacity" : "font-normal text-black duration-1000"}>MENEZES </span>
+                <span className={mobileMenuOpen ? "font-bold text-white duration-1000 transition-opacity" : "font-bold text-custom-purple duration-1000"}>AVOCAT</span>
             </Link>
           </div>
+
+          {/* Burger Button */}
           <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(true)}
+
+            <div
+              className='menu-toggle'
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
+              <div className="hamBox">
+                <span className={mobileMenuOpen ? "lineTop spin" : "lineTop"}></span>
+                <span className={mobileMenuOpen ? "lineBottom spin" : "lineBottom"}></span>
+              </div>
+            </div>
+
+              {/* <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              </button> */}
+
           </div>
+
+          {/* Desktop Menu Window */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            {/* <Link
-              href='/'
-              className='text-xs font-semibold leading-6 text-gray-900'>
-              Accueil
-            </Link> */}
             <Link
               href='/qui-sommes-nous'
               className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
@@ -84,7 +101,7 @@ export default function Header() {
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-normal leading-6 text-gray-900 border-none hover:text-custom-purple">
                 Expertises
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                <ChevronDownIcon className={mobileMenuOpen ? "hidden" : "h-5 w-5 flex-none text-gray-400"} aria-hidden="true" />
               </Popover.Button>
 
               <Transition
@@ -150,25 +167,100 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href="./contact" className="text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-custom-purple">
+              href="./contact" className={mobileMenuOpen ? "hidden" : "text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-custom-purple"}>
               Contact <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
+
         </nav>
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        
+        {/* Mobile Menu Window */}
+        <div className="nav-overlay flex justify-center" style={{
+          top: mobileMenuOpen ? "0%" : "-100vh",
+          transitionDelay: mobileMenuOpen ? "0s" : "0s",
+        }}>
+          <ul className={`${playfair.variable} font-playfair nav-links h-44 mt-20 flex flex-col items-center`}>
+            <li className="nav-item relative p-6">
+              <Link
+                href='/qui-sommes-nous'
+                className='text-xl font-normal text-white hover:text-custom-purple'
+                >
+                Qui sommes-nous
+              </Link>
+            </li>
+            <li
+              className="nav-item relative p-6 text-xl font-normal text-white cursor-pointer hover:text-custom-purple flex items-center"
+              onClick={() => setSubOpen(!subOpen)}
+            > 
+            Expertises
+            <ChevronDownIcon
+              className={classNames(subOpen ? 'rotate-180 transition-all duration-500' : '', 'h-5 w-5 flex-none transition-all duration-500')}
+              aria-hidden="true"
+            />
+            </li>
+                <ul
+                  className='expertises-list flex flex-col items-center transition-all duration-500'
+                  style={{
+                    height: subOpen ? '100%' : '0%',
+                    opacity: subOpen ? "1" : "0",
+                  }}
+                >
+                  {[...expertises].map((item) => (
+                    <Link
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className="rounded-lg p-2 text-sm font-normal text-white"
+                      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                      <span className='flex'>
+                        <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                        {item.name}
+                      </span>
+                    </Link>
+                  ))}
+                </ul>
+              
+            <li className="nav-item relative p-6">
+              <Link
+                href='/honoraires'
+                className='text-xl font-normal text-white hover:text-custom-purple'>
+                Honoraires
+              </Link>
+            </li>
+            <li className="nav-item relative p-6">
+              <Link
+                href='/actualites'
+                className='text-xl font-normal text-white hover:text-custom-purple'>
+                Actualités
+              </Link>
+            </li>
+            <li className="nav-item relative p-6">
+              <Link
+                href='/faq'
+                className='text-xl font-normal text-white hover:text-custom-purple'>
+                F.A.Q
+              </Link>
+            </li>
+            <li className="nav-item relative mt-8">
+              <Link
+                href="./contact" className="text-xl font-semibold text-white border border-custom-purple rounded-full p-3 hover:text-custom-purple">
+                Contact <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </li>
+          </ul>
+
+        </div>
+        
+        {/* <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-10" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link
                 href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">MENEZES AVOCAT</span>
-                {/* <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt="Menezes Avocat"
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                /> */}
               </Link>
+
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -177,17 +269,11 @@ export default function Header() {
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
+
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {/* <Link
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  >
-                    Accueil
-                  </Link> */}
                   <Link
                     href="/qui-sommes-nous"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
@@ -256,8 +342,11 @@ export default function Header() {
               </div>
             </div>
           </Dialog.Panel>
-        </Dialog>
+        </Dialog> */}
+
+        
       </header>
+
     </HeadRoom>
   )
 }
