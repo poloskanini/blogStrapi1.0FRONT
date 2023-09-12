@@ -25,6 +25,10 @@ button:focus {
   outline: 0
 }
 
+header {
+  border-bottom: 1px solid hsla(0,0%,91.4%,.4);
+}
+
 
 /** "Scroll Down" Home Animation*/
 #scroll-wrapper {
@@ -302,6 +306,12 @@ button:focus {
   z-index: 100 !important;
 }
 
+/** Headroom Header */
+.headroom-unpinned {
+  position: fixed;
+  background-color: white;
+}
+
 /** Burger Button */
 .menu-toggle {
   cursor: pointer;
@@ -353,7 +363,7 @@ button:focus {
 
 .nav-overlay {
   position: fixed;
-  background: #18181c;
+  background: rgba(24, 24, 28, 1);
   z-index: -2;
   top: -100%;
   left: 0;

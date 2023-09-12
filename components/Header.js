@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
 import HeadRoom from 'react-headroom'
+import { motion, AnimatePresence } from "framer-motion"
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -53,8 +54,8 @@ export default function Header() {
   })
 
 
-
   return (
+
     <HeadRoom>
       <header className="bg-slate-100 drop-shadow z-10 ">
         <nav className="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -68,8 +69,7 @@ export default function Header() {
           </div>
 
           {/* Burger Button */}
-          <div className="flex lg:hidden">
-
+          <div className={"flex lg:hidden"}>
             <div
               className='menu-toggle'
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -79,16 +79,6 @@ export default function Header() {
                 <span className={mobileMenuOpen ? "lineBottom spin" : "lineBottom"}></span>
               </div>
             </div>
-
-              {/* <button
-                type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(true)}
-              >
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-              </button> */}
-
           </div>
 
           {/* Desktop Menu Window */}
@@ -134,18 +124,6 @@ export default function Header() {
                       </Link>
                     ))}
                   </div>
-                  {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                    {callsToAction.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-normal leading-6 text-gray-900 hover:bg-gray-100"
-                      >
-                        <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div> */}
                 </Popover.Panel>
               </Transition>
             </Popover>
@@ -210,7 +188,7 @@ export default function Header() {
                       key={item.name}
                       as="a"
                       href={item.href}
-                      className="rounded-lg p-2 text-sm font-normal text-white"
+                      className="rounded-lg p-2 text-sm font-normal text-white hover:text-custom-purple"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       <span className='flex'>
@@ -251,99 +229,6 @@ export default function Header() {
           </ul>
 
         </div>
-        
-        {/* <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-          <div className="fixed inset-0 z-10" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <Link
-                href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">MENEZES AVOCAT</span>
-              </Link>
-
-              <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  <Link
-                    href="/qui-sommes-nous"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  >
-                    Qui sommes-nous
-                  </Link>
-                  <Disclosure as="div" className="-mx-3">
-                    {({ open }) => (
-                      <>
-                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100">
-                          Expertises
-                          <ChevronDownIcon
-                            className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                            aria-hidden="true"
-                          />
-                        </Disclosure.Button>
-                        <Disclosure.Panel className="mt-2 space-y-2">
-                          {[...expertises, ...callsToAction].map((item) => (
-                            <Disclosure.Button
-                              key={item.name}
-                              as="a"
-                              href={item.href}
-                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-normal leading-7 text-gray-900 hover:bg-gray-100"
-                              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            >
-                              <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                              {item.name}
-                            </Disclosure.Button>
-                          ))}
-                        </Disclosure.Panel>
-                      </>
-                    )}
-                  </Disclosure>
-                  <Link
-                    href="/honoraires"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  >
-                    Honoraires
-                  </Link>
-                  <Link
-                    href="/actualites"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  >
-                    Actualités
-                  </Link>
-                  <Link
-                    href="faq"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-normal leading-7 text-gray-900 hover:bg-gray-100"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  >
-                    F.A.Q
-                  </Link>
-                </div>
-                <div className="py-6">
-                  <Link
-                    href="/contact"
-                    className="text-base font-normal leading-6 text-gray-900 border border-custom-purple rounded-full p-3"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  >
-                    Contact <span aria-hidden="true">&rarr;</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Dialog.Panel>
-        </Dialog> */}
-
         
       </header>
 
