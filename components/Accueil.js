@@ -151,7 +151,7 @@ export default function Accueil() {
     </div>
     
     {/* Scroll Down */}
-    <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute right-0 -bottom-5`}>
+    <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute right-0 bottom-0`}>
 
       <div id="scroll-wrapper-inner">
         <div id="scroll-title">
