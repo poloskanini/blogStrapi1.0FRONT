@@ -312,6 +312,22 @@ header {
   background-color: white;
 }
 
+/** Liens NavBar */
+a,
+button {
+  position: relative;
+}
+
+a::after,
+button::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  bottom: -1rem;
+  left: -1rem;
+  right: -1rem;
+}
+
 /** Burger Button */
 .menu-toggle {
   cursor: pointer;
