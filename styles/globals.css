@@ -359,21 +359,21 @@ button::after {
 }
 
 .lineTop {
-  top: 1.4rem;
+  top: 1.7rem;
 }
 
 .lineBottom {
-  bottom: 2.2rem;
+  bottom: 1.7rem;
 }
 
 .lineTop.spin {
-  top: 1.5rem;
+  top: 2rem;
   transform: rotate(-45deg);
   background: #FFF;
 }
 
 .lineBottom.spin {
-  bottom: 2.35em;
+  bottom: 1.85em;
   transform: rotate(45deg);
   background: #FFF;
 }

@@ -58,12 +58,12 @@ export default function Header() {
   return (
 
     <HeadRoom>
-      <header className="bg-slate-100 drop-shadow z-10 ">
-        <nav className="mx-auto flex items-center justify-between p-3 lg:p-6 lg:px-8" aria-label="Global">
+      <header className="bg-white drop-shadow z-10 ">
+        <nav className="mx-auto flex items-center justify-between p-3 lg:p-6" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link
               href='/'
-              className="-m-1.5 p-1.5 text-xl">
+              className="px-3 text-xl">
                 <span className={mobileMenuOpen ? "font-normal text-white duration-1000 transition-opacity" : "font-normal text-black duration-1000"}>MENEZES </span>
                 <span className={mobileMenuOpen ? "font-bold text-white duration-1000 transition-opacity" : "font-bold text-custom-purple duration-1000"}>AVOCAT</span>
             </Link>
@@ -111,7 +111,7 @@ export default function Header() {
                 onMouseEnter={() => setIsShowing(true)}
                 onMouseLeave={() => setIsShowing(false)}
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-slate-100 shadow-lg ring-1 ring-gray-900/5 border border-none">
+                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 border border-none">
                   <div className="p-4">
                     {expertises.map((item) => (
                       <Link
@@ -151,7 +151,7 @@ export default function Header() {
               F.A.Q
             </Link>
           </Popover.Group>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end px-3">
             <Link
               href="./contact" className={mobileMenuOpen ? "hidden" : "text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-custom-purple"}>
               Contact <span aria-hidden="true">&rarr;</span>

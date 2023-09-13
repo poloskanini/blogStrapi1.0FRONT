@@ -29,6 +29,8 @@ export default function App({ Component, pageProps }) {
   return (
       <AnimatePresence mode='wait'>
         <motion.div key={router.pathname}>
+
+
           <Component {...pageProps} />
 
           <motion.div
