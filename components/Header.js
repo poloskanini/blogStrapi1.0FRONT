@@ -164,7 +164,7 @@ export default function Header() {
         <div
           className={mobileMenuOpen ? "nav-overlay mobileActive" : "nav-overlay invisible "}>
           <ul className={`${playfair.variable} font-playfair nav-links h-44 mt-20 flex flex-col items-center`}>
-            <li className="nav-item relative p-8">
+            <li className="nav-item relative p-5">
               <Link
                 href='/qui-sommes-nous'
                 className='text-xl font-normal text-white hover:text-custom-purple'
@@ -173,7 +173,7 @@ export default function Header() {
               </Link>
             </li>
             <li
-              className="nav-item relative pt-8 text-xl font-normal text-white cursor-pointer hover:text-custom-purple flex items-center"
+              className="nav-item relative p-5 text-xl font-normal text-white cursor-pointer hover:text-custom-purple flex items-center"
               onClick={() => setSubOpen(!subOpen)}
             > 
             Expertises
@@ -183,7 +183,7 @@ export default function Header() {
             />
             </li>
                 <ul
-                  className='expertises-list flex flex-col items-center transition-all duration-500 mb-8'
+                  className={subOpen ? 'expertises-list flex flex-col items-center transition-all duration-500 mb-36' : 'expertises-list flex flex-col items-center transition-all duration-500 invisible'}
                   style={{
                     height: subOpen ? '100%' : '0%',
                     opacity: subOpen ? "1" : "0",
@@ -192,34 +192,33 @@ export default function Header() {
                   {[...expertises].map((item) => (
                     <Link
                       key={item.name}
-                      as="a"
                       href={item.href}
-                      className="rounded-lg p-2 text-base font-normal text-white hover:text-custom-purple"
+                      className="rounded-lg p-5 text-base font-normal text-white hover:text-custom-purple"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       <span className='flex'>
                         <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                        {item.name}
+                        &nbsp; {item.name}
                       </span>
                     </Link>
                   ))}
                 </ul>
               
-            <li className="nav-item relative p-8">
+            <li className="nav-item relative p-5">
               <Link
                 href='/honoraires'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
                 Honoraires
               </Link>
             </li>
-            <li className="nav-item relative p-8">
+            <li className="nav-item relative p-5">
               <Link
                 href='/actualites'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
                 Actualités
               </Link>
             </li>
-            <li className="nav-item relative p-8">
+            <li className="nav-item relative p-5">
               <Link
                 href='/faq'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
