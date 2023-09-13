@@ -178,7 +178,7 @@ export default function Header() {
             > 
             Expertises
             <ChevronDownIcon
-              className={classNames(subOpen ? 'rotate-180 transition-all duration-500' : '', 'h-5 w-5 flex-none transition-all duration-500')}
+              className={classNames(subOpen ? 'rotate-180 transition-all duration-200' : '', 'h-5 w-5 flex-none transition-all duration-200')}
               aria-hidden="true"
             />
             </li>
