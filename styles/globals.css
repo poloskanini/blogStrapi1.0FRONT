@@ -314,7 +314,8 @@ header {
 
 /** Liens NavBar */
 a,
-button {
+button,
+li {
   position: relative;
 }
 
