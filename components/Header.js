@@ -47,6 +47,7 @@ function classNames(...classes) {
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [subOpen, setSubOpen] = useState(false)
+  const [isShowing, setIsShowing] = useState(false)
 
   // Desactive le scroll si le menu mobile est ouvert
   useEffect(() => {
@@ -88,7 +89,11 @@ export default function Header() {
               className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
               Qui sommes-nous
             </Link>
-            <Popover className="relative">
+            <Popover
+              className="relative"
+              onMouseEnter={() => setIsShowing(true)}
+              onMouseLeave={() => setIsShowing(false)}
+            >
               <Popover.Button className="flex items-center gap-x-1 text-sm font-normal leading-6 text-gray-900 border-none hover:text-custom-purple">
                 Expertises
                 <ChevronDownIcon className={mobileMenuOpen ? "hidden" : "h-5 w-5 flex-none text-gray-400"} aria-hidden="true" />
@@ -102,8 +107,11 @@ export default function Header() {
                 leave="transition ease-in duration-150"
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
+                show={isShowing}
+                onMouseEnter={() => setIsShowing(true)}
+                onMouseLeave={() => setIsShowing(false)}
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 border border-none">
+                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-slate-100 shadow-lg ring-1 ring-gray-900/5 border border-none">
                   <div className="p-4">
                     {expertises.map((item) => (
                       <Link
@@ -154,7 +162,7 @@ export default function Header() {
         
         {/* Mobile Menu Window */}
         <div
-          className={mobileMenuOpen ? "nav-overlay flex justify-center mobileActive" : "nav-overlay flex justify-center"}>
+          className={mobileMenuOpen ? "nav-overlay mobileActive" : "nav-overlay invisible "}>
           <ul className={`${playfair.variable} font-playfair nav-links h-44 mt-20 flex flex-col items-center`}>
             <li className="nav-item relative p-8">
               <Link

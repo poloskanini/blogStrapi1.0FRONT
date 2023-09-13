@@ -376,4 +376,6 @@ header {
 
 .nav-overlay.mobileActive {
   opacity: 1;
+  display: flex;
+  justify-content: center;
 }
