@@ -25,9 +25,55 @@ button:focus {
   outline: 0
 }
 
+/**HEADER  */
 header {
   border-bottom: 1px solid hsla(0,0%,91.4%,.4);
 }
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+  transition: transform 200ms ease-in-out;
+}
+
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
+/* .headroom--unfixed header {
+  background: transparent;
+  transition: all 500ms ease-in-out;
+}
+
+.headroom--unfixed
+.header-brand, .navlink {
+  color: white;
+}
+
+.headroom--pinned header {
+  background-color: white;
+}
+
+.headroom--pinned .navlink {
+  color: black;
+} */
 
 
 /** "Scroll Down" Home Animation*/

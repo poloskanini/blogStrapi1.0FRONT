@@ -1,6 +1,7 @@
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
+import Reveal from './Reveal'
 
 
 const playfair = Playfair_Display({
@@ -62,12 +63,16 @@ export default function Accueil() {
               <div className="mx-auto max-w-2xl gap-x-48 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-lg p-5">
                   <div className="max-w-sm pb-6">
-                    <h1 className={`${playfair.variable} font-playfair home-title`}>
-                    <span className='text-5xl tracking-tight text-white lg:text-6xl 2xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl 2xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
-                    </h1>
+
+                    <Reveal>
+                      <h1 className={`${playfair.variable} font-playfair home-title`}>
+                      <span className='text-5xl tracking-tight text-white lg:text-6xl 2xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl 2xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
+                      </h1>
+                    </Reveal>
+
                   </div>
                   <div className="max-w-sm pb-3">
-                    <h2 className={`${cormorant.variable} font-cormorant font-normal text-3xl tracking-tight text-white lg:text-5xl pb-4`}>
+                    <h2 className={`${playfair.variable} font-playfair font-normal text-3xl tracking-tight text-white lg:text-5xl pb-4`}>
                       Avocats spécialisés <br /> en Droit du Travail
                     </h2>
                     <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light text-justify">
@@ -151,7 +156,7 @@ export default function Accueil() {
     </div>
     
     {/* Scroll Down */}
-    <div id="scroll-wrapper" className={`${cormorant.variable} font-cormorant text-sm absolute right-0 -bottom-10`}>
+    <div id="scroll-wrapper" className={"text-sm absolute right-0 -bottom-10"}>
 
       <div id="scroll-wrapper-inner">
         <div id="scroll-title">

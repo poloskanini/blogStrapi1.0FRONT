@@ -57,15 +57,15 @@ export default function Header() {
 
   return (
 
-    <HeadRoom>
-      <header className="bg-white drop-shadow z-10 ">
+    <HeadRoom disableInlineStyles>
+      <header className="header drop-shadow z-10 bg-slate-100">
         <nav className="mx-auto flex items-center justify-between p-3 lg:p-6" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link
               href='/'
               className="px-3 text-xl">
-                <span className={mobileMenuOpen ? "font-normal text-white duration-1000 transition-opacity" : "font-normal text-black duration-1000"}>MENEZES </span>
-                <span className={mobileMenuOpen ? "font-bold text-white duration-1000 transition-opacity" : "font-bold text-custom-purple duration-1000"}>AVOCAT</span>
+                <span className={mobileMenuOpen ? "header-brand font-normal text-white duration-1000 transition-opacity" : "header-brand font-normal text-black duration-1000"}>MENEZES </span>
+                <span className={mobileMenuOpen ? "header-subBrand font-bold text-white duration-1000 transition-opacity" : "header-subBrand font-bold text-custom-purple duration-1000"}>AVOCAT</span>
             </Link>
           </div>
 
@@ -86,7 +86,7 @@ export default function Header() {
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <Link
               href='/qui-sommes-nous'
-              className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
               Qui sommes-nous
             </Link>
             <Popover
@@ -94,9 +94,9 @@ export default function Header() {
               onMouseEnter={() => setIsShowing(true)}
               onMouseLeave={() => setIsShowing(false)}
             >
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-normal leading-6 text-gray-900 border-none hover:text-custom-purple">
+              <Popover.Button className="navlink flex items-center gap-x-1 text-sm font-normal leading-6 text-gray-900 border-none hover:text-custom-purple">
                 Expertises
-                <ChevronDownIcon className={mobileMenuOpen ? "hidden" : "h-5 w-5 flex-none text-gray-400"} aria-hidden="true" />
+                <ChevronDownIcon className={mobileMenuOpen ? "hidden" : "h-5 w-5 flex-none text-b"} lackaria-hidden="true" />
               </Popover.Button>
 
               <Transition
@@ -117,7 +117,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                        className="navlink group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                       >
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <item.icon className="h-6 w-6 text-gray-600 group-hover:text-custom-purple" aria-hidden="true" />
@@ -137,23 +137,23 @@ export default function Header() {
             </Popover>
             <Link
               href='/honoraires'
-              className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
               Honoraires
             </Link>
             <Link
               href='/actualites'
-              className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
               Actualités
             </Link>
             <Link
               href='/faq'
-              className='text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
               F.A.Q
             </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end px-3">
             <Link
-              href="./contact" className={mobileMenuOpen ? "hidden" : "text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-custom-purple"}>
+              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-custom-purple"}>
               Contact <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
