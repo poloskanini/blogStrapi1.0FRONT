@@ -32,7 +32,6 @@ export default function Home() {
         <meta property="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1694591001/image-description-menezes_zvl0ti.png" />
       </Head>
       
-      <Layout />
 
       <main className="h-full">
         <VideoHero />
@@ -40,6 +39,7 @@ export default function Home() {
         <Section />
       </main>
       
+
       
     </>
   )

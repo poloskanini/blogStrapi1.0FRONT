@@ -46,11 +46,10 @@ const images = {
 export default function quisommesnous() {
   return (
     <>
-      <Layout />
 
       <Reveal>
-        <Container>
 
+        <Container>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify">
               <h1 className={`${playfair.variable} font-playfair text-4xl font-medium text-neutral-950`}>Qui sommes-nous</h1>
@@ -109,8 +108,8 @@ export default function quisommesnous() {
                 </div>
               </motion.div>
           </div>
-        
         </Container>
+        
       </Reveal>
     </>
   )

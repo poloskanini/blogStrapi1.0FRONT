@@ -3,8 +3,6 @@ import Layout from "@/components/Layout"
 export default function faq() {
   return (
     <>
-    <Layout />
-
     <div className="h-full flex flex-col justify-center items-center mt-36">
       <h1 className="text-xl font-bold">F.A.Q</h1>
       <br />

@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
+import Layout from '@/components/Layout'
 
 import localFont from 'next/font/local'
 
@@ -27,31 +28,32 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   
   return (
-
     <>
+      <Layout>
 
-      <AnimatePresence mode='wait'>
-        <motion.div key={router.pathname}>
+        <AnimatePresence mode='wait'>
+          <motion.div key={router.pathname}>
 
-          <Component {...pageProps} />
-          
-          <motion.div
-            className='slide-in'
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 1, opacity: 1}}
-            transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
-          ></motion.div>
-          <motion.div
-            className='slide-out'
-            initial={{ scaleY: 1, opacity: 1 }}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 0, opacity: 0}}
-            transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
-          ></motion.div>
-        </motion.div>
-      </AnimatePresence>
-
+            <Component {...pageProps} />
+            
+            <motion.div
+              className='slide-in'
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 1, opacity: 1}}
+              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
+            ></motion.div>
+            <motion.div
+              className='slide-out'
+              initial={{ scaleY: 1, opacity: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 0, opacity: 0}}
+              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
+            ></motion.div>
+          </motion.div>
+        </AnimatePresence>
+        
+      </Layout>
     </>
   )
 }
