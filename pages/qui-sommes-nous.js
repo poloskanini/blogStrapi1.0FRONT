@@ -30,7 +30,7 @@ export default function quisommesnous() {
                 <h1 className={`${playfair.variable} font-playfair text-4xl font-medium text-neutral-950`}>Qui sommes-nous</h1>
                 <p className={`${cormorant.variable} font-cormorant text-2xl mt-8 max-w-3xl text-neutral-500`}>
                   Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem
-                  minus ut molestiae velit error quod. Excepturi quidem expedita molestias quas.
+                  minus ut molestiae velit error quod. Excepturi quidem expedita molestias.
                 </p>
                 <p className="mt-6 text-base leading-7 text-neutral-500">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
