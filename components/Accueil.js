@@ -72,7 +72,7 @@ export default function Accueil() {
 
                   </div>
                   <div className="max-w-sm pb-3">
-                    <h2 className={`${playfair.variable} font-playfair font-normal text-3xl tracking-tight text-white lg:text-5xl pb-4`}>
+                    <h2 className={`${playfair.variable} font-playfair font-normal text-3xl tracking-tight text-white lg:text-4xl pb-4`}>
                       Avocats spécialisés <br /> en Droit du Travail
                     </h2>
                     <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light text-justify">
