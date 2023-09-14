@@ -1,7 +1,7 @@
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
-import Reveal from './Reveal'
+import Reveal from './animations/Reveal'
 
 
 const playfair = Playfair_Display({

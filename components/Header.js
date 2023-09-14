@@ -27,7 +27,6 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-
 const expertises = [
   { name: 'Droit du Travail', description: 'Une meilleure défense de vos droits', href: '/droit-du-travail', icon: ChartPieIcon },
   { name: 'Droit de la sécurité sociale', description: 'Speak directly to your customers', href: '/droit-de-la-securite-sociale', icon: CursorArrowRaysIcon },
@@ -43,6 +42,8 @@ const callsToAction = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
