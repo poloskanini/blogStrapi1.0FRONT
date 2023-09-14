@@ -27,12 +27,14 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   
   return (
+
+    <>
+
       <AnimatePresence mode='wait'>
         <motion.div key={router.pathname}>
 
-
           <Component {...pageProps} />
-
+          
           <motion.div
             className='slide-in'
             initial={{ scaleY: 0, opacity: 0 }}
@@ -49,5 +51,7 @@ export default function App({ Component, pageProps }) {
           ></motion.div>
         </motion.div>
       </AnimatePresence>
+
+    </>
   )
 }
