@@ -38,12 +38,12 @@ export default function FilmsList({ films }) {
       <BreadCrumb />
 
       <Container>
-          <h1 className="text-5xl md:text-6xl leading-tighter mb-4">
-            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2"}>
-              Liste des films <span className="text-lg">({films.data.length})</span>
-            </span>
-          </h1>
-          <Films films={data} />
+        <h1 className="text-5xl md:text-6xl leading-tighter mb-4">
+          <span className={"bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2"}>
+            Liste des films <span className="text-lg">({films.data.length})</span>
+          </span>
+        </h1>
+        <Films films={films} />
 
       </Container>
       
@@ -78,14 +78,14 @@ export default function FilmsList({ films }) {
 
 export async function getStaticProps() {
   const filmsResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films`, { next: { revalidate: 1 } })
+  // console.log(filmsResponse);
+  
+  // Tri des films pour qu'ils soient classés par ID décroissant
+  filmsResponse.data.sort((x, y) => y.id - x.id)
 
   return {
     props: {
       films: filmsResponse
     }
   }
-}
-
-function Loading() {
-  return <h2>🌀 Loading...</h2>;
 }
