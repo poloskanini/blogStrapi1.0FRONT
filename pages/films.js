@@ -77,7 +77,7 @@ export default function FilmsList({ films }) {
 }
 
 export async function getStaticProps() {
-  const filmsResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films`, { next: { revalidate: 1 } })
+  const filmsResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films`, { cache: 'force-cache' }, { next: { revalidate: 1 } })
   // console.log(filmsResponse);
   
   // Tri des films pour qu'ils soient classés par ID décroissant
