@@ -22,6 +22,11 @@ export default function FilmsList({ films }) {
 
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
 
+  //TODO: Essai pour trier la liste des films par ID décroissant :
+  console.log(data)
+  const dataFiltered = data.data.sort((x, y) => y.id - x.id)
+  console.log(dataFiltered);
+
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
   ]
@@ -38,12 +43,13 @@ export default function FilmsList({ films }) {
       <BreadCrumb />
 
       <Container>
+
         <h1 className="text-5xl md:text-6xl leading-tighter mb-4">
           <span className={"bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2"}>
             Liste des films <span className="text-lg">({films.data.length})</span>
           </span>
         </h1>
-        <Films films={data} />
+        <Films films={dataFiltered} />
 
       </Container>
       
@@ -71,14 +77,13 @@ export default function FilmsList({ films }) {
 
       </div>
       
-      
     </>
   )
 }
 
 export async function getStaticProps() {
   const filmsResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films`, { next: { revalidate: 1 } })
-  // console.log(filmsResponse);
+  console.log(filmsResponse);
   
   // Tri des films pour qu'ils soient classés par ID décroissant
   // filmsResponse.data.sort((x, y) => y.id - x.id)

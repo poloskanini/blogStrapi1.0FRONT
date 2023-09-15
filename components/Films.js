@@ -5,10 +5,10 @@ export default function Films( {films} ) {
   
   return (
     <>
-    <Container>
-      <ul className="list-none space-y-4 text-lg font-bold mt-10 h-80">
+
+      <ul className="list-none space-y-4 text-lg font-bold h-80">
         {films &&
-          films.data.map((film) => {
+          films.map((film) => {
             return (
               <li key={film.id}>
                 <Link href={`films/` + film.attributes.slug}>{film.attributes.title}</Link>
@@ -16,7 +16,7 @@ export default function Films( {films} ) {
             )
           })}
       </ul>
-    </Container>
+
     </>
   )
 }
