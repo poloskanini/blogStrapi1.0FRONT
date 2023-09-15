@@ -23,9 +23,9 @@ export default function FilmsList({ films }) {
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
 
   //TODO: Essai pour trier la liste des films par ID décroissant :
-  console.log(data)
+  // console.log(data)
   const dataFiltered = data.data.sort((x, y) => y.id - x.id)
-  console.log(dataFiltered);
+  // console.log(dataFiltered);
 
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
