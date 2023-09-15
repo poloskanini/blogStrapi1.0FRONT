@@ -81,7 +81,7 @@ export async function getStaticProps() {
   // console.log(filmsResponse);
   
   // Tri des films pour qu'ils soient classés par ID décroissant
-  filmsResponse.data.sort((x, y) => y.id - x.id)
+  // filmsResponse.data.sort((x, y) => y.id - x.id)
 
   return {
     props: {
