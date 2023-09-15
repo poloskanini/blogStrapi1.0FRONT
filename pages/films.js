@@ -43,7 +43,7 @@ export default function FilmsList({ films }) {
             Liste des films <span className="text-lg">({films.data.length})</span>
           </span>
         </h1>
-        <Films films={films} />
+        <Films films={data} />
 
       </Container>
       
