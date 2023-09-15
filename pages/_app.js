@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
   
   return (
     <>
-      <Layout>
+
 
         <AnimatePresence mode='wait'>
           <motion.div key={router.pathname}>
@@ -52,8 +52,8 @@ export default function App({ Component, pageProps }) {
             ></motion.div>
           </motion.div>
         </AnimatePresence>
-        
-      </Layout>
+
+
     </>
   )
 }

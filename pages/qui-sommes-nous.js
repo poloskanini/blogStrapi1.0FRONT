@@ -3,6 +3,8 @@ import Container from '@/components/Container'
 import Image from 'next/image'
 import Reveal from '../components/animations/Reveal'
 import { motion } from "framer-motion"
+import Header from '../components/Header'
+
 
 
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
@@ -46,6 +48,9 @@ const images = {
 export default function quisommesnous() {
   return (
     <>
+
+      <Header />
+
 
       <Reveal>
 
@@ -109,7 +114,7 @@ export default function quisommesnous() {
               </motion.div>
           </div>
         </Container>
-        
+
       </Reveal>
     </>
   )
