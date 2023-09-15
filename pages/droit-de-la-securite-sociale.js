@@ -8,7 +8,7 @@ export default function droitdelasecuritesociale() {
     <div className="h-full flex flex-col justify-center items-center mt-36">
       <h1 className="text-xl font-bold">DROIT DE LA SECURITÉ SOCIALE</h1>
       <br />
-      <h2>en construction</h2>
+      <h2>Page en construction</h2>
     </div>
   </>
   )
