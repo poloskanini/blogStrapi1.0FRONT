@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
 import HeadRoom from 'react-headroom'
@@ -55,6 +56,7 @@ export default function Header() {
     mobileMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="auto"
   })
 
+  const router = useRouter();
 
   return (
 
@@ -87,7 +89,7 @@ export default function Header() {
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <Link
               href='/qui-sommes-nous'
-              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className={router.pathname == "/qui-sommes-nous" ? "text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
               Qui sommes-nous
             </Link>
             <Popover
@@ -138,17 +140,17 @@ export default function Header() {
             </Popover>
             <Link
               href='/honoraires'
-              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className={router.pathname == "/honoraires" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
               Honoraires
             </Link>
             <Link
               href='/actualites'
-              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className={router.pathname == "/actualites" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
               Actualités
             </Link>
             <Link
               href='/faq'
-              className='navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple'>
+              className={router.pathname == "/faq" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
               F.A.Q
             </Link>
           </Popover.Group>
