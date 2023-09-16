@@ -53,7 +53,7 @@ export default function FilmsList({ films }) {
       </Container>
       
       {/* PAGINATION */}
-      {/* <div className="pagination-bar mt-12 text-center w-full">
+      <div className="pagination-bar mt-12 text-center w-full">
         <div className="flex justify-center items-center">
           <button
             className={`md:p-2 rounded py-2 text-white p-2 m-2 ${pageIndex === 1 ? 'bg-gray-300' : 'bg-blue-400'}`}
@@ -74,7 +74,7 @@ export default function FilmsList({ films }) {
         
         <p>{`${pageIndex} of ${data && data.meta.pagination.pageCount}`}</p>
 
-      </div> */}
+      </div>
       
     </>
   )
