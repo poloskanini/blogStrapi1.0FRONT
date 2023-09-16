@@ -58,16 +58,20 @@ export default function Header() {
 
   const router = useRouter();
 
+  // if (router.pathname == "/" && header.classList.contains("")) {
+    
+  // }
+
   return (
 
     <HeadRoom disableInlineStyles>
-      <header className="header drop-shadow z-10 bg-slate-100">
+      <header className={router.pathname === "/" ? "homeHeader header drop-shadow z-10" : "header drop-shadow z-10"}>
         <nav className="mx-auto flex items-center justify-between p-3 lg:p-6" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link
               href='/'
-              className="px-3 text-xl">
-                <span className={mobileMenuOpen ? "header-brand font-normal text-white duration-1000 transition-opacity" : "header-brand font-normal text-black duration-1000"}>MENEZES </span>
+              className="px-3 text-xl lastName">
+                <span className={mobileMenuOpen ? "header-brand font-normal text-white  transition-opacity" : "header-brand font-normal text-black "}>MENEZES </span>
                 <span className={mobileMenuOpen ? "header-subBrand font-bold text-white duration-1000 transition-opacity" : "header-subBrand font-bold text-custom-purple duration-1000"}>AVOCAT</span>
             </Link>
           </div>
@@ -89,7 +93,7 @@ export default function Header() {
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <Link
               href='/qui-sommes-nous'
-              className={router.pathname == "/qui-sommes-nous" ? "text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              className={router.pathname == "/qui-sommes-nous" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
               Qui sommes-nous
             </Link>
             <Popover

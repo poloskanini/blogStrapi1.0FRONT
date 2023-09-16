@@ -52,6 +52,11 @@ header {
   transform: translateY(-100%);
 }
 
+.headroom--pinned.headroom--scrolled .navlink,
+.headroom--pinned.headroom--scrolled .header-brand {
+  color: black;
+}
+
 .headroom--pinned {
   position: fixed;
   transform: translateY(0%);
@@ -74,6 +79,24 @@ header {
 .headroom--pinned .navlink {
   color: black;
 } */
+
+.active {
+  color: rgb(96 137 195)
+}
+
+.homeHeader .header-brand,
+.homeHeader .navlink {
+  color: white;
+}
+
+.homeHeader .hamBox span {
+  background: white;
+}
+
+.headroom.headroom--pinned {
+  background-color: white;
+  color: black;
+}
 
 /** "Scroll Down" Home Animation*/
 #scroll-wrapper {
