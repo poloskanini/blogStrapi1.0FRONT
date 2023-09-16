@@ -23,7 +23,7 @@ export default function FilmsList({ films }) {
 
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
 
-  const dataFiltered = data.data.sort((x, y) => y.id - x.id);
+  // const dataFiltered = data.data.sort((x, y) => y.id - x.id);
 
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
