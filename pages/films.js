@@ -14,7 +14,7 @@ import Link from "next/link"
 
 export default function FilmsList({ films }) {
 
-  let filmsQuantity = 20;
+  let filmsQuantity = 100;
 
   const { user, loading } = useFetchUser()
 
