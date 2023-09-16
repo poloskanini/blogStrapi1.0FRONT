@@ -14,16 +14,16 @@ import Link from "next/link"
 
 export default function FilmsList({ films }) {
 
-  let filmsQuantity = 6;
+  let filmsQuantity = 20;
 
   const { user, loading } = useFetchUser()
 
   const [pageIndex, setPageIndex] = useState(1);
 
 
-  // const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
+  const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
 
-  // const dataFiltered = data.data.sort((x, y) => y.id - x.id);
+  const dataFiltered = data.data.sort((x, y) => y.id - x.id);
 
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
@@ -50,8 +50,8 @@ export default function FilmsList({ films }) {
         </h1>
         
         <ul className="list-none space-y-4 text-lg font-bold h-100% my-20">
-          {films &&
-            films.data.map((film) => {
+          {data &&
+            data.data.map((film) => {
               return (
                 <li key={film.id}>
                   <Link href={`films/` + film.attributes.slug}>{film.id}. {film.attributes.title}</Link>
