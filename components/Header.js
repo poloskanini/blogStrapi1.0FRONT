@@ -72,7 +72,7 @@ export default function Header() {
               href='/'
               className="px-3 text-xl lastName">
                 <span className={mobileMenuOpen ? "header-brand font-normal text-white  transition-opacity" : "header-brand font-normal text-black "}>MENEZES </span>
-                <span className={mobileMenuOpen ? "header-subBrand font-bold text-white duration-1000 transition-opacity" : "header-subBrand font-bold text-custom-purple duration-1000"}>AVOCAT</span>
+                <span className={mobileMenuOpen ? "header-subBrand font-bold text-custom-purple duration-1000 transition-opacity" : "header-subBrand font-bold text-custom-purple duration-1000"}>AVOCAT</span>
             </Link>
           </div>
 
