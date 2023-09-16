@@ -48,7 +48,17 @@ export default function FilmsList({ films }) {
             Liste des films <span className="text-lg">({films.data.length})</span>
           </span>
         </h1>
-        <Films films={films} />
+        
+        <ul className="list-none space-y-4 text-lg font-bold h-100% my-20">
+          {films &&
+            films.data.map((film) => {
+              return (
+                <li key={film.id}>
+                  <Link href={`films/` + film.attributes.slug}>{film.id}. {film.attributes.title}</Link>
+                </li>
+              )
+            })}
+        </ul>
 
       </Container>
       
