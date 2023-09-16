@@ -6,7 +6,7 @@ export default function Films( {films} ) {
   return (
     <>
 
-      <ul className="list-none space-y-4 text-lg font-bold h-100% my-20 flex flex-col-reverse">
+      <ul className="list-none space-y-4 text-lg font-bold h-100% my-20">
         {films &&
           films.data.map((film) => {
             return (
