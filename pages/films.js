@@ -21,7 +21,7 @@ export default function FilmsList({ films }) {
   const [pageIndex, setPageIndex] = useState(1);
 
 
-  const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
+  // const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
 
   // const dataFiltered = data.data.sort((x, y) => y.id - x.id);
 
@@ -48,12 +48,12 @@ export default function FilmsList({ films }) {
             Liste des films <span className="text-lg">({films.data.length})</span>
           </span>
         </h1>
-        <Films films={data} />
+        <Films films={films} />
 
       </Container>
       
       {/* PAGINATION */}
-      <div className="pagination-bar mt-12 text-center w-full">
+      {/* <div className="pagination-bar mt-12 text-center w-full">
         <div className="flex justify-center items-center">
           <button
             className={`md:p-2 rounded py-2 text-white p-2 m-2 ${pageIndex === 1 ? 'bg-gray-300' : 'bg-blue-400'}`}
@@ -74,7 +74,7 @@ export default function FilmsList({ films }) {
         
         <p>{`${pageIndex} of ${data && data.meta.pagination.pageCount}`}</p>
 
-      </div>
+      </div> */}
       
     </>
   )
