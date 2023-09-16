@@ -20,12 +20,10 @@ export default function FilmsList({ films }) {
 
   const [pageIndex, setPageIndex] = useState(1);
 
+
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/films?pagination[page]=${pageIndex}&pagination[pageSize]=${filmsQuantity}`, fetcher, {fallbackData: films})
 
-  //TODO: Essai pour trier la liste des films par ID décroissant :
-  // console.log(data)
-  const dataFiltered = data.data.sort((x, y) => y.id - x.id)
-  // console.log(dataFiltered);
+  const dataFiltered = data.data.sort((x, y) => y.id - x.id);
 
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
@@ -40,21 +38,22 @@ export default function FilmsList({ films }) {
       
       <Layout/>
 
-      <BreadCrumb />
 
       <Container>
+      
+      <BreadCrumb />
 
         <h1 className="text-5xl md:text-6xl leading-tighter mb-4">
           <span className={"bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2"}>
             Liste des films <span className="text-lg">({films.data.length})</span>
           </span>
         </h1>
-        <Films films={dataFiltered} />
+        <Films films={films} />
 
       </Container>
       
       {/* PAGINATION */}
-      <div className="pagination-bar mt-12 text-center w-full">
+      {/* <div className="pagination-bar mt-12 text-center w-full">
         <div className="flex justify-center items-center">
           <button
             className={`md:p-2 rounded py-2 text-white p-2 m-2 ${pageIndex === 1 ? 'bg-gray-300' : 'bg-blue-400'}`}
@@ -75,7 +74,7 @@ export default function FilmsList({ films }) {
         
         <p>{`${pageIndex} of ${data && data.meta.pagination.pageCount}`}</p>
 
-      </div>
+      </div> */}
       
     </>
   )

@@ -6,10 +6,11 @@ import { useFetchUser } from "@/lib/authContext"
 import Head from 'next/head'
 // import { UserProvider } from '@/lib/authContext'
 import Link from "next/link"
-import { HomeIcon } from '@heroicons/react/20/solid'
 import { getTokenFromLocalCookie } from "@/lib/auth"
 import Container from '@/components/Container'
 import Image from 'next/image'
+import { HomeIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+
 
 
 export default function Film({ film }) {
@@ -51,7 +52,7 @@ export default function Film({ film }) {
 
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
-    { name: `${film.attributes.title}`, href: '/films', current: false },
+    { name: `${film.attributes.title}`, href: router.asPath, current: false },
   ]
 
   return (
@@ -63,7 +64,7 @@ export default function Film({ film }) {
       <Layout/>
 
         {/* BREADCRUMB */}
-        <nav className="flex mb-12 mt-5 justify-center" aria-label="Breadcrumb">
+        {/* <nav className="flex mb-12 mt-5 justify-center" aria-label="Breadcrumb">
           <ol role="list" className="flex space-x-4 rounded-md bg-white px-6 shadow">
             <li className="flex">
               <div className="flex items-center">
@@ -89,7 +90,7 @@ export default function Film({ film }) {
                     href={page.href}
                     className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
                     aria-current={page.current ? 'page' : undefined}
-                    disabled={page.current === pages.href}
+                    disabled={page.current === pages[1].href}
                   >
                     {page.name}
                   </Link>
@@ -97,9 +98,38 @@ export default function Film({ film }) {
               </li>
             ))}
           </ol>
-        </nav>
+        </nav> */}
+        
       
       <Container>
+        {/* BreadCrumb V2 */}
+        <nav className="flex mb-12 mt-5" aria-label="Breadcrumb">
+          <ol role="list" className="flex space-x-4 ">
+            <li flex>
+              <div>
+                <a href="/" className="text-gray-400 hover:text-gray-500">
+                  <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                  <span className="sr-only">Home</span>
+                </a>
+              </div>
+            </li>
+            {pages.map((page) => (
+              <li key={page.name}>
+                <div className="flex items-center">
+                  <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                  <a
+                    href={page.href}
+                    className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+                    aria-current={page.current ? 'page' : undefined}
+                    disabled={page.current === router.asPath}
+                  >
+                    {page.name}
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </nav>
         
         {/* TITLE */}
         <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter mb-4">

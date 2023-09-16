@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { HomeIcon } from '@heroicons/react/20/solid'
+import { HomeIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+
 
 export default function BreadCrumb( ) {
 
@@ -10,7 +11,7 @@ export default function BreadCrumb( ) {
   return (
     <>
       {/* BREADCRUMB */}
-      <nav className="flex mt-5 mb-12 justify-center" aria-label="Breadcrumb">
+      {/* <nav className="flex mt-5 mb-12 justify-center" aria-label="Breadcrumb">
           <ol role="list" className="flex space-x-4 rounded-md bg-white px-6 shadow">
             <li className="flex">
               <div className="flex items-center">
@@ -40,6 +41,33 @@ export default function BreadCrumb( ) {
                   >
                     {page.name}
                   </Link>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </nav> */}
+        {/* BreadCrumb V2 */}
+        <nav className="flex mb-12 mt-5" aria-label="Breadcrumb">
+          <ol role="list" className="flex space-x-4 ">
+            <li flex>
+              <div>
+                <a href="/" className="text-gray-400 hover:text-gray-500">
+                  <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                  <span className="sr-only">Home</span>
+                </a>
+              </div>
+            </li>
+            {pages.map((page) => (
+              <li key={page.name}>
+                <div className="flex items-center">
+                  <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                  <a
+                    href={page.href}
+                    className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+                    aria-current={page.current ? 'page' : undefined}
+                  >
+                    {page.name}
+                  </a>
                 </div>
               </li>
             ))}
