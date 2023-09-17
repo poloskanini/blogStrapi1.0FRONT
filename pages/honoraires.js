@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout"
 import Header from '../components/Header'
+import TextReveal from "@/components/TextReveal"
 
 export default function honoraires() {
   return (
@@ -10,6 +11,8 @@ export default function honoraires() {
       <br />
       <h2>Page en construction</h2>
     </div>
+
+    <TextReveal />
   </>
   )
 }
