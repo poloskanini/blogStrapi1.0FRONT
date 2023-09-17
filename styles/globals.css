@@ -98,6 +98,10 @@ header {
   color: black;
 }
 
+.headroom--pinned.headroom--scrolled .hamBox span {
+  background: black;
+}
+
 /** "Scroll Down" Home Animation*/
 #scroll-wrapper {
   position: absolute;
@@ -378,6 +382,23 @@ header {
 .headroom-unpinned {
   position: fixed;
   background-color: white;
+}
+
+/** Text Reveal  */
+
+.reveal {
+  background: var(--backgroundColor);
+  padding-left: 30%;
+  padding-right: 10%;
+}
+
+
+.reveal-text {
+  font-weight: 800;
+  font-size: clamp(3rem, 10vw, 15rem);
+  line-height: clamp(3rem, 10vw, 15rem);
+  color: #FFF;
+  filter: drop-shadow(0 0 0.06rem rgb(2, 2, 2));
 }
 
 /** Liens NavBar */
