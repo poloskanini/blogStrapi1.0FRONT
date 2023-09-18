@@ -1,9 +1,9 @@
-import Layout from "@/components/Layout"
-import Container from "@/components/Container"
 import { useFetchUser } from "@/lib/authContext"
 import Head from 'next/head'
 import VideoHero from "@/components/VideoHero"
 import Accueil from "@/components/Accueil"
+import variables from '../styles/variables.module.scss'
+import styles from '../styles/Home.module.scss'
 import Section from "@/components/Section"
 
 // import { UserProvider } from '@/lib/authContext'
@@ -33,11 +33,12 @@ export default function Home() {
       </Head>
       
 
-      <main className="h-full">
+      <main className={styles.main}>
         <VideoHero />
         <Accueil />
         <div className="h-screen"></div>
-        {/* <Section /> */}
+        <div className={variables.bg_flashy}>Hello SASS</div>
+        <Section />
       </main>
       
 

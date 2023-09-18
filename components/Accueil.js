@@ -1,20 +1,20 @@
-import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
+// import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import Reveal from './animations/Reveal'
 import Header from './Header'
 
-const playfair = Playfair_Display({
-  weight: ['400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  variable: '--font-playfair'
-})
+// const playfair = Playfair_Display({
+//   weight: ['400', '500', '600', '700', '800', '900'],
+//   subsets: ['latin'],
+//   variable: '--font-playfair'
+// })
 
-const cormorant = Cormorant_Garamond({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-cormorant'
-})
+// const cormorant = Cormorant_Garamond({
+//   weight: ['300', '400', '500', '600', '700'],
+//   subsets: ['latin'],
+//   variable: '--font-cormorant'
+// })
 
 export default function Accueil() {
   return (
@@ -67,14 +67,14 @@ export default function Accueil() {
                   <div className="max-w-sm pb-6">
 
                     <Reveal>
-                      <h1 className={`${playfair.variable} font-playfair home-title`}>
+                      <h1 className={` font-playfair home-title`}>
                       <span className='text-5xl tracking-tight text-white lg:text-6xl 2xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl 2xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
                       </h1>
                     </Reveal>
 
                   </div>
                   <div className="max-w-sm pb-3">
-                    <h2 className={`${playfair.variable} font-playfair font-normal text-3xl tracking-tight text-white lg:text-4xl pb-4`}>
+                    <h2 className={` font-playfair font-normal text-3xl tracking-tight text-white lg:text-4xl pb-4`}>
                       Avocats spécialisés <br /> en Droit du Travail
                     </h2>
                     <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light text-justify">
@@ -84,7 +84,7 @@ export default function Accueil() {
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link
                       href="/contact"
-                      className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
+                      className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-custom-purple-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
                     >
                       Nous contacter
                     </Link>

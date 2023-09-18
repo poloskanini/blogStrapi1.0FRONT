@@ -190,7 +190,7 @@ export async function getServerSideProps({ req, params }) {
   } : ''
   )
   
-  console.log(filmResponse.data.attributes.image.data.attributes.url);
+  // console.log(filmResponse.data.attributes.image.data.attributes.url);
   return {
     props: {
       film: filmResponse.data

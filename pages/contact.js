@@ -132,7 +132,7 @@ export default function Example() {
                       checked={agreed}
                       onChange={setAgreed}
                       className={classNames(
-                        agreed ? 'bg-indigo-600' : 'bg-gray-200',
+                        agreed ? 'bg-custom-purple' : 'bg-gray-200',
                         'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                       )}
                     >
@@ -148,7 +148,7 @@ export default function Example() {
                   </div>
                   <Switch.Label className="text-sm leading-6 text-gray-600">
                   En cochant ceci, vous acceptez notre {' '}
-                    <a href="#" className="font-semibold text-indigo-600">
+                    <a href="#" className="font-semibold text-custom-purple">
                     politique de confidentialité.
                     </a>
                     .
@@ -158,7 +158,7 @@ export default function Example() {
               <div className="mt-10">
                 <button
                   type="submit"
-                  className="block w-full rounded-md bg-custom-purple px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="block w-full rounded-md bg-custom-purple px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-custom-purple-dark transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Envoyer
                 </button>

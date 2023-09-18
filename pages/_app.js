@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
   
   return (
     <>
-
+      <div className={playfair.variable}>
 
         <AnimatePresence mode='wait'>
           <motion.div key={router.pathname}>
@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }) {
           </motion.div>
         </AnimatePresence>
 
-
+      </div>
     </>
   )
 }

@@ -30,6 +30,7 @@ header {
   border-bottom: 1px solid hsla(0,0%,91.4%,.4);
 }
 
+/**HEADROOM  */
 .headroom {
   top: 0;
   left: 0;
