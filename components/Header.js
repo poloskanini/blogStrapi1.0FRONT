@@ -30,10 +30,10 @@ const inter = Inter({
 
 const expertises = [
   { name: 'Droit du Travail', description: 'Une meilleure défense de vos droits', href: '/droit-du-travail', icon: ChartPieIcon },
-  { name: 'Droit de la sécurité sociale', description: 'Speak directly to your customers', href: '/droit-de-la-securite-sociale', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Droit de la sécurité sociale', description: 'Lorem ipsum dolor sit amet.', href: '/droit-de-la-securite-sociale', icon: CursorArrowRaysIcon },
+  { name: 'Formation en droit du travail', description: 'Lorem ipsum dolor sit amet', href: '#', icon: FingerPrintIcon },
+  { name: 'Conseils', description: 'Lorem ipsum dolor sit amet', href: '#', icon: SquaresPlusIcon },
+  { name: 'Autres expertises juridiques', description: 'Lorem ipsum dolor sit amet', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },

@@ -108,7 +108,7 @@ export default function Accueil() {
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <Image 
-                        src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694424800/pexels-pavel-danilyuk-8111860_ckqsjd.jpg'}
+                        src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694429864/charlesdeluvio-rRWiVQzLm7k-unsplash_qebkkv.jpg'}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
                         width={500}
                         height={500}

@@ -15,7 +15,7 @@ function TextReveal() {
     }
 
     gsap.registerPlugin(ScrollTrigger);
-    const text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut."
+    const text = "Découvrez notre engagement envers la transparence et l'équité dans nos tarifs et honoraires aoinaein aponae pnaen aibe aaa  aorn a aone " 
 
     useEffect(() => {
         const anim = gsap.to(
@@ -24,13 +24,13 @@ function TextReveal() {
                 scrollTrigger: {
                     trigger: triggerRef.current,
                     scrub: true,
-                    start: "top center",
+                    start: "top",
                     end: "bottom 85%"
 
                 },
                 color: "#2A2A2A",
                 duration: 5,
-                stagger: 1,
+                stagger: 5,
             }
         );
         return (() => {
@@ -40,9 +40,8 @@ function TextReveal() {
 
     return (
         <>
-            <div className="spacing-small"></div>
-            <div className="reveal">
-                <div ref={triggerRef}>
+            <div className="reveal mt-40">
+                <div >
                     {text.split("").map((letter, index) => (
                         <span className="reveal-text" key={index} ref={setlettersRef}>
                             {letter}
@@ -50,6 +49,8 @@ function TextReveal() {
                     ))}
                 </div>
             </div>
+            <div className="spacing"></div>
+            
         </>
     )
 }

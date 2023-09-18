@@ -36,7 +36,8 @@ export default function Home() {
       <main className="h-full">
         <VideoHero />
         <Accueil />
-        <Section />
+        <div className="h-screen"></div>
+        {/* <Section /> */}
       </main>
       
 
