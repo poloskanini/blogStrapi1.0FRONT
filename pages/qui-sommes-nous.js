@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Reveal from '../components/animations/Reveal'
 import { motion } from "framer-motion"
 import Header from '../components/Header'
-
+import Head from 'next/head'
 
 
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
@@ -45,9 +45,14 @@ const images = {
   }
 }
 
+
 export default function quisommesnous() {
   return (
     <>
+
+      <Head>
+        <title>Menezes Avocat - Qui sommes-nous</title>
+      </Head>
 
       <Header />
 

@@ -5,7 +5,7 @@ import { HomeIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 export default function BreadCrumb( ) {
 
   const pages = [
-    { name: 'Liste des films', href: '/films', current: false },
+    { name: 'Actualités', href: '/actualites', current: false },
   ]
 
   return (
