@@ -68,7 +68,7 @@ export default function Posts({ posts }) {
                 <article className="flex flex-col items-start justify-between rounded-2xl">
                   <div className="relative w-full">
                     <Image
-                      src={`${post.attributes.image.data.attributes.url} `}
+                      src={`${post.attributes.image.data.attributes.url}`}
                       width={500}
                       height={500}
                       alt='post-img'
