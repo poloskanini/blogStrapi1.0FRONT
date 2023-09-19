@@ -153,8 +153,8 @@ export default function Header() {
               Actualités
             </Link>
             <Link
-              href='/faq'
-              className={router.pathname == "/faq" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              href='/faqs'
+              className={router.pathname == "/faqs" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
               F.A.Q
             </Link>
           </Popover.Group>
@@ -227,7 +227,7 @@ export default function Header() {
             </li>
             <li className="nav-item relative p-5">
               <Link
-                href='/faq'
+                href='/faqs'
                 className='text-xl font-normal text-white hover:text-custom-purple'>
                 F.A.Q
               </Link>

@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout"
 import Header from '../components/Header'
 
-export default function faq() {
+export default function faqs() {
   return (
     <>
     <Header />
