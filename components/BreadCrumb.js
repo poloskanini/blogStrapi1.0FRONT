@@ -2,7 +2,7 @@ import Link from "next/link"
 import { HomeIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
 
-export default function BreadCrumb( ) {
+export default function BreadCrumb() {
 
   const pages = [
     { name: 'Actualités', href: '/actualites', current: false },
