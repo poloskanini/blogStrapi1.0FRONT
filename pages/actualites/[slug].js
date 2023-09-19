@@ -72,7 +72,7 @@ export default function Post({ post }) {
         {/* Article Slug */}
         
         <section className="mx-auto gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
-          <div className="lg:w-full lg:pb-8 text-justify">
+          <div className="lg:w-full lg:pb-8">
 
             {/* TITLE */}
             <h1 className={`${playfair.variable} font-playfair text-4xl font-medium text-neutral-950`}>{post.attributes.title}

@@ -9,6 +9,7 @@ import { HomeIcon } from '@heroicons/react/20/solid'
 import Link from "next/link"
 import Image from 'next/image'
 
+
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 
 const playfair = Playfair_Display({
@@ -30,10 +31,10 @@ export default function Posts({ posts }) {
   ]
 
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, fetcher, {fallbackData: posts})
-
-  // const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`, fetcher, {fallbackData: posts})
-
   // console.log(data.data);
+
+  data.data.sort((x, y) => y.id - x.id);
+  
 
   return (
     <>
