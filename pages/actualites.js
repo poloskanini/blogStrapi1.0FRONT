@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 
 
-export default function posts({ posts }) {
+export default function Posts({ posts }) {
 
 
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, fetcher, {fallbackData: posts})
@@ -37,7 +37,7 @@ export default function posts({ posts }) {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Actualités Juridiques</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Apprenez à développer votre business à l'aide de l'avis de nos experts.
+            Apprenez à développer votre business à l&apos;aide de l&apos;avis de nos experts.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
