@@ -30,10 +30,17 @@ export default function Post({ post }) {
   ]
 
   const date = post.attributes.date;
+  const updatedAtDate = post.attributes.updatedAt
+  console.log(date)
+  console.log(updatedAtDate)
 
   function convertToFrenchDate(date) {
     const dateFragments = date.split("-")
     return `${dateFragments[2]}/${dateFragments[1]}/${dateFragments[0]}`
+  }
+
+  function convertUpdatedAtDate(updatedAtDate) {
+    
   }
 
   const frenchDate = convertToFrenchDate(date)
@@ -133,7 +140,7 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
   const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`)
 
-  console.log(postResponse.data.attributes.updatedAt);
+  // console.log(postResponse.data.attributes.updatedAt);
   
   return {
     props: {

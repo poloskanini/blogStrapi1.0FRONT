@@ -34,6 +34,15 @@ export default function Posts({ posts }) {
   
   data.data.sort((x, y) => y.id - x.id);
 
+  // Convert to French Date
+  function convertToFrenchDate(date) {
+    const splitDate = date.split("-")
+    const frenchDate = `${splitDate[2]}-${splitDate[1]}-${splitDate[0]}`
+    
+    return frenchDate
+  }
+  
+
   return (
     <>
        <Head>
@@ -79,7 +88,7 @@ export default function Posts({ posts }) {
                     <div className="mt-3 flex items-center gap-x-4 text-xs">
                       {/* Date */}
                       <time dateTime={post.datetime} className="text-gray-500">
-                        {post.attributes.date}
+                        {convertToFrenchDate(post.attributes.date)}
                       </time>
                     </div>
                     <div className="group relative">
@@ -124,7 +133,7 @@ export default function Posts({ posts }) {
 
 export async function getStaticProps() {
   const postsResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, { next: { revalidate: 1 } })
-  // console.log(postsResponse);
+  console.log(postsResponse);
   
   // Tri des films pour qu'ils soient classés par ID décroissant
   // postsResponse.data.sort((x, y) => y.id - x.id)
