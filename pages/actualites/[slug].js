@@ -29,6 +29,16 @@ export default function Post({ post }) {
     { name: `${post.attributes.title}`, href: router.asPath, current: false },
   ]
 
+  const date = post.attributes.date;
+
+  function convertToFrenchDate(date) {
+    const dateFragments = date.split("-")
+    return `${dateFragments[2]}/${dateFragments[1]}/${dateFragments[0]}`
+  }
+
+  const frenchDate = convertToFrenchDate(date)
+  // console.log(frenchDate);
+
   return (
     <>
       <Head>
@@ -96,7 +106,7 @@ export default function Post({ post }) {
                 />
                 <div className="pl-2 flex items-center gap-x-4 text-xs">
                   <time className="text-gray-500">
-                    Publié le {post.attributes.date} par {post.attributes.author}
+                    Publié le {frenchDate} par {post.attributes.author}
                   </time>
                 </div>
               </div>
@@ -111,6 +121,8 @@ export default function Post({ post }) {
            
         </section>
 
+
+
       </Container>
     </>
     
@@ -121,7 +133,7 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
   const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`)
 
-  // console.log(postResponse);
+  console.log(postResponse.data.attributes.updatedAt);
   
   return {
     props: {

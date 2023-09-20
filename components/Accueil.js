@@ -91,7 +91,6 @@ export default function Accueil() {
                   </div>
                 </div>
 
-                {/* Hero Images */}
                 <div className="mt-14 flex justify-end gap-6 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">

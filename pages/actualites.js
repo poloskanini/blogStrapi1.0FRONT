@@ -31,10 +31,8 @@ export default function Posts({ posts }) {
   ]
 
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, fetcher, {fallbackData: posts})
-  // console.log(data.data);
-
-  data.data.sort((x, y) => y.id - x.id);
   
+  data.data.sort((x, y) => y.id - x.id);
 
   return (
     <>
