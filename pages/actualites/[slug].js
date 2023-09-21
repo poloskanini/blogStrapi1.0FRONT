@@ -30,21 +30,40 @@ export default function Post({ post }) {
   ]
 
   const date = post.attributes.date;
-  const updatedAtDate = post.attributes.updatedAt
-  console.log(date)
-  console.log(updatedAtDate)
+  const updatedAtDate = post.attributes.updatedAt;
+  // console.log(date)
+  // console.log(updatedAtDate)
 
   function convertToFrenchDate(date) {
     const dateFragments = date.split("-")
+
     return `${dateFragments[2]}/${dateFragments[1]}/${dateFragments[0]}`
   }
 
   function convertUpdatedAtDate(updatedAtDate) {
-    
+    const dateSubString = updatedAtDate.substring(0, 10) // "2023-09-19"
+	  const splitDate = dateSubString.split("-") // ["2023", "09", "19"]
+	  const updatedDate = `${splitDate[2]}/${splitDate[1]}/${splitDate[0]}` // "19-09-2023"
+  	
+  	return updatedDate
+  }
+
+  function convertToFrenchHour(updatedAtDate) {
+    const hourSubString = updatedAtDate.substring(11, 19)
+    const splitHour = hourSubString.split(':')
+    const finalHour = `${(parseInt(splitHour[0]) + 2)}:${splitHour[1]}:${splitHour[2]}`
+
+    return finalHour
   }
 
   const frenchDate = convertToFrenchDate(date)
   // console.log(frenchDate);
+
+  const updatedAt = convertUpdatedAtDate(updatedAtDate)
+  // console.log(updatedAt);
+
+  const frenchHour = convertToFrenchHour(updatedAtDate)
+  console.log(frenchHour)
 
   return (
     <>
@@ -57,11 +76,11 @@ export default function Post({ post }) {
       <Container>
         {/* BreadCrumb V2 */}
         <nav className="flex mb-12 mt-5" aria-label="Breadcrumb">
-          <ol role="list" className="flex space-x-4 ">
+          <ol role="list" className="flex">
             <li flex>
               <div>
                 <Link href="/" className="text-gray-400 hover:text-gray-500">
-                  <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                  <HomeIcon className="h-5 w-5 flex-shrink-0 mr-2" aria-hidden="true" />
                   <span className="sr-only">Home</span>
                 </Link>
               </div>
@@ -70,7 +89,7 @@ export default function Post({ post }) {
               <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
               <Link
                 href={"/actualites"}
-                className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+                className="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700"
               >
                 Actualités
               </Link>
@@ -79,7 +98,7 @@ export default function Post({ post }) {
               <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
               <Link
                   href={router.asPath}
-                  className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700 disabled"
+                  className="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700 disabled"
                 >
                   {post.attributes.title}
               </Link>
@@ -101,7 +120,7 @@ export default function Post({ post }) {
               width={500}
               height={500}
             />
-            {/* DATE et AUTHOR */}
+            {/* AUTHOR */}
             <div className="mt-3 flex items-center gap-x-4 text-xs">
               <div class="mb-6 flex items-center">
                 <Image
@@ -111,24 +130,26 @@ export default function Post({ post }) {
                   alt='sandrine-profile'
                   className="h-10 w-10 rounded-full bg-gray-100"
                 />
-                <div className="pl-2 flex items-center gap-x-4 text-xs">
+                {/* DATE */}
+                <div className="pl-2 flex flex-col items-start gap-x-4 text-xs">
                   <time className="text-gray-500">
                     Publié le {frenchDate} par {post.attributes.author}
+                  </time>
+                  <time className="text-gray-400">
+                  {post.attributes.createdAt !== post.attributes.updatedAt ? `Modifié le ${updatedAt} à ${frenchHour}` : ''}
                   </time>
                 </div>
               </div>
             </div>
             {/* DESCRIPTION */}
-            <p className={`${cormorant.variable} font-cormorant text-2xl mt-8 text-neutral-500`}>
+            <p className={`text-lg mt-8`}>
               {post.attributes.description}
             </p>
             {/* FULL CONTENT */}
-            <div className={`${cormorant.variable} font-cormorant blog-content mt-8 text-lg text-neutral-500`} dangerouslySetInnerHTML={{ __html: post.attributes.content }}></div>
+            <div className={`blog-content mt-8 text-lg `} dangerouslySetInnerHTML={{ __html: post.attributes.content }}></div>
           </div>
            
         </section>
-
-
 
       </Container>
     </>

@@ -1,20 +1,8 @@
-// import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import Reveal from './animations/Reveal'
 import Header from './Header'
 
-// const playfair = Playfair_Display({
-//   weight: ['400', '500', '600', '700', '800', '900'],
-//   subsets: ['latin'],
-//   variable: '--font-playfair'
-// })
-
-// const cormorant = Cormorant_Garamond({
-//   weight: ['300', '400', '500', '600', '700'],
-//   subsets: ['latin'],
-//   variable: '--font-cormorant'
-// })
 
 export default function Accueil() {
   return (
@@ -157,7 +145,7 @@ export default function Accueil() {
     </div>
     
     {/* Scroll Down */}
-    <div id="scroll-wrapper" className={"text-sm absolute right-0 -bottom-10"}>
+    <div id="scroll-wrapper" className={"text-sm absolute right-0 -bottom-12"}>
 
       <div id="scroll-wrapper-inner">
         <div id="scroll-title">
