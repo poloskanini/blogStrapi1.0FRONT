@@ -63,7 +63,7 @@ export default function Post({ post }) {
   // console.log(updatedAt);
 
   const frenchHour = convertToFrenchHour(updatedAtDate)
-  console.log(frenchHour)
+  // console.log(frenchHour)
 
   return (
     <>
