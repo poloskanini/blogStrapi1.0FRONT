@@ -46,12 +46,12 @@ const images = {
   }
 }
 
-export default function quisommesnous() {
+export default function lecabinet() {
   return (
     <>
 
       <Head>
-        <title>Menezes Avocat - Qui sommes-nous</title>
+        <title>Menezes Avocat - Le Cabinet</title>
       </Head>
 
       <Header />
@@ -62,7 +62,7 @@ export default function quisommesnous() {
         <Container>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify">
-              <h1 className={`${playfair.variable} font-playfair text-4xl font-medium text-neutral-950`}>Qui sommes-nous</h1>
+              <h1 className={`${playfair.variable} font-playfair text-4xl font-medium text-neutral-950`}>Le Cabinet</h1>
               <p className={`${cormorant.variable} font-cormorant text-2xl mt-8 max-w-3xl text-neutral-500`}>
                 Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem
                 minus ut molestiae velit error quod. Excepturi quidem expedita molestias.

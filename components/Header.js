@@ -52,9 +52,9 @@ export default function Header() {
   const [isShowing, setIsShowing] = useState(false)
 
   // Desactive le scroll si le menu mobile est ouvert
-  useEffect(() => {
-    mobileMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="auto"
-  })
+  // useEffect(() => {
+  //   mobileMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="auto"
+  // })
 
   const router = useRouter();
 
@@ -66,12 +66,12 @@ export default function Header() {
 
     <HeadRoom disableInlineStyles>
       <header className={router.pathname === "/" ? "homeHeader header drop-shadow z-10" : "header drop-shadow z-10"}>
-        <nav className="mx-auto flex items-center justify-between p-3 lg:p-6" aria-label="Global">
+        <nav className={mobileMenuOpen ? "mobileActive mx-auto flex items-center justify-between p-3 lg:p-6" : "mx-auto flex items-center justify-between p-3 lg:p-6"} aria-label="Global">
           <div className="flex lg:flex-1">
             <Link
               href='/'
               className="px-3 text-xl lastName">
-                <span className={mobileMenuOpen ? "header-brand font-normal text-white  transition-opacity" : "header-brand font-normal text-black "}>MENEZES </span>
+                <span className={mobileMenuOpen ? "header-brand font-normal text-white transition-opacity" : "header-brand font-normal"}>MENEZES </span>
                 <span className={mobileMenuOpen ? "header-subBrand font-bold text-custom-purple duration-1000 transition-opacity" : "header-subBrand font-bold text-custom-purple duration-1000"}>AVOCAT</span>
             </Link>
           </div>
@@ -92,9 +92,9 @@ export default function Header() {
           {/* Desktop Menu Window */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <Link
-              href='/qui-sommes-nous'
-              className={router.pathname == "/qui-sommes-nous" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
-              Qui sommes-nous
+              href='/le-cabinet'
+              className={router.pathname == "/le-cabinet" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              Le Cabinet
             </Link>
             <Popover
               className="relative"
@@ -173,14 +173,14 @@ export default function Header() {
           <ul className={`${playfair.variable} font-playfair nav-links h-44 mt-20 flex flex-col items-center`}>
             <li className="nav-item relative p-5">
               <Link
-                href='/qui-sommes-nous'
-                className='text-xl font-normal text-white hover:text-custom-purple'
+                href='/le-cabinet'
+                className='text-xl text-white font-normal hover:text-custom-purple'
                 >
-                Qui sommes-nous
+                Le Cabinet
               </Link>
             </li>
             <li
-              className="nav-item relative p-5 text-xl font-normal text-white cursor-pointer hover:text-custom-purple flex items-center"
+              className="nav-item text-white relative p-5 text-xl font-normal cursor-pointer hover:text-custom-purple flex items-center"
               onClick={() => setSubOpen(!subOpen)}
             > 
             Expertises
@@ -190,7 +190,7 @@ export default function Header() {
             />
             </li>
                 <ul
-                  className={subOpen ? 'expertises-list flex flex-col items-center transition-all duration-500 mb-36' : 'expertises-list flex flex-col items-center transition-all duration-500 invisible'}
+                  className={subOpen ? 'expertises-list flex flex-col transition-all duration-500 mb-52' : 'expertises-list flex flex-col transition-all duration-500 invisible'}
                   style={{
                     height: subOpen ? '100%' : '0%',
                     opacity: subOpen ? "1" : "0",
@@ -200,7 +200,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="rounded-lg p-5 text-base font-normal text-white hover:text-custom-purple"
+                      className="rounded-lg p-5 text-white text-base font-normal hover:text-custom-purple"
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                       <span className='flex'>
@@ -211,30 +211,30 @@ export default function Header() {
                   ))}
                 </ul>
               
-            <li className="nav-item relative p-5">
+            <li className="nav-item text-white relative p-5">
               <Link
                 href='/honoraires'
-                className='text-xl font-normal text-white hover:text-custom-purple'>
+                className='text-xl font-normal hover:text-custom-purple'>
                 Honoraires
               </Link>
             </li>
-            <li className="nav-item relative p-5">
+            <li className="nav-item text-white relative p-5">
               <Link
                 href='/actualites'
-                className='text-xl font-normal text-white hover:text-custom-purple'>
+                className='text-xl font-normal hover:text-custom-purple'>
                 Actualités
               </Link>
             </li>
-            <li className="nav-item relative p-5">
+            <li className="nav-item text-white relative p-5">
               <Link
                 href='/faqs'
-                className='text-xl font-normal text-white hover:text-custom-purple'>
+                className='text-xl font-normal hover:text-custom-purple'>
                 F.A.Q
               </Link>
             </li>
-            <li className="nav-item relative mt-8">
+            <li className="nav-item text-white relative mt-8">
               <Link
-                href="./contact" className="text-xl font-semibold text-white border border-custom-purple rounded-full p-3 hover:text-custom-purple">
+                href="./contact" className="text-xl font-semibold border border-custom-purple rounded-full p-3 hover:text-custom-purple">
                 Contact <span aria-hidden="true">&rarr;</span>
               </Link>
             </li>

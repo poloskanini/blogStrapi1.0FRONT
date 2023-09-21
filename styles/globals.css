@@ -36,6 +36,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1;
+  background: transparent;
 }
 
 .headroom--unfixed {
@@ -84,6 +85,12 @@ header {
 .headroom--pinned.headroom--scrolled .hamBox span {
   background: black;
 }
+
+.headroom--pinned.headroom--scrolled.nav-overlay.mobileActive .hamBox span {
+  background: white;
+}
+
+
 
 
 /** Headroom Header */
@@ -160,7 +167,7 @@ button::after {
 
 .nav-overlay {
   position: fixed;
-  background: rgba(24, 24, 28, 1);
+  background: #222222;
   z-index: -2;
   opacity: 0;
   top: 0;
@@ -175,6 +182,14 @@ button::after {
   opacity: 1;
   display: flex;
   justify-content: center;
+}
+
+nav.mobileActive .lastName .header-brand {
+  color: white;
+}
+
+nav.mobileActive .menu-toggle .hamBox span {
+  background: white;
 }
 
 /** Preloader */
