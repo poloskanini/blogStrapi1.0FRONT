@@ -52,9 +52,9 @@ export default function Header() {
   const [isShowing, setIsShowing] = useState(false)
 
   // Desactive le scroll si le menu mobile est ouvert
-  // useEffect(() => {
-  //   mobileMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="auto"
-  // })
+  useEffect(() => {
+    mobileMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="auto"
+  })
 
   const router = useRouter();
 

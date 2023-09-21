@@ -167,7 +167,7 @@ button::after {
 
 .nav-overlay {
   position: fixed;
-  background: #222222;
+  background: rgba(34, 34, 34, 1);
   z-index: -2;
   opacity: 0;
   top: 0;
@@ -282,6 +282,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   text-align:center;
   transform: rotate(90deg);
   margin-bottom: 45px;
+  font-size: clamp(.7rem, 1.5vh, 1rem);
 }
 
 #scroll-down::before {

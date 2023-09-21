@@ -112,7 +112,7 @@ export default function Post({ post }) {
           <div className="lg:w-full lg:pb-8">
 
             {/* TITLE */}
-            <h1 className={`${playfair.variable} font-playfair text-4xl font-medium text-neutral-950`}>{post.attributes.title}
+            <h1 className={`text-4xl font-medium text-neutral-950`}>{post.attributes.title}
             </h1>
             {/* COVER IMAGE */}
             <Image src={`${post.attributes.image.data.attributes.url}`}
