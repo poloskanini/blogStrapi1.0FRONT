@@ -180,7 +180,7 @@ export default function Header() {
         {/* Mobile Menu Window */}
         <div
           className={mobileMenuOpen ? "nav-overlay mobileActive" : "nav-overlay invisible "}>
-          <ul className={`${playfair.variable} font-playfair nav-links h-44 mt-20 flex flex-col items-center`}>
+          <ul className={`nav-links h-44 mt-20 flex flex-col items-center`}>
             <li className="nav-item relative p-5">
               <Link
                 href='/le-cabinet'
