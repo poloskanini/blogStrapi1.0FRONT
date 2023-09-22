@@ -74,14 +74,14 @@ export default function Header() {
               className="px-3 lastName flex">
                 <span>
                   <Image
-                    src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg"
+                    src={router.pathname === "/" ? "https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg" : "https://res.cloudinary.com/dbff7xgqx/image/upload/v1695373481/logomenezes-black_jluvbc.svg"}
                     width={50}
                     height={50}
                     alt='logo'
                     className='header-logo'
                   />
                 </span>
-                <span className="px-2 text-xl header-brand font-normal text-white">MENEZES</span>
+                <span className="px-2 text-xl header-brand font-normal">MENEZES</span>
                 <span className="header-subBrand font-bold text-custom-purple text-xl">AVOCAT</span>
             </Link>
           </div>

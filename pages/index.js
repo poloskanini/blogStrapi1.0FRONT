@@ -37,7 +37,7 @@ export default function Home() {
         <VideoHero />
         <Accueil />
         <div className="h-screen"></div>
-        <div className={variables.bg_flashy}>Hello SASS</div>
+
         <Section />
       </main>
       

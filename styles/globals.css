@@ -30,9 +30,13 @@ header {
   border-bottom: 1px solid hsla(0,0%,91.4%,.4);
 }
 
-.header-brand,
+/* .header-brand,
 .header-subBrand {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+.header .lastName .header-brand span{
+  color: black;
 }
 
 /**HEADROOM  */
@@ -62,6 +66,10 @@ header {
 .headroom--pinned.headroom--scrolled .navlink,
 .headroom--pinned.headroom--scrolled .header-brand {
   color: black;
+}
+
+.headroom--pinned.headroom--scrolled .navlink:hover {
+  color: #4B68AF;
 }
 
 .headroom--pinned {
