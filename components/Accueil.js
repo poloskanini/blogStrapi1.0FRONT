@@ -24,7 +24,7 @@ export default function Accueil() {
     gsap.to('.char', {
       y: 0,
       stagger: 0.03,
-      duration: 0.5
+      duration: 0.5,
     })
   })
 
@@ -88,9 +88,6 @@ export default function Accueil() {
                     </h1>
                   </div>
                 </Reveal>
-
-
-                
 
               </div>
             </div>
