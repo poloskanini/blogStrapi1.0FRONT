@@ -81,8 +81,8 @@ export default function Header() {
                     className='header-logo'
                   />
                 </span>
-                <span className={mobileMenuOpen ? "header-brand font-normal px-2 text-white" : "px-2 text-xl header-brand font-normal"}>MENEZES</span>
-                <span className={mobileMenuOpen ? "header-subBrand font-bold text-custom-purple" : "header-subBrand font-bold text-custom-purple text-xl duration-1000"}>AVOCAT</span>
+                <span className="px-2 text-xl header-brand font-normal text-white">MENEZES</span>
+                <span className="header-subBrand font-bold text-custom-purple text-xl">AVOCAT</span>
             </Link>
           </div>
 
