@@ -78,7 +78,7 @@ export default function Accueil() {
 
                 <Reveal>
                   <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <h1 className={`text-3xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
+                    <h1 className={`text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
                       <p>PRÉVALOIR.</p>
                       <br />
                       <p>DÉFENDRE.</p>
