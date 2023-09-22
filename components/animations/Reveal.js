@@ -1,9 +1,6 @@
 import { motion } from "framer-motion"
-import { useEffect, useRef } from 'react'
 
 export default function Reveal({ children }) {
-
-  const ref = useRef(null);
 
   return (
     <div style={{ position: "relative"}}>
@@ -14,7 +11,7 @@ export default function Reveal({ children }) {
         }}
         initial="hidden"
         animate="visible"
-        transition={{ duration: .5, delay: 0.25}}
+        transition={{ duration: 1, delay: 0.35}}
       >
         {children}
       </motion.div>

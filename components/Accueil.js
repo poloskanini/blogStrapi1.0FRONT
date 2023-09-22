@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Reveal from './animations/Reveal'
 import Header from './Header'
 import { Montserrat } from 'next/font/google'
+import { useEffect } from 'react'
+import SplitType from 'split-type'
+import { gsap } from 'gsap/dist/gsap'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -11,6 +14,21 @@ const montserrat = Montserrat({
 
 
 export default function Accueil() {
+
+
+  useEffect(() => {
+    
+    const text = new SplitType('#text-wrapper');
+    let characters = document.querySelectorAll('.char');
+
+    gsap.to('.char', {
+      y: 0,
+      stagger: 0.03,
+      duration: 0.5
+    })
+  })
+
+
   return (
 
     <>
@@ -56,17 +74,22 @@ export default function Accueil() {
           </div>
           <div className="overflow-hidden relative">
             <div className="h-screen">
-              <div className="max-w-sm pb-6 absolute bottom-28">
+              <div className="max-w-sm pb-6 absolute bottom-20">
 
                 <Reveal>
-                  <div className={montserrat.className}>
-                    <h1 className={`text-4xl tracking-tight lg:text-5xl 2xl:text-8xl text-white font-medium p-7 lg:p-12`}>
+                  <div className={`${montserrat.className} homeTitle-container w-screen`}>
+                    <h1 className={`text-3xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
                       <p>PRÉVALOIR.</p>
+                      <br />
                       <p>DÉFENDRE.</p>
+                      <br />
                       <p>RÉUSSIR.</p>
+                      <br />
                     </h1>
                   </div>
                 </Reveal>
+
+
                 
 
               </div>
