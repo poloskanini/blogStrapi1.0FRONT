@@ -74,7 +74,7 @@ export default function Header() {
               className="px-3 lastName flex">
                 <span>
                   <Image
-                    src={router.pathname === "/" ? "https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg" : "https://res.cloudinary.com/dbff7xgqx/image/upload/v1695373481/logomenezes-black_jluvbc.svg"}
+                    src={router.pathname === "/" || mobileMenuOpen ? "https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg" : "https://res.cloudinary.com/dbff7xgqx/image/upload/v1695373481/logomenezes-black_jluvbc.svg"}
                     width={50}
                     height={50}
                     alt='logo'

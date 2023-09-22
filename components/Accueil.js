@@ -2,6 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Reveal from './animations/Reveal'
 import Header from './Header'
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800','900']
+})
 
 
 export default function Accueil() {
@@ -48,96 +54,21 @@ export default function Accueil() {
               }}
             />
           </div>
-          <div className="overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pb-32 portrait:pt-28 lg:px-8 2xl:pt-14">
-              <div className="mx-auto max-w-2xl gap-x-48 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                {/* <div className="w-full max-w-xl lg:shrink-0 xl:max-w-lg p-5">
-                  <div className="max-w-sm pb-6">
+          <div className="overflow-hidden relative">
+            <div className="h-screen">
+              <div className="max-w-sm pb-6 absolute bottom-28">
 
-                    <Reveal>
-                      <h1 className={` font-playfair home-title`}>
-                      <span className='text-5xl tracking-tight text-white lg:text-6xl 2xl:text-8xl' >MENEZES </span> <span className='text-5xl lg:text-6xl 2xl:text-8xl tracking-tight font-bold text-custom-purple' >AVOCAT</span>
-                      </h1>
-                    </Reveal>
+                <Reveal>
+                  <div className={montserrat.className}>
+                    <h1 className={`text-4xl tracking-tight lg:text-5xl 2xl:text-8xl text-white font-medium p-7 lg:p-12`}>
+                      <p>PRÉVALOIR.</p>
+                      <p>DÉFENDRE.</p>
+                      <p>RÉUSSIR.</p>
+                    </h1>
+                  </div>
+                </Reveal>
+                
 
-                  </div>
-                  <div className="max-w-sm pb-3">
-                    <h2 className={` font-playfair font-normal text-3xl tracking-tight text-white lg:text-4xl pb-4`}>
-                      Avocats spécialisés <br /> en Droit du Travail
-                    </h2>
-                    <p className="relative mt-10 text-base leading-5 text-white sm:max-w-md lg:max-w-none font-light text-justify">
-                      Depuis janvier 2012, notre cabinet est à votre disposition afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées à l&apos;emploi et à la sécurité sociale. 
-                    </p>
-                  </div>
-                  <div className="mt-10 flex items-center gap-x-6">
-                    <Link
-                      href="/contact"
-                      className="rounded-md bg-custom-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-custom-purple-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition focus-visible:outline-indigo-600"
-                    >
-                      Nous contacter
-                    </Link>
-                  </div>
-                </div> */}
-
-                {/* <div className="mt-14 flex justify-end gap-6 sm:justify-start sm:pl-20 lg:mt-16 lg:pl-0">
-                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                    <div className="relative">
-                      <Image 
-                        src={'https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
-                        width={500}
-                        height={500}
-                        alt='menezes-avocat-Femme travaillant sur son ordinateur et souriante '
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                  </div>
-                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                    <div className="relative">
-                      <Image 
-                        src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694429864/charlesdeluvio-rRWiVQzLm7k-unsplash_qebkkv.jpg'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
-                        width={500}
-                        height={500}
-                        alt='menezes-avocat-avocate sur son bureau au telephone'
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                    <div className="relative">
-                      <Image 
-                        src={'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden "
-                        width={500}
-                        height={500}
-                        alt='menezes-avocat-equipe travaillant dans un open space'
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                  </div>
-                  <div className="w-44 flex-none space-y-8 pt-14 sm:pt-0">
-                    <div className="relative">
-                      <Image 
-                        src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694427794/pexels-cottonbro-studio-3205568_rllyt8.jpg'}
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
-                        width={500}
-                        height={500}
-                        alt='menezes-avocat-equipe de juristes debout autour de la table'
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                    <div className="relative">
-                      <Image 
-
-                          src={'https://res.cloudinary.com/dbff7xgqx/image/upload/v1694429862/linkedin-sales-solutions-wS73LE0GnKs-unsplash_zhief7.jpg'}
-                          className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg wide:landscape:hidden"
-                          width={500}
-                          height={500}
-                          alt='menezes-avocat-femme travaille dans son bureau sur son ordinateur'
-                        />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -145,7 +76,7 @@ export default function Accueil() {
     </div>
     
     {/* Scroll Down */}
-    <div id="scroll-wrapper" className={"text-sm absolute right-0 -bottom-12"}>
+    <div id="scroll-wrapper" className={"text-sm absolute right-0 bottom-0"}>
 
       <div id="scroll-wrapper-inner">
         <div id="scroll-title">
