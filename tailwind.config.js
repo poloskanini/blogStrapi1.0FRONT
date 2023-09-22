@@ -20,7 +20,7 @@ module.exports = {
         inter: ['var(--font-inter)']
       },
       colors: {
-        'custom-purple': '#6089C3',
+        'custom-purple': '#4B68AF',
         'custom-purple-dark': '#4371b1'
       },
       brightness: {

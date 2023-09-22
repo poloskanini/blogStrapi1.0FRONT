@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import HeadRoom from 'react-headroom'
 import { motion, AnimatePresence } from "framer-motion"
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
@@ -70,9 +71,18 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link
               href='/'
-              className="px-3 text-xl lastName">
-                <span className={mobileMenuOpen ? "header-brand font-normal text-white transition-opacity" : "header-brand font-normal"}>MENEZES </span>
-                <span className={mobileMenuOpen ? "header-subBrand font-bold text-custom-purple duration-1000 transition-opacity" : "header-subBrand font-bold text-custom-purple duration-1000"}>AVOCAT</span>
+              className="px-3 lastName flex">
+                <span>
+                  <Image
+                    src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg"
+                    width={50}
+                    height={50}
+                    alt='logo'
+                    className='header-logo'
+                  />
+                </span>
+                <span className={mobileMenuOpen ? "header-brand font-normal px-2 text-white" : "px-2 text-xl header-brand font-normal"}>MENEZES</span>
+                <span className={mobileMenuOpen ? "header-subBrand font-bold text-custom-purple" : "header-subBrand font-bold text-custom-purple text-xl duration-1000"}>AVOCAT</span>
             </Link>
           </div>
 
@@ -160,7 +170,7 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end px-3">
             <Link
-              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-custom-purple"}>
+              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border-2 border-custom-purple rounded-full p-3 hover:text-black hover:bg-white duration-100 transition"}>
               Contact <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
