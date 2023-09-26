@@ -1,9 +1,9 @@
-import Layout from "@/components/Layout"
+import Header from '../components/Header'
 import Head from 'next/head'
 import BreadCrumb from "@/components/BreadCrumb"
 import Container from "@/components/Container"
 import { fetcher } from "@/lib/api"
-import { useState } from 'react'
+import Reveal from '../components/animations/Reveal'
 import useSWR from 'swr'
 import { HomeIcon } from '@heroicons/react/20/solid'
 import Link from "next/link"
@@ -45,11 +45,13 @@ export default function Posts({ posts }) {
 
   return (
     <>
-       <Head>
+      <Head>
         <title>Menezes Avocat - Actualités</title>
       </Head>
       
-      <Layout/>
+      <Header />
+
+      <Reveal>
 
       <Container>
       
@@ -71,6 +73,7 @@ export default function Posts({ posts }) {
               <Link
                 href={`actualites/` + post.attributes.slug}
                 key={post.id}
+                // className='hover:shadow-lg duration-200'
               >          
                 <article className="flex flex-col items-start justify-between rounded-2xl">
                   <div className="relative w-full">
@@ -126,7 +129,8 @@ export default function Posts({ posts }) {
       </div>
 
       </Container>
-      
+
+      </Reveal>
     </>
   )
 }

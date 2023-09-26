@@ -1,12 +1,19 @@
-import { useFetchUser } from "@/lib/authContext"
+import Feature from '@/components/Feature'
 import Head from 'next/head'
 import VideoHero from "@/components/VideoHero"
 import Accueil from "@/components/Accueil"
 import variables from '../styles/variables.module.scss'
 import styles from '../styles/Home.module.scss'
+import TimeLine from "@/components/TimeLine"
 import Section from "@/components/Section"
+import { Lato } from 'next/font/google'
+import Footer from '@/components/Footer'
 
-// import { UserProvider } from '@/lib/authContext'
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '700', '900']
+})
+
 
 export default function Home() {
 
@@ -33,12 +40,16 @@ export default function Home() {
       </Head>
       
 
-      <main className={styles.main}>
+      <main className={lato.className}>
         <VideoHero />
         <Accueil />
+        <TimeLine />
+        <Feature />
+        {/* <Section /> */}
         <div className="h-screen"></div>
-
-        <Section />
+        <div className="h-screen"></div>
+        <div className="h-screen"></div>
+        <Footer />
       </main>
       
 

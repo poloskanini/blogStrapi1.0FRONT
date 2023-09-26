@@ -142,11 +142,11 @@ export default function Post({ post }) {
               </div>
             </div>
             {/* DESCRIPTION */}
-            <p className={`text-lg mt-8`}>
+            <p className={`text-lg mt-8 text-justify`}>
               {post.attributes.description}
             </p>
             {/* FULL CONTENT */}
-            <div className={`blog-content mt-8 text-lg `} dangerouslySetInnerHTML={{ __html: post.attributes.content }}></div>
+            <div className={`blog-content mt-8 text-lg text-justify`} dangerouslySetInnerHTML={{ __html: post.attributes.content }}></div>
           </div>
            
         </section>

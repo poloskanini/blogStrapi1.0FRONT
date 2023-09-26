@@ -11,7 +11,7 @@ export default function Reveal({ children }) {
         }}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1, delay: 0.15}}
+        transition={{ duration: 1, delay: 1}}
       >
         {children}
       </motion.div>

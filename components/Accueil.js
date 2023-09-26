@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Reveal from './animations/Reveal'
+import RevealSlow from './animations/Reveal'
 import Header from './Header'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Lato } from 'next/font/google'
 import { useEffect } from 'react'
 import SplitType from 'split-type'
 import { gsap } from 'gsap/dist/gsap'
@@ -11,6 +11,12 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800','900']
 })
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '700', '900']
+})
+
 
 
 export default function Accueil() {
@@ -37,7 +43,7 @@ export default function Accueil() {
 
     <div className="relative isolate">
           <svg
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)] brightness-50"
+            className="absolute inset-x-0 top-0 -z-10 h-screen w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)] brightness-50"
             aria-hidden="true"
           >
             <defs>
@@ -76,10 +82,10 @@ export default function Accueil() {
             <div className="h-screen">
               <div className="max-w-sm pb-6 absolute bottom-36">
 
-                <Reveal>
+                <RevealSlow>
                   <div className={`${montserrat.className} homeTitle-container w-screen`}>
                     <h1 className={`text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
-                      <p>PRÉVALOIR.</p>
+                      <p>OSER.</p>
                       <br />
                       <p>DÉFENDRE.</p>
                       <br />
@@ -87,7 +93,7 @@ export default function Accueil() {
                       <br />
                     </h1>
                   </div>
-                </Reveal>
+                </RevealSlow>
 
               </div>
             </div>
@@ -96,15 +102,13 @@ export default function Accueil() {
     </div>
     
     {/* Scroll Down */}
-    <div id="scroll-wrapper" className={"text-sm absolute right-0 bottom-0"}>
+    <div id="scroll-wrapper" className={"text-sm absolute right-0 bottom-1 mr-10"}>
 
       <div id="scroll-wrapper-inner">
-        <div id="scroll-title">
-          Scroll
-        </div>
         <div id="scroll-down"></div>
         </div>
     </div>
+
 
   </>
   )
