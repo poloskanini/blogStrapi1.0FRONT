@@ -496,7 +496,8 @@ nav.mobileActive .menu-toggle .hamBox span {
   width: 100%;
   height: 100vh;
   /* background: #16161C; */
-  background: #222222;
+  /* background: #222222; */
+  background-color: #090f18;
   transform-origin: bottom;
   z-index: 100 !important;
 }
@@ -508,7 +509,8 @@ nav.mobileActive .menu-toggle .hamBox span {
   width: 100%;
   height: 100vh;
   /* background: #16161C; */
-  background: #222222;
+  /* background: #222222; */
+  background-color: #090f18;
   transform-origin: top;
   z-index: 100 !important;
 }
@@ -521,7 +523,7 @@ nav.mobileActive .menu-toggle .hamBox span {
 /** SVG TIMELINE ANIMATION  */
 
 .svg-animation {
-  height: 150vh;
+  height: 170vh;
 }
 
 .line-container {
