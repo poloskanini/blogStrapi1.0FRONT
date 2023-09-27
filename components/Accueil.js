@@ -80,16 +80,16 @@ export default function Accueil() {
           </div>
           <div className="overflow-hidden relative">
             <div className="h-screen">
-              <div className="max-w-sm pb-6 absolute bottom-36">
+              <div className="max-w-sm pb-6 absolute bottom-24">
 
                 <RevealSlow>
                   <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <h1 className={`text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
-                      <p>OSER.</p>
+                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
+                      <p>Oser.</p>
                       <br />
-                      <p>DÉFENDRE.</p>
+                      <p>Défendre.</p>
                       <br />
-                      <p>RÉUSSIR.</p>
+                      <p>Réussir.</p>
                       <br />
                     </h1>
                   </div>

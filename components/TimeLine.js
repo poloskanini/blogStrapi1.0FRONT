@@ -194,7 +194,7 @@ export default function TimeLine() {
         </div>
 
 
-        <div className="line-container w-[55vh] fixed -z-index-1 overflow-hidden text-center mt-52">
+        <div className="line-container w-[60vh] fixed -z-index-1 overflow-hidden text-center mt-52">
         {/* <svg viewBox="0 0 34 813" fill="none" id='svg-draw'>
           <path d="M20.5 0.5C22.6667 40.1667 25.7 121.8 20.5 131C14 142.5 1.50002 147.5 1.50002 160.5C1.50002 173.5 31.5 193 32.5 202C33.5 211 1.50002 221 1.50002 234.5C1.50002 248 32.5 262.5 32.5 273.5C32.5 284.5 3.50002 294 1.50002 301.5C-0.49998 309 20.5 315.5 20.5 322.5C20.5 328.1 20.5 401.833 20.5 438C20.5 476.667 20.5 556.4 20.5 566C20.5 578 32.5 574.5 32.5 581.5C32.5 588.5 1.50002 600 1.50002 612.5C1.50002 625 37.5 635 32.5 647.5C27.5 660 20.5 664.5 20.5 671C20.5 676.2 20.5 767.833 20.5 813" stroke="black" id="svg-path"/>
         </svg> */}
@@ -218,6 +218,13 @@ export default function TimeLine() {
         <svg viewBox="0 0 131 930" fill="none" id='svg-draw'>
           <path d="M67.0129 0.5C67.0129 153.152 67.0129 62.4444 67.0129 93.7333C67.0129 125.022 123.681 136.4 129.699 164.844C135.717 193.289 8.84026 244.489 1.31794 272.933C-6.20438 301.378 122.177 333.615 129.699 385.763C137.221 437.911 1.31794 429.378 1.31794 490.059C1.31794 550.741 67.0129 555.481 67.0129 619.007C67.0129 669.828 67.0129 847.511 67.0129 930" stroke="black" opacity={.10} id="svg-path"/>
         </svg>
+
+        
+{/* <svg viewBox="0 0 83 395" fill="none" id='svg-draw'>
+<path d="M48 0C48 6.82643 53.5 12 60 16.5C73.7976 25.3 46.3081 39.8333 37 47C23.5 54.5 16 57.8354 16 76.5C16 107.789 66.9821 114.556 73 143C79.0178 171.444 23.5223 155.556 16 184C8.47768 212.444 73.9777 181.852 81.5 234C89.0223 286.148 1 254.819 1 315.5C1 376.181 50.5 333 48 394" stroke="black" opacity={.10} id="svg-path"/>
+</svg> */}
+
+
 
 
 
@@ -246,13 +253,13 @@ export default function TimeLine() {
 
           <div className='px-12 mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2894&q=80"
+              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852635/smalloffice_labota.webp"
               alt=""
               className="object-cover image-1 h-32 image"
               width={500}
               height={500}
             />
-            <time className="flex flex-col items-center text-xl font-semibold leading-6 text-custom-purple">
+            <time className="mt-4 flex flex-col items-center text-xl font-semibold leading-6 text-custom-purple">
               Janvier 2017
             </time>
             <p className="text-lg font-semibold leading-8 tracking-tight text-gray-900">Création du Cabinet</p>
@@ -260,13 +267,13 @@ export default function TimeLine() {
    
           <div className='px-12 mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2894&q=80"
+              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852637/mediumoffice_aotj1n.webp"
               alt=""
               className="object-cover image-2 h-32 image"
               width={500}
               height={500}
             />
-            <time className="flex flex-col items-center text-xl font-semibold leading-6 text-custom-purple">
+            <time className="mt-4 flex flex-col items-center text-xl font-semibold leading-6 text-custom-purple">
               Décembre 2021
             </time>
             <p className="text-lg font-semibold leading-8 tracking-tight text-gray-900">Partenariat</p>
@@ -276,7 +283,7 @@ export default function TimeLine() {
 
            <div className='px-12 mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2894&q=80"
+              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852640/largeoffice_ltxd8n.webp"
               alt=""
               className="object-cover image-3 h-32 image"
               width={500}

@@ -7,14 +7,14 @@ const features = [
     name: 'Droit du Travail',
     description:
       'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.',
-    href: '#',
+    href: '/droit-du-travail',
     icon: ChartPieIcon,
   },
   {
     name: 'Droit de la Sécurité Sociale',
     description:
       'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
-    href: '#',
+    href: '/droit-de-la-securite-sociale',
     icon: CursorArrowRaysIcon,
   },
   {
