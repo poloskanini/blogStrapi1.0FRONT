@@ -80,7 +80,7 @@ export default function Accueil() {
           </div>
           <div className="overflow-hidden relative">
             <div className="h-screen">
-              <div className="max-w-sm pb-6 absolute bottom-24">
+              <div className="max-w-sm pb-6 absolute bottom-36">
 
                 <RevealSlow>
                   <div className={`${montserrat.className} homeTitle-container w-screen`}>
