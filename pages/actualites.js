@@ -26,10 +26,6 @@ const cormorant = Cormorant_Garamond({
 
 export default function Posts({ posts }) {
 
-  const pages = [
-    { name: 'Actualités', href: '/actualites', current: false },
-  ]
-
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, fetcher, {fallbackData: posts})
   
   data.data.sort((x, y) => y.id - x.id);
@@ -41,6 +37,9 @@ export default function Posts({ posts }) {
     
     return frenchDate
   }
+
+  const titlePage = "Actualités"
+  const hrefPage = "/actualites"
   
 
   return (
@@ -55,7 +54,7 @@ export default function Posts({ posts }) {
 
       <Container>
       
-      <BreadCrumb />
+      <BreadCrumb href={hrefPage} title={titlePage}/>
 
       <div className="bg-white sm:pb-32">
         <div className="mx-auto max-w-7xl lg:px-8">

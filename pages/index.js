@@ -8,7 +8,6 @@ import TimeLine from "@/components/TimeLine"
 import Section from "@/components/Section"
 import { Lato } from 'next/font/google'
 import Footer from '@/components/Footer'
-import FooterBis from '@/components/FooterBis'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -52,7 +51,7 @@ export default function Home() {
         <div className="h-screen"></div>
         <div className="h-screen"></div>
         {/* <Footer /> */}
-        <FooterBis />
+        <Footer />
       </main>
       
 

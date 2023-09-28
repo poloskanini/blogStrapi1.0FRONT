@@ -184,7 +184,7 @@ export default function TimeLine() {
   return (
 
     <div className={styles.container}>
-      <main className='w-full flex justify-center svg-animation'>
+      <main className='w-full flex justify-center h-[135vh] sm:h-[170vh] svg-animation'>
         
         <div className="mx-auto max-w-2xl text-center absolute mt-20">
           <h2 className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold">

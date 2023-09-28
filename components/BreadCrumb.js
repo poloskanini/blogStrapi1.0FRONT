@@ -1,11 +1,14 @@
 import Link from "next/link"
+import { useRouter } from 'next/router'
 import { HomeIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
 
-export default function BreadCrumb() {
+export default function BreadCrumb(props) {
+
+  const router = useRouter();
 
   const pages = [
-    { name: 'Actualités', href: '/actualites', current: false },
+    { name: props.title, href: props.href, current: false },
   ]
 
   return (
@@ -61,13 +64,13 @@ export default function BreadCrumb() {
               <li key={page.name}>
                 <div className="flex items-center">
                   <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                  <a
-                    href={page.href}
+                  <Link
+                    href={props.href}
                     className="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700"
                     aria-current={page.current ? 'page' : undefined}
                   >
                     {page.name}
-                  </a>
+                  </Link>
                 </div>
               </li>
             ))}

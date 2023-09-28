@@ -3,30 +3,33 @@ import Link from 'next/link'
 
 const currentYear = new Date().getFullYear();
 
+
 const navigation = {
-  solutions: [
+  un: [
     { name: 'Marketing', href: '#' },
     { name: 'Analytics', href: '#' },
     { name: 'Commerce', href: '#' },
     { name: 'Insights', href: '#' },
   ],
-  support: [
+  deux: [
     { name: 'Pricing', href: '#' },
     { name: 'Documentation', href: '#' },
     { name: 'Guides', href: '#' },
     { name: 'API Status', href: '#' },
   ],
-  company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+  trois: [
+    { name: 'Accueil', href: '/' },
+    { name: 'Le Cabinet', href: '/le-cabinet' },
+    { name: 'Droit du Travail', href: '/droit-du-travail' },
+    { name: 'Droit de la Sécurité Sociale', href: '/droit-de-la-securite-sociale' },
+    { name: 'Formation en Droit du Travail', href: '#' },
   ],
-  legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+  quatre: [
+    { name: 'Conseils', href: '#' },
+    { name: 'Autres expertises juridiques', href: '#' },
+    { name: 'Honoraires', href: '/honoraires' },
+    { name: 'Actualités', href: '/actualites' },
+    { name: 'F.A.Q', href: 'faq' },
   ],
   social: [
     {
@@ -93,70 +96,67 @@ const navigation = {
   ],
 }
 
-export default function Footer() {
+export default function Example() {
   return (
     <footer className="bg-gray-900" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="lg:grid sm:flex sm:flex-col text-center justify-center items-center">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-8 lg:px-8">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="image-wrapper text-center flex flex-col justify-center items-center mb-20">
-            <Image
-              className="h-14"
-              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg"
-              alt="Company name"
-              width={500}
-              height={500}
-            />
+            <Link
+              href='/'>
+              <Image
+                className="h-14"
+                src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695369122/logomenezes-white_wpwzky.svg"
+                alt="Company name"
+                width={500}
+                height={500}
+              />
+            </Link>
             <div>
               <span className="px-2 text-xl header-brand font-normal text-white">MENEZES</span>
               <span className="header-subBrand font-bold text-custom-purple text-xl">AVOCAT</span>
-            </div>
+             </div>
           </div>
-          <div className="mb-20 flex gap-8 xl:col-span-2 xl:mt-0 justify-center">
-            <div>
-
-              <div className='flex justify-center'>
-                {/* <h3 className="text-sm font-semibold leading-6 text-white">Adresse</h3> */}
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className='flex justify-center text-center'>
+              {/* <h3 className="text-sm font-semibold leading-6 text-white">Adresse</h3> */}
                 <Link
                   href={"https://maps.app.goo.gl/L3sJhjpQ4cT7oy5V7"}
-                  className='text-sm font-normal leading-6 text-white'
+                  className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
                 >
-                  <span>
-                    <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                  </span>
+                <span>
+                  <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </span>
+                <p>26 Av. George V</p>
+                <p>75008 Paris</p>
 
-                  <p>26 Av. George V</p>
-                  <p>75008 Paris</p>
                 </Link>
+                  
+            </div>
                 
-              </div>
-             
-            </div>
+            <div className='flex text-center flex-col justify-between'>
+              <Link
+                href={"tel:+33760868065"}
+                className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
+              >
+              <span>
+                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </span>
 
-            <div>
+              <p>07 60 86 80 65</p>
+              </Link>
               <Link
                   href={"tel:+33760868065"}
-                  className='text-sm font-normal leading-6 text-white'
-                >
-                  <span>
-                    <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                    </svg>
-
-                  </span>
-
-                  <p>07 60 86 80 65</p>
-                </Link>
-            </div>
-            <div>
-              <Link
-                  href={"tel:+33760868065"}
-                  className='text-sm font-normal leading-6 text-white'
+                  className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
                 >
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
@@ -169,62 +169,86 @@ export default function Footer() {
                   <p>mail@email.com</p>
                 </Link>
             </div>
-            
           </div>
-          
-        </div>
-        {/* <div className="border-t border-white/10 mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
-          <div>
-            <h3 className="text-sm font-semibold leading-6 text-white">Souscrire à notre newsletter</h3>
-            <p className="mt-2 text-sm leading-6 text-gray-300">
-              Les dernières informations, articles et ressources envoyées de façon hebdomadaires sur votre boite mail.
-            </p>
-          </div>
-          <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
-            <label htmlFor="email-address" className="sr-only">
-              Adresse email
-            </label>
-            <input
-              type="email"
-              name="email-address"
-              id="email-address"
-              autoComplete="email"
-              required
-              className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-56 sm:text-sm sm:leading-6"
-              placeholder="Entrez votre e-mail"
-            />
-            <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md bg-custom-purple px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                Souscrire
-              </button>
+          <div className="md:grid md:grid-cols-2 md:gap-8 sm:hidden portrait:hidden">
+            <div>
+              <ul role="list" className="space-y-4">
+                {navigation.trois.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </form>
-        </div> */}
-        <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2 justify-center">
-            {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <a
-            href="https://www.nicolasbarthes.com"
-            className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-              Site réalisé par N|B
-            </a>
-            <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
-              &copy; {currentYear} Sandrine MENEZES, tous droits réservés.
-            </p>
-
+            <div className="mt-10 md:mt-0">
+              <ul role="list" className="space-y-4">
+                {navigation.quatre.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <div className="border-t border-white/10 pt-8  lg:mt-10 lg:flex lg:items-center lg:justify-between">
+        <div>
+          <h3 className="text-sm font-semibold leading-6 text-white">Souscrivez à notre newsletter</h3>
+          <p className="mt-2 text-sm leading-6 text-gray-300">
+            Les dernières news, actualités et ressources, envoyées sur votre mail une fois par mois.
+          </p>
+        </div>
+        <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
+          <label htmlFor="email-address" className="sr-only">
+            Email address
+          </label>
+          <input
+            type="email"
+            name="email-address"
+            id="email-address"
+            autoComplete="email"
+            required
+            className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-56 sm:text-sm sm:leading-6"
+            placeholder="Entrez votre e-mail"
+          />
+          <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+            <button
+              type="submit"
+              className="flex w-full items-center justify-center rounded-md bg-custom-purple px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >
+              Souscrire
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+        <div className="flex space-x-6 md:order-2 justify-center">
+          {navigation.social.map((item) => (
+            <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
+              <span className="sr-only">{item.name}</span>
+              <item.icon className="h-6 w-6" aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+        <div className='text-center'>
+          <Link
+            href="https://www.nicolasbarthes.com"
+            className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+              Site réalisé par N|B
+          </Link>
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
+            &copy; {currentYear} Sandrine MENEZES, tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </div>
     </footer>
   )
 }

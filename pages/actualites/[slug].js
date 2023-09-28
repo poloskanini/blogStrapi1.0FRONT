@@ -24,11 +24,6 @@ export default function Post({ post }) {
 
   const router = useRouter()
 
-  const pages = [
-    { name: 'Actualités', href: '/actualites', current: false },
-    { name: `${post.attributes.title}`, href: router.asPath, current: false },
-  ]
-
   const date = post.attributes.date;
   const updatedAtDate = post.attributes.updatedAt;
   // console.log(date)
@@ -65,6 +60,9 @@ export default function Post({ post }) {
   const frenchHour = convertToFrenchHour(updatedAtDate)
   // console.log(frenchHour)
 
+  const titlePage = post.attributes.title
+  const hrefPage = router.asPath
+
   return (
     <>
       <Head>
@@ -97,10 +95,10 @@ export default function Post({ post }) {
             <li className="flex">
               <ChevronRightIcon className="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
               <Link
-                  href={router.asPath}
+                  href={hrefPage}
                   className="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700 disabled"
                 >
-                  {post.attributes.title}
+                  {titlePage}
               </Link>
             </li>
           </ol>
