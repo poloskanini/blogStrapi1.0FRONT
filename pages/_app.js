@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import '@/styles/globals.css'
 import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
@@ -17,9 +18,23 @@ const lato = Lato({
 
 export default function App({ Component, pageProps }) {
   const router = useRouter()
+
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 200)
+  }, [])
   
   return (
     <>
+    {loading ? (
+    <AnimatePresence mode='wait'>
+      <div className="loader-container"></div>
+    </AnimatePresence>
+    ) : (
       <div className={lato.className}>
 
         <AnimatePresence mode='wait'>
@@ -45,6 +60,7 @@ export default function App({ Component, pageProps }) {
         </AnimatePresence>
 
       </div>
+    )}
     </>
   )
 }
