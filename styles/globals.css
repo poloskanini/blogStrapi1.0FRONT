@@ -21,9 +21,6 @@ html, body {
   min-height: 100vh;
 }
 
-body {
-  height: 100%;
-}
 
 button:focus {
   outline: 0
@@ -527,7 +524,7 @@ nav.mobileActive .menu-toggle .hamBox span {
 .line-container {
   position: relative;
   top: -7px;
-  left: 0;
+  left: -4px;
   overflow: hidden;
   text-align: center;
 }

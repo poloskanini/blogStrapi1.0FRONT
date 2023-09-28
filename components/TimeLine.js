@@ -184,7 +184,7 @@ export default function TimeLine() {
   return (
 
     <div className={styles.container}>
-      <main className='w-full flex justify-center h-[135vh] sm:h-[170vh] svg-animation'>
+      <main className='w-full flex justify-center h-[135vh] lg:h-[170vh] svg-animation'>
         
         <div className="mx-auto max-w-2xl text-center absolute mt-20">
           <h2 className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold">
@@ -194,7 +194,7 @@ export default function TimeLine() {
         </div>
 
 
-        <div className="line-container w-[60vh] fixed -z-index-1 overflow-hidden text-center mt-52">
+        <div className="line-container w-[60vh] fixed -z-index-1 overflow-hidden text-center mt-36">
         {/* <svg viewBox="0 0 34 813" fill="none" id='svg-draw'>
           <path d="M20.5 0.5C22.6667 40.1667 25.7 121.8 20.5 131C14 142.5 1.50002 147.5 1.50002 160.5C1.50002 173.5 31.5 193 32.5 202C33.5 211 1.50002 221 1.50002 234.5C1.50002 248 32.5 262.5 32.5 273.5C32.5 284.5 3.50002 294 1.50002 301.5C-0.49998 309 20.5 315.5 20.5 322.5C20.5 328.1 20.5 401.833 20.5 438C20.5 476.667 20.5 556.4 20.5 566C20.5 578 32.5 574.5 32.5 581.5C32.5 588.5 1.50002 600 1.50002 612.5C1.50002 625 37.5 635 32.5 647.5C27.5 660 20.5 664.5 20.5 671C20.5 676.2 20.5 767.833 20.5 813" stroke="black" id="svg-path"/>
         </svg> */}
