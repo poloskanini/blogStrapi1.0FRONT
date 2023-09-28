@@ -28,6 +28,9 @@ export default function FilmsList({ films }) {
   const pages = [
     { name: 'Liste des films', href: '/films', current: false },
   ]
+
+  const titlePage = "Films"
+  const hrefPage = "/films"
   
   return (
     <>
@@ -41,7 +44,7 @@ export default function FilmsList({ films }) {
 
       <Container>
       
-      <BreadCrumb />
+      <BreadCrumb href={hrefPage} title={titlePage}/>
 
         <h1 className="text-5xl md:text-6xl leading-tighter mb-4">
           <span className={"bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2"}>
