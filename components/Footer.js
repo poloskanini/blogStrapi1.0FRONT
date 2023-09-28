@@ -29,7 +29,7 @@ const navigation = {
     { name: 'Autres expertises juridiques', href: '#' },
     { name: 'Honoraires', href: '/honoraires' },
     { name: 'Actualités', href: '/actualites' },
-    { name: 'F.A.Q', href: 'faq' },
+    { name: 'F.A.Q', href: 'faqs' },
   ],
   social: [
     {
