@@ -40,7 +40,6 @@ export default function Posts({ posts }) {
 
   const titlePage = "Actualités"
   const hrefPage = "/actualites"
-  
 
   return (
     <>

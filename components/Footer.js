@@ -114,11 +114,11 @@ export default function Example() {
                 width={500}
                 height={500}
               />
+              <div>
+                <span className="px-2 text-xl header-brand font-normal text-white">MENEZES</span>
+                <span className="header-subBrand font-bold text-custom-purple text-xl">AVOCAT</span>
+              </div>
             </Link>
-            <div>
-              <span className="px-2 text-xl header-brand font-normal text-white">MENEZES</span>
-              <span className="header-subBrand font-bold text-custom-purple text-xl">AVOCAT</span>
-             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
