@@ -6,7 +6,7 @@ import Accueil from "@/components/Accueil"
 import variables from '../styles/variables.module.scss'
 import styles from '../styles/Home.module.scss'
 import TimeLine from "@/components/TimeLine"
-import Section from "@/components/Section"
+import Marketing from '@/components/Marketing'
 import { Lato } from 'next/font/google'
 import Footer from '@/components/Footer'
 
@@ -45,8 +45,8 @@ export default function Home() {
         <Accueil />
         <TimeLine />
         <Feature />
-        {/* <Feature />
-        <Feature /> */}
+        <div className="mb-20"></div>
+        <Marketing />
         <div className="h-screen"></div>
         {/* <Footer /> */}
         <Footer />

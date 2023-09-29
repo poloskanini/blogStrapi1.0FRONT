@@ -2,10 +2,11 @@ import Layout from '@/components/Layout'
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
-import Container from '@/components/Container'
+
 import Header from '../components/Header'
 import ContactUs from '@/components/ContactUs'
 import Footer from '@/components/Footer'
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -157,7 +158,7 @@ export default function Contact() {
 
       <ContactUs />
 
-      <Footer></Footer>
+      <Footer />
 
     </>
   )
