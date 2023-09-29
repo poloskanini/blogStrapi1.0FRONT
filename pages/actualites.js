@@ -71,7 +71,7 @@ export default function Posts({ posts }) {
               <Link
                 href={`actualites/` + post.attributes.slug}
                 key={post.id}
-                // className='hover:shadow-lg duration-200'
+                className='hover:shadow-xl duration-200'
               >          
                 <article className="flex flex-col items-start justify-between rounded-2xl">
                   <div className="relative w-full">
@@ -80,7 +80,7 @@ export default function Posts({ posts }) {
                       width={500}
                       height={500}
                       alt='post-img'
-                      className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                      className="aspect-[16/9] w-full rounded-t-xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                     />
                     <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -110,7 +110,7 @@ export default function Posts({ posts }) {
                         className="h-10 w-10 rounded-full bg-gray-100"
                       />
                       {/* Author Name */}
-                      <div className="text-sm leading-6">
+                      <div className="text-sm leading-6 mb-3">
                         <p className="font-semibold text-gray-900">
                             <span className="absolute inset-0" />
                             {post.attributes.author}

@@ -3,43 +3,6 @@ import styles from '../styles/Timeline.module.css'
 import Image from 'next/image'
 
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Resources', href: '#' },
-  { name: 'Company', href: '#' },
-]
-const timeline = [
-  {
-    name: 'Création du cabinet',
-    description:
-      'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
-    date: 'Janvier 2017',
-    dateTime: '2017-01',
-  },
-  {
-    name: 'Partenariat',
-    description:
-      'Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.',
-    date: 'Dec 2021',
-    dateTime: '2021-12',
-  },
-  {
-    name: 'Extension',
-    description:
-      'Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.',
-    date: 'Fev 2022',
-    dateTime: '2022-02',
-  },
-  {
-    name: 'Émancipation',
-    description:
-      'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-    date: 'Dec 2022',
-    dateTime: '2023-03',
-  },
-]
-
 export default function TimeLine() {
 
   return (
@@ -47,7 +10,7 @@ export default function TimeLine() {
     <div className={styles.container}>
       <main className='justify-center svg-animation'>
         
-        <div className="flex justify-center mx-auto max-w-2xl mt-20 px-10 text-center">
+        <div className="flex justify-center mx-auto mt-20 px-10 text-center">
           <h2 className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold mb-20">
             Cabinet spécialisé en Droit du Travail
           </h2>
@@ -57,7 +20,7 @@ export default function TimeLine() {
 
           {/* OSER */}
           <div>
-            <h3 className='text-custom-purple hidden md:block  text-2xl md:text-6xl lg:text-9xl opacity-10'>Oser</h3>
+            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Oser</h3>
           </div>
 
           <div className='mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='horizontal'>
@@ -90,11 +53,11 @@ export default function TimeLine() {
 
           {/* DÉFENDRE */}
           <div>
-            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-9xl opacity-10'>Défendre</h3>
+            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Défendre</h3>
           </div>
           {/* RÉUSSIR */}
           <div>
-            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-9xl opacity-10'>Réussir</h3>
+            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Réussir</h3>
           </div>
 
            <div className='mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='vertical'>

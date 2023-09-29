@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { Switch } from '@headlessui/react'
 import { useState } from 'react'
+import RevealSlow from '../components/animations/RevealSlow'
+
 
 
 function classNames(...classes) {
@@ -87,10 +89,12 @@ export default function ContactUs() {
             </dl>
           </div>
 
-          {/* GOOGLE MAPS */}
-          <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10497.997327390412!2d2.3015524!3d48.8677569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2c4888971f%3A0x8ffb155631af1279!2sSandrine%20MENEZES!5e0!3m2!1sfr!2sfr!4v1695987503593!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy" ></iframe>
+          <RevealSlow>
+            {/* GOOGLE MAPS */}
+            <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10497.997327390412!2d2.3015524!3d48.8677569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2c4888971f%3A0x8ffb155631af1279!2sSandrine%20MENEZES!5e0!3m2!1sfr!2sfr!4v1695987503593!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy" ></iframe>
 
-          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4959123084886!2d2.296611493032685!3d48.867822097418966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc2b76b5163%3A0xf6bd70ab2ef8374!2s26%20Av.%20George%20V%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1695987669670!5m2!1sfr!2sfr" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4959123084886!2d2.296611493032685!3d48.867822097418966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc2b76b5163%3A0xf6bd70ab2ef8374!2s26%20Av.%20George%20V%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1695987669670!5m2!1sfr!2sfr" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+          </RevealSlow>
 
         </div>
 

@@ -170,7 +170,7 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden lg:flex sm:flex-0 xl:flex-1 lg:justify-end px-3">
             <Link
-              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-black hover:bg-white duration-100 transition"}>
+              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-black hover:bg-slate-200 duration-100 transition"}>
               Contact <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
