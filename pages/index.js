@@ -45,9 +45,8 @@ export default function Home() {
         <Accueil />
         <TimeLine />
         <Feature />
-        {/* <Section /> */}
-        <div className="h-screen"></div>
-        <div className="h-screen"></div>
+        {/* <Feature />
+        <Feature /> */}
         <div className="h-screen"></div>
         {/* <Footer /> */}
         <Footer />

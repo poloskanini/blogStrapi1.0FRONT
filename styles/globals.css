@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DEBUGUER */
+/* * {
+  box-shadow: 0 0 0 3px red;
+} */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -535,14 +540,9 @@ nav.mobileActive .menu-toggle .hamBox span {
 
 /** SVG TIMELINE ANIMATION  */
 
-.svg-animation {
-  height: 170vh;
-}
 
 .line-container {
   position: relative;
-  top: -7px;
-  left: -4px;
   overflow: hidden;
   text-align: center;
 }
@@ -553,6 +553,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   z-index: 1000;
   filter: invert(1);
 }
+
 
 .image-wrapper image{
   z-index: -1;
@@ -577,12 +578,28 @@ nav.mobileActive .menu-toggle .hamBox span {
 }
 
 .image-wrapper .image-4 {
+  animation: 1.25s ease-in-out 2s window-fromright both;
+  -webkit-animation: 1.25s ease-in-out 4.5s window-fromright both;
+  opacity: 1;
+}
+.image-wrapper .image-5 {
   animation: 1.25s ease-in-out 2s window-fromleft both;
-  -webkit-animation: 1.25s ease-in-out 4.5s window-fromleft both;
+  -webkit-animation: 1.25s ease-in-out 5.5s window-fromleft both;
+  opacity: 1;
+}
+.image-wrapper .image-6 {
+  animation: 1.25s ease-in-out 2s window-fromright both;
+  -webkit-animation: 1.25s ease-in-out 6.5s window-fromright both;
   opacity: 1;
 }
 
-
+.underskin-item {
+  opacity: .7;
+  font-size: clamp(3rem, 10vh, 10rem);
+  z-index: -10;
+  padding-left: 4rem;
+  bottom: 2rem;
+}
 
 
 @keyframes window-fromleft {
