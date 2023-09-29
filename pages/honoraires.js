@@ -25,7 +25,8 @@ export default function honoraires() {
 
       <div className="h-full flex flex-col justify-center items-center relative">
         <h1 className="text-xl font-bold">HONORAIRES</h1>
-        <h2>Page en construction</h2>
+        <br />
+        <h2>Page en attente de wording et images</h2>
         <br />
 
         {/* <div className="wrapper-reveal flex justify-end ">

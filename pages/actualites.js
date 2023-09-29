@@ -8,7 +8,7 @@ import useSWR from 'swr'
 import { HomeIcon } from '@heroicons/react/20/solid'
 import Link from "next/link"
 import Image from 'next/image'
-
+import Footer from '@/components/Footer'
 
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 
@@ -58,7 +58,7 @@ export default function Posts({ posts }) {
       <div className="bg-white sm:pb-32">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className={`text-4xl font-medium text-neutral-950`}>Actualités Juridiques</h1>
+            <h1 className={`text-4xl font-bold text-neutral-950`}>Actualités Juridiques</h1>
             
             <p className={`text-xl mt-2  text-neutral-600`}>
               Apprenez à développer votre business à l&apos;aide de l&apos;avis de nos experts.
@@ -127,6 +127,8 @@ export default function Posts({ posts }) {
       </div>
 
       </Container>
+
+      <Footer />
 
       </Reveal>
     </>

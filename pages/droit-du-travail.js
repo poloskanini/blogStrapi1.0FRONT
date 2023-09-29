@@ -8,7 +8,7 @@ export default function droitdutravail() {
     <div className="h-full flex flex-col justify-center items-center mt-36">
       <h1 className="text-xl font-bold">DROIT DU TRAVAIL</h1>
       <br />
-      <h2>Page en construction</h2>
+      <h2>Page en attente de wording et images</h2>
     </div>
   </>
   )
