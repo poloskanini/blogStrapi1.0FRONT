@@ -68,7 +68,7 @@ export default function TimeLine() {
               width={500}
               height={500}
             />
-            <p className="m-6 flex flex-col items-center text-2xl font-semibold leading-6 text-custom-purple">
+            <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
               Entreprendre avec assurance
             </p>
             <p className="text-lg font-normal leading-8 tracking-tight text-gray-900 text-justify px-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa animi illum rem fugiat recusandae magnam vero iusto qui cupiditate, veniam accusamus ex dolor totam quaerat nostrum nesciunt, ipsum laborum. Inventore, animi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consectetur tempora sunt ad! Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
@@ -82,7 +82,7 @@ export default function TimeLine() {
               width={500}
               height={500}
             />
-            <p className="m-6 flex flex-col items-center text-2xl font-semibold leading-6 text-custom-purple">
+            <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
               Résister à une critique
             </p>
             <p className="text-lg font-normal leading-8 tracking-tight text-gray-900 text-justify px-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tenetur ex non, placeat molestias optio accusantium, cumque, dolore neque consequuntur sed cupiditate quasi.</p>
