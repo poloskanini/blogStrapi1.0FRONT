@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import RevealSlow from './animations/Reveal'
+import Reveal from './animations/Reveal'
 import Header from './Header'
 import { Montserrat, Lato } from 'next/font/google'
 import { useEffect } from 'react'
@@ -24,6 +24,7 @@ export default function Accueil() {
 
   useEffect(() => {
     
+    // Split Text Wrapper
     const text = new SplitType('#text-wrapper');
     let characters = document.querySelectorAll('.char');
 
@@ -31,6 +32,7 @@ export default function Accueil() {
       y: 0,
       stagger: 0.03,
       duration: 0.5,
+      delay: 0.3
     })
   })
 
@@ -82,18 +84,23 @@ export default function Accueil() {
             <div className="h-screen">
               <div className="max-w-sm pb-6 absolute bottom-36">
 
-                <RevealSlow>
+
                   <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium p-7 lg:p-12`} id='text-wrapper'>
+                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
                       <p>Oser.</p>
-                      <br />
-                      <p>Défendre.</p>
-                      <br />
-                      <p>Réussir.</p>
-                      <br />
                     </h1>
                   </div>
-                </RevealSlow>
+                  <div className={`${montserrat.className} homeTitle-container w-screen`}>
+                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
+                      <p>Défendre.</p>
+                    </h1>
+                  </div>
+                  <div className={`${montserrat.className} homeTitle-container w-screen`}>
+                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
+                      <p>Réussir.</p>
+                    </h1>
+                  </div>
+
 
               </div>
             </div>
