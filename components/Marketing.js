@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const stats = [
   { id: 1, name: 'Creators on the platform', value: '8,000 +' },
   { id: 2, name: 'Flat platform fee', value: '3 %' },
@@ -10,7 +12,7 @@ export default function Marketing() {
 
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-      <img
+      <Image
         src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp"
         alt="statistics"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
