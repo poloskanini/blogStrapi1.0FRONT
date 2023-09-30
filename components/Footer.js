@@ -134,8 +134,8 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                 </span>
-                <p>26 Av. George V</p>
-                <p>75008 Paris</p>
+                <p>62 rue Condorcet</p>
+                <p>75009 PARIS</p>
 
                 </Link>
                   
@@ -143,7 +143,7 @@ export default function Footer() {
                 
             <div className='flex text-center flex-col justify-between'>
               <Link
-                href={"tel:+33760868065"}
+                href={"tel:+33184171590"}
                 className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
               >
               <span>
@@ -152,7 +152,7 @@ export default function Footer() {
                 </svg>
               </span>
 
-              <p>07 60 86 80 65</p>
+              <p>01 84 17 15 90</p>
               </Link>
               <Link
                   href={"tel:+33760868065"}

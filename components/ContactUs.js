@@ -58,9 +58,9 @@ export default function ContactUs() {
                 </dt>
                 <dd>
                   <Link className='hover:text-custom-purple' href={"https://maps.app.goo.gl/L3sJhjpQ4cT7oy5V7"}>
-                    26 Av. George V
+                    62 rue Condorcet
                     <br />
-                    75008 Paris
+                    75009 PARIS
                   </Link>
                 </dd>
               </div>
@@ -70,8 +70,8 @@ export default function ContactUs() {
                   <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <Link className="hover:text-custom-purple" href="tel:+33760868065">
-                    07 60 86 80 65
+                  <Link className="hover:text-custom-purple" href="tel:+33184171590">
+                    01 84 17 15 90
                   </Link>
                 </dd>
               </div>
@@ -91,9 +91,9 @@ export default function ContactUs() {
 
           <RevealSlow>
             {/* GOOGLE MAPS */}
-            <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10497.997327390412!2d2.3015524!3d48.8677569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2c4888971f%3A0x8ffb155631af1279!2sSandrine%20MENEZES!5e0!3m2!1sfr!2sfr!4v1695987503593!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy" ></iframe>
+            {/* <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10497.997327390412!2d2.3015524!3d48.8677569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2c4888971f%3A0x8ffb155631af1279!2sSandrine%20MENEZES!5e0!3m2!1sfr!2sfr!4v1695987503593!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy" ></iframe> */}
 
-            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4959123084886!2d2.296611493032685!3d48.867822097418966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc2b76b5163%3A0xf6bd70ab2ef8374!2s26%20Av.%20George%20V%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1695987669670!5m2!1sfr!2sfr" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+            <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.8309831717133!2d2.3418794!3d48.880498499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e4141541b61%3A0xe6488e15aa2a21ca!2s62%20Rue%20Condorcet%2C%2075009%20Paris!5e0!3m2!1sfr!2sfr!4v1696105484783!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy"></iframe>
           </RevealSlow>
 
         </div>
