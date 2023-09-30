@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import styles from '../styles/Timeline.module.css'
 import Image from 'next/image'
 

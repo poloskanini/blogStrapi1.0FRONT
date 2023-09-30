@@ -12,18 +12,6 @@ import Footer from '@/components/Footer'
 
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
 
-const playfair = Playfair_Display({
-  weight: ['400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  variable: '--font-playfair'
-})
-
-const cormorant = Cormorant_Garamond({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-cormorant'
-})
-
 export default function Posts({ posts }) {
 
   const { data }= useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, fetcher, {fallbackData: posts})
@@ -71,7 +59,7 @@ export default function Posts({ posts }) {
               <Link
                 href={`actualites/` + post.attributes.slug}
                 key={post.id}
-                className='hover:shadow-xl duration-200'
+                className='hover:shadow-2xl duration-200'
               >          
                 <article className="flex flex-col items-start justify-between rounded-2xl">
                   <div className="relative w-full">

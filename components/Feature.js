@@ -36,7 +36,7 @@ const lato = Lato({
 
 export default function Feature() {
   return (
-    <div className="bg-white">
+    <div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto text-center">
           <h2 className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold">

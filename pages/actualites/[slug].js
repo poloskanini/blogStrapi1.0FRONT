@@ -4,6 +4,7 @@ import Container from '@/components/Container'
 import Link from "next/link"
 import { HomeIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
+import Footer from "@/components/Footer"
 import { useRouter } from 'next/router'
 import { fetcher } from "@/lib/api"
 import { Cormorant_Garamond, Playfair_Display } from 'next/font/google'
@@ -150,6 +151,8 @@ export default function Post({ post }) {
         </section>
 
       </Container>
+
+      <Footer />
     </>
     
   )

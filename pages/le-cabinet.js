@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import Header from '../components/Header'
 import Head from 'next/head'
 import BreadCrumb from '@/components/BreadCrumb'
-
+import Footer from '@/components/Footer'
 
 
 const variants = {
@@ -51,7 +51,7 @@ export default function lecabinet() {
 
         <Container>
           <BreadCrumb href={hrefPage} title={titlePage}/>
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify">
               <h1 className={`text-4xl font-bold text-neutral-950`}>Le Cabinet</h1>
               <p className={`text-2xl mt-8 max-w-3xl text-neutral-500`}>
@@ -110,6 +110,8 @@ export default function lecabinet() {
               </motion.div>
           </div>
         </Container>
+
+        <Footer />
 
       </Reveal>
     </>

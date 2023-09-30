@@ -26,6 +26,8 @@ html, body {
   min-height: 100vh;
 }
 
+
+
 button:focus {
   outline: 0
 }
@@ -194,7 +196,7 @@ button::after {
   background: #FFF;
 }
 
-/* OVERLAY MOBILE */
+/** OVERLAY MOBILE */
 .nav-overlay {
   position: fixed;
   background: rgba(34, 34, 34, 1);
@@ -226,7 +228,6 @@ nav.mobileActive .menu-toggle .hamBox span {
 .reveal {
   background: var(--backgroundColor);
 }
-
 
 .reveal-text {
   font-weight: 800;
@@ -278,8 +279,6 @@ nav.mobileActive .menu-toggle .hamBox span {
   padding-top: 79px;
   text-align: center;
 }
-
-
 
 #scroll-down::before {
     -webkit-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
@@ -539,7 +538,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   pointer-events: none;
 }
 
-/** SVG TIMELINE ANIMATION  */
+/** TIMELINE ANIMATION  */
 
 .svg-draw {
   display: inline-block;
@@ -547,7 +546,6 @@ nav.mobileActive .menu-toggle .hamBox span {
   z-index: 1000;
   filter: invert(1);
 }
-
 
 .image-wrapper image{
   z-index: -1;
@@ -619,3 +617,12 @@ nav.mobileActive .menu-toggle .hamBox span {
       -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
   }
 }
+
+/** TimeLine  */
+/* .timeCard {
+  opacity: 0;
+}
+
+.timeCard.isActive {
+  opacity: 1;
+} */
