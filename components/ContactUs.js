@@ -99,7 +99,7 @@ export default function ContactUs() {
         </div>
 
         {/* Formulaire (RIGHT COLUMN) */}
-        <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-42 sm:pt-32 lg:static">
+        <form action="#" method="POST" className="px-6 p-20 sm:pb-32 lg:px-8 lg:py-42 sm:pt-32 lg:static">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 pb-8">Nous écrire :</h2>
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -113,7 +113,7 @@ export default function ContactUs() {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
