@@ -1,8 +1,27 @@
+import { useRef, useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer';
 import styles from '../styles/Timeline.module.css'
 import Image from 'next/image'
 
 
 export default function TimeLine() {
+
+  useEffect(() => {
+    const timeCards = document.querySelectorAll('.timeCard')
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('isActive')
+        }
+      })
+    })
+  
+    timeCards.forEach(timeCard => {
+      observer.observe(timeCard)
+    })
+  })
+  
 
   return (
 
@@ -22,7 +41,7 @@ export default function TimeLine() {
             <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Oser</h3>
           </div>
 
-          <div className='mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='horizontal'>
+          <div className="mb-10 lg:mb-0 timeCard timeCard1 scroll" data-rate='-0.1' data-direction='horizontal'>
             <Image
               src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852635/smalloffice_labota.webp"
               alt=""
@@ -36,7 +55,7 @@ export default function TimeLine() {
             <p className="text-lg font-normal leading-8 tracking-tight text-gray-900 text-justify px-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa animi illum rem fugiat recusandae magnam vero iusto qui cupiditate, veniam accusamus ex dolor totam quaerat nostrum nesciunt, ipsum laborum. Inventore, animi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consectetur tempora sunt ad! Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
           </div>
    
-          <div className='mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='vertical'>
+          <div className='mb-10 lg:mb-0 timeCard timeCard2 scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
               src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852637/mediumoffice_aotj1n.webp"
               alt=""
@@ -59,7 +78,7 @@ export default function TimeLine() {
             <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Réussir</h3>
           </div>
 
-           <div className='mb-10 lg:mb-0 timeCard scroll' data-rate='-0.1' data-direction='vertical'>
+           <div className='mb-10 lg:mb-0 timeCard timeCard3 scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
               src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852640/largeoffice_ltxd8n.webp"
               alt=""

@@ -551,38 +551,33 @@ nav.mobileActive .menu-toggle .hamBox span {
   z-index: -1;
 }
 
-.image-wrapper .image-1 {
-  animation: 1.25s ease-in-out 2s window-fromleft both;
-  -webkit-animation: 1.25s ease-in-out 1.5s window-fromleft both;
-  opacity: 1;
+/* TODO: Reprendre d'ici avec la logique .timeCard.isActive */
+
+/** TimeLine  */
+.timeCard {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.image-wrapper .image-2 {
-  animation: 1.25s ease-in-out 2s window-fromright both;
-  -webkit-animation: 1.25s ease-in-out 2.5s window-fromright both;
+.timeCard1.isActive {
+  animation: 1.25s ease-in-out .7s swindow-fromleft both;
+  -webkit-animation: 1.25s ease-in-out .7s window-fromleft both;
   opacity: 1;
+  visibility: visible;
 }
 
-.image-wrapper .image-3 {
-  animation: 1.25s ease-in-out 2s window-fromleft both;
-  -webkit-animation: 1.25s ease-in-out 3.5s window-fromleft both;
+.timeCard2.isActive {
+  animation: 1.25s ease-in-out .7s window-fromright both;
+  -webkit-animation: 1.25s ease-in-out .7s window-fromright both;
   opacity: 1;
+  visibility: visible;
 }
 
-.image-wrapper .image-4 {
-  animation: 1.25s ease-in-out 2s window-fromright both;
-  -webkit-animation: 1.25s ease-in-out 4.5s window-fromright both;
+.timeCard3.isActive {
+  animation: 1.25s ease-in-out .7s window-fromleft both;
+  -webkit-animation: 1.25s ease-in-out .7s window-fromleft both;
   opacity: 1;
-}
-.image-wrapper .image-5 {
-  animation: 1.25s ease-in-out 2s window-fromleft both;
-  -webkit-animation: 1.25s ease-in-out 5.5s window-fromleft both;
-  opacity: 1;
-}
-.image-wrapper .image-6 {
-  animation: 1.25s ease-in-out 2s window-fromright both;
-  -webkit-animation: 1.25s ease-in-out 6.5s window-fromright both;
-  opacity: 1;
+  visibility: visible;
 }
 
 .underskin-item {
@@ -617,12 +612,3 @@ nav.mobileActive .menu-toggle .hamBox span {
       -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
   }
 }
-
-/** TimeLine  */
-/* .timeCard {
-  opacity: 0;
-}
-
-.timeCard.isActive {
-  opacity: 1;
-} */
