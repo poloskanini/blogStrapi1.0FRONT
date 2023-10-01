@@ -43,7 +43,6 @@ button:focus {
   background: #090f18;
   z-index: 1000;
   opacity: 1;
-
 }
 
 /**HEADER  */
@@ -108,11 +107,11 @@ header {
 }
 
 .homeHeader .hamBox span {
-  background: white;
+  background: #e2e8f0;
 }
 
 .headroom.headroom--pinned {
-  background-color: white;
+  background-color: #e2e8f0;
   color: black;
 }
 
@@ -121,13 +120,13 @@ header {
 }
 
 .headroom--pinned.headroom--scrolled.nav-overlay.mobileActive .hamBox span {
-  background: white;
+  background: #e2e8f0;
 }
 
 /** Headroom Header */
 .headroom-unpinned {
   position: fixed;
-  background-color: white;
+  background-color: #e2e8f0;
 }
 
 /** Liens NavBar */
