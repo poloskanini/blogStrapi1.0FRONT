@@ -120,135 +120,145 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="mt-16 grid lg:grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-16 grid lg:grid-cols-2 gap-8 xl:col-span-2 xl:mt-0 items-center justify-center">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div className='flex justify-center text-center'>
-              {/* <h3 className="text-sm font-semibold leading-6 text-white">Adresse</h3> */}
+              <div className='text-center flex flex-column justify-center items-center'>
                 <Link
-                  href={"https://maps.app.goo.gl/L3sJhjpQ4cT7oy5V7"}
+                  href="./contact"
+                  className="text-sm font-normal leading-6 text-gray-300 border bg-custom-purple hover:bg-custom-purple-dark rounded-full p-3 duration-100 transition">
+                  Contactez nous <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
+              <div className='flex justify-center text-center'>
+                {/* <h3 className="text-sm font-semibold leading-6 text-white">Adresse</h3> */}
+                  <Link
+                    href={"https://maps.app.goo.gl/L3sJhjpQ4cT7oy5V7"}
+                    className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
+                  >
+                  <span>
+                    <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                  </span>
+                  <p>62 rue Condorcet</p>
+                  <p>75009 PARIS</p>
+
+                  </Link>
+                    
+              </div>
+                
+              <div className='flex text-center flex-col justify-between'>
+                <Link
+                  href={"tel:+33184171590"}
                   className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
                 >
                 <span>
                   <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
                 </span>
-                <p>62 rue Condorcet</p>
-                <p>75009 PARIS</p>
 
+                <p>01 84 17 15 90</p>
                 </Link>
-                  
+              </div>
+
+              <div className='flex text-center flex-col justify-between'>
+                <Link
+                    href={"mailto:mail@email.com"}
+                    className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
+                  >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                      </svg>
+
+
+                    </span>
+
+                    <p>mail@email.com</p>
+                  </Link>
+              </div>
             </div>
-                
-            <div className='flex text-center flex-col justify-between'>
-              <Link
-                href={"tel:+33184171590"}
-                className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
+            <div className="md:grid md:grid-cols-2 md:gap-8 sm:hidden portrait:hidden">
+              <div>
+                <ul role="list" className="space-y-4">
+                  {navigation.trois.map((item) => (
+                    <li key={item.name}>
+                      <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <ul role="list" className="space-y-4">
+                  {navigation.quatre.map((item) => (
+                    <li key={item.name}>
+                      <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div className="border-t border-white/10 pt-8  lg:mt-10 lg:flex lg:items-center lg:justify-between">
+          <div>
+            <h3 className="text-sm font-semibold leading-6 text-white">Souscrivez à notre newsletter</h3>
+            <p className="mt-2 text-sm leading-6 text-gray-300">
+              Les dernières news, actualités et ressources, envoyées sur votre mail une fois par mois.
+            </p>
+          </div>
+          <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
+            <label htmlFor="email-address" className="sr-only">
+              Email address
+            </label>
+            <input
+              type="email"
+              name="email-address"
+              id="email-address"
+              autoComplete="email"
+              required
+              className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-56 sm:text-sm sm:leading-6"
+              placeholder="Entrez votre e-mail"
+            />
+            <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+              <button
+                type="submit"
+                className="flex w-full items-center justify-center rounded-md bg-custom-purple px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-custom-purple-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
-              <span>
-                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                </svg>
-              </span>
-
-              <p>01 84 17 15 90</p>
-              </Link>
-              <Link
-                  href={"tel:+33760868065"}
-                  className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
-                >
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
-
-
-                  </span>
-
-                  <p>mail@email.com</p>
-                </Link>
+                Souscrire
+              </button>
             </div>
+          </form>
+        </div>
+        <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+          <div className="flex space-x-6 md:order-2 justify-center">
+            {navigation.social.map((item) => (
+              <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
           </div>
-          <div className="md:grid md:grid-cols-2 md:gap-8 sm:hidden portrait:hidden">
-            <div>
-              <ul role="list" className="space-y-4">
-                {navigation.trois.map((item) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-10 md:mt-0">
-              <ul role="list" className="space-y-4">
-                {navigation.quatre.map((item) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className='text-center'>
+            <Link
+              href="https://www.nicolasbarthes.com"
+              className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+                Site réalisé par N|B
+            </Link>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
+              &copy; {currentYear} Sandrine MENEZES, tous droits réservés.
+            </p>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 pt-8  lg:mt-10 lg:flex lg:items-center lg:justify-between">
-        <div>
-          <h3 className="text-sm font-semibold leading-6 text-white">Souscrivez à notre newsletter</h3>
-          <p className="mt-2 text-sm leading-6 text-gray-300">
-            Les dernières news, actualités et ressources, envoyées sur votre mail une fois par mois.
-          </p>
-        </div>
-        <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
-          <label htmlFor="email-address" className="sr-only">
-            Email address
-          </label>
-          <input
-            type="email"
-            name="email-address"
-            id="email-address"
-            autoComplete="email"
-            required
-            className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-56 sm:text-sm sm:leading-6"
-            placeholder="Entrez votre e-mail"
-          />
-          <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-            <button
-              type="submit"
-              className="flex w-full items-center justify-center rounded-md bg-custom-purple px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-            >
-              Souscrire
-            </button>
-          </div>
-        </form>
-      </div>
-      <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
-        <div className="flex space-x-6 md:order-2 justify-center">
-          {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
-          ))}
-        </div>
-        <div className='text-center'>
-          <Link
-            href="https://www.nicolasbarthes.com"
-            className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-              Site réalisé par N|B
-          </Link>
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
-            &copy; {currentYear} Sandrine MENEZES, tous droits réservés.
-          </p>
-        </div>
-      </div>
-    </div>
     </footer>
   )
 }

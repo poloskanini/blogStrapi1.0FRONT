@@ -17,8 +17,6 @@ const lato = Lato({
 
 
 export default function Home() {
-  
-  // const { user, loading } = useFetchUser()
 
   return (
     <>
@@ -40,7 +38,7 @@ export default function Home() {
         <meta property="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1694591001/image-description-menezes_zvl0ti.png" />
       </Head>
       
-        <main className={lato.className}>
+      <main className={lato.className}>
         <VideoHero />
         <Accueil />
         <TimeLine />
@@ -48,7 +46,6 @@ export default function Home() {
         <div className="mb-20"></div>
         <Marketing />
         <div className="h-screen"></div>
-        {/* <Footer /> */}
         <Footer />
       </main>
       

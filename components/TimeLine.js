@@ -1,5 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
-import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react'
 import styles from '../styles/Timeline.module.css'
 import Image from 'next/image'
 

@@ -107,11 +107,11 @@ header {
 }
 
 .homeHeader .hamBox span {
-  background: #e2e8f0;
+  background: #FFF;
 }
 
 .headroom.headroom--pinned {
-  background-color: #e2e8f0;
+  background-color: #FFF;
   color: black;
 }
 
@@ -120,13 +120,13 @@ header {
 }
 
 .headroom--pinned.headroom--scrolled.nav-overlay.mobileActive .hamBox span {
-  background: #e2e8f0;
+  background: #FFF;
 }
 
 /** Headroom Header */
 .headroom-unpinned {
   position: fixed;
-  background-color: #e2e8f0;
+  background-color: white;
 }
 
 /** Liens NavBar */
