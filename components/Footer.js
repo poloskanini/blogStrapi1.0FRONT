@@ -125,7 +125,7 @@ export default function Footer() {
               <div className='text-center flex flex-column justify-center items-center'>
                 <Link
                   href="./contact"
-                  className="text-sm font-normal leading-6 text-gray-300 border bg-custom-purple hover:bg-custom-purple-dark rounded-full p-3 duration-100 transition">
+                  className="text-sm font-normal leading-6 text-gray-300  bg-custom-purple hover:bg-custom-purple-dark rounded-full p-3 duration-100 transition">
                   Contactez nous <span aria-hidden="true">&rarr;</span>
                 </Link>
               </div>

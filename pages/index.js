@@ -6,6 +6,7 @@ import Accueil from "@/components/Accueil"
 import variables from '../styles/variables.module.scss'
 import styles from '../styles/Home.module.scss'
 import TimeLine from "@/components/TimeLine"
+import ContentWork from '@/components/ContentWork'
 import Marketing from '@/components/Marketing'
 import { Lato } from 'next/font/google'
 import Footer from '@/components/Footer'
@@ -42,6 +43,7 @@ export default function Home() {
         <VideoHero />
         <Accueil />
         <TimeLine />
+        <ContentWork />
         <Feature />
         <div className="mb-20"></div>
         <Marketing />

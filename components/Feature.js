@@ -37,9 +37,9 @@ const lato = Lato({
 export default function Feature() {
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-32">
         <div className="mx-auto text-center">
-          <h2 className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold">
+          <h2 className="mt-2 text-4xl tracking-tight text-gray-900 sm:text-5xl font-bold">
             Lorem ipsum, <br/> dolor sit amet consectur.
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">

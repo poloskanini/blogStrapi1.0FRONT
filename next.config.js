@@ -17,7 +17,8 @@ module.exports = {
       'res.cloudinary.com',
       'images.unsplash.com',
       'unsplash.com',
-      'studio.tailwindui.com'
+      'studio.tailwindui.com',
+      'images.unsplash.com',
     ],
   },
 }

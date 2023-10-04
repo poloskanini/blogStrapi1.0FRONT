@@ -154,7 +154,7 @@ export default function lecabinet() {
           {/* Text */}
           <div className="overflow-hidden bg-white px-6 mb-32">
             <div className="mx-auto max-w-max lg:max-w-7xl">
-              <div className="relative z-10 mb-8 md:mb-2 md:px-6">
+              <div className="relative  mb-8 md:mb-2 md:px-6">
                 <div className="max-w-prose text-base lg:max-w-none">
                   <h2 className="font-semibold leading-6 text-indigo-600">Lorem</h2>
                   <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
@@ -208,7 +208,7 @@ export default function lecabinet() {
                   <rect width={404} height={384} fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
                 </svg>
                 <div className="relative md:bg-white md:p-6">
-                  <div className="lg:grid lg:grid-cols-2 lg:gap-6">
+                  <div className="lg:grid lg:grid-cols-2 lg:gap-20 text-justify">
                     <div className="prose prose-lg prose-indigo text-gray-500 lg:max-w-none">
                       <p>
                         Ultrices ultricies a in odio consequat egestas rutrum. Ut vitae aliquam in ipsum. Duis nullam placerat
@@ -269,7 +269,13 @@ export default function lecabinet() {
               >
                 {people.map((person) => (
                   <li key={person.name}>
-                    <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
+                    <Image
+                      className="aspect-[3/2] w-full rounded-2xl object-cover"
+                      src={person.imageUrl}
+                      alt="team-partner"
+                      width={500}
+                      height={500}
+                    />
                     <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
                     <p className="text-base leading-7 text-gray-600">{person.role}</p>
                     <ul role="list" className="mt-6 flex gap-x-6">

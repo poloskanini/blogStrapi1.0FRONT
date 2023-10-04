@@ -28,7 +28,7 @@ export default function TimeLine() {
       <main className='justify-center svg-animation'>
         
         <div className="flex justify-center mx-auto mt-20 px-10 text-center">
-          <h2 className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl font-bold mb-20">
+          <h2 className="mt-2 text-4xl tracking-tight text-gray-900 sm:text-5xl font-bold mb-20">
             Cabinet spécialisé en Droit du Travail
           </h2>
         </div>
