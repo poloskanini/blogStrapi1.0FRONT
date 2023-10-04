@@ -33,6 +33,37 @@ const images = {
   }
 }
 
+const timeline = [
+  {
+    name: 'Création du cabinet',
+    description:
+      'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
+    date: 'Août 2017',
+    dateTime: '2021-08',
+  },
+  {
+    name: 'Partenariat',
+    description:
+      'Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.',
+    date: 'Dec 2021',
+    dateTime: '2021-12',
+  },
+  {
+    name: 'Extension',
+    description:
+      'Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.',
+    date: 'Fev 2022',
+    dateTime: '2022-02',
+  },
+  {
+    name: 'Émancipation',
+    description:
+      'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
+    date: 'Dec 2022',
+    dateTime: '2022-12',
+  },
+]
+
 const people = [
   {
     name: 'Sandrine MENEZES',
@@ -70,7 +101,6 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
-  // More people...
 ]
 
 
@@ -151,8 +181,33 @@ export default function lecabinet() {
               </motion.div>
           </div>
 
+          {/* Timeline section */}
+          <div className="mx-auto max-w-7xl px-6 mb-32 lg:px-8">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              {timeline.map((item) => (
+                <div key={item.name}>
+                  <time
+                    dateTime={item.dateTime}
+                    className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                  >
+                    <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                      <circle cx={2} cy={2} r={2} fill="currentColor" />
+                    </svg>
+                    {item.date}
+                    <div
+                      className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                      aria-hidden="true"
+                    />
+                  </time>
+                  <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{item.name}</p>
+                  <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Text */}
-          <div className="overflow-hidden bg-white px-6 mb-32">
+          <div className="overflow-hidden bg-white mb-32">
             <div className="mx-auto max-w-max lg:max-w-7xl">
               <div className="relative  mb-8 md:mb-2 md:px-6">
                 <div className="max-w-prose text-base lg:max-w-none">
@@ -256,7 +311,7 @@ export default function lecabinet() {
 
           {/* L'équipe */}
           <div className="bg-white pb-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl lg:px-8">
               <div className="mx-auto max-w-2xl lg:mx-0">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Notre équipe</h2>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -280,7 +335,7 @@ export default function lecabinet() {
                     <p className="text-base leading-7 text-gray-600">{person.role}</p>
                     <ul role="list" className="mt-6 flex gap-x-6">
                       <li>
-                        <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
+                        <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500 cursor-pointer">
                           <span className="sr-only">Twitter</span>
                           <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
@@ -288,7 +343,7 @@ export default function lecabinet() {
                         </a>
                       </li>
                       <li>
-                        <a href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500">
+                        <a href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500 cursor-pointer">
                           <span className="sr-only">LinkedIn</span>
                           <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                             <path
