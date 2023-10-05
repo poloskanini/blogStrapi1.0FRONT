@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Carousel from "./Carousel"
 
 const stats = [
   { id: 1, name: 'Creators on the platform', value: '8,000 +' },
@@ -8,6 +9,10 @@ const stats = [
 ]
 
 export default function Marketing() {
+
+  const OPTIONS = { dragFree: true, containScroll: 'trimSnaps' }
+  const SLIDE_COUNT = 4
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 
   return (
@@ -89,9 +94,8 @@ export default function Marketing() {
           </dl>
         </div> */}
 
-
-        
       </div>
+        <Carousel slides={SLIDES} options={OPTIONS} />
     </>
     
   )
