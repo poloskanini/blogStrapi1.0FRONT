@@ -21,7 +21,7 @@ module.exports = {
       },
       colors: {
         'custom-purple': '#4A67AE',
-        'custom-purple-dark': '#4371b1'
+        'custom-purple-dark': '#32467a'
       },
       brightness: {
         20: '.20',

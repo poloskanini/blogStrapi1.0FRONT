@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.try {
+  background-color: #32467a;
+}
+
 /* MARGINS DEBUGUER */
 /* * {
   box-shadow: 0 0 0 3px red;
@@ -201,7 +205,7 @@ button::after {
   top: 0;
   left: 0;
   right: 0;
-  height: 1.5px;
+  height: 2px;
   background: #fe0222;
   transform-origin: 0%;
   z-index: 1000;
@@ -650,27 +654,32 @@ nav.mobileActive .menu-toggle .hamBox span {
   --slide-height: 60vh;
   padding: 1.6rem;
 }
+
 .embla__viewport {
   overflow: hidden;
 }
+
 .embla__container {
   backface-visibility: hidden;
   display: flex;
   touch-action: pan-y;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
   position: relative;
 }
+
 .embla__slide__img {
   display: block;
   height: var(--slide-height);
   width: 100%;
   object-fit: cover;
 }
+
 .embla__slide__number {
   width: 4.6rem;
   height: 4.6rem;
@@ -685,6 +694,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   text-align: center;
   pointer-events: none;
 }
+
 .embla__slide__number > span {
   color: var(--brand-primary);
   background-image: linear-gradient(
@@ -723,6 +733,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   height: 100%;
   width: 100%;
 }
+
 .embla__parallax__img {
   max-width: none;
   width: calc(100% + (var(--slide-spacing) * 2));

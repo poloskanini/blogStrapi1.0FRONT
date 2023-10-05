@@ -102,7 +102,7 @@ export default function Header() {
           <Popover.Group className="hidden lg:flex lg:gap-x-12 px-5">
             <Link
               href='/le-cabinet'
-              className={router.pathname == "/le-cabinet" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              className={router.pathname == "/le-cabinet" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               Le Cabinet
             </Link>
             <Popover

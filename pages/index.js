@@ -9,6 +9,8 @@ import styles from '../styles/Home.module.scss'
 import TimeLine from "@/components/TimeLine"
 import ContentWork from '@/components/ContentWork'
 import Marketing from '@/components/Marketing'
+import Testimonials from '@/components/Testimonials';
+import Testify from '@/components/Testify';
 import { Lato } from 'next/font/google'
 import Footer from '@/components/Footer'
 
@@ -57,7 +59,8 @@ export default function Home() {
         {/* <Feature /> */}
         <div className="mb-20"></div>
         <Marketing />
-        <div className="h-screen"></div>
+        <Testimonials />
+        <Testify />
         <Footer />
       </main>
       

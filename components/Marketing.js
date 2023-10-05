@@ -96,6 +96,7 @@ export default function Marketing() {
 
       </div>
         <Carousel slides={SLIDES} options={OPTIONS} />
+        
     </>
     
   )
