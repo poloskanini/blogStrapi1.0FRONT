@@ -153,23 +153,23 @@ export default function Header() {
             </Popover>
             <Link
               href='/honoraires'
-              className={router.pathname == "/honoraires" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              className={router.pathname == "/honoraires" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               Honoraires
             </Link>
             <Link
               href='/actualites'
-              className={router.pathname == "/actualites" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              className={router.pathname == "/actualites" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               Actualités
             </Link>
             <Link
               href='/faqs'
-              className={router.pathname == "/faqs" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple"}>
+              className={router.pathname == "/faqs" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               F.A.Q
             </Link>
           </Popover.Group>
           <div className="hidden lg:flex sm:flex-0 xl:flex-1 lg:justify-end px-3">
             <Link
-              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-black hover:bg-slate-200 duration-100 transition"}>
+              href="./contact" className={mobileMenuOpen ? "navlink hidden" : "navlink text-sm font-semibold leading-6 text-gray-900 border border-custom-purple rounded-full p-3 hover:text-black hover:bg-slate-200 hover:font-bold duration-100 transition"}>
               Contact <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
