@@ -188,7 +188,7 @@ export default function lecabinet() {
                 <div key={item.name}>
                   <time
                     dateTime={item.dateTime}
-                    className="flex items-center text-sm font-semibold leading-6 text-indigo-600"
+                    className="flex items-center text-sm font-semibold leading-6 text-custom-purple"
                   >
                     <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
                       <circle cx={2} cy={2} r={2} fill="currentColor" />
@@ -211,7 +211,7 @@ export default function lecabinet() {
             <div className="mx-auto max-w-max lg:max-w-7xl">
               <div className="relative  mb-8 md:mb-2 md:px-6">
                 <div className="max-w-prose text-base lg:max-w-none">
-                  <h2 className="font-semibold leading-6 text-indigo-600">Lorem</h2>
+                  <h2 className="font-semibold leading-6 text-custom-purple">Lorem</h2>
                   <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                    Lorem ipsum dolor sit amet consectetur adipisicing.
                   </p>

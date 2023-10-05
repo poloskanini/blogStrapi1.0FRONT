@@ -212,7 +212,6 @@ export default function ContactUs() {
                     <a href="#" className="font-semibold text-custom-purple">
                     politique de confidentialité.
                     </a>
-                    .
                   </Switch.Label>
                 </Switch.Group>
             </div>

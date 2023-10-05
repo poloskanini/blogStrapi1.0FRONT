@@ -195,6 +195,18 @@ button::after {
   background: #FFF;
 }
 
+/** PROGRESS BAR  */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #fe0222;
+  transform-origin: 0%;
+  z-index: 1000;
+}
+
 /** OVERLAY MOBILE */
 .nav-overlay {
   position: fixed;
@@ -559,22 +571,22 @@ nav.mobileActive .menu-toggle .hamBox span {
 }
 
 .timeCard1.isActive {
-  animation: 1.25s ease-in-out .7s swindow-fromleft both;
-  -webkit-animation: 1.25s ease-in-out .7s window-fromleft both;
+  animation: 1.25s ease-in-out .4s swindow-fromleft both;
+  -webkit-animation: 1.25s ease-in-out .4s window-fromleft both;
   opacity: 1;
   visibility: visible;
 }
 
 .timeCard2.isActive {
-  animation: 1.25s ease-in-out .7s window-fromright both;
-  -webkit-animation: 1.25s ease-in-out .7s window-fromright both;
+  animation: 1.25s ease-in-out .4s window-fromright both;
+  -webkit-animation: 1.25s ease-in-out .4s window-fromright both;
   opacity: 1;
   visibility: visible;
 }
 
 .timeCard3.isActive {
-  animation: 1.25s ease-in-out .7s window-fromleft both;
-  -webkit-animation: 1.25s ease-in-out .7s window-fromleft both;
+  animation: 1.25s ease-in-out .4s window-fromleft both;
+  -webkit-animation: 1.25s ease-in-out .4s window-fromleft both;
   opacity: 1;
   visibility: visible;
 }

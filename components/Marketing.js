@@ -19,7 +19,7 @@ export default function Marketing() {
         width={500}
         height={500}
       />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto px-6 lg:px-32">
         <div
           className="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10"
           aria-hidden="true"

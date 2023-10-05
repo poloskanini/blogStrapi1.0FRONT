@@ -3,7 +3,6 @@ import { Fragment, useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import HeadRoom from 'react-headroom'
-import { motion, AnimatePresence } from "framer-motion"
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -64,9 +63,9 @@ export default function Header() {
   // }
 
   return (
-
+    
     <HeadRoom disableInlineStyles>
-      <header className={router.pathname === "/" ? "homeHeader header drop-shadow-2xl z-10 border-b-1" : "header drop-shadow-2xl z-10 border-b-1"}>
+      <header className={router.pathname === "/" ? "homeHeader header  z-10 border-b-1" : "header z-10 border-b-1"}>
         <nav className={mobileMenuOpen ? "mobileActive mx-auto flex items-center justify-between p-3 lg:p-6" : "mx-auto flex items-center justify-between p-3 lg:p-6"} aria-label="Global">
           <div className="flex lg:flex-1">
             <Link

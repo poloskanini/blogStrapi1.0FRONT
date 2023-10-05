@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Feature from '@/components/Feature'
 import Head from 'next/head'
+import { motion, useScroll, useSpring } from "framer-motion";
 import VideoHero from "@/components/VideoHero"
 import Accueil from "@/components/Accueil"
 import variables from '../styles/variables.module.scss'
@@ -18,6 +19,14 @@ const lato = Lato({
 
 
 export default function Home() {
+
+    // useScroll Animation (red bar)
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+      stiffness: 100,
+      damping: 30,
+      restDelta: 0.001
+    });
 
   return (
     <>
@@ -40,11 +49,12 @@ export default function Home() {
       </Head>
       
       <main className={lato.className}>
+        <motion.div className="progress-bar" style={{ scaleX }} />
         <VideoHero />
         <Accueil />
         <TimeLine />
         <ContentWork />
-        <Feature />
+        {/* <Feature /> */}
         <div className="mb-20"></div>
         <Marketing />
         <div className="h-screen"></div>
