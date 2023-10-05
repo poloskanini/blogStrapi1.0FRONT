@@ -201,7 +201,7 @@ button::after {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 1.5px;
   background: #fe0222;
   transform-origin: 0%;
   z-index: 1000;
@@ -622,4 +622,12 @@ nav.mobileActive .menu-toggle .hamBox span {
       clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
       -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
   }
+}
+
+/** MARKETING  */
+.marketing {
+  background-color: #222222;
+}
+.marketingBis {
+  background-color: #222222;
 }
