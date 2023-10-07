@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { Switch } from '@headlessui/react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import RevealSlow from '../components/animations/RevealSlow'
 
-
+import emailjs from '@emailjs/browser'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -13,6 +13,25 @@ function classNames(...classes) {
 export default function ContactUs() {
 
   const [agreed, setAgreed] = useState(false)
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // ('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_e75n6oz', 'template_og74e9o', form.current, 'ZEWxc-sRPqnRKbpPg')
+      .then((result) => {
+          console.log(result.text);
+          console.log('Message envoyé !');
+          // TODO: Remplacer par un TOAST SUCCESS
+          alert('Message envoyé !');
+          e.target.reset()
+      }, (error) => {
+        // TODO: Remplacer par un TOAST ERROR
+          console.log(error.text);
+      });
+  };
 
 
   return (
@@ -99,7 +118,7 @@ export default function ContactUs() {
         </div>
 
         {/* Formulaire (RIGHT COLUMN) */}
-        <form action="#" method="POST" className="px-6 p-20 sm:pb-32 lg:px-8 lg:py-42 sm:pt-32 lg:static">
+        <form ref={form} onSubmit={sendEmail} method="POST" className="px-6 p-20 sm:pb-32 lg:px-8 lg:py-42 sm:pt-32 lg:static">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 pb-8">Nous écrire :</h2>
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
