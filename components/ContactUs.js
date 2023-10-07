@@ -110,8 +110,6 @@ export default function ContactUs() {
 
           <RevealSlow>
             {/* GOOGLE MAPS */}
-            {/* <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10497.997327390412!2d2.3015524!3d48.8677569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2c4888971f%3A0x8ffb155631af1279!2sSandrine%20MENEZES!5e0!3m2!1sfr!2sfr!4v1695987503593!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy" ></iframe> */}
-
             <iframe className='mt-10' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.8309831717133!2d2.3418794!3d48.880498499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e4141541b61%3A0xe6488e15aa2a21ca!2s62%20Rue%20Condorcet%2C%2075009%20Paris!5e0!3m2!1sfr!2sfr!4v1696105484783!5m2!1sfr!2sfr" width="100%" height="300" loading="lazy"></iframe>
           </RevealSlow>
 
@@ -124,7 +122,7 @@ export default function ContactUs() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Prénom
+                  Prénom <span className='text-red-600'>*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -133,12 +131,13 @@ export default function ContactUs() {
                     id="first-name"
                     autoComplete="given-name"
                     className="block w-full rounded-md px-3.5 py-2 border text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
                   />
                 </div>
               </div>
               <div>
                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Nom
+                  Nom <span className='text-red-600'>*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -147,6 +146,7 @@ export default function ContactUs() {
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
                   />
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function ContactUs() {
                 </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Email
+                  Email <span className='text-red-600'>*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -175,6 +175,7 @@ export default function ContactUs() {
                     id="email"
                     autoComplete="email"
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
                   />
                 </div>
               </div>
@@ -194,7 +195,7 @@ export default function ContactUs() {
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Message
+                  Message <span className='text-red-600'>*</span>
                 </label>
                 <div className="mt-2.5">
                   <textarea
@@ -203,6 +204,7 @@ export default function ContactUs() {
                     rows={4}
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={''}
+                    required
                   />
                 </div>
               </div>
