@@ -1,11 +1,14 @@
 import Image from "next/image"
 import Carousel from "./Carousel"
+import { useEffect } from 'react'
+
+
 
 const stats = [
-  { id: 1, name: 'Creators on the platform', value: '8,000 +' },
-  { id: 2, name: 'Flat platform fee', value: '3 %' },
-  { id: 3, name: 'Uptime guarantee', value: '99.9 %' },
-  { id: 4, name: 'Paid out to creators', value: '70 M€' },
+  { id: 1, name: "% de procès gagnés", value: 82, initial: '00' },
+  { id: 2, name: "M€ d'indemnnités perçues", value: 2, initial: '0' },
+  { id: 3, name: "Années d'expériences", value: 12, initial: '00' },
+  { id: 4, name: "% de cas résolus", value: 99, initial: '00' },
 ]
 
 export default function Marketing() {
@@ -13,6 +16,50 @@ export default function Marketing() {
   const OPTIONS = { dragFree: true, containScroll: 'trimSnaps' }
   const SLIDE_COUNT = 4
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
+  useEffect(() => {
+    let wrapperTop = document.querySelector('.wrapper');
+
+  const launch = () => {
+    let valueDisplays = document.querySelectorAll('.num');
+  
+    // Rallonger interval pour ralentir le compteur
+    let interval = 2000;
+  
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endValue);
+  
+      let counter = setInterval(function() {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if(startValue == endValue) {
+          clearInterval(counter);
+        }
+      }, duration)
+    })
+  }
+  
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    for(const entry of entries) {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        launch();
+        observer.unobserve(entry.target);
+      }
+    }
+  }, options)
+  
+  observer.observe(wrapperTop);
+  })
+
 
 
   return (
@@ -27,7 +74,7 @@ export default function Marketing() {
         />
 
         {/* CHIFFRES */}
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 wrapper">
           <div
             className="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10"
             aria-hidden="true"
@@ -54,7 +101,7 @@ export default function Marketing() {
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col gap-y-3 border-l border-white/10 pl-6">
                 <dt className="text-sm leading-6 text-center">{stat.name}</dt>
-                <dd className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center">{stat.value}</dd>
+                <dd className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center num" data-val={stat.value}>{stat.initial}</dd>
               </div>
             ))}
           </dl>
