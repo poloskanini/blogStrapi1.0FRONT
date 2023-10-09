@@ -42,15 +42,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Installed Libraries and other usefull stuffs to maintain :
 
+- React HeadRoom (Header sticky)
+- Split Type
 - Framer Motion (page transitions, animations...)
 - Intersection Observer
 - Gsap
-- React HeadRoom (Header sticky)
 - HeadlessUI React + HeroIcons
 - Google Fonts
-- Email.js (mailing + templates)
 - Embla Carousel
-- Split Type
+- React Hook Form
+- Email.js (mailing + templates)
+- React Toastify
 
 ## Working with :
 

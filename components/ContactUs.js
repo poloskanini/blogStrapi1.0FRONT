@@ -6,8 +6,6 @@ import { useForm } from "react-hook-form"
 import RevealSlow from '../components/animations/RevealSlow'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
 import emailjs from '@emailjs/browser'
 
 function classNames(...classes) {
@@ -16,14 +14,14 @@ function classNames(...classes) {
 
 export default function ContactUs() {
 
-  // const [agreed, setAgreed] = useState(false)
-
   const form = useRef();
 
+  // VALIDATION DU FORMULAIRE avec REACT HOOK FORM
   const {register, formState: {errors}, handleSubmit} = useForm({
     mode: "all"
   })
 
+  // ENVOI DU MAIL avec Email.js
   const sendEmail = () => {
 
     // ('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
