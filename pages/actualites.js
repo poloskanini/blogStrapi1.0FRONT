@@ -116,7 +116,7 @@ export default function Posts({ posts }) {
             
             :
             
-            <p className='mx-auto m-20 max-w-2xl gap-y-20 text-center'>Aucun article n'est disponible.</p>}
+            <p className='mx-auto m-20 max-w-2xl gap-y-20 text-center'>Aucun article n&apos;est disponible.</p>}
           
         </div>
       </div>
