@@ -575,22 +575,22 @@ nav.mobileActive .menu-toggle .hamBox span {
 }
 
 .timeCard1.isActive {
-  animation: 1.25s ease-in-out .4s swindow-fromleft both;
-  -webkit-animation: 1.25s ease-in-out .4s window-fromleft both;
+  animation: 1.25s ease-in-out swindow-fromleft both;
+  -webkit-animation: 1.25s ease-in-out window-fromleft both;
   opacity: 1;
   visibility: visible;
 }
 
 .timeCard2.isActive {
-  animation: 1.25s ease-in-out .4s window-fromright both;
-  -webkit-animation: 1.25s ease-in-out .4s window-fromright both;
+  animation: 1.25s ease-in-out window-fromright both;
+  -webkit-animation: 1.25s ease-in-out window-fromright both;
   opacity: 1;
   visibility: visible;
 }
 
 .timeCard3.isActive {
-  animation: 1.25s ease-in-out .4s window-fromleft both;
-  -webkit-animation: 1.25s ease-in-out .4s window-fromleft both;
+  animation: 1.25s ease-in-out window-fromleft both;
+  -webkit-animation: 1.25s ease-in-out window-fromleft both;
   opacity: 1;
   visibility: visible;
 }

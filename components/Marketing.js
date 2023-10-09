@@ -2,8 +2,6 @@ import Image from "next/image"
 import Carousel from "./Carousel"
 import { useEffect } from 'react'
 
-
-
 const stats = [
   { id: 1, name: "de procès gagnés", value: 82, initial: '0', slug:" %" },
   { id: 2, name: "d'indemnnités perçues", value: 2, initial: '0', slug:" M€" },
@@ -20,58 +18,58 @@ export default function Marketing() {
   useEffect(() => {
     let wrapperTop = document.querySelector('.wrapper');
 
-  const launch = () => {
-    let valueDisplays = document.querySelectorAll('.num');
-  
-    // Rallonger interval pour ralentir le compteur
-    let interval = 2300;
-  
-    valueDisplays.forEach((valueDisplay) => {
-      let startValue = 0;
-      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-      let duration = Math.floor(interval / endValue);
-  
-      let counter = setInterval(function() {
-        startValue += 1;
-        valueDisplay.textContent = startValue;
-        if(startValue == endValue) {
-          clearInterval(counter);
-        }
-      }, duration)
-    })
-  }
-  
-  let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: .6,
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    for(const entry of entries) {
-      if(entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        launch();
-        observer.unobserve(entry.target);
-      }
+    const launch = () => {
+      let valueDisplays = document.querySelectorAll('.num');
+    
+      // Rallonger interval pour ralentir le compteur
+      let interval = 2300;
+    
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+    
+        let counter = setInterval(function() {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if(startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration)
+      })
     }
-  }, options)
   
-  observer.observe(wrapperTop);
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: .6,
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      for(const entry of entries) {
+        if(entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          launch();
+          observer.unobserve(entry.target);
+        }
+      }
+    }, options)
+  
+    observer.observe(wrapperTop);
+    
   })
-
 
 
   return (
     <>
-      <div className="marketing relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        <Image
+      <div className="marketing relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 bg-fixed bg-[url('https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp')] bg-no-repeat bg-cover bg-center">
+        {/* <Image
           src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp"
           alt="statistics"
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          className="absolute inset-0 -z-10 h-full w-full object-cover	"
           width={500}
           height={500}
-        />
+        /> */}
 
         {/* CHIFFRES */}
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 wrapper">
@@ -111,7 +109,8 @@ export default function Marketing() {
         </div>
 
       </div>
-        <Carousel slides={SLIDES} options={OPTIONS} />
+      
+      <Carousel slides={SLIDES} options={OPTIONS} />
         
     </>
     
