@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { Switch } from '@headlessui/react'
 import { useState, useRef } from 'react'
+import { useForm } from "react-hook-form"
 import RevealSlow from '../components/animations/RevealSlow'
 
 import emailjs from '@emailjs/browser'
@@ -16,8 +17,11 @@ export default function ContactUs() {
 
   const form = useRef();
 
+  const {register, formState: {errors}, handleSubmit} = useForm({
+    mode: "all"
+  })
+
   const sendEmail = (e) => {
-    e.preventDefault();
 
     // ('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
     emailjs.sendForm('service_e75n6oz', 'template_og74e9o', form.current, 'ZEWxc-sRPqnRKbpPg')
@@ -26,11 +30,12 @@ export default function ContactUs() {
           console.log('Message envoyé !');
           // TODO: Remplacer par un TOAST SUCCESS
           alert('Message envoyé !');
-          e.target.reset()
+          form.current.reset()
       }, (error) => {
         // TODO: Remplacer par un TOAST ERROR
           console.log(error.text);
       });
+      
   };
 
 
@@ -116,38 +121,64 @@ export default function ContactUs() {
         </div>
 
         {/* Formulaire (RIGHT COLUMN) */}
-        <form ref={form} onSubmit={sendEmail} method="POST" className="px-6 p-20 sm:pb-32 lg:px-8 lg:py-42 sm:pt-32 lg:static">
+        <form ref={form} onSubmit={handleSubmit(sendEmail)} method="POST" className="px-6 p-20 sm:pb-32 lg:px-8 lg:py-42 sm:pt-32 lg:static">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 pb-8">Nous écrire :</h2>
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="firstName" className="block text-sm font-semibold leading-6 text-gray-900">
                   Prénom <span className='text-red-600'>*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("firstName", {
+                      required: "Le prénom est requis",
+                      minLength: {
+                        value: 3,
+                        message: "Le prénom doit contenir au minimum 3 caractères"
+                      },
+                      maxLength: {
+                        value: 30,
+                        message: "Le prénom doit contenir au maximum 30 caractères"
+                      },
+                    })}
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="firstName"
+                    id="firstName"
                     autoComplete="given-name"
                     className="block w-full rounded-md px-3.5 py-2 border text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    required
                   />
+                  <p className="text-red-600 text-sm">
+                    {errors.firstName?.message}
+                  </p>
                 </div>
               </div>
               <div>
-                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="lastName" className="block text-sm font-semibold leading-6 text-gray-900">
                   Nom <span className='text-red-600'>*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("lastName", {
+                      required: "Le nom est requis",
+                      minLength: {
+                        value: 3,
+                        message: "Le nom doit contenir au minimum 3 caractères "
+                      },
+                      maxLength: {
+                        value: 30,
+                        message: "Le nom doit contenir au maximum 30 caractères "
+                      },
+                    })}
                     type="text"
-                    name="last-name"
-                    id="last-name"
+                    name="lastName"
+                    id="lastName"
                     autoComplete="family-name"
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    required
                   />
+                  <p className="text-red-600 text-sm">
+                    {errors.lastName?.message}
+                  </p>
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -156,12 +187,25 @@ export default function ContactUs() {
                   </label>
                   <div className="mt-2.5">
                     <input
+                      {...register("company", {
+                        minLength: {
+                          value: 2,
+                          message: "L'entreprise doit contenir au minimum 2 caractères "
+                        },
+                        maxLength: {
+                          value: 30,
+                          message: "L'entreprise doit contenir au maximum 30 caractères "
+                        },
+                      })}
                       type="text"
                       name="company"
                       id="company"
                       autoComplete="organization"
                       className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
+                    <p className="text-red-600 text-sm">
+                    {errors.company?.message}
+                  </p>
                   </div>
                 </div>
               <div>
@@ -170,27 +214,45 @@ export default function ContactUs() {
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("email", {
+                      required: "L'email est requis",
+                      pattern: {
+                        value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                        message: "L'email doit être valide et contenir un @"
+                      }
+                    })}
                     type="email"
                     name="email"
                     id="email"
                     autoComplete="email"
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    required
                   />
+                  <p className="text-red-600 text-sm">
+                    {errors.email?.message}
+                  </p>
                 </div>
               </div>
               <div>
-                <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="phoneNumber" className="block text-sm font-semibold leading-6 text-gray-900">
                   Téléphone
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("phoneNumber", {
+                      pattern: {
+                        value: /^(?:(?:(?:\+|00)33[ ]?(?:\(0\)[ ]?)?)|0){1}[1-9]{1}([ .-]?)(?:\d{2}\1?){3}\d{2}$/,
+                        message: "Le téléphone doit être valide"
+                      }
+                    })}
                     type="tel"
-                    name="phone-number"
-                    id="phone-number"
+                    name="phoneNumber"
+                    id="phoneNumber"
                     autoComplete="tel"
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  <p className="text-red-600 text-sm">
+                    {errors.phoneNumber?.message}
+                  </p>
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -199,16 +261,29 @@ export default function ContactUs() {
                 </label>
                 <div className="mt-2.5">
                   <textarea
+                    {...register("message", {
+                      required: "Le message est requis",
+                      minLength: {
+                        value: 3,
+                        message: "Le message doit contenir au minimum 3 caractères "
+                      },
+                      maxLength: {
+                        value: 500,
+                        message: "Le message ne peut contenir plus de 500 caractères "
+                      },
+                    })}
                     name="message"
                     id="message"
                     rows={4}
                     className="block w-full rounded-md border px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={''}
-                    required
                   />
+                  <p className="text-red-600 text-sm">
+                    {errors.message?.message}
+                  </p>
                 </div>
               </div>
-              <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
+              <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2" required>
                   <div className="flex h-6 items-center">
                     <Switch
                       checked={agreed}
