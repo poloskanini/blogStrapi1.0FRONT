@@ -62,7 +62,7 @@ export default function Marketing() {
 
   return (
     <>
-      <div className="marketing relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 bg-fixed bg-[url('https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp')] bg-no-repeat bg-cover bg-center">
+      <div className="marketing relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 lg:bg-fixed bg-[url('https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp')] bg-no-repeat bg-cover bg-center">
         {/* <Image
           src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp"
           alt="statistics"
