@@ -4,6 +4,9 @@ import { Switch } from '@headlessui/react'
 import { useState, useRef } from 'react'
 import { useForm } from "react-hook-form"
 import RevealSlow from '../components/animations/RevealSlow'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import emailjs from '@emailjs/browser'
 
@@ -21,19 +24,36 @@ export default function ContactUs() {
     mode: "all"
   })
 
-  const sendEmail = (e) => {
+  const sendEmail = () => {
 
     // ('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
     emailjs.sendForm('service_e75n6oz', 'template_og74e9o', form.current, 'ZEWxc-sRPqnRKbpPg')
       .then((result) => {
-          console.log(result.text);
-          console.log('Message envoyé !');
-          // TODO: Remplacer par un TOAST SUCCESS
-          alert('Message envoyé !');
-          form.current.reset()
+        // TOAST MESSAGE SENT OK
+        toast.success("Votre message a bien été envoyé", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light"
+        })
+        form.current.reset()
+
       }, (error) => {
-        // TODO: Remplacer par un TOAST ERROR
-          console.log(error.text);
+        // TOAST MESSAGE ERROR
+        toast.error("Une erreur s'est produite, veuillez réessayer.", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       });
       
   };
@@ -272,6 +292,9 @@ export default function ContactUs() {
                 Envoyer
               </button>
             </div>
+
+            {/* TOAST MESSAGE SENT */}
+            <ToastContainer />
           </div>
         </form>
 
