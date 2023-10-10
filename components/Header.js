@@ -65,8 +65,8 @@ export default function Header() {
   return (
     
     <HeadRoom disableInlineStyles>
-      <header className={router.pathname === "/" ? "homeHeader header  z-10 border-b-1" : "header z-10 border-b-1"}>
-        <nav className={mobileMenuOpen ? "mobileActive mx-auto flex items-center justify-between p-3 lg:p-6" : "mx-auto flex items-center justify-between p-3 lg:p-6"} aria-label="Global">
+      <header className={router.pathname === "/" ? "homeHeader header  z-10 border-b-1 border-gray-300" : "header z-10 border-b-1 border-gray-300"}>
+        <nav className={mobileMenuOpen ? "mobileActive mx-auto flex items-center justify-between p-3 lg:p-6 drop-shadow-md" : "mx-auto flex items-center justify-between p-3 lg:p-6 drop-shadow-md"} aria-label="Global">
           <div className="flex lg:flex-1">
             <Link
               href='/'
