@@ -18,10 +18,25 @@ export default function Carousel(props) {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const [tweenValues, setTweenValues] = useState([])
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  const onScroll = useCallback((emblaApi) => {
+    const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
+    setScrollProgress(progress * 100)
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onScroll(emblaApi)
+    emblaApi.on('reInit', onScroll)
+    emblaApi.on('scroll', onScroll)
+  }, [emblaApi, onScroll])
+
 
   return (
     
-    <div className="embla cursor-grab">
+    <div className="embla cursor-grab relative">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {expertises.map((exp) => (
@@ -46,7 +61,7 @@ export default function Carousel(props) {
                         <h2 className='expertise-title text-xl md:text-3xl 2xl:text-4xl mb-10'>{exp.title}</h2>
                         <p className='expertise-description text-sm md:text-base'>{exp.description}</p>
                       </div>
-                      <div className="expertise-link text-lg absolute bottom-5">
+                      <div className="expertise-link text-lg absolute bottom-16">
                         <Link
                           className='hover:text-red-600'
                           href={`${exp.url}`}
@@ -62,6 +77,12 @@ export default function Carousel(props) {
             
           ))}
         </div>
+      </div>
+      <div className="embla__progress">
+        <div
+          className="embla__progress__bar"
+          style={{ transform: `translate3d(${scrollProgress}%,0px,0px)` }}
+        />
       </div>
     </div>
   )

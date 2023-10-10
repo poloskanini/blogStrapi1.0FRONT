@@ -748,3 +748,33 @@ nav.mobileActive .menu-toggle .hamBox span {
     padding: 1.6rem;
   }
 }
+
+.embla__progress {
+  z-index: 1;
+  background-color:rgb(249, 249, 249);
+  position: absolute;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  left: 0;
+  right: 0;
+  bottom: 2.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: none;
+  width: 21rem;
+  max-width: 90%;
+  overflow: hidden;
+}
+.embla__progress__bar {
+  background-image: linear-gradient(
+    45deg,
+    rgb(220 38 38),
+    rgb(220 38 38)
+  );
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+}
+
