@@ -59,7 +59,7 @@ export default function Home() {
         {/* <Feature /> */}
         <div className="mb-20"></div>
         <Marketing />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Testify />
         <Footer />
       </main>
