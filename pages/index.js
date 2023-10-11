@@ -69,7 +69,6 @@ export default function Home() {
         <div className="mb-20"></div>
         <Marketing />
         <CarouselBis slides={SLIDES} options={OPTIONS}/>
-        {/* <Testimonials /> */}
         <Testify />
         <Footer />
       </main>
