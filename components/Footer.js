@@ -70,7 +70,7 @@ export default function Footer() {
             <div className='text-center flex flex-column justify-center items-center'>
                 <Link
                   href="./contact"
-                  className="text-sm font-normal leading-6 text-gray-300  bg-custom-purple hover:bg-custom-purple-dark rounded-full p-3 duration-100 transition">
+                  className="text-sm font-normal leading-6 text-gray-300  bg-custom-purple hover:bg-custom-purple-dark hover:text-white rounded-full p-3 duration-100 transition">
                   Contactez nous <span aria-hidden="true">&rarr;</span>
                 </Link>
             </div>
@@ -150,7 +150,7 @@ export default function Footer() {
           <div className='text-center'>
             <Link
               href="https://www.nicolasbarthes.com"
-              className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+              className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
                 Site réalisé par N|B
             </Link>
           </div>
@@ -164,7 +164,7 @@ export default function Footer() {
           </div>
           <div className="space-x-6 hidden lg:flex justify-center">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
+              <a key={item.name} href={item.href} className="text-gray-500 hover:text-white">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
