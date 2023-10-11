@@ -85,21 +85,17 @@ export default function Accueil() {
               <div className="max-w-sm pb-6 absolute bottom-36">
 
 
-                  <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
-                      <p>Oser.</p>
-                    </h1>
-                  </div>
-                  <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
+                  <h1 className={`${montserrat.className} homeTitle-container w-screen`}>
+                    <div className={`${montserrat.className} homeTitle-container w-screen`}>
+                      <p className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>Oser.</p>
+                    </div>
+                    <div className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
                       <p>Défendre.</p>
-                    </h1>
-                  </div>
-                  <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <h1 className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
+                    </div>
+                    <div className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
                       <p>Réussir.</p>
-                    </h1>
-                  </div>
+                    </div>
+                  </h1>
 
 
               </div>
