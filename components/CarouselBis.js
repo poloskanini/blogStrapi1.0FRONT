@@ -14,10 +14,10 @@ const expertises = [
   { id: 2, title: 'Droit de la Sécurité Sociale', description: 'Aut sequi temporibus, quo nemo quis nisi odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-pixabay-161892.jpg', url: '/droit-de-la-securite-sociale'},
   { id: 3, title: 'Formations', description: 'adipisicing elit. Placeat quis tempore excepturi?', image: '/assets/images/pexels-luis-quintero-2774556.jpg', url: '/#'},
   { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
-  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
-  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
-  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
-  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 5, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 6, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 7, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 8, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
 ]
 
 const EmblaCarousel = (props) => {

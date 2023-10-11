@@ -799,10 +799,22 @@ nav.mobileActive .menu-toggle .hamBox span {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
-  left: 1.6rem;
-  width: 96%;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .embla__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.6rem;
+    width: 96%;
+  }
 }
 
 .embla__button {
