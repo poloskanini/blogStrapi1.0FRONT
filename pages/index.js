@@ -63,7 +63,6 @@ export default function Home() {
         <Accueil />
         <TimeLine />
         <ContentWork />
-        {/* <Feature /> */}
         <div className="mb-20"></div>
         <Marketing />
         <Carousel slides={SLIDES} options={OPTIONS}/>
