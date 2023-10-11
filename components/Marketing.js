@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Carousel from "./Carousel"
+import CarouselBis from "./CarouselBis"
 import { useEffect } from 'react'
 
 const stats = [
@@ -10,10 +11,6 @@ const stats = [
 ]
 
 export default function Marketing() {
-
-  const OPTIONS = { dragFree: true, containScroll: 'trimSnaps' }
-  const SLIDE_COUNT = 4
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   useEffect(() => {
     let wrapperTop = document.querySelector('.wrapper');
@@ -110,7 +107,8 @@ export default function Marketing() {
 
       </div>
       
-      <Carousel slides={SLIDES} options={OPTIONS} />
+      {/* <Carousel slides={SLIDES} options={OPTIONS} /> */}
+      {/* <CarouselBis /> */}
         
     </>
     

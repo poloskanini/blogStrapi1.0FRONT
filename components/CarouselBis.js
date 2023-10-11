@@ -1,0 +1,129 @@
+import React, { useState, useEffect, useCallback } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import {
+  DotButton,
+  PrevButton,
+  NextButton
+} from './EmblaCarouselArrowsDotsButtons'
+import Image from 'next/image'
+import Link from 'next/link'
+
+
+const expertises = [
+  { id: 1, title: 'Droit du Travail', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quis tempore excepturi?', image: '/assets/images/pexels-the-coach-space-2977547 (2).jpg', url: '/droit-du-travail'},
+  { id: 2, title: 'Droit de la Sécurité Sociale', description: 'Aut sequi temporibus, quo nemo quis nisi odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-pixabay-161892.jpg', url: '/droit-de-la-securite-sociale'},
+  { id: 3, title: 'Formations', description: 'adipisicing elit. Placeat quis tempore excepturi?', image: '/assets/images/pexels-luis-quintero-2774556.jpg', url: '/#'},
+  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+  { id: 4, title: 'Conseils', description: 'Odio accusantium reiciendis sit rerum cumque modi nam.', image: '/assets/images/pexels-vlada-karpovich-6114954.jpg', url: '/#'},
+]
+
+const EmblaCarousel = (props) => {
+  const { slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState([])
+
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  )
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  )
+  const scrollTo = useCallback(
+    (index) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  )
+
+  const onInit = useCallback((emblaApi) => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+  }, [])
+
+  const onSelect = useCallback((emblaApi) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+    setPrevBtnDisabled(!emblaApi.canScrollPrev())
+    setNextBtnDisabled(!emblaApi.canScrollNext())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onInit(emblaApi)
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onInit)
+    emblaApi.on('reInit', onSelect)
+    emblaApi.on('select', onSelect)
+  }, [emblaApi, onInit, onSelect])
+
+  return (
+    <>
+      <div className="embla relative">
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+            {expertises.map((exp) => (
+              <div className="embla__slide" key={exp.id}>
+                <div className="embla__parallax">
+                  <div
+                    className="embla__parallax__layer"
+                  >
+                    <Image
+                      className="embla__slide__img embla__parallax__img relative brightness-70 blur-sm"
+                      src={exp.image}
+                      alt={`Image ${exp.title}`}
+                      width={500}
+                      height={500}
+                    />
+                    <div className="embla__slide__content text-white text-lg flex justify-center items-center m-5 md:px-10 relative">
+                      <div className="expertise-number text-red-600 text-lg font-bold text-left">
+                        <span>0{exp.id}</span>
+                      </div>
+                      <div className="expertise-content mt-5 justify-around">
+                        <div className="expertises-text">
+                          <h2 className='expertise-title text-xl md:text-3xl 2xl:text-4xl mb-10'>{exp.title}</h2>
+                          <p className='expertise-description text-sm md:text-base'>{exp.description}</p>
+                        </div>
+                        <div className="expertise-link text-lg absolute bottom-16">
+                          <Link
+                            className='hover:text-red-600'
+                            href={`${exp.url}`}
+                          >
+                            En savoir plus &nbsp; <span aria-hidden="true" className='text-red-600'>&rarr;</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="embla__buttons">
+          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+        </div>
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
+      </div>
+
+    </>
+  )
+}
+
+export default EmblaCarousel

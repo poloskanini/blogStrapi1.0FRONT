@@ -9,6 +9,8 @@ import styles from '../styles/Home.module.scss'
 import TimeLine from "@/components/TimeLine"
 import ContentWork from '@/components/ContentWork'
 import Marketing from '@/components/Marketing'
+import Carousel from '@/components/Carousel';
+import CarouselBis from '@/components/CarouselBis';
 import Testimonials from '@/components/Testimonials';
 import Testify from '@/components/Testify';
 import { Lato } from 'next/font/google'
@@ -21,6 +23,11 @@ const lato = Lato({
 
 
 export default function Home() {
+
+    // Carousel Behaviour
+    const OPTIONS = { dragFree: true, containScroll: 'trimSnaps' }
+    const SLIDE_COUNT = 4
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
     // useScroll Animation (red bar)
     const { scrollYProgress } = useScroll();
@@ -59,6 +66,10 @@ export default function Home() {
         {/* <Feature /> */}
         <div className="mb-20"></div>
         <Marketing />
+        <Carousel slides={SLIDES} options={OPTIONS}/>
+        <div className="mb-20"></div>
+        <Marketing />
+        <CarouselBis slides={SLIDES} options={OPTIONS}/>
         {/* <Testimonials /> */}
         <Testify />
         <Footer />
