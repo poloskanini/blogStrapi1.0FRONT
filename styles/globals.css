@@ -801,7 +801,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
-  width: 90%;
+  width: 88%;
 }
 
 @media screen and (min-width: 768px) {

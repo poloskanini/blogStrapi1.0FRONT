@@ -102,7 +102,7 @@ export default function Header() {
           <Popover.Group className="hidden lg:flex lg:gap-x-12 px-5">
             <Link
               href='/le-cabinet'
-              className={router.pathname == "/le-cabinet" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
+              className={router.pathname == "/le-cabinet" ? "navlink text-custom-purple navlink text-sm leading-6 font-semibold delay-1000" : "navlink text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               Le Cabinet
             </Link>
             <Popover
@@ -110,9 +110,9 @@ export default function Header() {
               onMouseEnter={() => setIsShowing(true)}
               onMouseLeave={() => setIsShowing(false)}
             >
-              <Popover.Button className="navlink flex items-center gap-x-1 text-sm font-normal leading-6 text-gray-900 border-none hover:text-custom-purple">
+              <Popover.Button className="navlink flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 border-none hover:text-custom-purple">
                 Expertises
-                <ChevronDownIcon className={mobileMenuOpen ? "hidden" : "h-5 w-5 flex-none text-b"} lackaria-hidden="true" />
+                <ChevronDownIcon className={mobileMenuOpen ? "hidden" : "h-5 w-5 flex-none"} lackaria-hidden="true" />
               </Popover.Button>
 
               <Transition
@@ -133,13 +133,13 @@ export default function Header() {
                       <Link
                         href={item.href}
                         key={item.name}
-                        className="navlink group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                        className="navlink group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 "
                       >
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <item.icon className="h-6 w-6 text-gray-600 group-hover:text-custom-purple" aria-hidden="true" />
                         </div>
                         <div className="flex-auto">
-                          <p className="block font-normal text-gray-900 hover:text-custom-purple">
+                          <p className="block font-semibold text-gray-900 hover:text-custom-purple">
                             {item.name}
                             <span className="absolute inset-0" />
                           </p>
@@ -153,17 +153,17 @@ export default function Header() {
             </Popover>
             <Link
               href='/honoraires'
-              className={router.pathname == "/honoraires" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
+              className={router.pathname == "/honoraires" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               Honoraires
             </Link>
             <Link
               href='/actualites'
-              className={router.pathname == "/actualites" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
+              className={router.pathname == "/actualites" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               Actualités
             </Link>
             <Link
               href='/faqs'
-              className={router.pathname == "/faqs" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-normal leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
+              className={router.pathname == "/faqs" ? "text-custom-purple navlink text-sm leading-6 font-semibold" : "navlink text-sm font-semibold leading-6 text-gray-900 hover:text-custom-purple hover:font-bold"}>
               F.A.Q
             </Link>
           </Popover.Group>
