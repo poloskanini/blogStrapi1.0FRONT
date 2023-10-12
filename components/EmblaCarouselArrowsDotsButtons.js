@@ -4,7 +4,11 @@ export const DotButton = (props) => {
   const { children, ...restProps } = props
 
   return (
-    <button type="button" {...restProps}>
+    <button
+      type="button"
+      role="button"
+      aria-label="dots-button"
+      {...restProps}>
       {children}
     </button>
   )
@@ -19,7 +23,6 @@ export const PrevButton = (props) => {
       type="button"
       role="button"
       aria-label="previous-button"
-      
       {...restProps}
     >
       <svg className="embla__button__svg" viewBox="0 0 532 532">
