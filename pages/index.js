@@ -116,8 +116,8 @@ export default function Home() {
         <DynamicMarketing />
         <DynamicCarousel slides={SLIDES} options={OPTIONS}/>
         <div className="mb-20"></div>
-        {/* <DynamicMarketing />
-        <DynamicCarouselBis slides={SLIDES} options={OPTIONS}/> */}
+        <DynamicMarketing />
+        <DynamicCarouselBis slides={SLIDES} options={OPTIONS}/>
         <DynamicTestify />
         <DynamicFooter />
       </main>
