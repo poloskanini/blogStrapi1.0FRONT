@@ -8,6 +8,7 @@ import variables from '../styles/variables.module.scss'
 import styles from '../styles/Home.module.scss'
 import TimeLine from "@/components/TimeLine"
 import ContentWork from '@/components/ContentWork'
+import dynamic from 'next/dynamic'
 import Marketing from '@/components/Marketing'
 import Carousel from '@/components/Carousel';
 import CarouselBis from '@/components/CarouselBis';
@@ -19,6 +20,26 @@ import Footer from '@/components/Footer'
 const lato = Lato({
   subsets: ['latin'],
   weight: ['100', '300', '400', '700', '900']
+})
+
+// Chargement dynamique (lazy) de la section Marketing pour optimisation des performances
+const DynamicMarketing = dynamic(() => import('../components/Marketing'), {
+  loading: () => <p>Loading...</p>,
+})
+
+// Chargement dynamique (lazy) de la section Carousel pour optimisation des performances
+const DynamicCarousel = dynamic(() => import('../components/Carousel'), {
+  loading: () => <p>Loading...</p>,
+})
+
+// Chargement dynamique (lazy) de la section CarouselBis pour optimisation des performances
+const DynamicCarouselBis = dynamic(() => import('../components/CarouselBis'), {
+  loading: () => <p>Loading...</p>,
+})
+
+// Chargement dynamique (lazy) de la section TimeLine pour optimisation des performances
+const DynamicTimeLine = dynamic(() => import('../components/TimeLine'), {
+  loading: () => <p>Loading...</p>,
 })
 
 
@@ -61,14 +82,14 @@ export default function Home() {
         <motion.div className="progress-bar" style={{ scaleX }} />
         <VideoHero />
         <Accueil />
-        <TimeLine />
+        <DynamicTimeLine />
         <ContentWork />
         <div className="mb-20"></div>
-        <Marketing />
-        <Carousel slides={SLIDES} options={OPTIONS}/>
+        <DynamicMarketing />
+        <DynamicCarousel slides={SLIDES} options={OPTIONS}/>
         <div className="mb-20"></div>
-        <Marketing />
-        <CarouselBis slides={SLIDES} options={OPTIONS}/>
+        <DynamicMarketing />
+        <DynamicCarouselBis slides={SLIDES} options={OPTIONS}/>
         <Testify />
         <Footer />
       </main>

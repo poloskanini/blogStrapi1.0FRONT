@@ -42,11 +42,12 @@ export default function TimeLine() {
 
           <div className="mb-10 lg:mb-0 timeCard timeCard1 scroll" data-rate='-0.1' data-direction='horizontal'>
             <Image
-              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852635/smalloffice_labota.webp"
+              src="/assets/images/smalloffice_labota1.webp"
               alt="Oser"
               className="object-cover image-1 h-72 image w-full"
               width={500}
               height={500}
+              sizes="(max-width: 768px) 100vw"
             />
             <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
               Entreprendre avec assurance
@@ -56,11 +57,12 @@ export default function TimeLine() {
    
           <div className='mb-10 lg:mb-0 timeCard timeCard2 scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852637/mediumoffice_aotj1n.webp"
+              src="/assets/images/mediumoffice_aotj1n.webp"
               alt="Défendre"
               className="object-cover image-2 h-72 image w-full"
               width={500}
               height={500}
+              sizes="(max-width: 768px) 100vw"
             />
             <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
               Résister à une critique
@@ -79,11 +81,12 @@ export default function TimeLine() {
 
            <div className='mb-10 lg:mb-0 timeCard timeCard3 scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695852640/largeoffice_ltxd8n.webp"
+              src="/assets/images/largeoffice_ltxd8n.webp"
               alt="Réussir"
               className="object-cover image-3 h-72 image w-full"
               width={500}
               height={500}
+              sizes="(max-width: 768px) 100vw"
             />
             <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
               Parvenir au résultat recherché

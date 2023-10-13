@@ -78,6 +78,7 @@ export default function Header() {
                     height={50}
                     alt='logo'
                     className='header-logo'
+                    priority
                   />
                 </span>
                 <span className="px-2 text-xl header-brand font-normal">MENEZES</span>
