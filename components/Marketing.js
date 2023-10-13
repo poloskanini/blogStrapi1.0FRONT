@@ -99,7 +99,7 @@ export default function Marketing() {
                   <div className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center num" data-val={stat.value}>{stat.initial} </div>
                   <span className="pl-2 text-3xl md:text-5xl font-semibold tracking-tight text-center">{stat.slug}</span>
                 </div>
-                <dt className=" leading-6 text-center">{stat.name}</dt>
+                <div className=" leading-6 text-center">{stat.name}</div>
               </div>
             ))}
           </div>
