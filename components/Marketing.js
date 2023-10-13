@@ -92,17 +92,17 @@ export default function Marketing() {
               dolor cupiditate blanditiis ratione.
             </p>
           </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col gap-y-3 border-l border-white/10 pl-6">
                 <div className="flex justify-center">
-                  <dd className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center num" data-val={stat.value}>{stat.initial} </dd>
+                  <div className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center num" data-val={stat.value}>{stat.initial} </div>
                   <span className="pl-2 text-3xl md:text-5xl font-semibold tracking-tight text-center">{stat.slug}</span>
                 </div>
                 <dt className=" leading-6 text-center">{stat.name}</dt>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
 
       </div>
