@@ -22,6 +22,27 @@ const lato = Lato({
   weight: ['100', '300', '400', '700', '900']
 })
 
+// Chargement dynamique (lazy) de la section Video pour optimisation des performances
+const DynamicVideoHero = dynamic(() => import('../components/VideoHero'), {
+  loading: () => <p>Loading...</p>,
+})
+
+
+// Chargement dynamique (lazy) de la section Accueil pour optimisation des performances
+const DynamicAccueil = dynamic(() => import('../components/Accueil'), {
+  loading: () => <p>Loading...</p>,
+})
+
+// Chargement dynamique (lazy) de la section TimeLine pour optimisation des performances
+const DynamicTimeLine = dynamic(() => import('../components/TimeLine'), {
+  loading: () => <p>Loading...</p>,
+})
+
+// Chargement dynamique (lazy) de la section ContentWork pour optimisation des performances
+const DynamicContentWork = dynamic(() => import('../components/ContentWork'), {
+  loading: () => <p>Loading...</p>,
+})
+
 // Chargement dynamique (lazy) de la section Marketing pour optimisation des performances
 const DynamicMarketing = dynamic(() => import('../components/Marketing'), {
   loading: () => <p>Loading...</p>,
@@ -37,10 +58,17 @@ const DynamicCarouselBis = dynamic(() => import('../components/CarouselBis'), {
   loading: () => <p>Loading...</p>,
 })
 
-// Chargement dynamique (lazy) de la section TimeLine pour optimisation des performances
-const DynamicTimeLine = dynamic(() => import('../components/TimeLine'), {
+// Chargement dynamique (lazy) de la section Testify pour optimisation des performances
+const DynamicTestify = dynamic(() => import('../components/Testify'), {
   loading: () => <p>Loading...</p>,
 })
+
+// Chargement dynamique (lazy) de la section Footer pour optimisation des performances
+const DynamicFooter = dynamic(() => import('../components/Footer'), {
+  loading: () => <p>Loading...</p>,
+})
+
+
 
 
 export default function Home() {
@@ -80,18 +108,18 @@ export default function Home() {
       
       <main className={lato.className}>
         <motion.div className="progress-bar" style={{ scaleX }} />
-        <VideoHero />
-        <Accueil />
+        <DynamicVideoHero />
+        <DynamicAccueil />
         <DynamicTimeLine />
         <ContentWork />
         <div className="mb-20"></div>
         <DynamicMarketing />
         <DynamicCarousel slides={SLIDES} options={OPTIONS}/>
         <div className="mb-20"></div>
-        <DynamicMarketing />
-        <DynamicCarouselBis slides={SLIDES} options={OPTIONS}/>
-        <Testify />
-        <Footer />
+        {/* <DynamicMarketing />
+        <DynamicCarouselBis slides={SLIDES} options={OPTIONS}/> */}
+        <DynamicTestify />
+        <DynamicFooter />
       </main>
       
     </>
