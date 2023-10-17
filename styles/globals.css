@@ -127,6 +127,7 @@ header {
 }
 
 .headroom--pinned.headroom--scrolled .navlink,
+.headroom--pinned.headroom--scrolled .navlink-contact,
 .headroom--pinned.headroom--scrolled .header-brand {
   color: black;
 }
@@ -145,7 +146,8 @@ header {
 }
 
 .homeHeader .header-brand,
-.homeHeader .navlink {
+.homeHeader .navlink,
+.homeHeader .navlink-contact {
   color: white;
 }
 
@@ -198,7 +200,7 @@ button::after {
   position: absolute;
   background: #4B68AF;
   width: 100%;
-  height: 2px;
+  height: 1px;
   bottom: -5px;
   transform-origin: 100% 0;
   transform: scaleX(0);
