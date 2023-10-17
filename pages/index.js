@@ -111,7 +111,7 @@ export default function Home() {
         <DynamicVideoHero />
         <DynamicAccueil />
         <DynamicTimeLine />
-        <ContentWork />
+        <DynamicContentWork />
         <div className="mb-20"></div>
         <DynamicMarketing />
         <DynamicCarousel slides={SLIDES} options={OPTIONS}/>
