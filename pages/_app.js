@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import { motion, AnimatePresence } from "framer-motion"
 import { Lato } from 'next/font/google'
 import Layout from '@/components/Layout'
+import LoaderLogo from '@/components/LoaderLogo'
 
 import localFont from 'next/font/local'
 
@@ -25,14 +26,16 @@ export default function App({ Component, pageProps }) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500)
+    }, 2800)
   }, [])
   
   return (
     <>
     {loading ? (
     <AnimatePresence mode='wait'>
-      <div className="loader-container"></div>
+      <div className="loader-container">
+        <LoaderLogo />
+      </div>
     </AnimatePresence>
     ) : (
       <div className={lato.className}>

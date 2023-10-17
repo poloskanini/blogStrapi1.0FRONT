@@ -86,13 +86,13 @@ export default function Accueil() {
 
 
                   <h1 className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <div className={`${montserrat.className} homeTitle-container w-screen`}>
-                      <p className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>Oser.</p>
+                    <div className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7" id='text-wrapper'>
+                      <p>Oser.</p>
                     </div>
-                    <div className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
+                    <div className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7" id='text-wrapper'>
                       <p>Défendre.</p>
                     </div>
-                    <div className={`text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7`} id='text-wrapper'>
+                    <div className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7" id='text-wrapper'>
                       <p>Réussir.</p>
                     </div>
                   </h1>
