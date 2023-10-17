@@ -189,6 +189,27 @@ button::after {
   right: -1rem;
 }
 
+.navlink {
+  position: relative;
+}
+
+.navlink::before {
+  content: "";
+  position: absolute;
+  background: #4B68AF;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.navlink:hover::before {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+
 /** Burger Button */
 .menu-toggle {
   cursor: pointer;
