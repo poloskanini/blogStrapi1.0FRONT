@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }) {
       <div className={lato.className}>
 
         <AnimatePresence mode='wait'>
-          <motion.div key={router.pathname}>
+          {/* <motion.div key={router.pathname}>
 
             <Component {...pageProps} />
             
@@ -59,7 +59,11 @@ export default function App({ Component, pageProps }) {
               exit={{ scaleY: 1, opacity: 1}}
               transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
             ></motion.div>
-          </motion.div>
+          </motion.div> */}
+
+          {/* Transition sur toutes les pages ? Décommenter au dessus, et supprimer ci- dessous */}
+          <Component {...pageProps} />
+
         </AnimatePresence>
 
       </div>

@@ -124,8 +124,8 @@ export default function Posts({ posts }) {
       </Container>
 
       <Footer />
-
       </Reveal>
+
     </>
   )
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Feature from '@/components/Feature'
 import Head from 'next/head'
 import { motion, useScroll, useSpring } from "framer-motion";
+import { useRouter } from "next/router"
 import VideoHero from "@/components/VideoHero"
 import Accueil from "@/components/Accueil"
 import variables from '../styles/variables.module.scss'
@@ -73,6 +74,9 @@ const DynamicFooter = dynamic(() => import('../components/Footer'), {
 
 export default function Home() {
 
+  const router = useRouter()
+
+
     // Carousel Behaviour
     const OPTIONS = { dragFree: true, containScroll: 'trimSnaps' }
     const SLIDE_COUNT = 4
@@ -105,6 +109,25 @@ export default function Home() {
         <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1694591001/image-description-menezes_zvl0ti.png" />
       </Head>
+
+      <motion.div key={router.pathname}>
+            
+        <motion.div
+              className='slide-in'
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 0, opacity: 0}}
+              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
+        ></motion.div>
+        <motion.div
+              className='slide-out'
+              initial={{ scaleY: 1, opacity: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 1, opacity: 1}}
+              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
+        ></motion.div>
+        
+      </motion.div>
       
       <main className={lato.className}>
         <motion.div className="progress-bar" style={{ scaleX }} />
