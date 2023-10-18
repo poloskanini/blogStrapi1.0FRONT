@@ -37,7 +37,7 @@ export default function Posts({ posts }) {
       
       <Header />
 
-      <Reveal>
+
 
       <Container>
       
@@ -124,7 +124,7 @@ export default function Posts({ posts }) {
       </Container>
 
       <Footer />
-      </Reveal>
+
 
     </>
   )

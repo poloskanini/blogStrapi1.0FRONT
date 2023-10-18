@@ -118,7 +118,7 @@ export default function lecabinet() {
       <Header />
 
       
-      <Reveal>
+
 
         <Container>
           <BreadCrumb href={hrefPage} title={titlePage}/>
@@ -364,7 +364,7 @@ export default function lecabinet() {
 
         <Footer />
 
-      </Reveal>
+
     </>
   )
 }
