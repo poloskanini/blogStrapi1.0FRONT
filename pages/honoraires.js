@@ -4,6 +4,7 @@ import Container from "@/components/Container"
 import BreadCrumb from "@/components/BreadCrumb"
 import Head from "next/head"
 import Image from 'next/image'
+import Reveal from '../components/animations/Reveal'
 
 
 export default function honoraires() {
@@ -20,9 +21,12 @@ export default function honoraires() {
 
     <Header />
 
+
+
     <Container>
       <BreadCrumb href={hrefPage} title={titlePage}/>
 
+      <Reveal>
       <div className="h-full flex flex-col justify-center items-center relative">
         <h1 className="text-xl font-bold">HONORAIRES</h1>
         <br />
@@ -46,8 +50,9 @@ export default function honoraires() {
         </div> */}
 
       </div>
-
+      </Reveal>
     </Container>
+
 
 
   </>

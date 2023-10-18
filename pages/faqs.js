@@ -102,11 +102,10 @@ export default function faqs() {
 
     <Header />
 
-    <Reveal>
-
       <Container>
         <BreadCrumb href={hrefPage} title={titlePage}/>
 
+        <Reveal>
          <div className="bg-white">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
@@ -139,11 +138,12 @@ export default function faqs() {
             </div>
           </div>
         </div>
+        </Reveal>
+        
       </Container>
       
       <Footer />
 
-    </Reveal>  
   </>
   )
 }
