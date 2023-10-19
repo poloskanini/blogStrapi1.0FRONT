@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 
 const stats = [
   { id: 1, name: "de procès gagnés", value: 82, initial: '0', slug:" %" },
-  { id: 2, name: "d'indemnnités perçues", value: 2, initial: '0', slug:" M€" },
+  { id: 2, name: "d'indemnités perçues", value: 2, initial: '0', slug:" M€" },
   { id: 3, name: "dossiers défendus", value: 300, initial: '0', slug:""},
   { id: 4, name: "de cas résolus", value: 100, initial: '0', slug:" %" },
 ]
