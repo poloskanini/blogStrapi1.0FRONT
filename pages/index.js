@@ -96,23 +96,28 @@ export default function Home() {
         <title>Menezes Avocat</title>
         <meta name="title" content="Menezes Avocat" />
         <meta name="description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+        <meta name="keywords" content="indemnités licenciement abusif, rupture conventionnelle, avocat en droit du travail, avocat harcèlement au travail, discrimination, avocat droit de la sécurité sociale" />
+        
+        {/* Google Robots */}
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="French" />
+        {/* <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> */}
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
+        <meta property="og:url" content="https://www.menezes-avocat.com/" />
         <meta property="og:title" content="Menezes Avocat" />
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="og:image" content="/assets/images/videoPoster3.webp" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="" />
+        <meta property="twitter:url" content="https://www.menezes-avocat.com/" />
         <meta property="twitter:title" content="Menezes Avocat" />
         <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="twitter:image" content="/assets/images/videoPoster3.webp" />
       </Head>
 
       <motion.div key={router.pathname}>
-            
-        
+
         <motion.div
               className='slide-out'
               initial={{ scaleY: 1, opacity: 1 }}

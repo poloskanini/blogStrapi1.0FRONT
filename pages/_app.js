@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
             ></motion.div>
           </motion.div> */}
 
-          {/* Transition sur toutes les pages ? Décommenter au dessus, et supprimer ci- dessous */}
+          {/* Transition sur toutes les pages ? Décommenter au dessus, et supprimer ci- dessous + dans index.js */}
           <Component {...pageProps} />
 
         </AnimatePresence>
