@@ -95,7 +95,7 @@ export default function Home() {
       <Head>
         <title>Menezes Avocat</title>
         <meta name="title" content="Menezes Avocat" />
-        <meta name="description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+        <meta name="description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta name="keywords" content="indemnités licenciement abusif, rupture conventionnelle, avocat en droit du travail, avocat harcèlement au travail, discrimination, avocat droit de la sécurité sociale" />
         
         {/* Google Robots */}
@@ -106,13 +106,13 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.menezes-avocat.com/" />
         <meta property="og:title" content="Menezes Avocat" />
-        <meta property="og:description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+        <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="og:image" content="/assets/images/videoPoster3.webp" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.menezes-avocat.com/" />
         <meta property="twitter:title" content="Menezes Avocat" />
-        <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT est à votre disposition sur Paris afin de vous conseiller et vous défendre dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+        <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="twitter:image" content="/assets/images/videoPoster3.webp" />
       </Head>
 
