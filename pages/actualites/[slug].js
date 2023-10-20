@@ -69,7 +69,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>Menezes Avocat - {titlePage}</title>
+        <title>Menezes Avocat / {titlePage}</title>
         <meta name='description' content={description}/>
         <meta property="og:description" content={description} />
         <meta property="og:image" itemprop="image" content={thumbnailImageUrl} />
