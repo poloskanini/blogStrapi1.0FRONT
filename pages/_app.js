@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }) {
         <meta name="keywords" content="indemnités licenciement abusif, rupture conventionnelle, avocat en droit du travail, avocat harcèlement au travail, discrimination, avocat droit de la sécurité sociale" />
         
         {/* Google Robots */}
-        <meta name="robots" content="index, follow" />
+        {/* <meta name="robots" content="index, follow" /> */}
         <meta name="language" content="French" />
         {/* <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> */}
 
@@ -64,7 +64,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:title" content="Menezes Avocat" />
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
 
-        <meta property="og:image:type" content="image/webp" />
+        {/* <meta property="og:image:type" content="image/webp" /> */}
 
         {/* <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp --> */}
         <meta property="og:image:width" content="300" />
