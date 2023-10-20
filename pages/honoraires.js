@@ -15,7 +15,7 @@ export default function honoraires() {
     <>
 
     <Head>
-      <title>Menezes Avocat - {titlePage}</title>
+      <title>Menezes Avocat - Honoraires</title>
     </Head>
 
     <Header />

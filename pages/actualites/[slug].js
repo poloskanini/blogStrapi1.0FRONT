@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant'
 })
 
-export default function Post({ post, title, description, thumbnailImageUrl }) {
+export default function Post({ post }) {
 
   const router = useRouter()
 
@@ -62,12 +62,14 @@ export default function Post({ post, title, description, thumbnailImageUrl }) {
   // console.log(frenchHour)
 
   const titlePage = post.attributes.title
+  const description = post.attributes.description
+  const thumbnailImageUrl = post.attributes.image.data.attributes.url
   const hrefPage = router.asPath
 
   return (
     <>
       <Head>
-        <title>Menezes Avocat - {title}</title>
+        <title>Menezes Avocat - {titlePage}</title>
         <meta name='description' content={description}/>
         <meta property="og:description" content={description} />
         <meta property="og:image" itemprop="image" content={thumbnailImageUrl} />
@@ -166,14 +168,14 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
   const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`)
 
-  // console.log(postResponse.data.attributes.image.data.attributes.url);
+  console.log(postResponse.data.attributes.description);
   
   return {
     props: {
       post: postResponse.data,
-      title: postResponse.data.attributes.title,
-      description: postResponse.data.attributes.description,
-      thumbnailImageUrl: postResponse.data.attributes.image.data.attributes.url
+      // title: postResponse.data.attributes.title,
+      // description: postResponse.data.attributes.description,
+      // thumbnailImageUrl: postResponse.data.attributes.image.data.attributes.url
     }
   }
 }

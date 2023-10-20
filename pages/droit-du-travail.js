@@ -9,7 +9,7 @@ export default function droitdutravail() {
     <>
 
       <Head>
-        <title>Menezes Avocat - {titlePage}</title>
+        <title>Menezes Avocat - Droit du Travail</title>
       </Head>
 
       <Header />

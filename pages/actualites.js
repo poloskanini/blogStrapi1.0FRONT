@@ -32,7 +32,7 @@ export default function Posts({ posts }) {
   return (
     <>
       <Head>
-        <title>Menezes Avocat - {titlePage}</title>
+        <title>Menezes Avocat - Actualités</title>
       </Head>
       
       <Header />

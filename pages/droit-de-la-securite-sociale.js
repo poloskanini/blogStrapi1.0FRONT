@@ -10,7 +10,7 @@ export default function droitdelasecuritesociale() {
     <>
 
       <Head>
-        <title>Menezes Avocat - {titlePage}</title>
+        <title>Menezes Avocat - Droit de la sécurité sociale</title>
       </Head>
 
       <Header />
