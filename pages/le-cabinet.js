@@ -112,7 +112,7 @@ export default function lecabinet() {
     <>
 
       <Head>
-        <title>Menezes Avocat - {titlePage}</title>
+        <title>Menezes Avocat - Le Cabinet</title>
         {/* <meta property="og:title" content={`Menezes Avocat - ${titlePage}`} /> */}
 
 
