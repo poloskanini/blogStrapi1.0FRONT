@@ -114,6 +114,20 @@ export default function Home() {
         <meta property="twitter:title" content="Menezes Avocat" />
         <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="twitter:image" content="/assets/images/videoPoster3.webp" />
+
+        {/* FB & Whatsapp */}
+
+        {/* <!-- Site Name, Title, and Description to be displayed --> */}
+        <meta property="og:site_name" content="Menezes Avocat" />
+        <meta property="og:title" content="Menezes Avocat" />
+        <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+
+        <meta property="og:image:type" content="image/webp" />
+
+        {/* <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp --> */}
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+
       </Head>
 
       <motion.div key={router.pathname}>
