@@ -129,6 +129,9 @@ export default function Home() {
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
 
+        {/* Favicon */}
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico/ms-icon-310x310.png"/>
+
       </Head>
 
       <motion.div key={router.pathname}>
