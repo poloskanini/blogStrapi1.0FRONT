@@ -107,12 +107,14 @@ export default function lecabinet() {
 
   const titlePage = "Menezes Avocat - Le Cabinet"
   const hrefPage = "/le-cabinet"
-  
+
   return (
     <>
 
       <Head>
         <title>{titlePage}</title>
+        <meta name="title" content={titlePage} />
+        <meta property="og:title" content={titlePage} />
       </Head>
 
       <Header />

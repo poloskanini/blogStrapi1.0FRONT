@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }) {
 
         <meta property="og:url" content="https://www.menezes-avocat.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Menezes Avocat" />
+        {/* <meta property="og:title" content="Menezes Avocat" /> */}
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="og:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
 
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
 
         {/* <!-- Site Name, Title, and Description to be displayed --> */}
         <meta property="og:site_name" content="Menezes Avocat" />
-        <meta property="og:title" content="Menezes Avocat" />
+        {/* <meta property="og:title" content="Menezes Avocat" /> */}
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
 
         <meta property="og:image:type" content="image/webp" />
