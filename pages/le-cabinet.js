@@ -103,19 +103,16 @@ const people = [
   },
 ]
 
-
-const titlePage = "Le Cabinet"
-const hrefPage = "/le-cabinet"
-
 export default function lecabinet() {
+
+  const titlePage = "Menezes Avocat - Le Cabinet"
+  const hrefPage = "/le-cabinet"
+  
   return (
     <>
 
       <Head>
-        <title>Menezes Avocat - Le Cabinet</title>
-        {/* <meta property="og:title" content={`Menezes Avocat - ${titlePage}`} /> */}
-
-
+        <title>{titlePage}</title>
       </Head>
 
       <Header />
