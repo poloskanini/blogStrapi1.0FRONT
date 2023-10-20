@@ -67,7 +67,11 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-      <title>Menezes Avocat - Actualités</title>
+        <title>Menezes Avocat - {post.attributes.title}</title>
+        <meta name='description' content={post.attributes.description}/>
+        <meta property="og:description" content={`${post.attributes.description}`} />
+        <meta property="og:image" itemprop="image" content={post.attributes.image.data.attributes.url} />
+        <meta property="twitter:image" itemprop="image" content={post.attributes.image.data.attributes.url} />
       </Head>
 
       <Layout/>

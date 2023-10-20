@@ -6,7 +6,6 @@ import Head from "next/head"
 import Image from 'next/image'
 import Reveal from '../components/animations/Reveal'
 
-
 export default function honoraires() {
 
   const titlePage = "Honoraires"
@@ -16,12 +15,10 @@ export default function honoraires() {
     <>
 
     <Head>
-      <title>Menezes Avocat - Honoraires</title>
+      <title>Menezes Avocat - {titlePage}</title>
     </Head>
 
     <Header />
-
-
 
     <Container>
       <BreadCrumb href={hrefPage} title={titlePage}/>
@@ -52,8 +49,6 @@ export default function honoraires() {
       </div>
       </Reveal>
     </Container>
-
-
 
   </>
   )

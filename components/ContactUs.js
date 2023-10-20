@@ -358,8 +358,8 @@ export default function ContactUs() {
                   <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <Link className="hover:text-custom-purple" href="mailto:hello@example.com">
-                    hello@example.com
+                  <Link className="hover:text-custom-purple" href="mailto:contact@menezes-avocat.com">
+                    contact@menezes-avocat.com
                   </Link>
                 </dd>
               </div>

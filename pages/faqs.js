@@ -97,7 +97,7 @@ export default function faqs() {
   return (
   <>
     <Head>
-        <title>Menezes Avocat - Le Cabinet</title>
+        <title>Menezes Avocat - {titlePage}</title>
     </Head>
 
     <Header />

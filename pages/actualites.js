@@ -32,7 +32,7 @@ export default function Posts({ posts }) {
   return (
     <>
       <Head>
-        <title>Menezes Avocat - Actualités</title>
+        <title>Menezes Avocat - {titlePage}</title>
       </Head>
       
       <Header />
@@ -51,6 +51,7 @@ export default function Posts({ posts }) {
                 Apprenez à développer votre business à l&apos;aide de l&apos;avis de nos experts.
               </p>
             </div>
+            
             {/* Cards Container */}
             {data.data.length > 0 ?
 

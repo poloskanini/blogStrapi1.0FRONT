@@ -112,7 +112,8 @@ export default function lecabinet() {
     <>
 
       <Head>
-        <title>Menezes Avocat - Le Cabinet</title>
+        <title>Menezes Avocat - {titlePage}</title>
+        <meta name="title" content={`Menezes Avocat - ${titlePage}`} />
       </Head>
 
       <Header />
