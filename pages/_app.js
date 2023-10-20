@@ -48,14 +48,14 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Menezes Avocat" />
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta property="og:image" itemprop="image" content="/assets/images/videoPoster3.webp" />
+        <meta property="og:image" itemprop="image" content="/assets/images/ImageOGMenezes.webp" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="menezes-avocat.com" />
         <meta property="twitter:url" content="https://www.menezes-avocat.com/" />
         <meta property="twitter:title" content="Menezes Avocat" />
         <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta property="twitter:image" itemprop="image" content="/assets/images/videoPoster3.webp" />
+        <meta property="twitter:image" itemprop="image" content="/assets/images/ImageOGMenezes.webp" />
 
         {/* FB & Whatsapp */}
 
