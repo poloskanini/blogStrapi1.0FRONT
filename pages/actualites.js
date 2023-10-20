@@ -26,7 +26,7 @@ export default function Posts({ posts }) {
     return frenchDate
   }
 
-  const titlePage = "Actualités"
+  const titlePage = "Menezes Avocat - Actualités"
   const hrefPage = "/actualites"
 
   return (

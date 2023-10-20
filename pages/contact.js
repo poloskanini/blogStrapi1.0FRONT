@@ -12,7 +12,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const titlePage = "Contact"
+const titlePage = "Menezes Avocat - Contact"
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false)
@@ -21,7 +21,7 @@ export default function Contact() {
     <>
 
       <Head>
-          <title>Menezes Avocat - {titlePage}</title>
+          <title>{titlePage}</title>
       </Head>
       
       <Header />

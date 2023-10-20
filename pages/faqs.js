@@ -90,14 +90,14 @@ const images = {
   }
 }
 
-const titlePage = "F.A.Q"
+const titlePage = "Menezes Avocat - F.A.Q"
 const hrefPage = "/faqs"
 
 export default function faqs() {
   return (
   <>
     <Head>
-        <title>Menezes Avocat - {titlePage}</title>
+        <title>{titlePage}</title>
     </Head>
 
     <Header />

@@ -8,14 +8,14 @@ import Reveal from '../components/animations/Reveal'
 
 export default function honoraires() {
 
-  const titlePage = "Honoraires"
+  const titlePage = "Menezes Avocat - Honoraires"
   const hrefPage = "/honoraires"
 
   return (
     <>
 
     <Head>
-      <title>Menezes Avocat - Honoraires</title>
+      <title>{titlePage}</title>
     </Head>
 
     <Header />

@@ -4,13 +4,13 @@ import Head from 'next/head'
 
 export default function droitdelasecuritesociale() {
 
-  const titlePage = "Droit de la sécurité sociale"
+  const titlePage = "Menezes Avocat - Droit de la Sécurité Sociale"
 
   return (
     <>
 
       <Head>
-        <title>Menezes Avocat - Droit de la sécurité sociale</title>
+        <title>{titlePage}</title>
       </Head>
 
       <Header />
