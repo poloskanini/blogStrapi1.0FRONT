@@ -48,14 +48,14 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Menezes Avocat" />
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta property="og:image" itemprop="image" content="/assets/images/ImageOGMenezes.webp" />
+        <meta property="og:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="menezes-avocat.com" />
         <meta property="twitter:url" content="https://www.menezes-avocat.com/" />
         <meta property="twitter:title" content="Menezes Avocat" />
         <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta property="twitter:image" itemprop="image" content="/assets/images/ImageOGMenezes.webp" />
+        <meta property="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
 
         {/* FB & Whatsapp */}
 
@@ -64,7 +64,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:title" content="Menezes Avocat" />
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
 
-        {/* <meta property="og:image:type" content="image/webp" /> */}
+        <meta property="og:image:type" content="image/webp" />
 
         {/* <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp --> */}
         <meta property="og:image:width" content="300" />
