@@ -74,6 +74,8 @@ export default function Post({ post }) {
         <meta property="og:description" content={description} />
         <meta property="og:image" itemprop="image" content={thumbnailImageUrl} />
         <meta property="twitter:image" itemprop="image" content={thumbnailImageUrl} />
+        <meta name="title" content={titlePage} />
+        <meta property="og:title" content={titlePage} />
       </Head>
 
       <Layout/>

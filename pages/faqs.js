@@ -97,7 +97,9 @@ export default function faqs() {
   return (
   <>
     <Head>
-        <title>{titlePage}</title>
+      <title>{titlePage}</title>
+      <meta name="title" content={titlePage} />
+      <meta property="og:title" content={titlePage} />
     </Head>
 
     <Header />

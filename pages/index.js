@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <>
       <Head>
-
+        <meta property="og:title" content="Menezes Avocat" />
       </Head>
 
       <motion.div key={router.pathname}>

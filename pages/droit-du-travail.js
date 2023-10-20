@@ -11,6 +11,8 @@ export default function droitdutravail() {
 
       <Head>
         <title>{titlePage}</title>
+        <meta name="title" content={titlePage} />
+        <meta property="og:title" content={titlePage} />
       </Head>
 
       <Header />
