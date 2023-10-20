@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant'
 })
 
-export default function Post({ post }) {
+export default function Post({ post, title, description, thumbnailImageUrl }) {
 
   const router = useRouter()
 
@@ -67,11 +67,11 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>Menezes Avocat - {post.attributes.title}</title>
-        <meta name='description' content={post.attributes.description}/>
-        <meta property="og:description" content={`${post.attributes.description}`} />
-        <meta property="og:image" itemprop="image" content={post.attributes.image.data.attributes.url} />
-        <meta property="twitter:image" itemprop="image" content={post.attributes.image.data.attributes.url} />
+        <title>Menezes Avocat - {title}</title>
+        <meta name='description' content={description}/>
+        <meta property="og:description" content={description} />
+        <meta property="og:image" itemprop="image" content={thumbnailImageUrl} />
+        <meta property="twitter:image" itemprop="image" content={thumbnailImageUrl} />
       </Head>
 
       <Layout/>
@@ -166,11 +166,14 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
   const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`)
 
-  // console.log(postResponse.data.attributes.updatedAt);
+  console.log(postResponse.data.attributes.image.data.attributes.url);
   
   return {
     props: {
-      post: postResponse.data
+      post: postResponse.data,
+      title: postResponse.data.attributes.title,
+      description: postResponse.data.attributes.description,
+      thumbnailImageUrl: postResponse.data.attributes.image.data.attributes.url
     }
   }
 }
