@@ -130,7 +130,7 @@ export default function Home() {
         <meta property="og:image:height" content="300" />
 
         {/* Favicon */}
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico/ms-icon-310x310.png"/>
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico/ms-icon-310x310.png"/>
 
       </Head>
 
