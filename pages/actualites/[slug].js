@@ -61,7 +61,7 @@ export default function Post({ post }) {
   const frenchHour = convertToFrenchHour(updatedAtDate)
   // console.log(frenchHour)
 
-  const titlePage = post.attributes.title
+  const titlePage = `Menezes Avocat - ${post.attributes.title}`
   const description = post.attributes.description
   const thumbnailImageUrl = post.attributes.image.data.attributes.url
   const hrefPage = router.asPath
@@ -69,7 +69,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>Menezes Avocat / {titlePage}</title>
+        <title>{titlePage}</title>
         <meta name='description' content={description}/>
         <meta property="og:description" content={description} />
         <meta property="og:image" itemprop="image" content={thumbnailImageUrl} />
@@ -168,7 +168,7 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
   const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`)
 
-  console.log(postResponse.data.attributes.description);
+  console.log(postResponse.data.attributes.title);
   
   return {
     props: {
