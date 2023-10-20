@@ -166,7 +166,7 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
   const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts/${slug}?populate=*`)
 
-  console.log(postResponse.data.attributes.image.data.attributes.url);
+  // console.log(postResponse.data.attributes.image.data.attributes.url);
   
   return {
     props: {
