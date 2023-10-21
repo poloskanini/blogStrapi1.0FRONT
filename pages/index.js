@@ -93,6 +93,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta name="title" content="Menezes Avocat" />
         <meta property="og:title" content="Menezes Avocat" />
       </Head>
 
