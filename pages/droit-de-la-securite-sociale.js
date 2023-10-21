@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 export default function droitdelasecuritesociale() {
 
+  const singleTitle = "Droit de la Sécurité Sociale"
   const titlePage = "Menezes Avocat - Droit de la Sécurité Sociale"
 
   return (

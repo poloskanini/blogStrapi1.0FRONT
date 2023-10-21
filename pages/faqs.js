@@ -90,6 +90,7 @@ const images = {
   }
 }
 
+const singleTitle = "F.A.Q"
 const titlePage = "Menezes Avocat - F.A.Q"
 const hrefPage = "/faqs"
 
@@ -105,7 +106,7 @@ export default function faqs() {
     <Header />
 
       <Container>
-        <BreadCrumb href={hrefPage} title={titlePage}/>
+        <BreadCrumb href={hrefPage} title={singleTitle}/>
 
         <Reveal>
          <div className="bg-white">

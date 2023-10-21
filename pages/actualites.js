@@ -26,6 +26,7 @@ export default function Posts({ posts }) {
     return frenchDate
   }
 
+  const singleTitle = "Actualités"
   const titlePage = "Menezes Avocat - Actualités"
   const hrefPage = "/actualites"
 
@@ -41,7 +42,7 @@ export default function Posts({ posts }) {
 
       <Container>
       
-      <BreadCrumb href={hrefPage} title={titlePage}/>
+      <BreadCrumb href={hrefPage} title={singleTitle}/>
 
       <Reveal>
         <div className="bg-white sm:pb-32">

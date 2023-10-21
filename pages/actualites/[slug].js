@@ -61,6 +61,7 @@ export default function Post({ post }) {
   const frenchHour = convertToFrenchHour(updatedAtDate)
   // console.log(frenchHour)
 
+  const singleTitle = post.attributes.title
   const titlePage = `Menezes Avocat - ${post.attributes.title}`
   const description = post.attributes.description
   const thumbnailImageUrl = post.attributes.image.data.attributes.url
@@ -107,7 +108,7 @@ export default function Post({ post }) {
                   href={hrefPage}
                   className="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700 disabled"
                 >
-                  {titlePage}
+                  {singleTitle}
               </Link>
             </li>
           </ol>

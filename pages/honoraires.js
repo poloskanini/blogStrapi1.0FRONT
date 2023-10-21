@@ -8,6 +8,7 @@ import Reveal from '../components/animations/Reveal'
 
 export default function honoraires() {
 
+  const singleTitle = "Honoraires"
   const titlePage = "Menezes Avocat - Honoraires"
   const hrefPage = "/honoraires"
 
@@ -23,7 +24,7 @@ export default function honoraires() {
     <Header />
 
     <Container>
-      <BreadCrumb href={hrefPage} title={titlePage}/>
+      <BreadCrumb href={hrefPage} title={singleTitle}/>
 
       <Reveal>
       <div className="h-full flex flex-col justify-center items-center relative">

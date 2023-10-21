@@ -105,6 +105,7 @@ const people = [
 
 export default function lecabinet() {
 
+  const singleTitle = "Le Cabinet"
   const titlePage = "Menezes Avocat - Le Cabinet"
   const hrefPage = "/le-cabinet"
 
@@ -120,7 +121,7 @@ export default function lecabinet() {
       <Header />
 
         <Container>
-          <BreadCrumb href={hrefPage} title={titlePage}/>
+          <BreadCrumb href={hrefPage} title={singleTitle}/>
           <Reveal>
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify">
