@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* <title>Menezes Avocat</title> */}
+        <title>Menezes Avocat</title>
         <meta name="title" content="Menezes Avocat" />
         <meta property="og:title" content="Menezes Avocat" />
       </Head>
