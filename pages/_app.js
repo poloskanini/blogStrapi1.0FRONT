@@ -21,13 +21,15 @@ const lato = Lato({
 export default function App({ Component, pageProps }) {
   const router = useRouter()
 
+  const loadingTime = 2500
+
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500) //2500 OK
+    }, loadingTime) //2500 OK
   }, [])
   
   return (

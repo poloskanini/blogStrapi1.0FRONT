@@ -34,6 +34,9 @@ function generateSiteMap(posts) {
       <url>
         <loc>${URL}/contact</loc>
       </url>
+      <url>
+        <loc>${URL}/mentions-legales</loc>
+      </url>
      ${posts.data
        .map((post) => {
          return `
@@ -50,13 +53,11 @@ function generateSiteMap(posts) {
 
 export async function getServerSideProps({ res }) {
   const postsList = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, { next: { revalidate: 1 } })
-  // console.log(postsList.data[0].attributes.updatedAt);
 
-  // Generate the XML sitemap with the blog data
   const sitemap = generateSiteMap(postsList);
  
   res.setHeader("Content-Type", "text/xml");
-  // Send the XML to the browser
+
   res.write(sitemap);
   res.end();
  

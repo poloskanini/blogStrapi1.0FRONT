@@ -155,9 +155,16 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col justify-center items-center">
+            <Link
+              href="/mentions-legales"
+              className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
+                Mentions légales
+            </Link>
+
             <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
               &copy; {currentYear} Sandrine MENEZES
             </p>
+            
             <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
               Tous droits réservés.
             </p>
