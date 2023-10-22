@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
     <>
 
       <Head>
-        <title>Menezes Avocat</title>
+        {/* <title>Menezes Avocat</title> */}
         {/* <meta name="title" content="Menezes Avocat" /> */}
         <meta name="description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta name="keywords" content="indemnités licenciement abusif, rupture conventionnelle, avocat en droit du travail, avocat harcèlement au travail, discrimination, avocat droit de la sécurité sociale" />
