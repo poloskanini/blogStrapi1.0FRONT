@@ -11,34 +11,35 @@ function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://www.menezes-avocat.com/</loc>
+        <loc>${URL}/</loc>
       </url>
       <url>
-        <loc>https://www.menezes-avocat.com/le-cabinet</loc>
+        <loc>${URL}/le-cabinet</loc>
       </url>
       <url>
-        <loc>https://www.menezes-avocat.com/honoraires</loc>
+        <loc>${URL}/droit-du-travail</loc>
       </url>
       <url>
-        <loc>https://www.menezes-avocat.com/actualites</loc>
-      </url>
-      <url>
-        <loc>https://www.menezes-avocat.com/faqs</loc>
-      </url>
-      <url>
-        <loc>https://www.menezes-avocat.com/contact</loc>
-      </url>
-      <url>
-        <loc>https://www.menezes-avocat.com/droit-du-travail</loc>
-      </url>
-      <url>
-        <loc>https://www.menezes-avocat.com/droit-de-la-securite-sociale</loc>
+        <loc>${URL}/droit-de-la-securite-sociale</loc>
       </url>   
-     ${posts
-       .map(({ post }) => {
+      <url>
+        <loc>${URL}/honoraires</loc>
+      </url>
+      <url>
+        <loc>${URL}/actualites</loc>
+      </url>
+      <url>
+        <loc>${URL}/faqs</loc>
+      </url>
+      <url>
+        <loc>${URL}/contact</loc>
+      </url>
+     ${posts.data
+       .map((post) => {
          return `
            <url>
-               <loc>${`${URL}/actualites/${post.data.attributes.slug}`}</loc>
+               <loc>${`${URL}/actualites/${post.attributes.slug}`}</loc>
+               <lastmod>${post.attributes.updatedAt}</lastmod>
            </url>
          `;
        })
@@ -47,10 +48,10 @@ function generateSiteMap(posts) {
  `;
 }
 
-export function getServerSideProps() {
-  const postsList = fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`)
-  console.log(postsList);
- 
+export async function getServerSideProps({ res }) {
+  const postsList = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, { next: { revalidate: 1 } })
+  // console.log(postsList.data[0].attributes.updatedAt);
+
   // Generate the XML sitemap with the blog data
   const sitemap = generateSiteMap(postsList);
  
@@ -61,7 +62,7 @@ export function getServerSideProps() {
  
   return {
     props: {
-      posts: postsList.data
+      posts: postsList
     },
   };
 }
