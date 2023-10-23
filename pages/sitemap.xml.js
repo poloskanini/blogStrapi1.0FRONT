@@ -37,6 +37,9 @@ function generateSiteMap(posts) {
       <url>
         <loc>${URL}/mentions-legales</loc>
       </url>
+      <url>
+        <loc>${URL}/clause-de-confidentialite</loc>
+      </url>
      ${posts.data
        .map((post) => {
          return `
