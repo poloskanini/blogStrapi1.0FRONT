@@ -150,22 +150,33 @@ export default function Footer() {
           <div className='text-center'>
             <Link
               href="https://www.nicolasbarthes.com"
-              className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
+              className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
                 Site réalisé par N|B
             </Link>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Link
-              href="/mentions-legales"
-              className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
-                Mentions légales
-            </Link>
+            <div className="flex">
+              <span>
+                <Link
+                  href="/mentions-legales"
+                  className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
+                    Mentions légales | &nbsp;
+                </Link>
+              </span>
+              <span>
+                <Link
+                  href="/clause-de-confidentialite"
+                  className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
+                    Politique de confidentialité
+                </Link>
+              </span>
+            </div>
 
-            <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
+            <p className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
               &copy; {currentYear} Sandrine MENEZES
             </p>
             
-            <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
+            <p className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 text-center">
               Tous droits réservés.
             </p>
           </div>

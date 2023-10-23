@@ -26,7 +26,7 @@ export default function mentionslegales() {
 
         <Reveal>
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
-            <h1 class="text-2xl font-semibold mb-6">Informations légales</h1>
+            <h1 class="text-2xl font-semibold mb-6">Mentions légales</h1>
 
             <div class="mb-4">
                 <h2 class="text-lg font-semibold">Propriétaire du site Internet :</h2>
