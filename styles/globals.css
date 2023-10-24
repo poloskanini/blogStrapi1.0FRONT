@@ -607,7 +607,6 @@ nav.mobileActive .menu-toggle .hamBox span {
   transform-origin: top;
   z-index: 100 !important;
   transition: all .25s ease-out;
-
 }
 
 /** BREADCRUMB  */
