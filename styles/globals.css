@@ -606,7 +606,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   background-color: #090f18;
   transform-origin: top;
   z-index: 100 !important;
-  transition: all .1s ease-out;
+  transition: all .25s ease-out;
 
 }
 

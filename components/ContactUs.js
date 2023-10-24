@@ -247,7 +247,10 @@ export default function ContactUs() {
                   {errors.agreed?.message}
                 </p>
                   <span className="text-sm leading-6 text-gray-600">En soumettant ce formulaire, vous acceptez notre 
-                    <Link href="/clause-de-confidentialite" className="font-semibold text-custom-purple">
+                    <Link
+                      href="/politique-de-confidentialite" className="font-semibold text-custom-purple"
+                      target='_blank'
+                    >
                        &nbsp;politique de confidentialité. <span className='text-red-600'>*</span>
                     </Link>
                   </span>

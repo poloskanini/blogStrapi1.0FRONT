@@ -165,7 +165,7 @@ export default function Footer() {
               </span>
               <span>
                 <Link
-                  href="/clause-de-confidentialite"
+                  href="/politique-de-confidentialite"
                   className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
                     Politique de confidentialité
                 </Link>
