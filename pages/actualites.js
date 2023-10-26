@@ -136,9 +136,6 @@ export default function Posts({ posts }) {
 export async function getStaticProps() {
   const postsResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?populate=*`, { next: { revalidate: 1 } })
   // console.log(postsResponse);
-  
-  // Tri des films pour qu'ils soient classés par ID décroissant
-  // postsResponse.data.sort((x, y) => y.id - x.id)
 
   return {
     props: {
