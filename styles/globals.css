@@ -629,6 +629,18 @@ nav.mobileActive .menu-toggle .hamBox span {
 
 /* TODO: Reprendre d'ici avec la logique .timeCard.isActive */
 
+/** INTERSECTED **/
+.intersected {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intersected.isActive {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s 0.25s ease-in-out;
+}
+
 /** TimeLine  */
 .timeCard {
   opacity: 0;

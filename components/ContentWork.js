@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
@@ -12,6 +12,22 @@ const navigation = [
 
 export default function ContentWork() {
 
+  useEffect(() => {
+    const intersected = document.querySelectorAll('.intersected')
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('isActive')
+        }
+      })
+    })
+  
+    intersected.forEach(intersectedItem => {
+      observer.observe(intersectedItem)
+    })
+  })
+
   return (
     <div className="bg-white">
 
@@ -23,7 +39,7 @@ export default function ContentWork() {
             aria-hidden="true"
           />
           <div className="mx-auto max-w-7xl px-6 xl:py-32 sm:py-40 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8 intersected">
               <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:col-span-2 xl:col-auto">
                 Nous faisons valoir vos droits, vous restez concentrés sur vos objectifs.
               </h1>
