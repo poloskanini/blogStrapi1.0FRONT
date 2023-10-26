@@ -27,7 +27,7 @@ export default function politiqueDeConfidentialite() {
 
         <Reveal>
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
-            <h1 class="text-2xl font-semibold mb-6">Politique de Confidentialité - MENEZES AVOCAT</h1>
+            <h1 class="text-4xl font-semibold mb-6">Politique de Confidentialité - MENEZES AVOCAT</h1>
             <p class="text-gray-600 mb-6">La présente clause de confidentialité (la &quot;Clause de Confidentialité&quot;) est établie pour régir la collecte, l&apos;utilisation, la divulgation et la protection des informations personnelles des utilisateurs (les &quot;Utilisateurs&quot; ou &quot;Vous&quot;) du site web MENEZES AVOCAT (le &quot;Site&quot;). MENEZES AVOCAT est un cabinet d&apos;avocats spécialisé en droit du travail qui accorde une grande importance à la protection de vos informations personnelles. Nous nous engageons à respecter votre vie privée et à traiter vos informations personnelles de manière confidentielle.</p>
 
             <h2 class="text-2xl font-semibold mb-4">1. Collecte d&apos;Informations Personnelles</h2>
