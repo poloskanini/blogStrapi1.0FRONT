@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
         <meta name="keywords" content="indemnités licenciement abusif, rupture conventionnelle, avocat en droit du travail, avocat harcèlement au travail, discrimination, avocat droit de la sécurité sociale" />
         
         {/* Google Robots */}
-        {/* <meta name="robots" content="index, follow" /> */}
+        <meta name="robots" content="index, follow" />
         
         <meta name="language" content="French" />
         {/* <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> */}
