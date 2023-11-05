@@ -668,12 +668,32 @@ nav.mobileActive .menu-toggle .hamBox span {
   visibility: visible;
 }
 
+.timeCard4.isActive,
+.timeCard5.isActive,
+.timeCard6.isActive {
+  animation: 1.25s ease-in-out slowlyAppears both;
+  -webkit-animation: 1.25s ease-in-out slowlyAppears both;
+  opacity: .1;
+  visibility: visible;
+}
+
 .underskin-item {
   opacity: .7;
   font-size: clamp(3rem, 10vh, 10rem);
   z-index: -10;
   padding-left: 4rem;
   bottom: 2rem;
+}
+
+@keyframes slowlyAppears {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: .1
+  }
 }
 
 

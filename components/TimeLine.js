@@ -37,7 +37,7 @@ export default function TimeLine() {
 
           {/* OSER */}
           <div>
-            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Oser</h3>
+            <h3 className='timeCard timeCard4 text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Oser</h3>
           </div>
 
           <div className="mb-10 lg:mb-0 timeCard timeCard1 scroll" data-rate='-0.1' data-direction='horizontal'>
@@ -72,11 +72,11 @@ export default function TimeLine() {
 
           {/* DÉFENDRE */}
           <div>
-            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Défendre</h3>
+            <h3 className='timeCard timeCard5 text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Défendre</h3>
           </div>
           {/* RÉUSSIR */}
           <div>
-            <h3 className='text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Réussir</h3>
+            <h3 className='timeCard timeCard6 text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Réussir</h3>
           </div>
 
            <div className='mb-10 lg:mb-0 timeCard timeCard3 scroll' data-rate='-0.1' data-direction='vertical'>
