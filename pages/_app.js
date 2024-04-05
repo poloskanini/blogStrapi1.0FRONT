@@ -21,7 +21,8 @@ const lato = Lato({
 export default function App({ Component, pageProps }) {
   const router = useRouter()
 
-  const loadingTime = 2500
+  //TODO: Remettre 2500 en durée de loading
+  const loadingTime = 2
 
   const [loading, setLoading] = useState(false)
 

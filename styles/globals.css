@@ -987,3 +987,81 @@ nav.mobileActive .menu-toggle .hamBox span {
   );
 }
 
+/** LE CABINET */
+
+.droit-du-travail-container {
+  background-color: #000;
+  background-color: rgba(34, 34, 34, 1);
+  width: 100%;
+  height: 100%;
+  font-family: "PP Neue Montreal";
+}
+
+.droit-du-travail-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.droit-du-travail-container .headers h2 {
+  color: #FFF;
+  font-size: 14vw;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+
+.droit-du-travail-container p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.droit-du-travail-container .intro-copy {
+  position: fixed;
+  min-width: 300px;
+  min-height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.intro-copy-text {
+  margin: 2rem 0;
+}
+
+.intro-copy-text p {
+  color: #000;
+  
+}
+
+.droit-du-travail-container section {
+  margin: 100vh 0;
+}
+
+.section-previews {
+  position: fixed;
+  width: 500px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-previews .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.spacer {
+  width: 100%;
+  height: 200px;
+}
