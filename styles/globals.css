@@ -1005,7 +1005,7 @@ nav.mobileActive .menu-toggle .hamBox span {
 
 .droit-du-travail-container .headers h2 {
   color: #FFF;
-  font-size: 14vw;
+  font-size: 12vw;
   font-weight: 400;
   letter-spacing: -0.025em;
   text-transform: uppercase;
@@ -1014,10 +1014,9 @@ nav.mobileActive .menu-toggle .hamBox span {
 }
 
 .droit-du-travail-container p {
-  color: #000;
-  font-size: 14px;
+  color: #FFF;
+  font-size: 1rem;
   font-weight: 500;
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -1029,15 +1028,17 @@ nav.mobileActive .menu-toggle .hamBox span {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
+  mix-blend-mode: hard-light;
 }
 
 .intro-copy-text {
   margin: 2rem 0;
+  text-transform: uppercase;
+
 }
 
 .intro-copy-text p {
-  color: #000;
-  
+  color: #FFF;
 }
 
 .droit-du-travail-container section {
@@ -1064,4 +1065,8 @@ nav.mobileActive .menu-toggle .hamBox span {
 .spacer {
   width: 100%;
   height: 200px;
+}
+
+.invisible-text {
+  visibility: hidden;
 }

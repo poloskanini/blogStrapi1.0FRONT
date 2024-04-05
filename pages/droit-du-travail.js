@@ -2,12 +2,116 @@ import Layout from "@/components/Layout"
 import Header from '../components/Header'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import gsap from 'gsap';
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import Footer from '@/components/Footer'
 
 
-export default function droitdutravail() {
+gsap.registerPlugin(ScrollTrigger);
+
+
+export default function Droitdutravail() {
 
   const singleTitle = "Droit du Travail"
   const titlePage = "Menezes Avocat - Droit du Travail"
+
+  useEffect(() => {
+    function addImageScaleAnimation() {
+  gsap.utils.toArray("section").forEach((section, index) => {
+    const image = document.querySelector(`#preview-${index + 1} img`);
+
+    const startCondition = index === 0 ? "top top" : "bottom bottom";
+
+    gsap.to(image, {
+      scrollTrigger: {
+        trigger: section,
+        start: startCondition,
+        end: () => {
+          const viewportHeight = window.innerHeight;
+          const sectionBottom = section.offsetTop + section.offsetHeight;
+          const additionalDistance = viewportHeight * 0.5;
+          const endValue = sectionBottom - viewportHeight + additionalDistance;
+          return `+=${endValue}`;
+        },
+        scrub: 1,
+      },
+      scale: 3,
+      ease: "none",
+    });
+  });
+}
+
+addImageScaleAnimation();
+
+function animateClipPath(
+  sectionId,
+  previewId,
+  startClipPath,
+  endClipPath,
+  start = "top center",
+  end = "bottom top"
+) {
+  let section = document.querySelector(sectionId);
+  let preview = document.querySelector(previewId);
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: start,
+    end: end,
+    onEnter: () => {
+      gsap.to(preview, {
+        scrollTrigger: {
+          trigger: section,
+          start: start,
+          end: end,
+          scrub: 0.125,
+        },
+        clipPath: endClipPath,
+        ease: "none",
+      });
+    },
+  });
+}
+
+animateClipPath(
+  "#section-1",
+  "#preview-1",
+  "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+  "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+);
+
+const totalSections = 7;
+
+for (let i = 2; i <= totalSections; i++) {
+  let currentSection = `#section-${i}`;
+  let prevPreview = `#preview-${i - 1}`;
+  let currentPreview = `#preview-${i}`;
+
+  animateClipPath(
+    currentSection,
+    prevPreview,
+    "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    "top bottom",
+    "center center"
+  );
+
+  if (i < totalSections) {
+    animateClipPath(
+      currentSection,
+      currentPreview,
+      "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+      "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      "center center",
+      "bottom top"
+    );
+  }
+}
+
+  })
+
+
 
   return (
     <>
@@ -30,14 +134,11 @@ export default function droitdutravail() {
 
       <div className="droit-du-travail-container">
 
-        <div className="intro-copy">
-          <div className="intro-copy-text">
-            <p>This message stays right here</p>
-            <p>no matter where you go</p>
-            <p>it wont move an inch</p>
-            <p>even if you scroll up or down.</p>
-          </div>
+        <div className="invisible">
+          <p className="invisible-text">COUCOU</p>
+        </div>
 
+        <div className="intro-copy">
           <div className="intro-copy-text">
             <p>This message stays right here</p>
             <p>no matter where you go</p>
@@ -49,25 +150,28 @@ export default function droitdutravail() {
 
         <div className="headers">
           <section id="section-1">
-            <h2>Vacuum</h2>
+            <h2>Contrats</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente magni molestiae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente magni molestiae.</p>
+            
           </section>
           <section id="section-2">
-            <h2>Vacuum</h2>
+            <h2>Travail</h2>
           </section>
           <section id="section-3">
-            <h2>Vacuum</h2>
+            <h2>Licenciements</h2>
           </section>
           <section id="section-4">
-            <h2>Vacuum</h2>
+            <h2>Rémunération</h2>
           </section>
           <section id="section-5">
-            <h2>Vacuum</h2>
+            <h2>C.S.E</h2>
           </section>
           <section id="section-6">
-            <h2>Vacuum</h2>
+            <h2>Négociations</h2>
           </section>
           <section id="section-7">
-            <h2>Vacuum</h2>
+            <h2>Sécurité sociale</h2>
           </section>
           
           <div className="spacer"></div>
@@ -137,6 +241,9 @@ export default function droitdutravail() {
 
         </div>
       </div>
+
+      <Footer></Footer>
+      
   </>
   )
 }
