@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout"
 import Header from '../components/Header'
 import Head from 'next/head'
+import Image from 'next/image'
+
 
 export default function droitdutravail() {
 
@@ -32,14 +34,14 @@ export default function droitdutravail() {
           <div className="intro-copy-text">
             <p>This message stays right here</p>
             <p>no matter where you go</p>
-            <p>it won't move an inch</p>
+            <p>it wont move an inch</p>
             <p>even if you scroll up or down.</p>
           </div>
 
           <div className="intro-copy-text">
             <p>This message stays right here</p>
             <p>no matter where you go</p>
-            <p>it won't move an inch</p>
+            <p>it wont move an inch</p>
             <p>even if you scroll up or down.</p>
           </div>
 
@@ -72,22 +74,64 @@ export default function droitdutravail() {
 
           <div className="section-previews">
             <div className="img" id="preview-1">
-              <img src="/assets/images/largeoffice_ltxd8n.webp" alt="img-preview-1" />
+              <Image
+                src="/assets/images/largeoffice_ltxd8n.webp"
+                alt="preview-img-1"
+                className="object-cover image-1 h-72 image w-full"
+                width={500}
+                height={500}
+                sizes="(max-width: 768px) 100vw"
+              />
             </div>
             <div className="img" id="preview-2">
-              <img src="/assets/images/largeoffice_ltxd8n.webp" alt="img-preview-2" />
+              <Image
+                src="/assets/images/largeoffice_ltxd8n.webp"
+                alt="preview-img-1"
+                className="object-cover image-1 h-72 image w-full"
+                width={500}
+                height={500}
+                sizes="(max-width: 768px) 100vw"
+              />
             </div>
             <div className="img" id="preview-3">
-              <img src="/assets/images/largeoffice_ltxd8n.webp" alt="img-preview-3" />
+              <Image
+                src="/assets/images/largeoffice_ltxd8n.webp"
+                alt="preview-img-1"
+                className="object-cover image-1 h-72 image w-full"
+                width={500}
+                height={500}
+                sizes="(max-width: 768px) 100vw"
+              />
             </div>
             <div className="img" id="preview-4">
-              <img src="/assets/images/largeoffice_ltxd8n.webp" alt="img-preview-4" />
+              <Image
+                src="/assets/images/largeoffice_ltxd8n.webp"
+                alt="preview-img-1"
+                className="object-cover image-1 h-72 image w-full"
+                width={500}
+                height={500}
+                sizes="(max-width: 768px) 100vw"
+              />
             </div>
             <div className="img" id="preview-5">
-              <img src="/assets/images/largeoffice_ltxd8n.webp" alt="img-preview-5" />
+              <Image
+                src="/assets/images/largeoffice_ltxd8n.webp"
+                alt="preview-img-1"
+                className="object-cover image-1 h-72 image w-full"
+                width={500}
+                height={500}
+                sizes="(max-width: 768px) 100vw"
+              />
             </div>
             <div className="img" id="preview-6">
-              <img src="/assets/images/largeoffice_ltxd8n.webp" alt="img-preview-6" />
+              <Image
+                src="/assets/images/largeoffice_ltxd8n.webp"
+                alt="preview-img-1"
+                className="object-cover image-1 h-72 image w-full"
+                width={500}
+                height={500}
+                sizes="(max-width: 768px) 100vw"
+              />
             </div>
           </div>
 
