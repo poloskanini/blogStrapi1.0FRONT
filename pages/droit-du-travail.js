@@ -135,15 +135,13 @@ for (let i = 2; i <= totalSections; i++) {
       <div className="droit-du-travail-container">
 
         <div className="invisible">
-          <p className="invisible-text">COUCOU</p>
+          <p className="invisible-text">menezes</p>
         </div>
 
         <div className="intro-copy">
-          <div className="intro-copy-text">
-            <p>This message stays right here</p>
-            <p>no matter where you go</p>
-            <p>it wont move an inch</p>
-            <p>even if you scroll up or down.</p>
+          <div className="intro-copy-text text-justify">
+            <p>Nos expertises. Votre défense.
+            </p>
           </div>
 
         </div>
@@ -151,8 +149,8 @@ for (let i = 2; i <= totalSections; i++) {
         <div className="headers">
           <section id="section-1">
             <h2>Contrats</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente magni molestiae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente magni molestiae.</p>
+            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente magni molestiae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sapiente magni molestiae.</p> */}
             
           </section>
           <section id="section-2">
@@ -179,7 +177,7 @@ for (let i = 2; i <= totalSections; i++) {
           <div className="section-previews">
             <div className="img" id="preview-1">
               <Image
-                src="/assets/images/largeoffice_ltxd8n.webp"
+                src="/assets/images/Photos cabinet/DSCF8412.jpg"
                 alt="preview-img-1"
                 className="object-cover image-1 h-72 image w-full"
                 width={500}
@@ -189,8 +187,8 @@ for (let i = 2; i <= totalSections; i++) {
             </div>
             <div className="img" id="preview-2">
               <Image
-                src="/assets/images/largeoffice_ltxd8n.webp"
-                alt="preview-img-1"
+                src="/assets/images/Photos cabinet/DSCF8659.jpg"
+                alt="preview-img-2"
                 className="object-cover image-1 h-72 image w-full"
                 width={500}
                 height={500}
@@ -199,8 +197,8 @@ for (let i = 2; i <= totalSections; i++) {
             </div>
             <div className="img" id="preview-3">
               <Image
-                src="/assets/images/largeoffice_ltxd8n.webp"
-                alt="preview-img-1"
+                src="/assets/images/Photos cabinet/DSCF8549.jpg"
+                alt="preview-img-3"
                 className="object-cover image-1 h-72 image w-full"
                 width={500}
                 height={500}
@@ -209,8 +207,8 @@ for (let i = 2; i <= totalSections; i++) {
             </div>
             <div className="img" id="preview-4">
               <Image
-                src="/assets/images/largeoffice_ltxd8n.webp"
-                alt="preview-img-1"
+                src="/assets/images/Photos cabinet/DSCF8599.jpg "
+                alt="preview-img-4"
                 className="object-cover image-1 h-72 image w-full"
                 width={500}
                 height={500}
@@ -219,8 +217,8 @@ for (let i = 2; i <= totalSections; i++) {
             </div>
             <div className="img" id="preview-5">
               <Image
-                src="/assets/images/largeoffice_ltxd8n.webp"
-                alt="preview-img-1"
+                src="/assets/images/Photos cabinet/DSCF8633.jpg"
+                alt="preview-img-5"
                 className="object-cover image-1 h-72 image w-full"
                 width={500}
                 height={500}
@@ -229,8 +227,8 @@ for (let i = 2; i <= totalSections; i++) {
             </div>
             <div className="img" id="preview-6">
               <Image
-                src="/assets/images/largeoffice_ltxd8n.webp"
-                alt="preview-img-1"
+                src="/assets/images/Photos cabinet/DSCF8447.jpg"
+                alt="preview-img-6"
                 className="object-cover image-1 h-72 image w-full"
                 width={500}
                 height={500}
@@ -240,6 +238,14 @@ for (let i = 2; i <= totalSections; i++) {
           </div>
 
         </div>
+
+        {/* Scroll Down */}
+        <div id="scroll-wrapper" className={"text-sm absolute right-0 bottom-1 mr-10 scroll-wrapper-bis"}>
+          <div id="scroll-wrapper-inner">
+            <div id="scroll-down"></div>
+          </div>
+        </div>
+
       </div>
 
       <Footer></Footer>

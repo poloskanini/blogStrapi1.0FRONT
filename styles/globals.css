@@ -343,6 +343,12 @@ nav.mobileActive .menu-toggle .hamBox span {
   position: absolute;
 }
 
+.scroll-wrapper-bis {
+  left: 50%;
+  top: 50%;
+  opacity: .5;
+}
+
 #scroll-wrapper-inner {
   display: table-cell;
   vertical-align: middle;
@@ -994,7 +1000,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   background-color: rgba(34, 34, 34, 1);
   width: 100%;
   height: 100%;
-  font-family: "PP Neue Montreal";
+  z-index: 0;
 }
 
 .droit-du-travail-container img {
@@ -1010,7 +1016,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   letter-spacing: -0.025em;
   text-transform: uppercase;
   text-align: center;
-  
+  font-family: "PP Neue Montreal";
 }
 
 .droit-du-travail-container p {
@@ -1018,6 +1024,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
+  font-family: "PP Neue Montreal";
 }
 
 .droit-du-travail-container .intro-copy {
@@ -1034,15 +1041,16 @@ nav.mobileActive .menu-toggle .hamBox span {
 .intro-copy-text {
   margin: 2rem 0;
   text-transform: uppercase;
-
 }
 
 .intro-copy-text p {
-  color: #FFF;
+  font-size: 1.5rem;
+  opacity: .2;
 }
 
 .droit-du-travail-container section {
-  margin: 100vh 0;
+  margin: 100vh 0 0;
+  line-height: 1;
 }
 
 .section-previews {
