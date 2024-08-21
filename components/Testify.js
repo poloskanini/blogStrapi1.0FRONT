@@ -39,7 +39,7 @@ export default function Testify() {
               </blockquote>
               <figcaption className="mt-8 text-base">
                 <div className="font-semibold text-neutral-500">Sandrine Menezes</div>
-                <div className="mt-1 text-neutral-400">Mozafuckin CEO</div>
+                <div className="mt-1 text-neutral-400">CEO</div>
               </figcaption>
             </figure>
           </div>

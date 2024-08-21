@@ -116,9 +116,9 @@ export default function Home() {
         <DynamicAccueil />
         <DynamicTimeLine />
         <DynamicContentWork />
-        <div className="mb-20"></div>
-        <DynamicMarketing />
-        <DynamicCarousel slides={SLIDES} options={OPTIONS}/>
+        {/* <div className="mb-20"></div> */}
+        {/* <DynamicMarketing /> */}
+        {/* <DynamicCarousel slides={SLIDES} options={OPTIONS}/> */}
         <div className="mb-20"></div>
         <DynamicMarketing />
         <DynamicCarouselBis slides={SLIDES} options={OPTIONS}/>
