@@ -42,7 +42,7 @@ export default function TimeLine() {
 
           <div className="mb-10 lg:mb-0 timeCard timeCard1 scroll" data-rate='-0.1' data-direction='horizontal'>
             <Image
-              src="/assets/images/smalloffice_labota1.webp"
+              src="/assets/images/Photos cabinet/DSCF8572.jpg"
               alt="Oser"
               className="object-cover image-1 h-72 image w-full"
               width={500}
@@ -57,7 +57,7 @@ export default function TimeLine() {
    
           <div className='mb-10 lg:mb-0 timeCard timeCard2 scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="/assets/images/mediumoffice_aotj1n.webp"
+              src="/assets/images/Photos cabinet/DSCF8599.jpg"
               alt="Défendre"
               className="object-cover image-2 h-72 image w-full"
               width={500}
@@ -81,7 +81,7 @@ export default function TimeLine() {
 
            <div className='mb-10 lg:mb-0 timeCard timeCard3 scroll' data-rate='-0.1' data-direction='vertical'>
             <Image
-              src="/assets/images/largeoffice_ltxd8n.webp"
+              src="/assets/images/Photos cabinet/DSCF8619.jpg"
               alt="Réussir"
               className="object-cover image-3 h-72 image w-full"
               width={500}

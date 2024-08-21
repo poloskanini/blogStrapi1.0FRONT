@@ -9,7 +9,7 @@ export default function Testify() {
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <Image
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-center shadow-2xl"
-                src={'/assets/images/205322461_m_normal_none.jpg'}
+                src={'/assets/images/Photos cabinet/Sandrine Menezes©BenoitBeauchaine2024-03.jpg'}
                 alt="sandrine-menezes-image"
                 width={500}
                 height={500}
