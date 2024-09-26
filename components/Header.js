@@ -67,7 +67,7 @@ export default function Header() {
     <HeadRoom disableInlineStyles>
       <header className={router.pathname === "/" ? "homeHeader header  z-10 border-b-1 border-gray-300" : "header z-10 border-b-1 border-gray-300"}>
         <nav className={mobileMenuOpen ? "mobileActive mx-auto flex items-center justify-between p-3 lg:p-6 drop-shadow-md" : "mx-auto flex items-center justify-between p-3 lg:p-6 drop-shadow-md"} aria-label="Global">
-          <div className="flex lg:flex-1">
+          <h1 className="flex lg:flex-1">
             <Link
               href='/'
               className="px-3 lastName flex">
@@ -84,7 +84,7 @@ export default function Header() {
                 <span className="px-2 text-xl header-brand font-normal">MENEZES</span>
                 <span className="header-subBrand font-bold text-custom-purple text-xl">AVOCAT</span>
             </Link>
-          </div>
+          </h1>
 
           {/* Burger Button */}
           <div className={"flex lg:hidden"}>
