@@ -109,6 +109,8 @@ header {
   right: 0;
   z-index: 1;
   background: transparent;
+  z-index: 50;
+  position: relative;
 }
 
 .headroom--unfixed {
@@ -1009,6 +1011,11 @@ nav.mobileActive .menu-toggle .hamBox span {
   height: 100%;
 }
 
+.droit-du-travail-container .headers {
+  position: relative;
+  z-index: 10;
+}
+
 .droit-du-travail-container .headers h2 {
   color: #FFF;
   font-size: 12vw;
@@ -1017,6 +1024,8 @@ nav.mobileActive .menu-toggle .hamBox span {
   text-transform: uppercase;
   text-align: center;
   font-family: "PP Neue Montreal";
+  position: relative;
+  z-index: 10
 }
 
 .droit-du-travail-container p {
@@ -1028,30 +1037,33 @@ nav.mobileActive .menu-toggle .hamBox span {
 }
 
 .droit-du-travail-container .intro-copy {
-  position: fixed;
+  display: flex;
   min-width: 300px;
-  min-height: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 0;
   mix-blend-mode: hard-light;
 }
 
 .intro-copy-text {
-  margin: 2rem 0;
   text-transform: uppercase;
+  text-wrap: wrap;
 }
 
 .intro-copy-text p {
   font-size: 1.5rem;
-  opacity: .2;
+  opacity: .3;
+}
+
+.droit-du-travail-container section:first-of-type {
+  margin-top: 10rem;
 }
 
 .droit-du-travail-container section {
   margin: 100vh 0 0;
   line-height: 1;
-}
+  background-color: rgba(34, 34, 34, 1);
+  z-index: 0;
+  position: relative;
+} 
 
 .section-previews {
   position: fixed;
@@ -1060,6 +1072,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .section-previews .img {
@@ -1068,6 +1081,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   position: absolute;
   clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   overflow: hidden;
+  z-index: -1;
 }
 
 .spacer {

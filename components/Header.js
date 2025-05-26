@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import HeadRoom from 'react-headroom'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { BriefcaseIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -29,12 +30,10 @@ const inter = Inter({
 })
 
 const expertises = [
-  { name: 'Droit du Travail', description: 'Une meilleure défense de vos droits', href: '/droit-du-travail', icon: ChartPieIcon },
-  { name: 'Droit de la sécurité sociale', description: 'Lorem ipsum dolor sit amet.', href: '/droit-de-la-securite-sociale', icon: CursorArrowRaysIcon },
-  { name: 'Formation en droit du travail', description: 'Lorem ipsum dolor sit amet', href: '#', icon: FingerPrintIcon },
-  { name: 'Conseils', description: 'Lorem ipsum dolor sit amet', href: '#', icon: SquaresPlusIcon },
-  { name: 'Autres expertises juridiques', description: 'Lorem ipsum dolor sit amet', href: '#', icon: ArrowPathIcon },
-]
+  { name: 'Droit du Travail', description: 'Intervention à chaque étape de la relation de travail', href: '/droitdutravail', icon: BriefcaseIcon },
+  { name: 'Droit de la Sécurité sociale', description: 'Prévention des risques et défense de vos intérêts', href: '/droit-de-la-securite-sociale', icon: ShieldCheckIcon },
+];
+
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
@@ -200,7 +199,7 @@ export default function Header() {
             />
             </li>
                 <ul
-                  className={subOpen ? 'expertises-list flex flex-col transition-all duration-500 mb-52' : 'expertises-list flex flex-col transition-all duration-500 invisible'}
+                  className={subOpen ? 'expertises-list flex flex-col transition-all duration-500' : 'expertises-list flex flex-col transition-all duration-500 invisible'}
                   style={{
                     height: subOpen ? '100%' : '0%',
                     opacity: subOpen ? "1" : "0",
