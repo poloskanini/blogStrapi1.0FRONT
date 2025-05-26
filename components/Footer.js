@@ -20,16 +20,14 @@ const navigation = {
   trois: [
     { name: 'Accueil', href: '/' },
     { name: 'Le Cabinet', href: '/le-cabinet' },
-    { name: 'Droit du Travail', href: '/droit-du-travail' },
+    { name: 'Droit du Travail', href: '/droitdutravail' },
     { name: 'Droit de la Sécurité Sociale', href: '/droit-de-la-securite-sociale' },
-    { name: 'Formations', href: '#' },
   ],
   quatre: [
-    { name: 'Conseils', href: '#' },
-    { name: 'Autres expertises', href: '#' },
     { name: 'Honoraires', href: '/honoraires' },
     { name: 'Actualités', href: '/actualites' },
     { name: 'F.A.Q', href: 'faqs' },
+    { name: 'Contactez nous', href: '/contact' },
   ],
   social: [
     {
@@ -151,7 +149,8 @@ export default function Footer() {
           <div className='text-center'>
             <Link
               href="https://www.nicolasbarthes.com"
-              className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white">
+              className="text-xs leading-5 text-gray-400 md:order-1 md:mt-0 hover:text-white"
+              target="_blank">
                 Site réalisé par N|B
             </Link>
           </div>
@@ -183,7 +182,7 @@ export default function Footer() {
           </div>
           <div className="space-x-6 hidden lg:flex justify-center">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-500 hover:text-white">
+              <a key={item.name} href={item.href} target="_blank" className="text-gray-500 hover:text-white">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>

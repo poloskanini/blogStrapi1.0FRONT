@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import Container from "@/components/Container"
+import BreadCrumb from "@/components/BreadCrumb"
 import TextParallaxComponent from "@/components/TextParallaxContent"
 import Footer from '@/components/Footer'
 
@@ -17,6 +18,7 @@ export default function Droitdutravail() {
 
   const singleTitle = "Droit du Travail"
   const titlePage = "Menezes Avocat - Droit du Travail"
+  const hrefPage = "/droitdutravail"
 
   useEffect(() => {
     function addImageScaleAnimation() {
@@ -124,13 +126,16 @@ for (let i = 2; i <= totalSections; i++) {
 
       <Header />
 
-        <div className="wrapper lg:m-10">
+      <Container>
+      <BreadCrumb href={hrefPage} title={singleTitle}/>
+      </Container>
+
+        <div className="wrapper lg:mx-20">
 
         <TextParallaxComponent />
         </div>
 
       <Footer></Footer>
-      
   </>
   )
 }

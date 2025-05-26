@@ -45,7 +45,7 @@ const TextParallaxComponent = () => {
   return (
     <div className="bg-white">
       {/* Titre principal */}
-      <div className="pt-12 text-center">
+      <div className="text-center">
         <FadeIn>
           <h1 className="text-4xl font-bold uppercase tracking-wide text-neutral-800 sm:text-5xl">
             DROIT DU TRAVAIL
@@ -104,32 +104,30 @@ const StickyImage = ({ imgUrl, isFirst }) => {
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <div
+    <motion.div
       ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl"
       style={{
+        backgroundImage: `url(${imgUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         top: IMG_PADDING,
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+        scale,
+        opacity: isFirst ? undefined : opacity, // Seul le premier n’a pas d’animation d’opacité
       }}
+      initial={isFirst ? { opacity: 0 } : {}}
+      animate={isFirst ? { opacity: 1 } : {}}
+      transition={isFirst ? { duration: 1.2, ease: "easeOut" } : {}}
+      className="sticky z-0 overflow-hidden rounded-3xl"
     >
-      {/* Image en fade in */}
-      <motion.img
-        src={imgUrl}
-        alt="Section background"
-        initial={isFirst ? { opacity: 0 } : {}}
-        animate={isFirst ? { opacity: 1 } : {}}
-        transition={isFirst ? { duration: 1.2, ease: "easeOut" } : {}}
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ scale }}
-      />
-
-      {/* Overlay sombre */}
-      <div className="absolute inset-0 bg-neutral-950/70" />
-    </div>
+      <motion.div className="absolute inset-0 bg-neutral-950/70" />
+    </motion.div>
   );
 };
+
 
 
 const OverlayCopy = ({ heading, showScrollDown }) => {
@@ -146,7 +144,7 @@ const OverlayCopy = ({ heading, showScrollDown }) => {
     <div ref={targetRef} className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white">
       <motion.h2
         style={{ y, opacity }}
-        className="text-white text-[12vw] font-normal tracking-[-0.025em] uppercase text-center font-['PP_Neue_Montreal'] relative z-10"
+        className="text-white text-[12vw] font-normal tracking-[-0.025em] uppercase text-center font-['PP_Neue_Montreal'] relative z-10 leading-none"
       >
         {heading}
       </motion.h2>
