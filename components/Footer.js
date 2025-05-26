@@ -79,8 +79,9 @@ export default function Footer() {
         <div className="image-wrapper text-center flex flex-col justify-center items-center mb-5">
           <div className='flex justify-center text-center'>
             <Link
-              href={"https://maps.app.goo.gl/L3sJhjpQ4cT7oy5V7"}
+              href={"https://maps.app.goo.gl/tBtLkVjsP1u8KAG36"}
               className='text-sm font-normal leading-6 text-gray-300 hover:text-white m-6'
+              target='_blank'
             >
             <span>
               <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block">
