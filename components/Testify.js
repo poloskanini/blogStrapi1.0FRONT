@@ -1,11 +1,26 @@
+"use client";
+
 import Image from 'next/image'
+import { motion } from "framer-motion"
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 1 } }
+};
 
 export default function Testify() {
   return (
     <div className="bg-white sm:pb-24 xl:pb-32 mt-32">
       <div className="pb-20 sm:pb-24 xl:pb-0">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-          <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
+
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none"
+          >
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <Image
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-center shadow-2xl"
@@ -15,8 +30,15 @@ export default function Testify() {
                 height={500}
               />
             </div>
-          </div>
-          <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24"
+          >
             <figure className="relative isolate pt-6 sm:pt-12">
               <svg
                 viewBox="0 0 162 128"
@@ -32,7 +54,7 @@ export default function Testify() {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-neutral-950 sm:text-2xl sm:leading-9">
                 <p>
-                Au cœur de mon engagement : la justice et la défense inconditionnelle de vos droits, pour que chaque voix soit entendue.
+                  Au cœur de mon engagement : la justice et la défense inconditionnelle de vos droits, pour que chaque voix soit entendue.
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">
@@ -40,7 +62,7 @@ export default function Testify() {
                 <div className="mt-1 text-neutral-400">Fondatrice du cabinet MENEZES AVOCAT</div>
               </figcaption>
             </figure>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

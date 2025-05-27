@@ -105,7 +105,7 @@ export default function Accueil() {
               className="font-light text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl text-white px-7 absolute bottom-32 uppercase"
             >
               <hr />
-              Cabinet spécialisé en Droit du Travail
+              Cabinet spécialisé en Droit Social
             </motion.h2>
 
             </div>

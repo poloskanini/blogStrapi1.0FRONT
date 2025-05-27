@@ -1,14 +1,20 @@
+"use client"
+
 import Image from "next/image"
-import Carousel from "./Carousel"
-import CarouselBis from "./CarouselBis"
 import { useEffect } from 'react'
+import { motion } from "framer-motion"
 
 const stats = [
-  { id: 1, name: "de procès gagnés", value: 82, initial: '0', slug:" %" },
-  { id: 2, name: "d'indemnités perçues", value: 2, initial: '0', slug:" M€" },
-  { id: 3, name: "dossiers défendus", value: 300, initial: '0', slug:""},
-  { id: 4, name: "de cas résolus", value: 100, initial: '0', slug:" %" },
+  { id: 1, name: "de procès gagnés", value: 82, initial: '0', slug: " %" },
+  { id: 2, name: "d'indemnités perçues", value: 2, initial: '0', slug: " M€" },
+  { id: 3, name: "dossiers défendus", value: 300, initial: '0', slug: "" },
+  { id: 4, name: "de cas résolus", value: 100, initial: '0', slug: " %" },
 ]
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+};
 
 export default function Marketing() {
 
@@ -17,59 +23,61 @@ export default function Marketing() {
 
     const launch = () => {
       let valueDisplays = document.querySelectorAll('.num');
-    
-      // Rallonger interval pour ralentir le compteur
       let interval = 2300;
-    
+
       valueDisplays.forEach((valueDisplay) => {
         let startValue = 0;
         let endValue = parseInt(valueDisplay.getAttribute("data-val"));
         let duration = Math.floor(interval / endValue);
-    
-        let counter = setInterval(function() {
+
+        let counter = setInterval(function () {
           startValue += 1;
           valueDisplay.textContent = startValue;
-          if(startValue == endValue) {
+          if (startValue == endValue) {
             clearInterval(counter);
           }
         }, duration)
       })
-    }
-  
+    };
+
     let options = {
       root: null,
       rootMargin: "0px",
       threshold: .6,
     };
-  
+
     const observer = new IntersectionObserver((entries) => {
-      for(const entry of entries) {
-        if(entry.isIntersecting) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
           launch();
           observer.unobserve(entry.target);
         }
       }
     }, options)
-  
-    observer.observe(wrapperTop);
-    
-  })
 
+    observer.observe(wrapperTop);
+
+  }, []);
 
   return (
     <>
-      <div className="marketing relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 lg:bg-fixed bg-[url('https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp')] bg-no-repeat bg-cover bg-center">
-        {/* <Image
-          src="https://res.cloudinary.com/dbff7xgqx/image/upload/v1695991910/largeofficeblack_l5lnuy.webp"
+      <div className="marketing relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <Image
+          src="/assets/images/Photos cabinet/DSCF8449.jpg"
           alt="statistics"
-          className="absolute inset-0 -z-10 h-full w-full object-cover	"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40"
           width={500}
           height={500}
-        /> */}
+        />
 
-        {/* CHIFFRES */}
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 wrapper">
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="relative mx-auto max-w-7xl px-6 lg:px-8 wrapper"
+        >
           <div
             className="absolute -bottom-8 -left-96 -z-10 transform-gpu blur-3xl sm:-bottom-64 sm:-left-40 lg:-bottom-32 lg:left-8 xl:-left-10"
             aria-hidden="true"
@@ -82,34 +90,48 @@ export default function Marketing() {
               }}
             />
           </div>
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-            {/* <h2 className="text-base font-semibold leading-8 text-custom-purple">Lorem Ipsum Dolor</h2> */}
+
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl"
+          >
             <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-300 sm:text-5xl lg:col-span-2 xl:col-auto">
-                Nos chiffres : votre confiance.
-              </h1>
+              Nos chiffres : votre confiance.
+            </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-            Notre objectif est de vous accompagner vers des résultats concrets, qui répondent à vos enjeux et à vos attentes, avec la clarté et la rigueur qui nous animent.
+              Notre objectif est de vous accompagner vers des résultats concrets, qui répondent à vos enjeux et à vos attentes, avec la clarté et la rigueur qui nous animent.
             </p>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+          >
             {stats.map((stat) => (
-              <div key={stat.id} className="flex flex-col gap-y-3 border-l border-white/10 pl-6">
+              <motion.div
+                key={stat.id}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="flex flex-col gap-y-3 border-l border-white/10 pl-6"
+              >
                 <div className="flex justify-center">
-                  <div className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center num" data-val={stat.value}>{stat.initial} </div>
+                  <div className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-center num" data-val={stat.value}>{stat.initial}</div>
                   <span className="pl-2 text-3xl md:text-5xl font-semibold tracking-tight text-center">{stat.slug}</span>
                 </div>
-                <div className=" leading-6 text-center">{stat.name}</div>
-              </div>
+                <div className="leading-6 text-center">{stat.name}</div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-
+          </motion.div>
+        </motion.div>
       </div>
-      
-      {/* <Carousel slides={SLIDES} options={OPTIONS} /> */}
-      {/* <CarouselBis /> */}
-        
     </>
-    
-  )
+  );
 }
