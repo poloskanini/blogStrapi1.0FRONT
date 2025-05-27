@@ -49,7 +49,7 @@ export default function TimeLine() {
               height={500}
               sizes="(max-width: 768px) 100vw"
             />
-            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 lg:px-0 lg:pr-5 mb-8 mt-5 text-wrap"><strong>Oser</strong> défendre sa place ou son entreprise. <strong>Oser</strong> poser des limites. <br/> Dans le monde du travail, chaque décision compte. <br/> Nous vous aidons à la prendre.</p>
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 lg:px-0 lg:pr-5 mb-8 mt-5 text-wrap"><strong>Oser</strong> défendre sa place ou son entreprise. <strong>Oser</strong> poser des limites. Dans le monde du travail, chaque décision compte. <br/>Nous vous aidons à la prendre.</p>
           </div>
    
           <div className='mb-10 lg:mb-0 timeCard timeCard2 scroll w-full' data-rate='-0.1' data-direction='vertical'>
@@ -61,7 +61,7 @@ export default function TimeLine() {
               height={500}
               sizes="(max-width: 768px) 100vw"
             />
-            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 mt-5 mb-8 text-wrap"><strong>Défendre</strong> un contrat, une réputation, un avenir professionnel. <br/> Faire valoir vos droits, avec méthode et détermination. <br/> C’est notre métier et notre engagement.</p>
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 mt-5 mb-8 text-wrap"><strong>Défendre</strong> un contrat, une réputation, un avenir professionnel. Faire valoir vos droits, avec méthode et détermination. <br/> C’est notre métier et notre engagement.</p>
           </div>
 
           {/* DÉFENDRE */}
@@ -82,7 +82,7 @@ export default function TimeLine() {
               height={500}
               sizes="(max-width: 768px) 100vw"
             />
-            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 mt-5 text-wrap"><strong>Réussir</strong>, c’est obtenir une issue juste, efficace, durable. <br/> C’est sortir d’un conflit en ayant gardé le cap. <br/> C’est transformer un risque en solution. Nous y travaillons, avec vous.</p>
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 mt-5 text-wrap"><strong>Réussir</strong>, c’est obtenir une issue juste, efficace, durable. C’est sortir d’un conflit en ayant gardé le cap. <br/> C’est transformer un risque en solution. <br/>Nous y travaillons, avec vous.</p>
           </div>
            
         </div>
