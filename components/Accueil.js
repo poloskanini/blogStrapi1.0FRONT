@@ -6,6 +6,7 @@ import { Montserrat, Lato } from 'next/font/google'
 import { useEffect } from 'react'
 import SplitType from 'split-type'
 import { gsap } from 'gsap/dist/gsap'
+import { motion } from 'framer-motion' // Ajout pour l'animation framer motion
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -36,9 +37,7 @@ export default function Accueil() {
     })
   })
 
-
   return (
-
     <>
 
     <Header />
@@ -72,33 +71,43 @@ export default function Accueil() {
             className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
             aria-hidden="true"
           >
-            {/* <div
-              className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-              style={{
-                clipPath:
-                  'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
-              }}
-            /> */}
           </div>
+
+          {/* Les 3 titres Oser/Défendre/Réussir */}
           <div className="overflow-hidden relative">
             <div className="h-screen">
-              <div className="max-w-sm pb-6 absolute bottom-36">
+              <div className="max-w-sm pb-6 absolute bottom-60">
 
-
-                  <h1 className={`${montserrat.className} homeTitle-container w-screen`}>
-                    <div className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7" id='text-wrapper'>
-                      <p>Oser.</p>
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                  className={`${montserrat.className} homeTitle-container w-screen`}
+                >
+                  <div className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-medium px-7" id='text-wrapper'>
+                      <p>Oser</p>
                     </div>
-                    <div className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7" id='text-wrapper'>
-                      <p>Défendre.</p>
+                    <div className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-medium px-7" id='text-wrapper'>
+                      <p>Défendre</p>
                     </div>
-                    <div className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-medium px-7" id='text-wrapper'>
-                      <p>Réussir.</p>
+                    <div className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-medium px-7" id='text-wrapper'>
+                      <p>Réussir</p>
                     </div>
-                  </h1>
-
+                </motion.h1>
 
               </div>
+
+              {/* Animation framer motion sur le h2 */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+              className="font-light text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl text-white px-7 absolute bottom-32 uppercase"
+            >
+              <hr />
+              Cabinet spécialisé en Droit du Travail
+            </motion.h2>
+
             </div>
           </div>
 

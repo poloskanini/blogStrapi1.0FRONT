@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 const sections = [
   {
     heading: "Conseil",
-    imgUrl: "/assets/images/Photos%20cabinet/DSCF8404.jpg",
+    imgUrl: "/assets/images/Photos%20cabinet/DSCF8412.jpg",
     showScrollDown: true,
     content: [
       "Rédaction et analyse des contrats de travail",
@@ -53,7 +53,7 @@ const TextParallaxComponent = () => {
         </FadeIn>
       </div>
 
-      {/* Bloc de texte d’introduction stylisé */}
+      {/* Bloc de texte d’introduction */}
       <div className="max-w-4xl mx-auto text-center py-12 px-6">
         <FadeIn delay={0.2}>
           <p className="text-xl text-neutral-600 leading-relaxed text-justify px-6 font-light sm:text-2xl sm:leading-9">
@@ -87,7 +87,7 @@ const IMG_PADDING = 12;
 const TextParallaxContent = ({ imgUrl, heading, children, showScrollDown, isFirst }) => {
   return (
     <div style={{ paddingLeft: IMG_PADDING, paddingRight: IMG_PADDING }}>
-      <div className="relative h-[100vh]">
+      <div className="relative">
         <StickyImage imgUrl={imgUrl} isFirst={isFirst} />
         <OverlayCopy heading={heading} showScrollDown={showScrollDown} />
       </div>
@@ -104,7 +104,6 @@ const StickyImage = ({ imgUrl, isFirst }) => {
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <motion.div
@@ -114,21 +113,17 @@ const StickyImage = ({ imgUrl, isFirst }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         top: IMG_PADDING,
-        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         scale,
-        opacity: isFirst ? undefined : opacity, // Seul le premier n’a pas d’animation d’opacité
       }}
       initial={isFirst ? { opacity: 0 } : {}}
       animate={isFirst ? { opacity: 1 } : {}}
       transition={isFirst ? { duration: 1.2, ease: "easeOut" } : {}}
-      className="sticky z-0 overflow-hidden rounded-3xl"
+      className="sticky z-0 overflow-hidden rounded-3xl h-[40vh] sm:h-[80vh]"
     >
-      <motion.div className="absolute inset-0 bg-neutral-950/70" />
+      <motion.div className="absolute inset-0 bg-neutral-950/30" />
     </motion.div>
   );
 };
-
-
 
 const OverlayCopy = ({ heading, showScrollDown }) => {
   const targetRef = useRef(null);
@@ -138,37 +133,26 @@ const OverlayCopy = ({ heading, showScrollDown }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.75], [0, 1]);
 
   return (
-    <div ref={targetRef} className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white">
+    <div
+      ref={targetRef}
+      className="absolute left-0 top-0 flex h-[40vh] sm:h-full w-full flex-col items-center justify-center text-white"
+    >
       <motion.h2
-        style={{ y, opacity }}
-        className="text-white text-[12vw] font-normal tracking-[-0.025em] uppercase text-center font-['PP_Neue_Montreal'] relative z-10 leading-none"
+        style={{ y }}
+        className="text-white text-[10vw] sm:text-[8vw] font-normal tracking-[-0.025em] uppercase text-center font-['PP_Neue_Montreal'] relative z-10 leading-none"
       >
         {heading}
       </motion.h2>
-      {showScrollDown && (
-        <div className="absolute top-16 flex flex-col items-center animate-bounce z-20">
-          <svg
-            className="w-6 h-6 text-white mb-1"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-          <span className="text-sm">Scroll</span>
-        </div>
-      )}
+
     </div>
   );
 };
 
 const SectionContent = ({ content }) => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">Notre accompagnement</h2>
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-custom-purple">Notre accompagnement</h2>
     <div className="col-span-1 md:col-span-8">
       <ul className="list-disc list-inside space-y-2 text-lg text-neutral-500 md:text-xl leading-relaxed">
         {content.map((item, index) => (
@@ -185,7 +169,11 @@ const FadeInItem = ({ children }) => {
     <motion.li
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } } : {}}
+      animate={
+        inView
+          ? { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } }
+          : {}
+      }
     >
       {children}
     </motion.li>
@@ -198,7 +186,11 @@ const FadeIn = ({ children, delay = 0 }) => {
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0, transition: { duration: 1.2, delay } } : {}}
+      animate={
+        inView
+          ? { opacity: 1, y: 0, transition: { duration: 0.2, delay } }
+          : {}
+      }
     >
       {children}
     </motion.div>

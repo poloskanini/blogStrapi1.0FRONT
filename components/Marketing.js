@@ -83,13 +83,12 @@ export default function Marketing() {
             />
           </div>
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-            <h2 className="text-base font-semibold leading-8 text-custom-purple">Lorem Ipsum Dolor</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Nos chiffres, votre confiance.
-            </p>
+            {/* <h2 className="text-base font-semibold leading-8 text-custom-purple">Lorem Ipsum Dolor</h2> */}
+            <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-300 sm:text-5xl lg:col-span-2 xl:col-auto">
+                Nos chiffres : votre confiance.
+              </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-              dolor cupiditate blanditiis ratione.
+            Notre objectif est de vous accompagner vers des résultats concrets, qui répondent à vos enjeux et à vos attentes, avec la clarté et la rigueur qui nous animent.
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">

@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import Header from '../components/Header'
 import Head from 'next/head'
 import BreadCrumb from '@/components/BreadCrumb'
+import ImageGridHero from '@/components/ImageGridHero'
 import Footer from '@/components/Footer'
 
 
@@ -123,17 +124,32 @@ export default function lecabinet() {
         <Container>
           <BreadCrumb href={hrefPage} title={singleTitle}/>
           <Reveal>
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
-              <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
+              <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify text-neutral-500">
                 <h1 className={`text-4xl font-bold text-neutral-950`}>Le Cabinet</h1>
-                <p className={`text-2xl mt-8 max-w-3xl text-neutral-500`}>
-                  Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem
-                  minus ut molestiae velit error quod. Excepturi quidem expedita molestias.
+                <p className={`text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify mt-8`}>
+                Sandrine MENEZES accompagne les carrières et les entreprises dans les moments où tout peut basculer.
                 </p>
-                <p className="mt-6 text-base leading-7 text-neutral-500">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.
+                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
+                Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques : face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence.
                 </p>
+       
+                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
+                  Depuis plus de 15 ans, elle exerce en droit du travail et en droit de la sécurité sociale, auprès de salariés, dirigeants et entreprises. Elle connaît la complexité des relations professionnelles et la nécessité de réponses claires, solides et adaptées à chaque situation.
+                </p>
+                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
+                  Diplômée de l’Université Paris II Panthéon-Assas, titulaire du Certificat de Spécialisation en droit du travail, formée au sein de cabinets de référence, elle a fondé son propre cabinet avec une ambition : proposer une pratique indépendante, humaine, sans automatisme.
+                </p>
+                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
+                  Chaque dossier est traité avec rigueur, vision, et engagement. Qu’il s’agisse de défendre, de conseiller ou de prévenir, elle privilégie une approche sur mesure, pensée à la fois pour résoudre le présent et sécuriser l’avenir.
+                </p>
+                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
+                  Pour répondre aux enjeux transverses du monde de l’entreprise, elle travaille également en lien étroit avec un réseau de partenaires et avocats de confiance — experts en droit des affaires, fiscalité, droit pénal du travail, gestion de crise, ou encore en ressources humaines — permettant une réponse globale, cohérente et opérationnelle.
+                </p>
+                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
+                  Ce qui guide sa pratique : l’indépendance d’esprit, la loyauté dans la relation, et la conviction que le droit du travail est un outil vivant — au service des réalités humaines autant qu’économiques.
+                </p>
+
               </div>
                 <motion.div
                   variants={variants}
@@ -141,15 +157,16 @@ export default function lecabinet() {
                   animate="show"
                   className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents"
                 >
-                  <motion.div variants={images} className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+                  <motion.div variants={images} className="order-first md:order-none flex w-full justify-center sm:justify-end">
                     <Image
-                      src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2894&q=80"
-                      alt=""
-                      className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                      width={500}
-                      height={500}
+                      src="/assets/images/Photos cabinet/SandrineMenezes_BenoitBeauchaine2024-01.jpg"
+                      alt="Sandrine Menezes"
+                      className="rounded-2xl bg-gray-50 object-cover w-full h-auto max-h-[90vh] sm:w-[37rem] sm:h-auto"
+                      width={800}
+                      height={1000}
                     />
                   </motion.div>
+
                   <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                     <motion.div variants={images} className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                       <Image

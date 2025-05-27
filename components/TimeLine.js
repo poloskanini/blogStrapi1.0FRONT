@@ -27,10 +27,10 @@ export default function TimeLine() {
     <div className={styles.container}>
       <main className='justify-center svg-animation'>
         
-        <div className="flex justify-center mx-auto mt-20 px-10 text-center">
-          <h2 className="mt-2 text-4xl tracking-tight text-gray-900 sm:text-5xl font-bold mb-20">
+        <div className="flex justify-center mx-auto mt-10 px-10 text-center">
+          {/* <h2 className="mt-2 text-4xl tracking-tight text-gray-900 sm:text-5xl font-bold mb-20">
             Cabinet spécialisé en Droit du Travail
-          </h2>
+          </h2> */}
         </div>
         
         <div className="image-wrapper md:grid items-center justify-items-center grid-rows-3 grid-cols-2 w-full text-center h-full mb-32">
@@ -40,7 +40,7 @@ export default function TimeLine() {
             <h3 className='timeCard timeCard4 text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Oser</h3>
           </div>
 
-          <div className="mb-10 lg:mb-0 timeCard timeCard1 scroll" data-rate='-0.1' data-direction='horizontal'>
+          <div className="mb-10 lg:mb-0 timeCard timeCard1 scroll w-full" data-rate='-0.1' data-direction='horizontal'>
             <Image
               src="/assets/images/Photos cabinet/DSCF8572.jpg"
               alt="Oser"
@@ -49,13 +49,10 @@ export default function TimeLine() {
               height={500}
               sizes="(max-width: 768px) 100vw"
             />
-            <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
-              Entreprendre avec assurance
-            </p>
-            <p className="text-lg font-normal leading-8 tracking-tight text-gray-900 text-justify px-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa animi illum rem fugiat recusandae magnam vero iusto qui cupiditate, veniam accusamus ex dolor totam quaerat nostrum nesciunt, ipsum laborum. Inventore, animi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consectetur tempora sunt ad! Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 lg:px-0 lg:pr-5 mb-8 mt-5 text-wrap"><strong>Oser</strong> défendre sa place ou son entreprise. <strong>Oser</strong> poser des limites. <br/> Dans le monde du travail, chaque décision compte. <br/> Nous vous aidons à la prendre.</p>
           </div>
    
-          <div className='mb-10 lg:mb-0 timeCard timeCard2 scroll' data-rate='-0.1' data-direction='vertical'>
+          <div className='mb-10 lg:mb-0 timeCard timeCard2 scroll w-full' data-rate='-0.1' data-direction='vertical'>
             <Image
               src="/assets/images/Photos cabinet/DSCF8599.jpg"
               alt="Défendre"
@@ -64,10 +61,7 @@ export default function TimeLine() {
               height={500}
               sizes="(max-width: 768px) 100vw"
             />
-            <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
-              Résister à une critique
-            </p>
-            <p className="text-lg font-normal leading-8 tracking-tight text-gray-900 text-justify px-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tenetur ex non, placeat molestias optio accusantium, cumque, dolore neque consequuntur sed cupiditate quasi.</p>
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 mt-5 mb-8 text-wrap"><strong>Défendre</strong> un contrat, une réputation, un avenir professionnel. <br/> Faire valoir vos droits, avec méthode et détermination. <br/> C’est notre métier et notre engagement.</p>
           </div>
 
           {/* DÉFENDRE */}
@@ -79,7 +73,7 @@ export default function TimeLine() {
             <h3 className='timeCard timeCard6 text-custom-purple hidden md:block text-2xl md:text-6xl lg:text-8xl xl:text-9xl opacity-10'>Réussir</h3>
           </div>
 
-           <div className='mb-10 lg:mb-0 timeCard timeCard3 scroll' data-rate='-0.1' data-direction='vertical'>
+           <div className='mb-10 lg:mb-0 timeCard timeCard3 scroll w-full' data-rate='-0.1' data-direction='vertical'>
             <Image
               src="/assets/images/Photos cabinet/DSCF8619.jpg"
               alt="Réussir"
@@ -88,10 +82,7 @@ export default function TimeLine() {
               height={500}
               sizes="(max-width: 768px) 100vw"
             />
-            <p className="m-6 flex flex-col items-center text-3xl font-semibold leading-6 text-custom-purple">
-              Parvenir au résultat recherché
-            </p>
-            <p className="text-lg font-normal leading-8 tracking-tight text-gray-900 text-justify px-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, praesentium? Minus soluta inventore perspiciatis tempora cupiditate harum exercitationem necessitatibus illum numquam consequuntur, accusamus natus doloribus eius vero?</p>
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-1 tracking-tight text-gray-900 text-justify px-3 mt-5 text-wrap"><strong>Réussir</strong>, c’est obtenir une issue juste, efficace, durable. <br/> C’est sortir d’un conflit en ayant gardé le cap. <br/> C’est transformer un risque en solution. Nous y travaillons, avec vous.</p>
           </div>
            
         </div>

@@ -9,7 +9,7 @@ export default function Testify() {
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <Image
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover object-center shadow-2xl"
-                src={'/assets/images/Photos cabinet/Sandrine Menezes©BenoitBeauchaine2024-03.jpg'}
+                src={'/assets/images/Photos cabinet/SandrineMenezes_BenoitBeauchaine2024-03.jpg'}
                 alt="sandrine-menezes-image"
                 width={500}
                 height={500}
@@ -32,14 +32,12 @@ export default function Testify() {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-neutral-950 sm:text-2xl sm:leading-9">
                 <p>
-                  Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt
-                  nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque
-                  bibendum.
+                Au cœur de mon engagement : la justice et la défense inconditionnelle de vos droits, pour que chaque voix soit entendue.
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="font-semibold text-neutral-500">Sandrine Menezes</div>
-                <div className="mt-1 text-neutral-400">CEO</div>
+                <div className="font-semibold text-neutral-500">Sandrine MENEZES</div>
+                <div className="mt-1 text-neutral-400">Fondatrice du cabinet MENEZES AVOCAT</div>
               </figcaption>
             </figure>
           </div>

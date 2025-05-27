@@ -38,21 +38,25 @@ export default function ContentWork() {
             className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
             aria-hidden="true"
           />
-          <div className="mx-auto max-w-7xl px-6 xl:py-32 sm:py-40 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6  sm:py-32 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8 intersected">
               <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:col-span-2 xl:col-auto">
-                Nous faisons valoir vos droits, vous restez concentrés sur vos objectifs.
+                Nous protégeons vos droits, vous restez concentrés sur vos objectifs.
               </h1>
-              <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+              <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1 text-justify">
                 <p className="text-lg leading-8 text-gray-600">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                  irure qui lorem cupidatat commodo.
+                Depuis plus de 15 ans, <strong>notre cabinet défend, conseille, négocie</strong>. Nous mettons notre énergie et notre rigueur au service de celles et ceux qui doivent faire face à un enjeu professionnel majeur : rupture, litige, contrôle URSSAF, conflit collectif, ou simplement besoin de clarté dans un environnement juridique mouvant.
                 </p>
                 <br />
                 <p className="text-lg leading-8 text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, officia incidunt? Repellat quasi, nulla eos commodi, laboriosam molestias ipsam ea veritatis sed voluptatibus harum dicta optio voluptas asperiores voluptates quaerat debitis totam.
+                <strong>Fondé par Sandrine MENEZES</strong>, le cabinet exerce une défense libre, humaine et engagée. Ni formatage, ni automatisme : chaque dossier est traité avec méthode, vision, et stratégie.
                 </p>
+                <br />
+                <p className="text-lg leading-8 text-gray-600">
+                Nous intervenons​ en <strong> droit du travail</strong> comme en <strong>droit de la sécurité sociale</strong>, pour des entreprises, des dirigeants, ou des salariés, dans un esprit de rigueur, de loyauté et d’écoute. Nous aimons les dossiers complexes, les confrontations d’idées, mais aussi les <strong> solutions pragmatiques et durables</strong>.
+                </p>
+                <br/>
+                <p className="text-lg leading-8 font-bold text-custom-purple">Nous avons la conviction que le droit social est avant tout un droit vivant, profondément humain.</p>
               </div>
               <Image
                 src="/assets/images/Photos cabinet/DSCF8536.jpg"
