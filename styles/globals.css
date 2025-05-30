@@ -700,7 +700,7 @@ nav.mobileActive .menu-toggle .hamBox span {
   }
   100% {
     visibility: visible;
-    opacity: .1
+    opacity: .2
   }
 }
 

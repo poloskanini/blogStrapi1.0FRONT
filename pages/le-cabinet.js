@@ -6,9 +6,22 @@ import { motion } from "framer-motion"
 import Header from '../components/Header'
 import Head from 'next/head'
 import BreadCrumb from '@/components/BreadCrumb'
-import ImageGridHero from '@/components/ImageGridHero'
+import VerticalSlideFeatures from '@/components/VerticalSlideFeature'
+import TeamSection from '@/components/TeamSection'
 import Footer from '@/components/Footer'
 
+const textVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const variants = {
   hidden: { opacity: 0},
@@ -124,14 +137,14 @@ export default function lecabinet() {
         <Container>
           <BreadCrumb href={hrefPage} title={singleTitle}/>
           <Reveal>
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-32">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 mb-12">
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify text-neutral-500">
                 <h1 className={`text-4xl font-bold text-neutral-950`}>Le Cabinet</h1>
                 <p className={`text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify mt-8`}>
                 Sandrine MENEZES accompagne les carrières et les entreprises dans les moments où tout peut basculer.
                 </p>
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques : face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence.
+                Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques : face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence. Parce que derrière chaque situation se cachent des enjeux humains, économiques et souvent émotionnels, Sandrine MENEZES apporte un regard expert, un soutien constant et un accompagnement sur mesure.
                 </p>
        
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
@@ -139,15 +152,6 @@ export default function lecabinet() {
                 </p>
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
                   Diplômée de l’Université Paris II Panthéon-Assas, titulaire du Certificat de Spécialisation en droit du travail, formée au sein de cabinets de référence, elle a fondé son propre cabinet avec une ambition : proposer une pratique indépendante, humaine, sans automatisme.
-                </p>
-                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                  Chaque dossier est traité avec rigueur, vision, et engagement. Qu’il s’agisse de défendre, de conseiller ou de prévenir, elle privilégie une approche sur mesure, pensée à la fois pour résoudre le présent et sécuriser l’avenir.
-                </p>
-                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                  Pour répondre aux enjeux transverses du monde de l’entreprise, elle travaille également en lien étroit avec un réseau de partenaires et avocats de confiance — experts en droit des affaires, fiscalité, droit pénal du travail, gestion de crise, ou encore en ressources humaines — permettant une réponse globale, cohérente et opérationnelle.
-                </p>
-                <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                  Ce qui guide sa pratique : l’indépendance d’esprit, la loyauté dans la relation, et la conviction que le droit du travail est un outil vivant — au service des réalités humaines autant qu’économiques.
                 </p>
 
               </div>
@@ -157,15 +161,26 @@ export default function lecabinet() {
                   animate="show"
                   className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents"
                 >
-                  <motion.div variants={images} className="order-first md:order-none flex w-full justify-center sm:justify-end">
+                  <motion.div variants={images} className="order-first md:order-none flex w-full justify-center sm:justify-center">
                     <Image
                       src="/assets/images/Photos cabinet/SandrineMenezes_BenoitBeauchaine2024-01.jpg"
                       alt="Sandrine Menezes"
-                      className="rounded-2xl bg-gray-50 object-cover w-full h-auto max-h-[90vh] sm:w-[37rem] sm:h-auto"
+                      className="rounded-2xl bg-gray-50 object-cover w-full h-auto max-h-[100vh] lg:max-h[100vh] sm:w-[32rem] sm:h-auto [@media(min-width:1280px)]:object-top"
                       width={800}
                       height={1000}
                     />
                   </motion.div>
+                </motion.div>
+            </div>
+
+          </Reveal>
+
+          {/* <motion.div
+                  variants={variants}
+                  initial="hidden"
+                  animate="show"
+                  className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents"
+                >
 
                   <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                     <motion.div variants={images} className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
@@ -196,13 +211,104 @@ export default function lecabinet() {
                       />
                     </motion.div>
                   </div>
-                </motion.div>
-            </div>
+          </motion.div> */}
 
-          </Reveal>
+          {/* Text */}
+          <div className="overflow-hidden bg-white mb-16">
+            <div className="mx-auto max-w-max lg:max-w-7xl">
+              {/* Titre animé */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="relative mb-8 md:mb-2"
+              >
+                <motion.div
+                  custom={0}
+                  variants={textVariants}
+                  className="max-w-prose text-base lg:max-w-none"
+                >
+                  <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Chaque dossier est traité avec rigueur, vision, et engagement.
+                  </p>
+                </motion.div>
+              </motion.div>
+
+              {/* Paragraphe animé */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <svg
+                  className="absolute bottom-20 hidden md:block md:[overflow-anchor:none]"
+                  width={404}
+                  height={384}
+                  fill="none"
+                  viewBox="0 0 404 384"
+                  aria-hidden="true"
+                  style={{ right: "-132px" }}
+                >
+                  <defs>
+                    <pattern
+                      id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
+                      x={0}
+                      y={0}
+                      width={20}
+                      height={20}
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                    </pattern>
+                  </defs>
+                  <rect width={304} height={384} fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
+                </svg>
+
+                <div className="relative md:bg-white">
+                  <div className="lg:grid lg:grid-cols-2 lg:gap-20 text-justify">
+                    <div className="prose prose-lg prose-indigo text-gray-500 lg:max-w-none">
+                      {[
+                        "Au-delà des textes et des procédures, elle croit en une approche ancrée dans l’écoute, la réflexion stratégique et la recherche constante de solutions.",
+                        "Qu’il s’agisse de défendre vos intérêts, de conseiller dans des choix décisifs ou de prévenir les risques, elle privilégie une démarche construite sur mesure, pensée à la fois pour résoudre le présent et sécuriser l’avenir.",
+                      ].map((text, i) => (
+                        <motion.p
+                          key={i}
+                          custom={i + 1}
+                          variants={textVariants}
+                          className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal tracking-tight text-justify"
+                        >
+                          {text}
+                        </motion.p>
+                      ))}
+                    </div>
+
+                    <div className="prose prose-lg prose-indigo mt-6 text-gray-500 lg:mt-0">
+                      {[
+                        "Consciente que le monde du travail évolue sans cesse, elle travaille également en lien étroit avec un réseau de partenaires et avocats de confiance — experts en droit des affaires, fiscalité, droit pénal du travail, gestion de crise ou encore en ressources humaines — pour offrir une réponse globale, cohérente et opérationnelle.",
+                        "Ce qui guide sa pratique : l’indépendance d’esprit, la loyauté dans la relation, et la conviction que le droit du travail est un outil vivant — au service des réalités humaines autant qu’économiques.",
+                      ].map((text, i) => (
+                        <motion.p
+                          key={i}
+                          custom={i + 3} // continuer la cascade
+                          variants={textVariants}
+                          className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal tracking-tight text-justify"
+                        >
+                          {text}
+                        </motion.p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* TimeLine VerticalSlideFeatures */}
+          <VerticalSlideFeatures />
 
           {/* Timeline section */}
-          <div className="mx-auto max-w-7xl px-6 mb-32 lg:px-8">
+          {/* <div className="mx-auto max-w-7xl px-6 mb-32 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {timeline.map((item) => (
                 <div key={item.name}>
@@ -224,114 +330,15 @@ export default function lecabinet() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
-          {/* Text */}
-          <div className="overflow-hidden bg-white mb-32">
-            <div className="mx-auto max-w-max lg:max-w-7xl">
-              <div className="relative  mb-8 md:mb-2 md:px-6">
-                <div className="max-w-prose text-base lg:max-w-none">
-                  <h2 className="font-semibold leading-6 text-custom-purple">Lorem</h2>
-                  <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-                   Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </p>
-                </div>
-              </div>
-              <div className="relative">
-                <svg
-                  className="absolute right-0 top-0 -mr-20 -mt-20 hidden md:block md:[overflow-anchor:none]"
-                  width={404}
-                  height={384}
-                  fill="none"
-                  viewBox="0 0 404 384"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <pattern
-                      id="95e8f2de-6d30-4b7e-8159-f791729db21b"
-                      x={0}
-                      y={0}
-                      width={20}
-                      height={20}
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width={404} height={384} fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)" />
-                </svg>
-                <svg
-                  className="absolute bottom-0 left-0 -mb-20 -ml-20 hidden md:block md:[overflow-anchor:none]"
-                  width={404}
-                  height={384}
-                  fill="none"
-                  viewBox="0 0 404 384"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <pattern
-                      id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
-                      x={0}
-                      y={0}
-                      width={20}
-                      height={20}
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width={404} height={384} fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
-                </svg>
-                <div className="relative md:bg-white md:p-6">
-                  <div className="lg:grid lg:grid-cols-2 lg:gap-20 text-justify">
-                    <div className="prose prose-lg prose-indigo text-gray-500 lg:max-w-none">
-                      <p>
-                        Ultrices ultricies a in odio consequat egestas rutrum. Ut vitae aliquam in ipsum. Duis nullam placerat
-                        cursus risus ultrices nisi, vitae tellus in. Qui non fugiat aut minus aut rerum. Perspiciatis iusto
-                        mollitia iste minima soluta id.
-                      </p>
-                      <p>
-                        Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
-                        eget. Est augue <a href="#">maecenas</a> risus nulla ultrices congue nunc tortor. Eu leo risus porta
-                        integer suspendisse sed sit ligula elit.
-                      </p>
-                      <ol role="list">
-                        <li>Integer varius imperdiet sed interdum felis cras in nec nunc.</li>
-                        <li>Quam malesuada odio ut sit egestas. Elementum at porta vitae.</li>
-                      </ol>
-                      <p>
-                        Amet, eu nulla id molestie quis tortor. Auctor erat justo, sed pellentesque scelerisque interdum
-                        blandit lectus. Nec viverra amet ac facilisis vestibulum. Vestibulum purus nibh ac ultricies congue.
-                      </p>
-                    </div>
-                    <div className="prose prose-lg prose-indigo mt-6 text-gray-500 lg:mt-0">
-                      <p>
-                        Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
-                        eget. Est augue maecenas risus nulla ultrices congue nunc tortor.
-                      </p>
-                      <p>
-                        Eu leo risus porta integer suspendisse sed sit ligula elit. Elit egestas lacinia sagittis pellentesque
-                        neque dignissim vulputate sodales. Diam sed mauris felis risus, ultricies mauris netus tincidunt.
-                        Mauris sit eu ac tellus nibh non eget sed accumsan. Viverra ac sed venenatis pulvinar elit. Cras diam
-                        quis tincidunt lectus. Non mi vitae, scelerisque felis nisi, netus amet nisl.
-                      </p>
-                      <p>
-                        Eu eu mauris bibendum scelerisque adipiscing et. Justo, elementum consectetur morbi eros, posuere
-                        ipsum tortor. Eget cursus massa sed velit feugiat sed ut. Faucibus eros mauris morbi aliquam nullam.
-                        Scelerisque elementum sit magna ullamcorper dignissim pretium.
-                      </p>
-                    </div>
-                  </div>
-         
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Team Section */}
 
+          <TeamSection />
 
           {/* L'équipe */}
-          <div className="bg-white pb-32">
-            <div className="mx-auto max-w-7xl lg:px-8">
+          {/* <div className="bg-white pb-32">
+            <div className="mx-auto max-w-7xl">
               <div className="mx-auto max-w-2xl lg:mx-0">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Notre équipe</h2>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -379,7 +386,8 @@ export default function lecabinet() {
                 ))}
               </ul>
             </div>
-          </div>
+          </div> */}
+          
         </Container>
 
         <Footer />

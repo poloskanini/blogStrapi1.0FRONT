@@ -16,7 +16,7 @@ export default function BreadCrumb(props) {
      
         <nav className="flex mb-12 mt-5" aria-label="Breadcrumb">
           <ol role="list" className="flex">
-            <li flex>
+            <li>
               <div>
                 <Link href="/" className="text-gray-400 hover:text-gray-500">
                   <HomeIcon className="h-5 w-5 flex-shrink-0 mr-2" aria-hidden="true" />
