@@ -75,13 +75,13 @@ export default function App({ Component, pageProps }) {
 
       </Head>
 
-    {/* {loading ? (
+    {loading ? (
     <AnimatePresence mode='wait'>
       <div className="loader-container">
         <LoaderLogo />
       </div>
     </AnimatePresence>
-    ) : ( */}
+    ) : (
       <div className={lato.className}>
 
         <AnimatePresence mode='wait'>
@@ -111,7 +111,7 @@ export default function App({ Component, pageProps }) {
         </AnimatePresence>
 
       </div>
-    
+    )}
     </>
   )
 }
