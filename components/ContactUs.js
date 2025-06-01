@@ -339,7 +339,7 @@ export default function ContactUs() {
                   <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <Link className='hover:text-custom-purple' href={"https://maps.app.goo.gl/L3sJhjpQ4cT7oy5V7"}>
+                  <Link className='hover:text-custom-purple' href={"https://maps.app.goo.gl/tBtLkVjsP1u8KAG36"}>
                     62 rue Condorcet
                     <br />
                     75009 PARIS

@@ -1,11 +1,19 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import ScrollArrow from "./ScrollArrow";
+import Image from "next/image";
+import Link from "next/link";
 
 const ImageGridHero = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
+
+  const fadeInVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };  
 
   return (
     <>
@@ -17,11 +25,116 @@ const ImageGridHero = () => {
 
           <Circles />
         </div>
+
+        {/* Flèche animée */}
+        <ScrollArrow />
+      </section>
+      
+      <section className="bg-white my-16 forfait">
+        <div className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-8">
+          <motion.div
+            variants={fadeInVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-2 gap-4"
+          >
+            <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8404.jpg" alt="office content 1" />
+            <Image width={500} height={500} className="w-full rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8589.jpg" alt="office content 1" />
+          </motion.div>
+
+            <motion.div
+              className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
+              variants={fadeInVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}>
+              <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
+                Forfait
+              </h1>
+                <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Lorsque l’intervention peut être délimitée dans le temps et dans son périmètre (rédaction d’un contrat, assistance à une rupture conventionnelle, procédure prud’homale, contrôle URSSAF, etc.), <strong className="text-custom-purple font-black"> un forfait global peut être proposé.</strong> Il comprend l’ensemble des diligences prévues, sans surprise.
+                </p>
+            </motion.div>
+        </div>
       </section>
 
-      <div className="h-screen bg-violet-600 text-white flex items-center justify-center">
-        <span>Other content here {":)"}</span>
-      </div>
+      <section className="bg-white dark:bg-gray-900 mb-16 tauxHoraire">
+          <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
+              <motion.div
+                className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
+                variants={fadeInVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}>
+                <h1 className="text-white text-5xl md:text-7xl font-bold max-w-xl">
+                  Taux Horaire
+                </h1>
+                  <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-black">adaptée à vos besoins.</strong>
+                  </p>
+              </motion.div>
+
+              <motion.div
+                variants={fadeInVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="grid grid-cols-2 gap-4">
+                  <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8632.jpg" alt="office content 1" />
+                  <Image width={500} height={500} className="w-full rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8436.jpg" alt="office content 1" />
+              </motion.div>
+          </div>
+        </section>
+
+      <section className="bg-white mb-28 abonnement">
+        <div className="gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-8">
+          <motion.div
+                variants={fadeInVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="grid grid-cols-2 gap-4">
+              <Image width={500} height={500} className="w-full rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8617.jpg" alt="office content 1" />
+              <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8633.jpg" alt="office content 1" />
+            </motion.div>
+
+          <motion.div
+              className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
+              variants={fadeInVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}>
+            <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
+              Abonnement
+            </h1>
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Le cabinet propose des formules d’abonnement <strong className="text-custom-purple font-black">mensuel ou annuel</strong> pour les clients qui souhaitent un accompagnement régulier (questions juridiques, relecture de documents, stratégie RH, veille…). L’abonnement est <strong className="text-custom-purple font-black">personnalisé</strong> selon la taille de la structure, les besoins identifiés et le volume d’échanges attendu.
+            </p>
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Une convention d’honoraires est systématiquement établie avant toute mission, conformément aux règles de la profession d’avocat.
+            </p>
+
+            <p className="lg:text-xl/9 text-justify">
+              <span className="font-normal">
+                Pour toute demande d’information ou de devis, vous pouvez contacter le cabinet via le{" "}
+              </span>
+              <Link
+                href="/contact"
+                className="navlink leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-custom-purple"
+              >
+                Formulaire de Contact
+              </Link>{" "}
+
+              ou par{" "}
+              <Link
+                href="tel:+33184171590"
+                className="navlink leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-custom-purple"
+              >
+                téléphone.
+              </Link>
+
+            </p>
+
+          </motion.div>
+        </div>
+      </section>
     </>
   );
 };
@@ -47,30 +160,34 @@ const Copy = ({ scrollYProgress }) => {
   const copyY = useTransform(scrollYProgress, [0, 0.75], ["0%", "7.5%"]);
 
   return (
-    <motion.div
-      style={{
-        scale: copyScale,
-        opacity: copyOpacity,
-        y: copyY,
-      }}
-      className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
-    >
-      <h1 className="text-stone-950 text-5xl md:text-7xl font-bold text-center max-w-xl">
-        Photo gallery for artists
-      </h1>
-      <p className="text-stone-600 text-sm md:text-base text-center max-w-xl my-6">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, minus
-        nisi? Quod praesentium quaerat possimus.
-      </p>
-      <div className="flex items-center gap-4">
-        <button className="px-4 py-2 bg-violet-600 hover:bg-violet-600 transition-colors text-white font-medium">
-          Try for free
-        </button>
-        <button className="px-4 py-2 bg-transparent hover:bg-stone-200 transition-colors text-stone-950 font-medium">
-          Learn about us
-        </button>
-      </div>
-    </motion.div>
+
+    <>
+      <motion.div
+        style={{
+          scale: copyScale,
+          opacity: copyOpacity,
+          y: copyY,
+        }}
+        className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
+      >
+        <h1 className="text-stone-950 text-5xl md:text-7xl font-bold text-center max-w-xl">
+          Honoraires
+        </h1>
+        
+        <section className="bg-white">
+          <div className="mx-auto max-w-screen-xl">
+              <div className="max-w-2xl text-gray-500 sm:text-lg dark:text-gray-400 mb-4">
+                  <p className="mt-8 mb-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal leading-1 tracking-tight text-justify">Le cabinet attache une importance particulière à la <strong className="font-black text-custom-purple">transparence</strong> et à la <strong className="font-black text-custom-purple">prévisibilité des honoraires.</strong>
+                  </p>
+                  <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés  dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-blakc">adaptée à vos besoins.</strong>
+                  </p>
+              </div>
+          </div>
+        </section>
+      </motion.div>
+
+      
+    </>
   );
 };
 
@@ -100,7 +217,7 @@ const Images = ({ scrollYProgress }) => {
         className="col-span-2 relative z-10"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1855&q=80)",
+            "url(/assets/images/Photos%20cabinet/DSCF8476.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -112,7 +229,7 @@ const Images = ({ scrollYProgress }) => {
         className="row-span-2 relative z-10"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1517504734587-2890819debab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=607&q=80)",
+            "url(/assets/images/Photos%20cabinet/DSCF8479.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -125,7 +242,7 @@ const Images = ({ scrollYProgress }) => {
         className="row-span-2 relative z-10"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1602294525148-c3d202338aa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
+            "url(/assets/images/Photos%20cabinet/DSCF8516.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -137,7 +254,7 @@ const Images = ({ scrollYProgress }) => {
         className="relative z-10"
         style={{
           backgroundImage:
-            "url(https://plus.unsplash.com/premium_photo-1671751033625-46175f2eb03d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1624&q=80)",
+            "url(/assets/images/Photos%20cabinet/DSCF8548.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -150,7 +267,7 @@ const Images = ({ scrollYProgress }) => {
         className="relative z-10"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1511800453077-8c0afa94175f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)",
+            "url(/assets/images/Photos%20cabinet/DSCF8496.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -162,7 +279,7 @@ const Images = ({ scrollYProgress }) => {
         className="relative z-10"
         style={{
           backgroundImage:
-            "url(https://plus.unsplash.com/premium_photo-1668790459004-780996a6404c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
+            "url(/assets/images/Photos%20cabinet/DSCF8524.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
