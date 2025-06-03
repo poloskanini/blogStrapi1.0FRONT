@@ -51,7 +51,7 @@ export default function Posts({ posts }) {
               <h1 className={`text-4xl font-bold text-neutral-950`}>Actualités Juridiques</h1>
               
               <p className={`text-xl mt-2  text-neutral-600`}>
-                Apprenez à développer votre business à l&apos;aide de l&apos;avis de nos experts.
+                L&apos;essentiel du droit social pour anticiper, comprendre et agir.
               </p>
             </div>
             
@@ -92,24 +92,6 @@ export default function Posts({ posts }) {
                           </h3>
                           {/* Description */}
                           <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 text-justify">{post.attributes.description}</p>
-                        </div>
-                        <div className="relative mt-8 flex items-center gap-x-4">
-                          {/* Author Pic */}
-                          <Image
-                            src={"https://res.cloudinary.com/dbff7xgqx/image/upload/v1695113044/photo-profil_c64ivj.jpg"}
-                            width={500}
-                            height={500}
-                            alt='sandrine-profile'
-                            className="h-10 w-10 rounded-full bg-gray-100"
-                          />
-                          {/* Author Name */}
-                          <div className="text-sm leading-6 mb-3">
-                            <p className="font-semibold text-gray-900">
-                                <span className="absolute inset-0" />
-                                {post.attributes.author}
-                            </p>
-                            <p className="text-gray-600 text-xs">Avocate spécialiste en Droit du Travail</p>
-                          </div>
                         </div>
                       </div>
                     </article>

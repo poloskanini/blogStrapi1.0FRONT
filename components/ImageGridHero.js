@@ -31,110 +31,130 @@ const ImageGridHero = () => {
       </section>
       
       <section className="bg-white my-16 forfait">
-        <div className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-8">
+        <motion.div
+          className="flex flex-col-reverse lg:flex-row gap-16 items-center px-4 mx-auto max-w-screen-xl lg:px-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInVariant}
+        >
+          {/* Images */}
+          <div className="grid grid-cols-2 gap-4 w-full">
+            <Image
+              width={500}
+              height={500}
+              className="mt-4 w-full lg:mt-10 rounded-lg"
+              src="/assets/images/Photos%20cabinet/DSCF8404.jpg"
+              alt="office content 1"
+            />
+            <Image
+              width={500}
+              height={500}
+              className="w-full rounded-lg"
+              src="/assets/images/Photos%20cabinet/DSCF8589.jpg"
+              alt="office content 1"
+            />
+          </div>
+
+          {/* Texte */}
+          <div className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400 w-full">
+            <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
+              Forfait
+            </h1>
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
+              Lorsque l’intervention peut être délimitée dans le temps et dans son périmètre (rédaction d’un contrat, assistance à une rupture conventionnelle, procédure prud’homale, contrôle URSSAF, etc.),
+              <strong className="text-custom-purple font-black"> un forfait global peut être proposé.</strong> Il comprend l’ensemble des diligences prévues, sans surprise.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      <section className="bg-white dark:bg-gray-900 mb-16 tauxHoraire">
+        <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
+          <motion.div
+            className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
+            variants={fadeInVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}>
+            <h1 className="text-white text-5xl md:text-7xl font-bold max-w-xl">
+              Taux Horaire
+            </h1>
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-black">adaptée à vos besoins.</strong>
+            </p>
+          </motion.div>
+
           <motion.div
             variants={fadeInVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-2 gap-4"
-          >
-            <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8404.jpg" alt="office content 1" />
-            <Image width={500} height={500} className="w-full rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8589.jpg" alt="office content 1" />
+            className="grid grid-cols-2 gap-4">
+              <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8632.jpg" alt="office content 1" />
+              <Image width={500} height={500} className="w-full rounded-lg h-full aspect-auto object-cover" src="/assets/images/Photos%20cabinet/DSCF8437.jpg" alt="office content 1" />
           </motion.div>
-
-            <motion.div
-              className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
-              variants={fadeInVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}>
-              <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
-                Forfait
-              </h1>
-                <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Lorsque l’intervention peut être délimitée dans le temps et dans son périmètre (rédaction d’un contrat, assistance à une rupture conventionnelle, procédure prud’homale, contrôle URSSAF, etc.), <strong className="text-custom-purple font-black"> un forfait global peut être proposé.</strong> Il comprend l’ensemble des diligences prévues, sans surprise.
-                </p>
-            </motion.div>
         </div>
       </section>
 
-      <section className="bg-white dark:bg-gray-900 mb-16 tauxHoraire">
-          <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
-              <motion.div
-                className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
-                variants={fadeInVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}>
-                <h1 className="text-white text-5xl md:text-7xl font-bold max-w-xl">
-                  Taux Horaire
-                </h1>
-                  <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-black">adaptée à vos besoins.</strong>
-                  </p>
-              </motion.div>
+        <section className="bg-white mb-28 abonnement">
+          <motion.div
+            className="flex flex-col-reverse lg:flex-row gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl lg:px-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInVariant}
+          >
+            {/* Images */}
+            <div className="grid grid-cols-2 gap-4 w-full">
+              <Image
+                width={500}
+                height={500}
+                className="w-full rounded-lg"
+                src="/assets/images/Photos%20cabinet/DSCF8617.jpg"
+                alt="office content 1"
+              />
+              <Image
+                width={500}
+                height={500}
+                className="mt-4 w-full lg:mt-10 rounded-lg"
+                src="/assets/images/Photos%20cabinet/DSCF8633.jpg"
+                alt="office content 1"
+              />
+            </div>
 
-              <motion.div
-                variants={fadeInVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                className="grid grid-cols-2 gap-4">
-                  <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8632.jpg" alt="office content 1" />
-                  <Image width={500} height={500} className="w-full rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8436.jpg" alt="office content 1" />
-              </motion.div>
-          </div>
+            {/* Texte */}
+            <div className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400 w-full">
+              <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
+                Abonnement
+              </h1>
+              <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
+                Le cabinet propose des formules d’abonnement <strong className="text-custom-purple font-black">mensuel ou annuel</strong> pour les clients qui souhaitent un accompagnement régulier (questions juridiques, relecture de documents, stratégie RH, veille…). L’abonnement est <strong className="text-custom-purple font-black">personnalisé</strong> selon la taille de la structure, les besoins identifiés et le volume d’échanges attendu.
+              </p>
+              <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
+                Une convention d’honoraires est systématiquement établie avant toute mission, conformément aux règles de la profession d’avocat.
+              </p>
+              <p className="lg:text-xl/9 text-justify">
+                <span className="font-normal">
+                  Pour toute demande d’information ou de devis, vous pouvez contacter le cabinet via le{" "}
+                </span>
+                <Link
+                  href="/contact"
+                  className="navlink leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-custom-purple"
+                >
+                  Formulaire de Contact
+                </Link>{" "}
+                ou par{" "}
+                <Link
+                  href="tel:+33184171590"
+                  className="navlink leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-custom-purple"
+                >
+                  téléphone.
+                </Link>
+              </p>
+            </div>
+          </motion.div>
         </section>
 
-      <section className="bg-white mb-28 abonnement">
-        <div className="gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-8">
-          <motion.div
-                variants={fadeInVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                className="grid grid-cols-2 gap-4">
-              <Image width={500} height={500} className="w-full rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8617.jpg" alt="office content 1" />
-              <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8633.jpg" alt="office content 1" />
-            </motion.div>
-
-          <motion.div
-              className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
-              variants={fadeInVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}>
-            <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
-              Abonnement
-            </h1>
-            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Le cabinet propose des formules d’abonnement <strong className="text-custom-purple font-black">mensuel ou annuel</strong> pour les clients qui souhaitent un accompagnement régulier (questions juridiques, relecture de documents, stratégie RH, veille…). L’abonnement est <strong className="text-custom-purple font-black">personnalisé</strong> selon la taille de la structure, les besoins identifiés et le volume d’échanges attendu.
-            </p>
-            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Une convention d’honoraires est systématiquement établie avant toute mission, conformément aux règles de la profession d’avocat.
-            </p>
-
-            <p className="lg:text-xl/9 text-justify">
-              <span className="font-normal">
-                Pour toute demande d’information ou de devis, vous pouvez contacter le cabinet via le{" "}
-              </span>
-              <Link
-                href="/contact"
-                className="navlink leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-custom-purple"
-              >
-                Formulaire de Contact
-              </Link>{" "}
-
-              ou par{" "}
-              <Link
-                href="tel:+33184171590"
-                className="navlink leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-custom-purple"
-              >
-                téléphone.
-              </Link>
-
-            </p>
-
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 };
@@ -159,38 +179,62 @@ const Copy = ({ scrollYProgress }) => {
   const copyOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
   const copyY = useTransform(scrollYProgress, [0, 0.75], ["0%", "7.5%"]);
 
+  // Définition du variant pour le fade-in des textes
+  const fadeInVariant = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
-
-    <>
-      <motion.div
-        style={{
-          scale: copyScale,
-          opacity: copyOpacity,
-          y: copyY,
-        }}
-        className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
+    <motion.div
+      style={{
+        scale: copyScale,
+        opacity: copyOpacity,
+        y: copyY,
+      }}
+      className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
+    >
+      <motion.h1
+        className="text-stone-950 text-5xl md:text-7xl font-bold text-center max-w-xl"
+        variants={fadeInVariant}
+        initial="hidden"
+        animate="visible"
       >
-        <h1 className="text-stone-950 text-5xl md:text-7xl font-bold text-center max-w-xl">
-          Honoraires
-        </h1>
-        
-        <section className="bg-white">
-          <div className="mx-auto max-w-screen-xl">
-              <div className="max-w-2xl text-gray-500 sm:text-lg dark:text-gray-400 mb-4">
-                  <p className="mt-8 mb-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal leading-1 tracking-tight text-justify">Le cabinet attache une importance particulière à la <strong className="font-black text-custom-purple">transparence</strong> et à la <strong className="font-black text-custom-purple">prévisibilité des honoraires.</strong>
-                  </p>
-                  <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés  dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-blakc">adaptée à vos besoins.</strong>
-                  </p>
-              </div>
-          </div>
-        </section>
-      </motion.div>
+        Honoraires
+      </motion.h1>
 
-      
-    </>
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl">
+          <div className="max-w-2xl text-gray-500 sm:text-lg dark:text-gray-400 mb-4">
+
+            <motion.p
+              variants={fadeInVariant}
+              initial="hidden"
+              animate="visible"
+              className="mt-8 mb-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal leading-1 tracking-tight text-justify"
+            >
+              Le cabinet attache une importance particulière à la{" "}
+              <strong className="font-black text-custom-purple">transparence</strong> et à la{" "}
+              <strong className="font-black text-custom-purple">prévisibilité des honoraires.</strong>
+            </motion.p>
+
+            <motion.p
+              variants={fadeInVariant}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }} // léger décalage pour le 2ème texte
+              className="my-4 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify"
+            >
+              Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés dès le premier rendez-vous, afin de définir ensemble la solution la plus{" "}
+              <strong className="font-black">adaptée à vos besoins.</strong>
+            </motion.p>
+
+          </div>
+        </div>
+      </section>
+    </motion.div>
   );
 };
-
 const Images = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 

@@ -5,38 +5,26 @@ import { useInView } from "react-intersection-observer";
 
 const sections = [
   {
-    heading: "Conseil",
-    imgUrl: "/assets/images/Photos%20cabinet/DSCF8412.jpg",
+    heading: "Conseil & Prévention",
+    imgUrl: "/assets/images/Photos%20cabinet/DSCF8405.jpg",
     showScrollDown: true,
     content: [
-      "Rédaction et analyse des contrats de travail",
-      "Accompagnement lors des embauches, mobilités, ruptures",
-      "Sécurisation des procédures disciplinaires et des ruptures conventionnelles",
-      "Gestion du temps de travail, de la rémunération, et des obligations légales",
-      "Prévention des risques psychosociaux et accompagnement des réorganisations",
-      "Négociation individuelle et collective",
-    ],
-  },
-  {
-    heading: "Relations Collectives",
-    imgUrl: "/assets/images/Photos%20cabinet/DSCF8513.jpg",
-    content: [
-      "Mise en place et fonctionnement des instances représentatives (CSE)",
-      "Négociation d’accords collectifs (temps de travail, télétravail, égalité professionnelle…)",
-      "Gestion des conflits collectifs et accompagnement du dialogue social",
-      "Élections professionnelles, droit syndical, droit de grève",
-      "Conseil en cas de réorganisation, fusion ou plan de sauvegarde de l’emploi (PSE)",
+      "Audit et optimisation des cotisations sociales",
+      "Analyse des risques en matière de conformité sociale",
+      "Préparation et accompagnement lors des contrôles URSSAF, CPAM, DRIEETS et autres organismes",
+      "Mise en place de procédures internes pour limiter les risques de redressement",
+      "Formation et sensibilisation des équipes aux bonnes pratiques sociales",
     ],
   },
   {
     heading: "Contentieux",
-    imgUrl: "/assets/images/Photos%20cabinet/DSCF8404.jpg",
+    imgUrl: "/assets/images/Photos%20cabinet/DSCF8442.jpg",
     content: [
-      "Contestation ou défense de licenciement",
-      "Litiges relatifs aux salaires, primes, heures supplémentaires",
-      "Contentieux liés au harcèlement, à la discrimination ou à l’inaptitude",
-      "Contentieux des ruptures conflictuelles : prise d’acte, résiliation judiciaire, nullité",
-      "Représentation devant les conseils de prud’hommes et les cours d’appel",
+      "Contestation des redressements URSSAF et litiges relatifs aux cotisations sociales",
+      "Défense lors des procédures de contrôle, de recouvrement et de pénalisation",
+      "Assistance en matière de contentieux pénal liés aux infractions sociales (travail dissimulé, fraude aux cotisations, etc.)",
+      "Représentation devant les juridictions administratives, prud’homales et pénales",
+      "Gestion des procédures de régularisation et négociation des plans d’apurement",
     ],
   },
 ];
@@ -48,7 +36,7 @@ const TextParallaxComponent = () => {
       <div className="text-center">
         <FadeIn>
           <h1 className="text-4xl font-bold uppercase tracking-wide text-neutral-800 sm:text-5xl">
-            DROIT DU TRAVAIL
+            DROIT DE LA SÉCURITÉ SOCIALE
           </h1>
         </FadeIn>
       </div>
@@ -57,11 +45,7 @@ const TextParallaxComponent = () => {
       <div className="max-w-4xl mx-auto text-center py-12 px-6">
         <FadeIn delay={0.2}>
           <p className="text-xl text-neutral-600 leading-relaxed text-justify px-6 font-light sm:text-2xl sm:leading-9">
-            Le cabinet intervient à chaque étape de la relation de travail, en{" "}
-            <strong className="text-black">conseil</strong> comme en{" "}
-            <strong className="text-black">contentieux</strong>, afin de
-            sécuriser les pratiques, prévenir les litiges et défendre
-            efficacement les intérêts de ses clients.
+            Le cabinet accompagne les entreprises dans la gestion de leurs obligations sociales, la prévention des risques et la défense de leurs intérêts face aux organismes de sécurité sociale.
           </p>
         </FadeIn>
       </div>

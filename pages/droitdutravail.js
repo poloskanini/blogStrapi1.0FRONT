@@ -127,7 +127,7 @@ for (let i = 2; i <= totalSections; i++) {
       <Header />
 
       <Container>
-      <BreadCrumb href={hrefPage} title={singleTitle}/>
+        <BreadCrumb title="Droit du Travail" href="/droitdutravail" withExpertises />
       </Container>
 
         <div className="wrapper lg:mx-20">
