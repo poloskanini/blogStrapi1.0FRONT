@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
   {
@@ -76,34 +76,31 @@ export default function FaqBis() {
 
   return (
     <section>
-      <div className="mx-auto max-w-7xl lg:px-8 mb-20">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 mb-20">
         <div className="mb-16 text-center">
-          <h1 className="text-4xl font-bold text-neutral-950">F.A.Q</h1>
+          <h2 className="text-4xl font-bold text-neutral-950">F.A.Q</h2>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div
+            <div
               key={index}
-              custom={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInVariant}
-              onClick={() => toggle(index)}
-              className={`accordion py-8 px-6 border-b border-gray-200 rounded-2xl transition-all duration-500 cursor-pointer ${
-                activeIndex === index ? "bg-indigo-50" : "hover:bg-indigo-50"
+              className={`py-6 px-6 border-b border-gray-200 rounded-2xl transition-all duration-500 hover:bg-indigo-50 cursor-pointer ${
+                activeIndex === index ? "bg-indigo-50" : ""
               }`}
+              onClick={() => toggle(index)}
             >
-              <div className="flex items-center justify-between text-left text-gray-900 group">
-                <h5 className="text-lg font-semibold leading-7 group-hover:text-indigo-600">
-                  {faq.question}
-                </h5>
+              <div className="flex items-center justify-between text-gray-900 group">
+              <h5
+                className={`text-lg font-semibold leading-7 ${
+                  activeIndex === index ? "text-custom-purple" : ""
+                }`}
+              >
+                {faq.question}
+              </h5>
                 <svg
-                  className={`w-5 h-5 text-gray-500 transition-transform duration-500 ${
-                    activeIndex === index
-                      ? "rotate-180 text-indigo-600"
-                      : "group-hover:text-indigo-600"
+                  className={`w-5 h-5 text-gray-500 transition-transform duration-500 group-hover:text-indigo-600 ${
+                    activeIndex === index ? "rotate-180 text-indigo-600" : ""
                   }`}
                   viewBox="0 0 22 22"
                   fill="none"
@@ -119,12 +116,22 @@ export default function FaqBis() {
                 </svg>
               </div>
 
-              {activeIndex === index && (
-                <div className="mt-4 text-base text-gray-900 leading-6">
-                  {faq.answer}
-                </div>
-              )}
-            </motion.div>
+              <AnimatePresence initial={false}>
+                {activeIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <p className="mt-4 text-base text-gray-900 leading-6 italic text-justify">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           ))}
         </div>
       </div>
