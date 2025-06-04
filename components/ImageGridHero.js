@@ -71,18 +71,14 @@ const ImageGridHero = () => {
 
       <section className="bg-white dark:bg-gray-900 mb-16 tauxHoraire">
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
-          <motion.div
-            className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400"
-            variants={fadeInVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}>
+          <div
+            className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400">
             <h1 className="text-white text-5xl md:text-7xl font-bold max-w-xl">
               Taux Horaire
             </h1>
             <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-black">adaptée à vos besoins.</strong>
             </p>
-          </motion.div>
+          </div>
 
           <motion.div
             variants={fadeInVariant}
