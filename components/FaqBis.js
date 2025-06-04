@@ -83,21 +83,26 @@ export default function FaqBis() {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
+              custom={index}
+              variants={fadeInVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               className={`py-6 px-6 border-b border-gray-200 rounded-2xl transition-all duration-500 hover:bg-indigo-50 cursor-pointer ${
                 activeIndex === index ? "bg-indigo-50" : ""
               }`}
               onClick={() => toggle(index)}
             >
               <div className="flex items-center justify-between text-gray-900 group">
-              <h5
-                className={`text-lg font-semibold leading-7 ${
-                  activeIndex === index ? "text-custom-purple" : ""
-                }`}
-              >
-                {faq.question}
-              </h5>
+                <h5
+                  className={`text-lg font-semibold leading-7 ${
+                    activeIndex === index ? "text-custom-purple" : ""
+                  }`}
+                >
+                  {faq.question}
+                </h5>
                 <svg
                   className={`w-5 h-5 text-gray-500 transition-transform duration-500 group-hover:text-indigo-600 ${
                     activeIndex === index ? "rotate-180 text-indigo-600" : ""
@@ -131,7 +136,7 @@ export default function FaqBis() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
