@@ -26,12 +26,25 @@ export default function App({ Component, pageProps }) {
 
   const [loading, setLoading] = useState(false)
 
+  const is404 = Component.name === "Custom404";
+
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, loadingTime) //2500 OK
-  }, [])
+    if (!is404) {
+      setLoading(true);
+      const timeout = setTimeout(() => {
+        setLoading(false);
+      }, loadingTime);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [is404]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, loadingTime) //2500 OK
+  // }, [])
   
   return (
     <>
