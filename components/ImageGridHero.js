@@ -69,7 +69,7 @@ const ImageGridHero = () => {
         </motion.div>
       </section>
 
-      <section className="bg-white dark:bg-gray-900 mb-16 tauxHoraire border border-red-500">
+      <section className="bg-gray-900 mb-16 tauxHoraire border border-red-500">
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
           <div
             className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400">
