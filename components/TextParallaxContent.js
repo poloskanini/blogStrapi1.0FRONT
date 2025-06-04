@@ -47,8 +47,8 @@ const TextParallaxComponent = () => {
       {/* Titre principal */}
       <div className="text-center">
         <FadeIn>
-          <h1 className="text-4xl font-bold uppercase tracking-wide text-neutral-800 sm:text-5xl">
-            DROIT DU TRAVAIL
+          <h1 className="text-4xl font-bold tracking-wide text-neutral-800 sm:text-5xl">
+            Droit du Travail
           </h1>
         </FadeIn>
       </div>
@@ -115,9 +115,7 @@ const StickyImage = ({ imgUrl, isFirst }) => {
         top: IMG_PADDING,
         scale,
       }}
-      initial={isFirst ? { opacity: 0 } : {}}
-      animate={isFirst ? { opacity: 1 } : {}}
-      transition={isFirst ? { duration: 1.2, ease: "easeOut" } : {}}
+    
       className="sticky z-0 overflow-hidden rounded-3xl h-[40vh] sm:h-[80vh]"
     >
       <motion.div className="absolute inset-0 bg-neutral-950/30" />

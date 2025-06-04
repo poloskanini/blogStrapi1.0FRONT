@@ -131,13 +131,6 @@ export default function Post({ post }) {
             {/* AUTHOR */}
             <div className="mt-3 flex items-center gap-x-4 text-xs">
               <div class="mb-6 flex items-center">
-                <Image
-                  src={"https://res.cloudinary.com/dbff7xgqx/image/upload/v1695113044/photo-profil_c64ivj.jpg"}
-                  width={500}
-                  height={500}
-                  alt='sandrine-profile'
-                  className="h-10 w-10 rounded-full bg-gray-100"
-                />
                 {/* DATE */}
                 <div className="pl-2 flex flex-col items-start gap-x-4 text-xs">
                   <time className="text-gray-500">

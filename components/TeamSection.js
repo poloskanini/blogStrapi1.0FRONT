@@ -108,18 +108,17 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.3, // Délai entre les enfants
-      },
-    },
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    show: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: i * 0.15, // décalage progressif
+      },
+    }),
   };
 
   return (
@@ -136,20 +135,17 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }} // Apparition une seule fois au scroll (20% visible)
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
+              custom={index}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
               variants={itemVariants}
               className="relative group flex flex-col items-center text-center rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow bg-white h-[70vh] w-full max-w-md mx-auto"
             >
-              {/* Bloc image */}
               <div className="relative w-full h-full">
                 <Image
                   src={member.imageUrl}
@@ -157,14 +153,11 @@ export default function TeamSection() {
                   className="object-cover w-full h-full"
                   fill
                 />
-
-                {/* Overlay sombre */}
                 <div className="absolute inset-0 bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center px-4">
                   {member.specialty}
                 </div>
               </div>
 
-              {/* Bloc texte */}
               <div className="absolute bottom-0 p-4 bg-white w-full">
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
                   {member.name}
@@ -195,7 +188,7 @@ export default function TeamSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -35,8 +35,8 @@ const TextParallaxComponent = () => {
       {/* Titre principal */}
       <div className="text-center">
         <FadeIn>
-          <h1 className="text-4xl font-bold uppercase tracking-wide text-neutral-800 sm:text-5xl">
-            DROIT DE LA SÉCURITÉ SOCIALE
+          <h1 className="text-4xl font-bold tracking-wide text-neutral-800 sm:text-5xl">
+            Droit de la Sécurité Sociale
           </h1>
         </FadeIn>
       </div>

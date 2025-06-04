@@ -43,14 +43,14 @@ const ImageGridHero = () => {
             <Image
               width={500}
               height={500}
-              className="mt-4 w-full lg:mt-10 rounded-lg"
-              src="/assets/images/Photos%20cabinet/DSCF8404.jpg"
+              className="w-full rounded-lg h-full aspect-auto object-cover"
+              src="/assets/images/Photos%20cabinet/DSCF8462.jpg"
               alt="office content 1"
             />
             <Image
               width={500}
               height={500}
-              className="w-full rounded-lg"
+              className="w-full rounded-lg mt-6"
               src="/assets/images/Photos%20cabinet/DSCF8589.jpg"
               alt="office content 1"
             />
@@ -161,7 +161,7 @@ const ImageGridHero = () => {
 
 const Nav = ({ scrollYProgress }) => {
   const background = useTransform(scrollYProgress, (i) =>
-    i === 1 ? "rgb(13,10,9)" : "transparent"
+    i === 1 ? "" : "transparent"
   );
 
   return (

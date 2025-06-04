@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import Header from '../components/Header'
 import Head from 'next/head'
 import BreadCrumb from '@/components/BreadCrumb'
+import FaqBis from "@/components/FaqBis"
 import Footer from "@/components/Footer"
 
 import { Disclosure } from '@headlessui/react'
@@ -65,7 +66,6 @@ const faqItems = [
 
 ]
 
-
 const variants = {
   hidden: { opacity: 0},
   show: {
@@ -108,7 +108,9 @@ export default function faqs() {
       <Container>
         <BreadCrumb href={hrefPage} title={singleTitle}/>
 
-        <Reveal>
+        <FaqBis />
+
+        {/* <Reveal>
          <div className="bg-white">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
@@ -141,8 +143,8 @@ export default function faqs() {
             </div>
           </div>
         </div>
-        </Reveal>
-        
+        </Reveal> */}
+
       </Container>
       
       <Footer />
