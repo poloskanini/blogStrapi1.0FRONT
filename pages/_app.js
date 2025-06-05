@@ -19,32 +19,38 @@ const lato = Lato({
 
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
+  const loadingTime = 2500;
 
-  //TODO: Remettre 2500 en durée de loading
-  const loadingTime = 2500
-
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [hasChecked, setHasChecked] = useState(false); // Ajouté
 
   const is404 = Component.name === "Custom404";
 
   useEffect(() => {
-    if (!is404) {
+    if (typeof window === "undefined") return;
+  
+    const expiration = localStorage.getItem('hasVisited');
+    const now = Date.now();
+    const shouldShowLoader = !expiration || now > parseInt(expiration);
+  
+    if (!is404 && shouldShowLoader) {
+      // 1. On déclenche le loader
       setLoading(true);
-      const timeout = setTimeout(() => {
+      // 2. On enregistre un nouveau timestamp (dans 1 min)
+      localStorage.setItem('hasVisited', (now + 60 * 1000).toString());
+      // 3. On le cache après le délai
+      setTimeout(() => {
         setLoading(false);
+        setHasChecked(true);
       }, loadingTime);
-
-      return () => clearTimeout(timeout);
+    } else {
+      // Pas de loader → directement prêt
+      setHasChecked(true);
     }
   }, [is404]);
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, loadingTime) //2500 OK
-  // }, [])
+  
+  if (!hasChecked) return null; // on attend d'avoir vérifié
   
   return (
     <>
@@ -88,43 +94,17 @@ export default function App({ Component, pageProps }) {
 
       </Head>
 
-    {loading ? (
-    <AnimatePresence mode='wait'>
+      {loading ? (
       <div className="loader-container">
         <LoaderLogo />
       </div>
-    </AnimatePresence>
     ) : (
       <div className={lato.className}>
-
-        <AnimatePresence mode='wait'>
-          {/* <motion.div key={router.pathname}>
-
-            <Component {...pageProps} />
-            
-            <motion.div
-              className='slide-in'
-              initial={{ scaleY: 0, opacity: 0 }}
-              animate={{ scaleY: 0 }}
-              exit={{ scaleY: 0, opacity: 0}}
-              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
-            ></motion.div>
-            <motion.div
-              className='slide-out'
-              initial={{ scaleY: 1, opacity: 1 }}
-              animate={{ scaleY: 0 }}
-              exit={{ scaleY: 1, opacity: 1}}
-              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
-            ></motion.div>
-          </motion.div> */}
-
-          {/* Transition sur toutes les pages ? Décommenter au dessus, et supprimer ci- dessous + dans index.js */}
+        <AnimatePresence mode="wait">
           <Component {...pageProps} />
-
         </AnimatePresence>
-
       </div>
     )}
-    </>
-  )
+  </>
+      )
 }
