@@ -29,8 +29,33 @@ const ImageGridHero = () => {
         {/* Flèche animée */}
         <ScrollArrow />
       </section>
+
+      <section className="bg-white mb-16 tauxHoraire">
+        <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
+          <div
+            className="flex flex-col justify-center font-light text-gray-500 sm:text-lg ">
+            <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-start">
+              Taux Horaire
+            </h1>
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">La facturation au temps passé est proposée lorsque la nature du dossier rend difficile l’évaluation à l’avance de la charge de travail (interventions ponctuelles complexes, etc.). Le taux horaire du cabinet est communiqué en toute transparence lors de l’ouverture du dossier.
+            </p>
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Le taux horaire du cabinet est communiqué en toute transparence lors de l’ouverture du dossier.
+            </p>
+          </div>
+
+          <motion.div
+            variants={fadeInVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-2 gap-4">
+              <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8632.jpg" alt="office content 1" />
+              <Image width={500} height={500} className="w-full rounded-lg h-full aspect-auto object-cover" src="/assets/images/Photos%20cabinet/DSCF8437.jpg" alt="office content 1" />
+          </motion.div>
+        </div>
+      </section>
       
-      <section className="bg-white my-16 forfait">
+      <section className="bg-gray-900 my-16 forfait py-12">
         <motion.div
           className="flex flex-col-reverse lg:flex-row gap-16 items-center px-4 mx-auto max-w-screen-xl lg:px-8"
           initial="hidden"
@@ -57,8 +82,8 @@ const ImageGridHero = () => {
           </div>
 
           {/* Texte */}
-          <div className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400 w-full">
-            <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
+          <div className="flex flex-col justify-center font-light text-white sm:text-lg w-full">
+            <h1 className="text-white text-5xl md:text-7xl font-bold max-w-xl text-end">
               Forfait
             </h1>
             <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
@@ -69,61 +94,14 @@ const ImageGridHero = () => {
         </motion.div>
       </section>
 
-      <section className="bg-gray-900 mb-16 tauxHoraire">
+      <section className="bg-white mb-16 tauxHoraire">
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-8">
           <div
-            className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h1 className="text-white text-5xl md:text-7xl font-bold max-w-xl">
-              Taux Horaire
+            className="flex flex-col justify-center font-light text-gray-500 sm:text-lg ">
+            <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-start">
+              Abonnement
             </h1>
-            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Chaque situation est unique : les modalités d’intervention et le coût de la mission sont abordés dès le premier rendez-vous, afin de définir ensemble la solution la plus <strong className="font-black">adaptée à vos besoins.</strong>
-            </p>
-          </div>
-
-          <motion.div
-            variants={fadeInVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-2 gap-4">
-              <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8632.jpg" alt="office content 1" />
-              <Image width={500} height={500} className="w-full rounded-lg h-full aspect-auto object-cover" src="/assets/images/Photos%20cabinet/DSCF8437.jpg" alt="office content 1" />
-          </motion.div>
-        </div>
-      </section>
-
-        <section className="bg-white mb-28 abonnement">
-          <motion.div
-            className="flex flex-col-reverse lg:flex-row gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl lg:px-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInVariant}
-          >
-            {/* Images */}
-            <div className="grid grid-cols-2 gap-4 w-full">
-              <Image
-                width={500}
-                height={500}
-                className="w-full rounded-lg"
-                src="/assets/images/Photos%20cabinet/DSCF8617.jpg"
-                alt="office content 1"
-              />
-              <Image
-                width={500}
-                height={500}
-                className="mt-4 w-full lg:mt-10 rounded-lg"
-                src="/assets/images/Photos%20cabinet/DSCF8633.jpg"
-                alt="office content 1"
-              />
-            </div>
-
-            {/* Texte */}
-            <div className="flex flex-col justify-center font-light text-gray-500 sm:text-lg dark:text-gray-400 w-full">
-              <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-end">
-                Abonnement
-              </h1>
-              <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
                 Le cabinet propose des formules d’abonnement <strong className="text-custom-purple font-black">mensuel ou annuel</strong> pour les clients qui souhaitent un accompagnement régulier (questions juridiques, relecture de documents, stratégie RH, veille…). L’abonnement est <strong className="text-custom-purple font-black">personnalisé</strong> selon la taille de la structure, les besoins identifiés et le volume d’échanges attendu.
               </p>
               <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">
@@ -147,9 +125,19 @@ const ImageGridHero = () => {
                   téléphone.
                 </Link>
               </p>
-            </div>
+          </div>
+
+          <motion.div
+            variants={fadeInVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-2 gap-4">
+              <Image width={500} height={500} className="mt-4 w-full lg:mt-10 rounded-lg" src="/assets/images/Photos%20cabinet/DSCF8617.jpg" alt="office content 1" />
+              <Image width={500} height={500} className="w-full rounded-lg h-full aspect-auto object-cover" src="/assets/images/Photos%20cabinet/DSCF8633.jpg" alt="office content 1" />
           </motion.div>
-        </section>
+        </div>
+      </section>
 
     </>
   );
@@ -282,7 +270,7 @@ const Images = ({ scrollYProgress }) => {
         className="row-span-2 relative z-10"
         style={{
           backgroundImage:
-            "url(/assets/images/Photos%20cabinet/DSCF8516.jpg)",
+            "url(/assets/images/Photos%20cabinet/DSCF8570.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -294,7 +282,7 @@ const Images = ({ scrollYProgress }) => {
         className="relative z-10"
         style={{
           backgroundImage:
-            "url(/assets/images/Photos%20cabinet/DSCF8548.jpg)",
+            "url(/assets/images/Photos%20cabinet/DSCF8599.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -307,7 +295,7 @@ const Images = ({ scrollYProgress }) => {
         className="relative z-10"
         style={{
           backgroundImage:
-            "url(/assets/images/Photos%20cabinet/DSCF8496.jpg)",
+            "url(/assets/images/Photos%20cabinet/DSCF8546.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,

@@ -49,34 +49,34 @@ const images = {
 
 const timeline = [
   {
-    name: 'Création du cabinet',
+    name: 'Master 2 Droit social – Université Paris II Panthéon-Assas',
     description:
-      'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
-    date: 'Août 2017',
-    dateTime: '2021-08',
+      'Spécialisation en droit du travail et droit de la sécurité sociale.',
+    date: '2009',
+    dateTime: '2009-01',
   },
   {
-    name: 'Partenariat',
+    name: 'Prestation de serment',
     description:
-      'Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.',
-    date: 'Dec 2021',
-    dateTime: '2021-12',
+      'Entrée dans la profession d’avocat après obtention du CAPA. Premières collaborations en cabinets spécialisés en droit social.',
+    date: '2012',
+    dateTime: '2012-01',
   },
   {
-    name: 'Extension',
+    name: 'Expérience en cabinets parisiens - Enseignement',
     description:
-      'Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.',
-    date: 'Fev 2022',
-    dateTime: '2022-02',
+      'Accompagnement de clients dans des contextes RH complexes : restructurations, contentieux prud’homaux, négociations collectives, contrôles URSSAF...',
+    date: '2012–2017',
+    dateTime: '2012-2017',
   },
   {
-    name: 'Émancipation',
+    name: 'Création du cabinet MENEZES AVOCATS',
     description:
-      'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-    date: 'Dec 2022',
-    dateTime: '2022-12',
+      'Un cabinet indépendant dédié au droit du travail et au droit de la sécurité sociale : conseil, contentieux, formation, accompagnement stratégique.',
+    date: '2017',
+    dateTime: '2017-01',
   },
-]
+];
 
 const people = [
   {
@@ -141,17 +141,17 @@ export default function lecabinet() {
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8 text-justify text-neutral-500">
                 <h1 className="text-4xl font-bold tracking-wide text-neutral-800 sm:text-5xl">Le Cabinet</h1>
                 <p className={`text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify mt-8`}>
-                Sandrine MENEZES accompagne les carrières et les entreprises dans les moments où tout peut basculer.
+                <strong className='font-bold'>Sandrine MENEZES</strong> accompagne les carrières et les entreprises dans les moments où tout peut basculer.
                 </p>
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques : face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence. Parce que derrière chaque situation se cachent des enjeux humains, économiques et souvent émotionnels, Sandrine MENEZES apporte un regard expert, un soutien constant et un accompagnement sur mesure.
+                <strong className='font-bold'>Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques </strong>: face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence. Parce que derrière chaque situation se cachent des enjeux humains, économiques et souvent émotionnels, Sandrine MENEZES apporte <strong className='font-bold'>un regard expert, un soutien constant et un accompagnement sur mesure.</strong>
                 </p>
        
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                  Depuis plus de 15 ans, elle exerce en droit du travail et en droit de la sécurité sociale, auprès de salariés, dirigeants et entreprises. Elle connaît la complexité des relations professionnelles et la nécessité de réponses claires, solides et adaptées à chaque situation.
+                  Depuis plus de 15 ans, elle exerce en <strong className='font-bold'> droit du travail et en droit de la sécurité sociale</strong>, auprès de salariés, dirigeants et entreprises. Elle connaît la complexité des relations professionnelles et la nécessité de réponses claires, solides et adaptées à chaque situation.
                 </p>
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                  Diplômée de l’Université Paris II Panthéon-Assas, titulaire du Certificat de Spécialisation en droit du travail, formée au sein de cabinets de référence, elle a fondé son propre cabinet avec une ambition : proposer une pratique indépendante, humaine, sans automatisme.
+                <strong className='font-bold'>Diplômée de l’Université Paris II Panthéon-Assas, titulaire du Certificat de Spécialisation en droit du travail</strong>, formée au sein de cabinets de référence, elle a fondé son propre cabinet avec une ambition : proposer une pratique indépendante, humaine, sans automatisme.
                 </p>
 
               </div>
@@ -231,8 +231,8 @@ export default function lecabinet() {
                   <div className="lg:grid lg:grid-cols-2 lg:gap-20 text-justify">
                     <div className="prose prose-lg prose-indigo text-gray-500 lg:max-w-none">
                       {[
-                        "Au-delà des textes et des procédures, elle croit en une approche ancrée dans l’écoute, la réflexion stratégique et la recherche constante de solutions.",
-                        "Qu’il s’agisse de défendre vos intérêts, de conseiller dans des choix décisifs ou de prévenir les risques, elle privilégie une démarche construite sur mesure, pensée à la fois pour résoudre le présent et sécuriser l’avenir.",
+                        "Au-delà des textes et des procédures, elle privilégie une approche fondée sur l’écoute, la réflexion stratégique et la recherche de solutions concrètes.",
+                        "Qu’il s’agisse de défendre vos intérêts, de vous accompagner dans des choix décisifs ou de prévenir les risques, elle adopte une démarche sur mesure, pensée pour résoudre le présent et sécuriser l’avenir."
                       ].map((text, i) => (
                         <motion.p
                           key={i}
@@ -247,8 +247,8 @@ export default function lecabinet() {
 
                     <div className="prose prose-lg prose-indigo mt-6 text-gray-500 lg:mt-0">
                       {[
-                        "Consciente que le monde du travail évolue sans cesse, elle travaille également en lien étroit avec un réseau de partenaires et avocats de confiance — experts en droit des affaires, fiscalité, droit pénal du travail, gestion de crise ou encore en ressources humaines — pour offrir une réponse globale, cohérente et opérationnelle.",
-                        "Ce qui guide sa pratique : l’indépendance d’esprit, la loyauté dans la relation, et la conviction que le droit du travail est un outil vivant — au service des réalités humaines autant qu’économiques.",
+                        "Consciente de l’évolution constante du monde du travail, elle s’appuie sur un réseau de partenaires et d’avocats de confiance — experts en droit des affaires, fiscalité, droit pénal du travail, gestion de crise ou ressources humaines — pour offrir une réponse globale, cohérente et opérationnelle.",
+                        "Ce qui guide sa pratique : l’indépendance d’esprit, la loyauté dans la relation, et la conviction que le droit du travail est un outil vivant, au service des réalités humaines autant qu’économiques."
                       ].map((text, i) => (
                         <motion.p
                           key={i}
@@ -267,32 +267,100 @@ export default function lecabinet() {
           </div>
           
           {/* TimeLine VerticalSlideFeatures */}
-          <VerticalSlideFeatures />
+          {/* <VerticalSlideFeatures /> */}
 
           {/* Timeline section */}
-          {/* <div className="mx-auto max-w-7xl px-6 mb-32 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 mb-24 lg:px-8 mt-24">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              {timeline.map((item) => (
-                <div key={item.name}>
-                  <time
-                    dateTime={item.dateTime}
-                    className="flex items-center text-sm font-semibold leading-6 text-custom-purple"
-                  >
-                    <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
-                      <circle cx={2} cy={2} r={2} fill="currentColor" />
-                    </svg>
-                    {item.date}
-                    <div
-                      className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
-                      aria-hidden="true"
-                    />
-                  </time>
-                  <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{item.name}</p>
-                  <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
-                </div>
-              ))}
+              {/* 2009 */}
+              <div>
+                <time
+                  dateTime="2009-01"
+                  className="flex items-center text-sm font-semibold leading-6 text-custom-purple"
+                >
+                  <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                    <circle cx={2} cy={2} r={2} fill="currentColor" />
+                  </svg>
+                  2009
+                </time>
+                <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                  Master 2 Droit social
+                </p>
+                <ul className="mt-2 text-base leading-7 text-gray-600 list-disc list-inside space-y-1">
+                  <li>Université Paris II Panthéon-Assas</li>
+                  <li>Spécialisation en droit du travail et droit de la sécurité sociale</li>
+                </ul>
+              </div>
+
+              {/* 2012 */}
+              <div>
+                <time
+                  dateTime="2012-01"
+                  className="flex items-center text-sm font-semibold leading-6 text-custom-purple"
+                >
+                  <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                    <circle cx={2} cy={2} r={2} fill="currentColor" />
+                  </svg>
+                  2012
+                </time>
+                <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                  Prestation de serment
+                </p>
+                <ul className="mt-2 text-base leading-7 text-gray-600 list-disc list-inside space-y-1">
+                  <li>Entrée dans la profession d’avocat après obtention du CAPA</li>
+                  <li>Premières collaborations en cabinets spécialisés en droit social</li>
+                </ul>
+              </div>
+
+              {/* 2012–2017 */}
+              <div>
+                <time
+                  dateTime="2012-2017"
+                  className="flex items-center text-sm font-semibold leading-6 text-custom-purple"
+                >
+                  <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                    <circle cx={2} cy={2} r={2} fill="currentColor" />
+                  </svg>
+                  2012–2017
+                </time>
+                <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                  Expérience en cabinets parisiens - Enseignement
+                </p>
+                <ul className="mt-2 text-base leading-7 text-gray-600 list-disc list-inside space-y-1">
+                  <li>Accompagnement de clients dans des contextes RH complexes :</li>
+                  <li>Restructurations</li>
+                  <li>Contentieux prud’homaux</li>
+                  <li>Négociations collectives</li>
+                  <li>Contrôles URSSAF</li>
+                  <li>Chargée d’enseignement en droit de la sécurité sociale à l’Université Paris-Saclay</li>
+                </ul>
+              </div>
+
+              {/* 2017 */}
+              <div>
+                <time
+                  dateTime="2017-01"
+                  className="flex items-center text-sm font-semibold leading-6 text-custom-purple"
+                >
+                  <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                    <circle cx={2} cy={2} r={2} fill="currentColor" />
+                  </svg>
+                  2017
+                </time>
+                <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                  Création du cabinet MENEZES AVOCATS
+                </p>
+                <ul className="mt-2 text-base leading-7 text-gray-600 list-disc list-inside space-y-1">
+                  <li>Cabinet indépendant dédié au droit du travail et à la sécurité sociale</li>
+                  <li>Conseil</li>
+                  <li>Contentieux</li>
+                  <li>Formation</li>
+                  <li>Accompagnement stratégique</li>
+                </ul>
+              </div>
             </div>
-          </div> */}
+          </div>
+
 
           {/* Team Section */}
 

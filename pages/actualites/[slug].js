@@ -134,7 +134,7 @@ export default function Post({ post }) {
                 {/* DATE */}
                 <div className="pl-2 flex flex-col items-start gap-x-4 text-xs">
                   <time className="text-gray-500">
-                    Publié le {frenchDate} par {post.attributes.author}
+                    Publié le {frenchDate}
                   </time>
                   <time className="text-gray-400">
                   {post.attributes.createdAt !== post.attributes.updatedAt ? `Modifié le ${updatedAt} à ${frenchHour}` : ''}
