@@ -7,32 +7,34 @@ const teamMembers = [
     role: "Avocat au barreau de Paris",
     imageUrl: "/assets/images/PhotosAssocies/marc-antoine-nys-portfolio.jpg",
     specialty: (
-      <div className="space-y-2 text-sm md:text-lg font-light text-center">
+      <div className="space-y-2 text-sm md:text-lg font-light text-justify">
         <p>
           Avocat au barreau de Paris depuis mars 2011, diplômé du Master 2 professionnel de juriste d’affaires à l’Université Paris V – René Descartes.
         </p>
+        <br />
         <p>
           Intervient principalement en droit commercial, droit de la construction et contentieux des affaires.
         </p>
       </div>
     ),
-    linkedinUrl: "https://www.google.fr",
+    linkedinUrl: "/",
   },
   {
     name: "Florent CORNUT-GENTILLE",
     role: "Avocat au barreau de Paris",
     imageUrl: "/assets/images/PhotosAssocies/florent-cornut-gentille-portfolio.jpg",
     specialty: (
-      <div className="space-y-2 text-sm md:text-lg font-light text-center">
+      <div className="space-y-2 text-sm md:text-lg font-light text-justify">
         <p>
           Florent CORNUT-GENTILLE est avocat au barreau de Paris depuis octobre 2010. Diplômé du Master 2 professionnel de Droit des affaires et fiscalité de l’Université Paris II Panthéon-Assas, il est parallèlement titulaire d’une licence d’Histoire.
         </p>
+        <br />
         <p>
           Florent CORNUT-GENTILLE conseille ainsi principalement les entreprises en droit des sociétés, droit des contrats ainsi qu’en droit commercial.
         </p>
       </div>
     ),
-    linkedinUrl: "https://www.google.fr",
+    linkedinUrl: "/",
   },
   {
     name: "Émilie SERGEANT",
@@ -49,7 +51,7 @@ const teamMembers = [
         </p>
       </>
     ),
-    linkedinUrl: "https://www.google.fr",
+    linkedinUrl: "/",
   },
 ];
 
