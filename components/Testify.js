@@ -29,6 +29,10 @@ export default function Testify() {
                 width={500}
                 height={500}
               />
+              {/* <figcaption className="mt-8 text-base">
+                <div className="font-semibold text-neutral-500">Sandrine MENEZES</div>
+                <div className="mt-1 text-neutral-400">Fondatrice du cabinet MENEZES AVOCAT</div>
+              </figcaption> */}
             </div>
           </motion.div>
 
@@ -54,13 +58,17 @@ export default function Testify() {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-neutral-950 sm:text-2xl sm:leading-9">
                 <p>
-                  Le droit social n’est pas une science exacte, mais une exigence de justice.
+                  « Le droit social n’est pas une science exacte, mais une exigence de justice. »
                 </p>
+                <footer className="mt-2 text-base font-medium text-neutral-500 text-right">
+                  — Jean-Emmanuel RAY 
+                </footer>
               </blockquote>
-              <figcaption className="mt-8 text-base">
+
+              {/* <figcaption className="mt-8 text-base">
                 <div className="font-semibold text-neutral-500">Sandrine MENEZES</div>
                 <div className="mt-1 text-neutral-400">Fondatrice du cabinet MENEZES AVOCAT</div>
-              </figcaption>
+              </figcaption> */}
             </figure>
           </motion.div>
         </div>
