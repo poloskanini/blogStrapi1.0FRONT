@@ -23,8 +23,10 @@ const sections = [
       "Contestation des redressements URSSAF et litiges relatifs aux cotisations sociales",
       "Défense lors des procédures de contrôle, de recouvrement et de pénalisation",
       "Assistance en matière de contentieux pénal liés aux infractions sociales (travail dissimulé, fraude aux cotisations, etc.)",
+      "Contentieux des accidents du travail et des maladies professionnelles ",
+      "Contentieux de la faute inexcusable",
       "Représentation devant les juridictions administratives, prud’homales et pénales",
-      "Gestion des procédures de régularisation et négociation des plans d’apurement",
+      "Gestion des procédures de régularisation et négociation des plans d’apurement avec les organismes de sécurité sociale",
     ],
   },
 ];

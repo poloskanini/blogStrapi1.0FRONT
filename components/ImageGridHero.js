@@ -37,7 +37,7 @@ const ImageGridHero = () => {
             <h1 className="text-neutral-950 text-5xl md:text-7xl font-bold max-w-xl text-start">
               Taux Horaire
             </h1>
-            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">La facturation au temps passé est proposée lorsque la nature du dossier rend difficile l’évaluation à l’avance de la charge de travail (interventions ponctuelles complexes, etc.). Le taux horaire du cabinet est communiqué en toute transparence lors de l’ouverture du dossier.
+            <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">La facturation au temps passé est proposée lorsque la nature du dossier rend difficile l’évaluation à l’avance de la charge de travail (interventions ponctuelles complexes, etc.).
             </p>
             <p className="my-4 leading-7 text-lg md:text-xl lg:text-xl/9 font-normal text-justify">Le taux horaire du cabinet est communiqué en toute transparence lors de l’ouverture du dossier.
             </p>

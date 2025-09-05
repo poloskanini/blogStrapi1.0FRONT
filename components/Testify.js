@@ -54,7 +54,7 @@ export default function Testify() {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-neutral-950 sm:text-2xl sm:leading-9">
                 <p>
-                  Au cœur de mon engagement : la justice et la défense inconditionnelle de vos droits, pour que chaque voix soit entendue.
+                  Le droit social n’est pas une science exacte, mais une exigence de justice.
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">

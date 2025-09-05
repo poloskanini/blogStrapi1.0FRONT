@@ -5,9 +5,9 @@ import { useEffect } from 'react'
 import { motion } from "framer-motion"
 
 const stats = [
-  { id: 1, name: "d'expérience", value: 20, initial: '0', slug: " ans" },
+  { id: 1, name: "d'expérience", value: 18, initial: '0', slug: " ans" },
   { id: 2, name: "d’enjeux économiques défendus", value: 10, initial: '0', slug: " M€" },
-  { id: 3, name: "dossiers défendus", value: 1000, initial: '0', slug: "" },
+  { id: 3, name: "dossiers gérés", value: 1000, initial: '0', slug: "" },
   { id: 4, name: "de cas résolus", value: 100, initial: '0', slug: " %" },
 ]
 
