@@ -3,9 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="fr" className="scroll-smooth">
-      <Head>
-        <link rel="canonical" href="https://menezes-avocat.com/" />
-      </Head>
+      <Head />
       <body>
         <Main />
         <NextScript />

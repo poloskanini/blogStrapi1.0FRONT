@@ -68,6 +68,9 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta name="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
 
+        {/* Canonical */}
+        <link rel="canonical" href={absoluteUrl} />
+
         {/* Favicon */}
         <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico/ms-icon-310x310.png"/>
       </Head>
