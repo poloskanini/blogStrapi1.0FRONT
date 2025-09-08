@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Lato } from 'next/font/google'
 import Layout from '@/components/Layout'
 import LoaderLogo from '@/components/LoaderLogo'
-
 import localFont from 'next/font/local'
 
 const argesta = localFont({ src: '../fonts/Argesta_Display_Regular/Argesta Display Regular Desktop/ArgestaDisplay-Regular.otf'})
@@ -17,25 +16,29 @@ const lato = Lato({
   weight: ['100', '300', '400', '700', '900']
 })
 
+const SITE_URL = 'https://menezes-avocat.com'
 
 export default function App({ Component, pageProps }) {
   const router = useRouter()
 
-  //TODO: Remettre 2500 en durée de loading
+  // Loader config
   const loadingTime = 2500
-
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true)
     setTimeout(() => {
-      setLoading(false);
-    }, loadingTime) //2500 OK
+      setLoading(false)
+    }, loadingTime)
   }, [])
-  
+
+  // URL canonique dynamique
+  const { asPath } = router
+  const cleanPath = asPath?.split('#')[0]?.split('?')[0] || '/'
+  const absoluteUrl = new URL(cleanPath, SITE_URL).toString()
+
   return (
     <>
-
       <Head>
         <title>Menezes Avocat</title>
         <meta name="title" content="Menezes Avocat" />
@@ -44,74 +47,45 @@ export default function App({ Component, pageProps }) {
         
         {/* Google Robots */}
         <meta name="robots" content="index, follow" />
-        
         <meta name="language" content="French" />
-        {/* <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> */}
 
-        <meta property="og:url" content="https://www.menezes-avocat.com/" />
+        {/* Open Graph */}
+        <meta property="og:url" content={absoluteUrl} />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="Menezes Avocat" />
         <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta property="og:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="menezes-avocat.com" />
-        <meta property="twitter:url" content="https://www.menezes-avocat.com/" />
-        <meta property="twitter:title" content="Menezes Avocat" />
-        <meta property="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta property="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
-
-        {/* FB & Whatsapp */}
-
-        {/* <!-- Site Name, Title, and Description to be displayed --> */}
         <meta property="og:site_name" content="Menezes Avocat" />
         <meta property="og:image:type" content="image/webp" />
-
-        {/* <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp --> */}
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
 
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:domain" content="menezes-avocat.com" />
+        <meta name="twitter:url" content={absoluteUrl} />
+        <meta name="twitter:title" content="Menezes Avocat" />
+        <meta name="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+        <meta name="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
+
         {/* Favicon */}
         <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico/ms-icon-310x310.png"/>
-
       </Head>
 
-    {loading ? (
-    <AnimatePresence mode='wait'>
-      <div className="loader-container">
-        <LoaderLogo />
-      </div>
-    </AnimatePresence>
-    ) : (
-      <div className={lato.className}>
-
+      {loading ? (
         <AnimatePresence mode='wait'>
-          {/* <motion.div key={router.pathname}>
-
-            <Component {...pageProps} />
-            
-            <motion.div
-              className='slide-in'
-              initial={{ scaleY: 0, opacity: 0 }}
-              animate={{ scaleY: 0 }}
-              exit={{ scaleY: 0, opacity: 0}}
-              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
-            ></motion.div>
-            <motion.div
-              className='slide-out'
-              initial={{ scaleY: 1, opacity: 1 }}
-              animate={{ scaleY: 0 }}
-              exit={{ scaleY: 1, opacity: 1}}
-              transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }}
-            ></motion.div>
-          </motion.div> */}
-
-          {/* Transition sur toutes les pages ? Décommenter au dessus, et supprimer ci- dessous + dans index.js */}
-          <Component {...pageProps} />
-
+          <div className="loader-container">
+            <LoaderLogo />
+          </div>
         </AnimatePresence>
-
-      </div>
-    )}
+      ) : (
+        <div className={lato.className}>
+          <AnimatePresence mode='wait'>
+            {/* Transitions globales optionnelles */}
+            <Component {...pageProps} />
+          </AnimatePresence>
+        </div>
+      )}
     </>
   )
 }
