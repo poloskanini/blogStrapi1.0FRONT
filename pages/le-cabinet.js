@@ -144,7 +144,7 @@ export default function lecabinet() {
                 <strong className='font-bold'>Sandrine MENEZES</strong> accompagne les carrières et les entreprises dans les moments où tout peut basculer.
                 </p>
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">
-                <strong className='font-bold'>Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques </strong>: face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence. Parce que derrière chaque situation se cachent des enjeux humains, économiques et souvent émotionnels, Sandrine MENEZES apporte <strong className='font-bold'>un regard expert, un soutien constant et un accompagnement sur mesure.</strong>
+                <strong className='font-bold'>Rupture de contrat, litige individuel ou collectif, contrôle URSSAF, tensions internes ou simples incertitudes juridiques </strong>: face à ces enjeux, elle intervient avec une méthode fondée sur l’écoute, la stratégie et l’exigence. Parce que derrière chaque situation se cachent des enjeux humains, économiques et souvent émotionnels, Sandrine MENEZES apporte <strong className='font-bold'>une analyse pointue, un soutien constant et un accompagnement sur mesure.</strong>
                 </p>
        
                 <p className="mt-6 leading-7 text-lg md:text-xl lg:text-xl font-normal leading-1 tracking-tight text-justify">

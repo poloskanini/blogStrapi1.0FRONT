@@ -10,12 +10,14 @@ const teamMembers = [
     specialty: (
       <div className="space-y-2 text-sm md:text-base font-light text-justify">
         <p>
-          Émilie Sergeant lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis possimus laudantium nam tempora ab natus? Commodi aperiam voluptatibus quae rerum autem? Dolorem, non rerum fuga accusamus ratione cum explicabo! Architecto.
+          Émilie SERGEANT est avocate au Barreau de Paris depuis mars 2023. Titulaire d’un Master 2 en Droit et Pratique des relations de travail (Université Paris-Saclay) et du certificat « Avocat Conseil en droit du travail » (HEDAC), elle intervient en droit des relations individuelles et de la protection sociale, en conseil comme en contentieux.
         </p>
 
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum velit aliquam debitis!
+          Avant de prêter serment, elle a acquis une solide expérience en entreprise et en cabinet d’avocats, notamment chez Final et au service juridique de la Caisse d’Épargne.
         </p>
+
+
       </div>
     ),
     linkedinUrl: "https://fr.linkedin.com/in/emilie-sergeant-613a54139",
@@ -23,7 +25,7 @@ const teamMembers = [
   {
     name: "Marc-Antoine NYS",
     role: "Avocat au barreau de Paris",
-    partnerShip: "Partenaire",
+    partnerShip: "Cabinet NYS CORNUT-GENTILLE",
     imageUrl: "/assets/images/PhotosAssocies/marc-antoine-nys-portfolio.jpg",
     specialty: (
       <div className="space-y-2 text-sm md:text-base font-light text-justify">
@@ -41,7 +43,7 @@ const teamMembers = [
   {
     name: "Florent CORNUT-GENTILLE",
     role: "Avocat au barreau de Paris",
-    partnerShip: "Partenaire",
+    partnerShip: "Cabinet NYS CORNUT-GENTILLE",
     imageUrl: "/assets/images/PhotosAssocies/florent-cornut-gentille-portfolio.jpg",
     specialty: (
       <div className="space-y-2 text-sm md:text-base font-light text-justify">
@@ -110,7 +112,7 @@ export default function TeamSection() {
                   px-5 py-6
                   overflow-y-auto pb-28
                   [-webkit-overflow-scrolling:touch]
-                  flex flex-col items-center justify-center">
+                  flex flex-col items-start justify-start">
                   {member.specialty}
                 </div>
               </div>
@@ -120,7 +122,7 @@ export default function TeamSection() {
                   <h3 className="mt-6 text-lg font-bold leading-8 tracking-tight text-gray-900">
                     {member.name}
                   </h3>
-                  <p className="text-base leading-7 text-gray-900 font-semibold">
+                  <p className="text-base leading-7 text-gray-900 font-light">
                     {member.partnerShip}
                   </p>
                   <p className="text-base leading-7 text-gray-600 italic">

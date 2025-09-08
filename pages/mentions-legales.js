@@ -55,13 +55,8 @@ export default function mentionslegales() {
             </div>
 
             <div class="mb-4">
-                <h2 class="text-lg font-semibold">Gestion des liens</h2>
-                <p>Le site contient des liens vers d’autres sites Web ou d’autres sources Internet. Dans la mesure où la société Menezes Avocat ne peut contrôler ces sites et ces sources externes, la société ne peut être tenue pour responsable de la mise à disposition de ces sites et sources externes, et ne peut supporter aucune responsabilité quant au contenu, publicités, produits, services ou tout autre matériel disponible sur ou à partir de ces sites ou sources externes.</p>
-            </div>
-
-            <div class="mb-4">
                 <h2 class="text-lg font-semibold">Médiateur de la consommation</h2>
-                <p>Conformément aux dispositions des articles L.612-1 et suivants du Code de la consommation, vous avez la possibilité, en cas de litige avec un avocat, de recourir gratuitement au Médiateur de la consommation qui sera le médiateur national près du Conseil National des Barreaux (CNB) et dont les coordonnées sont les suivantes : CNB, Médiateur à la consommation, 22 rue de Londres – 75009 PARIS.</p>
+                <p>Conformément aux dispositions des articles L.612-1 et suivants du Code de la consommation, vous avez la possibilité, en cas de litige avec un avocat, de recourir gratuitement au Médiateur de la consommation qui sera le médiateur national près du Conseil National des Barreaux (CNB) et dont les coordonnées sont les suivantes : CNB, Médiateur à la consommation, 180 boulevard Haussmann - 75008 PARIS.</p>
             </div>
 
             <div class="mb-4">
