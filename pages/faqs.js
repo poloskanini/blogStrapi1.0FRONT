@@ -98,9 +98,26 @@ export default function faqs() {
   return (
   <>
     <Head>
-      <title>{titlePage}</title>
-      <meta name="title" content={titlePage} />
-      <meta property="og:title" content={titlePage} />
+      <title>Menezes Avocat - Foire aux Questions</title>
+      <meta name="title" content="Menezes Avocat - Foire aux Questions" />
+      <meta
+        name="description"
+        content="Réponses aux questions fréquentes sur vos droits en droit du travail et en droit de la sécurité sociale avec le cabinet MENEZES AVOCAT : licenciement, rupture conventionnelle, harcèlement, URSSAF."
+      />
+
+      {/* Open Graph */}
+      <meta property="og:title" content="Menezes Avocat - Foire aux Questions" />
+      <meta
+        property="og:description"
+        content="Réponses aux questions fréquentes sur vos droits en droit du travail et en droit de la sécurité sociale avec le cabinet MENEZES AVOCAT : licenciement, rupture conventionnelle, harcèlement, URSSAF."
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:title" content="Menezes Avocat - Foire aux Questions" />
+      <meta
+        name="twitter:description"
+        content="Réponses aux questions fréquentes sur vos droits en droit du travail et en droit de la sécurité sociale avec le cabinet MENEZES AVOCAT : licenciement, rupture conventionnelle, harcèlement, URSSAF."
+      />
     </Head>
 
     <Header />

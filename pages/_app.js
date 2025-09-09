@@ -39,23 +39,20 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        <title>Menezes Avocat</title>
-        <meta name="title" content="Menezes Avocat" />
-        <meta name="description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta name="keywords" content="indemnités licenciement abusif, rupture conventionnelle, avocat en droit du travail, avocat harcèlement au travail, discrimination, avocat droit de la sécurité sociale" />
-        
+      <Head>    
         {/* Google Robots */}
         <meta name="robots" content="index, follow" />
         <meta name="language" content="French" />
 
+        {/* Canonical */}
+        <link rel="canonical" href={absoluteUrl} />
+
         {/* Open Graph */}
         <meta property="og:url" content={absoluteUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Menezes Avocat" />
-        <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
-        <meta property="og:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
         <meta property="og:site_name" content="Menezes Avocat" />
+        <meta property="og:title" content="Menezes Avocat" />
+        <meta property="og:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
         <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
@@ -64,15 +61,10 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:domain" content="menezes-avocat.com" />
         <meta name="twitter:url" content={absoluteUrl} />
-        <meta name="twitter:title" content="Menezes Avocat" />
-        <meta name="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
         <meta name="twitter:image" content="https://res.cloudinary.com/dbff7xgqx/image/upload/v1697803153/ImageOGMenezes_olzojs.png" />
 
-        {/* Canonical */}
-        <link rel="canonical" href={absoluteUrl} />
-
         {/* Favicon */}
-        <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico/ms-icon-310x310.png"/>
+        <link rel="icon" href="/favicon.png" sizes="any" />
       </Head>
 
       {loading ? (

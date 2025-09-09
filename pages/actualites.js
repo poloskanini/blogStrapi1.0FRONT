@@ -33,9 +33,26 @@ export default function Posts({ posts }) {
   return (
     <>
       <Head>
-        <title>{titlePage}</title>
-        <meta name="title" content={titlePage} />
-        <meta property="og:title" content={titlePage} />
+        <title>Menezes Avocat - Actualités</title>
+        <meta name="title" content="Menezes Avocat - Actualités" />
+        <meta
+          name="description"
+          content="Retrouvez les actualités juridiques en droit du travail et de la sécurité sociale publiées par le cabinet MENEZES AVOCAT : analyses, conseils pratiques et veille législative."
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Menezes Avocat - Actualités" />
+        <meta
+          property="og:description"
+          content="Retrouvez les actualités juridiques en droit du travail et de la sécurité sociale publiées par le cabinet MENEZES AVOCAT : analyses, conseils pratiques et veille législative."
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Menezes Avocat - Actualités" />
+        <meta
+          name="twitter:description"
+          content="Retrouvez les actualités juridiques en droit du travail et de la sécurité sociale publiées par le cabinet MENEZES AVOCAT : analyses, conseils pratiques et veille législative."
+        />
       </Head>
       
       <Header />

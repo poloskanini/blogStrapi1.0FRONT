@@ -78,45 +78,6 @@ const timeline = [
   },
 ];
 
-const people = [
-  {
-    name: 'Sandrine MENEZES',
-    role: 'Co-Founder / CEO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=800',
-  },
-  {
-    name: 'Nordal le Landais',
-    role: 'Témoin de mariage',
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  {
-    name: 'Angélique Barthès',
-    role: "Designeuse d'expressions uniques",
-    imageUrl:
-      'https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  {
-    name: 'Émilie Potez',
-    role: 'Secrétaire',
-    imageUrl:
-      'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  {
-    name: 'Draps Souillés',
-    role: 'Souilleur de draps',
-    imageUrl:
-      'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  {
-    name: 'Antoine Zschunke',
-    role: 'Expert en rhums arrangés',
-    imageUrl:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-]
-
 export default function lecabinet() {
 
   const singleTitle = "Le Cabinet"
@@ -127,9 +88,27 @@ export default function lecabinet() {
     <>
 
       <Head>
-        <title>{titlePage}</title>
-        <meta name="title" content={titlePage} />
-        <meta property="og:title" content={titlePage} />
+        {/* Titre + metas spécifiques à la page */}
+        <title>Menezes Avocat - Le Cabinet</title>
+        <meta name="title" content="Menezes Avocat - Le Cabinet" />
+        <meta
+          name="description"
+          content="Découvrez le cabinet MENEZES AVOCAT : expertise en droit du travail et de la sécurité sociale, stratégie, rigueur et accompagnement humain."
+        />
+
+        {/* Open Graph spécifiques (les autres comme og:url, site_name, image sont déjà globaux dans _app.js) */}
+        <meta property="og:title" content="Menezes Avocat - Le Cabinet" />
+        <meta
+          property="og:description"
+          content="Découvrez le cabinet MENEZES AVOCAT : expertise en droit du travail et de la sécurité sociale, stratégie, rigueur et accompagnement humain."
+        />
+
+        {/* Twitter spécifiques (twitter:card, url, image sont déjà globaux) */}
+        <meta name="twitter:title" content="Menezes Avocat - Le Cabinet" />
+        <meta
+          name="twitter:description"
+          content="Découvrez le cabinet MENEZES AVOCAT : expertise en droit du travail et de la sécurité sociale, stratégie, rigueur et accompagnement humain."
+        />
       </Head>
 
       <Header />

@@ -119,9 +119,27 @@ for (let i = 2; i <= totalSections; i++) {
     <>
 
       <Head>
-        <title>{titlePage}</title>
-        <meta name="title" content={titlePage} />
-        <meta property="og:title" content={titlePage} />
+        {/* Titre + metas spécifiques à la page */}
+        <title>Menezes Avocat - Droit de la Sécurité Sociale</title>
+        <meta name="title" content="Menezes Avocat - Droit de la Sécurité Sociale" />
+        <meta
+          name="description"
+          content="Le cabinet MENEZES AVOCAT vous conseille et vous défend en droit de la sécurité sociale : URSSAF, contentieux, cotisations, prestations sociales et protection des salariés."
+        />
+
+        {/* Open Graph spécifiques */}
+        <meta property="og:title" content="Menezes Avocat - Droit de la Sécurité Sociale" />
+        <meta
+          property="og:description"
+          content="Le cabinet MENEZES AVOCAT vous conseille et vous défend en droit de la sécurité sociale : URSSAF, contentieux, cotisations, prestations sociales et protection des salariés."
+        />
+
+        {/* Twitter spécifiques */}
+        <meta name="twitter:title" content="Menezes Avocat - Droit de la Sécurité Sociale" />
+        <meta
+          name="twitter:description"
+          content="Le cabinet MENEZES AVOCAT vous conseille et vous défend en droit de la sécurité sociale : URSSAF, contentieux, cotisations, prestations sociales et protection des salariés."
+        />
       </Head>
 
       <Header />

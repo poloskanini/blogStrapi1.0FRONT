@@ -18,9 +18,26 @@ export default function honoraires() {
     <>
 
     <Head>
-      <title>{titlePage}</title>
-      <meta name="title" content={titlePage} />
-      <meta property="og:title" content={titlePage} />
+      <title>Menezes Avocat - Honoraires</title>
+      <meta name="title" content="Menezes Avocat - Honoraires" />
+      <meta
+        name="description"
+        content="Découvrez la transparence des honoraires du cabinet MENEZES AVOCAT : forfaits, taux horaires et modalités adaptées à vos besoins en droit du travail et de la sécurité sociale."
+      />
+
+      {/* Open Graph */}
+      <meta property="og:title" content="Menezes Avocat - Honoraires" />
+      <meta
+        property="og:description"
+        content="Découvrez la transparence des honoraires du cabinet MENEZES AVOCAT : forfaits, taux horaires et modalités adaptées à vos besoins en droit du travail et de la sécurité sociale."
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:title" content="Menezes Avocat - Honoraires" />
+      <meta
+        name="twitter:description"
+        content="Découvrez la transparence des honoraires du cabinet MENEZES AVOCAT : forfaits, taux horaires et modalités adaptées à vos besoins en droit du travail et de la sécurité sociale."
+      />
     </Head>
 
     <Header />

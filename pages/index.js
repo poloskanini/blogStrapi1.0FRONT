@@ -93,9 +93,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Menezes Avocat</title>
-        <meta name="title" content="Menezes Avocat" />
-        <meta property="og:title" content="Menezes Avocat" />
+        <title>Menezes Avocat - Accueil</title>
+        <meta name="title" content="Menezes Avocat - Accueil" />
+        <meta name="description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+        
+        {/* Open Graph spécifique */}
+        <meta property="og:title" content="Menezes Avocat - Accueil" />
+        <meta property="og:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
+
+        {/* Twitter spécifique */}
+        <meta name="twitter:title" content="Menezes Avocat - Accueil" />
+        <meta name="twitter:description" content="Le cabinet MENEZES AVOCAT vous conseille et vous défend dans toutes vos affaires juridiques liées au droit du travail et de la sécurité sociale." />
       </Head>
 
       <motion.div key={router.pathname}>

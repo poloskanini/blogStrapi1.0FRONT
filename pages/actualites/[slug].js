@@ -67,16 +67,49 @@ export default function Post({ post }) {
   const thumbnailImageUrl = post.attributes.image.data.attributes.url
   const hrefPage = router.asPath
 
+  // Helpers (tu peux les mettre en haut du fichier)
+  const SITE_URL = "https://menezes-avocat.com"
+  const absUrl = (u) => (u?.startsWith("http") ? u : `${SITE_URL}${u || ""}`)
+  const toISODate = (d) => (d ? new Date(d).toISOString() : undefined)
+
   return (
     <>
       <Head>
-        <title>{titlePage}</title>
-        <meta name='description' content={description}/>
-        <meta property="og:description" content={description} />
-        <meta property="og:image" itemprop="image" content={thumbnailImageUrl} />
-        <meta property="twitter:image" itemprop="image" content={thumbnailImageUrl} />
-        <meta name="title" content={titlePage} />
-        <meta property="og:title" content={titlePage} />
+        {/* Titre : "Titre d’article – Menezes Avocat"  */}
+        <title>{`${post.attributes.title} – Menezes Avocat`}</title>
+        <meta name="title" content={`${post.attributes.title} – Menezes Avocat`} />
+
+        {/* Description (fallback si vide côté CMS) */}
+        <meta
+          name="description"
+          content={post.attributes.description || post.attributes.excerpt || post.attributes.title}
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${post.attributes.title} – Menezes Avocat`} />
+        <meta
+          property="og:description"
+          content={post.attributes.description || post.attributes.excerpt || post.attributes.title}
+        />
+        <meta property="og:image" content={absUrl(post.attributes.image?.data?.attributes?.url)} />
+        {/* (og:url est déjà géré dynamiquement dans _app.js via absoluteUrl) */}
+
+        {/* Twitter */}
+        <meta name="twitter:title" content={`${post.attributes.title} – Menezes Avocat`} />
+        <meta
+          name="twitter:description"
+          content={post.attributes.description || post.attributes.excerpt || post.attributes.title}
+        />
+        <meta name="twitter:image" content={absUrl(post.attributes.image?.data?.attributes?.url)} />
+
+        {/* Métadonnées article (aident FB/LinkedIn, et parfois Google) */}
+        {post.attributes.date && (
+          <meta property="article:published_time" content={toISODate(post.attributes.date)} />
+        )}
+        {post.attributes.updatedAt && (
+          <meta property="article:modified_time" content={toISODate(post.attributes.updatedAt)} />
+        )}
       </Head>
 
       <Layout/>

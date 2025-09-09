@@ -14,7 +14,7 @@ const teamMembers = [
         </p>
 
         <p>
-          Avant de prêter serment, elle a acquis une solide expérience en entreprise et en cabinet d’avocats, notamment chez Final et au service juridique de la Caisse d’Épargne.
+          Avant de prêter serment, elle a acquis une solide expérience en entreprise et en cabinet d’avocats, notamment chez Fidal et au service juridique de la Caisse d’Épargne.
         </p>
 
 
@@ -25,7 +25,7 @@ const teamMembers = [
   {
     name: "Marc-Antoine NYS",
     role: "Avocat au barreau de Paris",
-    partnerShip: "Cabinet NYS CORNUT-GENTILLE",
+    partnerShip: "Partenaire (Cabinet NYS CORNUT-GENTILLE)",
     imageUrl: "/assets/images/PhotosAssocies/marc-antoine-nys-portfolio.jpg",
     specialty: (
       <div className="space-y-2 text-sm md:text-base font-light text-justify">
@@ -43,7 +43,7 @@ const teamMembers = [
   {
     name: "Florent CORNUT-GENTILLE",
     role: "Avocat au barreau de Paris",
-    partnerShip: "Cabinet NYS CORNUT-GENTILLE",
+    partnerShip: "Partenaire (Cabinet NYS CORNUT-GENTILLE)",
     imageUrl: "/assets/images/PhotosAssocies/florent-cornut-gentille-portfolio.jpg",
     specialty: (
       <div className="space-y-2 text-sm md:text-base font-light text-justify">
@@ -125,7 +125,7 @@ export default function TeamSection() {
                   <p className="text-base leading-7 text-gray-900 font-light">
                     {member.partnerShip}
                   </p>
-                  <p className="text-base leading-7 text-gray-600 italic">
+                  <p className="text-base leading-7 text-gray-600 italic pt-3">
                     {member.role}
                   </p>
                 </div>

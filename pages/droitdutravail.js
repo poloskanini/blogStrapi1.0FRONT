@@ -119,9 +119,27 @@ for (let i = 2; i <= totalSections; i++) {
     <>
 
       <Head>
-        <title>{titlePage}</title>
-        <meta name="title" content={titlePage} />
-        <meta property="og:title" content={titlePage} />
+        {/* Titre + metas spécifiques à la page */}
+        <title>Menezes Avocat - Droit du Travail</title>
+        <meta name="title" content="Menezes Avocat - Droit du Travail" />
+        <meta
+          name="description"
+          content="Le cabinet MENEZES AVOCAT vous accompagne en droit du travail : licenciement abusif, rupture conventionnelle, harcèlement, discrimination, négociations collectives."
+        />
+
+        {/* Open Graph spécifiques */}
+        <meta property="og:title" content="Menezes Avocat - Droit du Travail" />
+        <meta
+          property="og:description"
+          content="Le cabinet MENEZES AVOCAT vous accompagne en droit du travail : licenciement abusif, rupture conventionnelle, harcèlement, discrimination, négociations collectives."
+        />
+
+        {/* Twitter spécifiques */}
+        <meta name="twitter:title" content="Menezes Avocat - Droit du Travail" />
+        <meta
+          name="twitter:description"
+          content="Le cabinet MENEZES AVOCAT vous accompagne en droit du travail : licenciement abusif, rupture conventionnelle, harcèlement, discrimination, négociations collectives."
+        />
       </Head>
 
       <Header />
