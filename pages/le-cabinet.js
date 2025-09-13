@@ -91,11 +91,8 @@ export default function lecabinet() {
     "jobTitle": "Avocate au Barreau de Paris",
     "image": "https://menezes-avocat.com/assets/images/Photos%20cabinet/sandrine_menezes_google_miniature.png",
     "url": "https://menezes-avocat.com/le-cabinet",
-    "worksFor": {
-      "@type": "LegalService",
-      "name": "MENEZES Avocat",
-      "url": "https://menezes-avocat.com/"
-    }
+    "worksFor": { "@id": "https://menezes-avocat.com/#organization" }
+    // "sameAs": ["https://www.linkedin.com/in/..."] // optionnel
   };
 
   return (
