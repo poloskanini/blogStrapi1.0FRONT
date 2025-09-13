@@ -65,6 +65,29 @@ export default function App({ Component, pageProps }) {
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" sizes="any" />
+
+        {/* JSON-LD LegalService (Google vignette) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              "name": "MENEZES Avocat",
+              "url": "https://menezes-avocat.com/",
+              "logo": "https://menezes-avocat.com/favicon.png",
+              "image": "https://menezes-avocat.com/assets/images/Photos%20cabinet/sandrine_menezes_google_miniature.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "62 rue Condorcet",
+                "addressLocality": "Paris",
+                "postalCode": "75009",
+                "addressCountry": "FR"
+              },
+              "telephone": "+33-1-84-17-15-90"
+            })
+          }}
+        />
       </Head>
 
       {loading ? (

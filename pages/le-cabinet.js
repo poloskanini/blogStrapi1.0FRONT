@@ -84,6 +84,20 @@ export default function lecabinet() {
   const titlePage = "Menezes Avocat - Le Cabinet"
   const hrefPage = "/le-cabinet"
 
+  const person = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maître Sandrine Menezes",
+    "jobTitle": "Avocate au Barreau de Paris",
+    "image": "https://menezes-avocat.com/assets/images/Photos%20cabinet/sandrine_menezes_google_miniature.png",
+    "url": "https://menezes-avocat.com/le-cabinet",
+    "worksFor": {
+      "@type": "LegalService",
+      "name": "MENEZES Avocat",
+      "url": "https://menezes-avocat.com/"
+    }
+  };
+
   return (
     <>
 
@@ -108,6 +122,12 @@ export default function lecabinet() {
         <meta
           name="twitter:description"
           content="Découvrez le cabinet MENEZES AVOCAT : expertise en droit du travail et de la sécurité sociale, stratégie, rigueur et accompagnement humain."
+        />
+
+        {/* JSON-LD Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }}
         />
       </Head>
 
