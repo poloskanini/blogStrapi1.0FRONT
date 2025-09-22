@@ -40,8 +40,14 @@ export default function mentionslegales() {
             <div class="mb-4">
                 <h2 class="text-lg font-semibold">Créateur du site Internet :</h2>
                 <p>N|B - Nicolas Barthès</p>
-                <p><a href="http://www.nicolasbarthes.com" class="text-blue-500">www.nicolasbarthes.com</a></p>
+                <p><a href="http://www.nicolasbarthes.com" target="blank" class="text-blue-500">www.nicolasbarthes.com</a></p>
                 <p>Directeur de publication : Menezes-Avocat.com</p>
+            </div>
+
+            <div class="mb-4">
+                <h2 class="text-lg font-semibold">Photographies</h2>
+                <p><a href="https://diwaize.com/" target="blank" class="text-blue-500">© Benoit Beauchaine</a></p>
+
             </div>
 
             <div class="mb-4">
@@ -69,9 +75,9 @@ export default function mentionslegales() {
             <p class="text-sm">L’internaute reconnaît que l’utilisation du site internet de la société Menezes Avocat est régie par le droit français (réglementée par la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique).</p>
           </div>
         </Reveal>
-        
+
       </Container>
-      
+
       <Footer />
 
     </div>
